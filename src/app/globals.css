@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pitch-900: #14532d;
+  --color-pitch-800: #166534;
+  --color-pitch-700: #15803d;
+  --color-ink-950: #09090b;
+  --color-ink-900: #18181b;
+  --color-ink-800: #27272a;
+  --color-ink-700: #3f3f46;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-ink-950 text-zinc-100 antialiased;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0.7;
+  }
+}
+
+.confetti-piece {
+  position: fixed;
+  top: 0;
+  font-size: 1.5rem;
+  pointer-events: none;
+  animation: confetti-fall 3.2s linear forwards;
+  z-index: 50;
+}

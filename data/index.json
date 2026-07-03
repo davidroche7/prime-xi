@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ac-milan",
+    "slug": "ac-milan",
+    "name": "AC Milan",
+    "tier": "marquee",
+    "themeColour": "#7f1d1d",
+    "budget": 625,
+    "playerCount": 41
+  },
+  {
+    "id": "arsenal",
+    "slug": "arsenal",
+    "name": "Arsenal",
+    "tier": "marquee",
+    "themeColour": "#dc2626",
+    "budget": 620,
+    "playerCount": 44
+  },
+  {
+    "id": "barcelona",
+    "slug": "barcelona",
+    "name": "Barcelona",
+    "tier": "marquee",
+    "themeColour": "#1d4ed8",
+    "budget": 660,
+    "playerCount": 42
+  },
+  {
+    "id": "liverpool",
+    "slug": "liverpool",
+    "name": "Liverpool",
+    "tier": "marquee",
+    "themeColour": "#be123c",
+    "budget": 630,
+    "playerCount": 46
+  },
+  {
+    "id": "manchester-united",
+    "slug": "manchester-united",
+    "name": "Manchester United",
+    "tier": "marquee",
+    "themeColour": "#b91c1c",
+    "budget": 645,
+    "playerCount": 46
+  },
+  {
+    "id": "real-madrid",
+    "slug": "real-madrid",
+    "name": "Real Madrid",
+    "tier": "marquee",
+    "themeColour": "#6d28d9",
+    "budget": 645,
+    "playerCount": 46
+  }
+]

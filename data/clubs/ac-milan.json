@@ -1,0 +1,550 @@
+{
+  "club": {
+    "id": "ac-milan",
+    "slug": "ac-milan",
+    "name": "AC Milan",
+    "aliases": [
+      "Milan",
+      "The Rossoneri"
+    ],
+    "tier": "marquee",
+    "themeColour": "#7f1d1d",
+    "budget": 625
+  },
+  "players": [
+    {
+      "id": "marco-van-basten-1989",
+      "playerName": "Marco van Basten",
+      "clubId": "ac-milan",
+      "seasonLabel": "1988-89",
+      "seasonEndYear": 1989,
+      "positions": [
+        "ST"
+      ],
+      "rating": 96,
+      "cost": 90.6,
+      "stats": {
+        "apps": 33,
+        "goals": 19
+      },
+      "note": "Ballon d'Or, two in the final, that volley still to come"
+    },
+    {
+      "id": "franco-baresi-1990",
+      "playerName": "Franco Baresi",
+      "clubId": "ac-milan",
+      "seasonLabel": "1989-90",
+      "seasonEndYear": 1990,
+      "positions": [
+        "CB"
+      ],
+      "rating": 95,
+      "cost": 92,
+      "note": "The libero all others are measured against"
+    },
+    {
+      "id": "kaka-2007",
+      "playerName": "Kaka",
+      "clubId": "ac-milan",
+      "seasonLabel": "2006-07",
+      "seasonEndYear": 2007,
+      "positions": [
+        "AM",
+        "CM"
+      ],
+      "rating": 94,
+      "cost": 84.7,
+      "note": "Ballon d'Or 2007, ran through Old Trafford"
+    },
+    {
+      "id": "paolo-maldini-1995",
+      "playerName": "Paolo Maldini",
+      "clubId": "ac-milan",
+      "seasonLabel": "1994-95",
+      "seasonEndYear": 1995,
+      "positions": [
+        "FB",
+        "CB"
+      ],
+      "rating": 94,
+      "cost": 84.7,
+      "note": "Peak left-back years; played on to 41"
+    },
+    {
+      "id": "ruud-gullit-1989",
+      "playerName": "Ruud Gullit",
+      "clubId": "ac-milan",
+      "seasonLabel": "1988-89",
+      "seasonEndYear": 1989,
+      "positions": [
+        "AM",
+        "ST"
+      ],
+      "rating": 94,
+      "cost": 84.7,
+      "note": "Two in the European Cup final"
+    },
+    {
+      "id": "andriy-shevchenko-2004",
+      "playerName": "Andriy Shevchenko",
+      "clubId": "ac-milan",
+      "seasonLabel": "2003-04",
+      "seasonEndYear": 2004,
+      "positions": [
+        "ST"
+      ],
+      "rating": 93,
+      "cost": 81.9,
+      "stats": {
+        "apps": 32,
+        "goals": 24
+      },
+      "note": "Capocannoniere in a scudetto season"
+    },
+    {
+      "id": "gianni-rivera-1969",
+      "playerName": "Gianni Rivera",
+      "clubId": "ac-milan",
+      "seasonLabel": "1968-69",
+      "seasonEndYear": 1969,
+      "positions": [
+        "AM"
+      ],
+      "rating": 92,
+      "cost": 79.1,
+      "note": "Ballon d'Or 1969, the Golden Boy"
+    },
+    {
+      "id": "gunnar-nordahl-1951",
+      "playerName": "Gunnar Nordahl",
+      "clubId": "ac-milan",
+      "seasonLabel": "1950-51",
+      "seasonEndYear": 1951,
+      "positions": [
+        "ST"
+      ],
+      "rating": 92,
+      "cost": 79.1,
+      "stats": {
+        "apps": 37,
+        "goals": 34
+      },
+      "note": "Still Serie A's most lethal ratio"
+    },
+    {
+      "id": "alessandro-nesta-2004",
+      "playerName": "Alessandro Nesta",
+      "clubId": "ac-milan",
+      "seasonLabel": "2003-04",
+      "seasonEndYear": 2004,
+      "positions": [
+        "CB"
+      ],
+      "rating": 91,
+      "cost": 80.2
+    },
+    {
+      "id": "andrea-pirlo-2006",
+      "playerName": "Andrea Pirlo",
+      "clubId": "ac-milan",
+      "seasonLabel": "2005-06",
+      "seasonEndYear": 2006,
+      "positions": [
+        "DM",
+        "CM"
+      ],
+      "rating": 91,
+      "cost": 78.7,
+      "note": "The regista role reinvented"
+    },
+    {
+      "id": "frank-rijkaard-1990",
+      "playerName": "Frank Rijkaard",
+      "clubId": "ac-milan",
+      "seasonLabel": "1989-90",
+      "seasonEndYear": 1990,
+      "positions": [
+        "DM",
+        "CB"
+      ],
+      "rating": 91,
+      "cost": 78.7,
+      "note": "The third Dutchman, and the steel"
+    },
+    {
+      "id": "george-weah-1996",
+      "playerName": "George Weah",
+      "clubId": "ac-milan",
+      "seasonLabel": "1995-96",
+      "seasonEndYear": 1996,
+      "positions": [
+        "ST"
+      ],
+      "rating": 91,
+      "cost": 76.4,
+      "note": "Ballon d'Or 1995"
+    },
+    {
+      "id": "zlatan-ibrahimovic-2012",
+      "playerName": "Zlatan Ibrahimovic",
+      "clubId": "ac-milan",
+      "seasonLabel": "2011-12",
+      "seasonEndYear": 2012,
+      "positions": [
+        "ST"
+      ],
+      "rating": 90,
+      "cost": 73.7,
+      "stats": {
+        "apps": 32,
+        "goals": 28
+      }
+    },
+    {
+      "id": "marcel-desailly-1995",
+      "playerName": "Marcel Desailly",
+      "clubId": "ac-milan",
+      "seasonLabel": "1994-95",
+      "seasonEndYear": 1995,
+      "positions": [
+        "DM",
+        "CB"
+      ],
+      "rating": 89,
+      "cost": 73.3
+    },
+    {
+      "id": "alessandro-costacurta-1994",
+      "playerName": "Alessandro Costacurta",
+      "clubId": "ac-milan",
+      "seasonLabel": "1993-94",
+      "seasonEndYear": 1994,
+      "positions": [
+        "CB"
+      ],
+      "rating": 88,
+      "cost": 72
+    },
+    {
+      "id": "gianluigi-donnarumma-2021",
+      "playerName": "Gianluigi Donnarumma",
+      "clubId": "ac-milan",
+      "seasonLabel": "2020-21",
+      "seasonEndYear": 2021,
+      "positions": [
+        "GK"
+      ],
+      "rating": 88,
+      "cost": 72
+    },
+    {
+      "id": "clarence-seedorf-2005",
+      "playerName": "Clarence Seedorf",
+      "clubId": "ac-milan",
+      "seasonLabel": "2004-05",
+      "seasonEndYear": 2005,
+      "positions": [
+        "CM",
+        "AM"
+      ],
+      "rating": 87,
+      "cost": 66.1
+    },
+    {
+      "id": "dida-2005",
+      "playerName": "Dida",
+      "clubId": "ac-milan",
+      "seasonLabel": "2004-05",
+      "seasonEndYear": 2005,
+      "positions": [
+        "GK"
+      ],
+      "rating": 87,
+      "cost": 69.4
+    },
+    {
+      "id": "rafael-leao-2022",
+      "playerName": "Rafael Leao",
+      "clubId": "ac-milan",
+      "seasonLabel": "2021-22",
+      "seasonEndYear": 2022,
+      "positions": [
+        "W"
+      ],
+      "rating": 87,
+      "cost": 66.1,
+      "note": "Serie A MVP in the scudetto season"
+    },
+    {
+      "id": "rui-costa-2002",
+      "playerName": "Rui Costa",
+      "clubId": "ac-milan",
+      "seasonLabel": "2001-02",
+      "seasonEndYear": 2002,
+      "positions": [
+        "AM"
+      ],
+      "rating": 87,
+      "cost": 66.1
+    },
+    {
+      "id": "cafu-2004",
+      "playerName": "Cafu",
+      "clubId": "ac-milan",
+      "seasonLabel": "2003-04",
+      "seasonEndYear": 2004,
+      "positions": [
+        "FB"
+      ],
+      "rating": 86,
+      "cost": 63.7
+    },
+    {
+      "id": "filippo-inzaghi-2003",
+      "playerName": "Filippo Inzaghi",
+      "clubId": "ac-milan",
+      "seasonLabel": "2002-03",
+      "seasonEndYear": 2003,
+      "positions": [
+        "ST"
+      ],
+      "rating": 86,
+      "cost": 63.7
+    },
+    {
+      "id": "jose-altafini-1963",
+      "playerName": "Jose Altafini",
+      "clubId": "ac-milan",
+      "seasonLabel": "1962-63",
+      "seasonEndYear": 1963,
+      "positions": [
+        "ST"
+      ],
+      "rating": 86,
+      "cost": 63.7
+    },
+    {
+      "id": "roberto-donadoni-1989",
+      "playerName": "Roberto Donadoni",
+      "clubId": "ac-milan",
+      "seasonLabel": "1988-89",
+      "seasonEndYear": 1989,
+      "positions": [
+        "W"
+      ],
+      "rating": 86,
+      "cost": 63.7
+    },
+    {
+      "id": "theo-hernandez-2022",
+      "playerName": "Theo Hernandez",
+      "clubId": "ac-milan",
+      "seasonLabel": "2021-22",
+      "seasonEndYear": 2022,
+      "positions": [
+        "FB"
+      ],
+      "rating": 86,
+      "cost": 63.7
+    },
+    {
+      "id": "demetrio-albertini-1994",
+      "playerName": "Demetrio Albertini",
+      "clubId": "ac-milan",
+      "seasonLabel": "1993-94",
+      "seasonEndYear": 1994,
+      "positions": [
+        "CM",
+        "DM"
+      ],
+      "rating": 85,
+      "cost": 61.4
+    },
+    {
+      "id": "gennaro-gattuso-2005",
+      "playerName": "Gennaro Gattuso",
+      "clubId": "ac-milan",
+      "seasonLabel": "2004-05",
+      "seasonEndYear": 2005,
+      "positions": [
+        "DM"
+      ],
+      "rating": 85,
+      "cost": 63.2
+    },
+    {
+      "id": "mauro-tassotti-1990",
+      "playerName": "Mauro Tassotti",
+      "clubId": "ac-milan",
+      "seasonLabel": "1989-90",
+      "seasonEndYear": 1990,
+      "positions": [
+        "FB"
+      ],
+      "rating": 85,
+      "cost": 61.4
+    },
+    {
+      "id": "zvonimir-boban-1994",
+      "playerName": "Zvonimir Boban",
+      "clubId": "ac-milan",
+      "seasonLabel": "1993-94",
+      "seasonEndYear": 1994,
+      "positions": [
+        "AM",
+        "CM"
+      ],
+      "rating": 85,
+      "cost": 61.4
+    },
+    {
+      "id": "daniele-massaro-1994",
+      "playerName": "Daniele Massaro",
+      "clubId": "ac-milan",
+      "seasonLabel": "1993-94",
+      "seasonEndYear": 1994,
+      "positions": [
+        "ST"
+      ],
+      "rating": 82,
+      "cost": 54.7
+    },
+    {
+      "id": "sebastiano-rossi-1994",
+      "playerName": "Sebastiano Rossi",
+      "clubId": "ac-milan",
+      "seasonLabel": "1993-94",
+      "seasonEndYear": 1994,
+      "positions": [
+        "GK"
+      ],
+      "rating": 82,
+      "cost": 57.5
+    },
+    {
+      "id": "kakha-kaladze-2005",
+      "playerName": "Kakha Kaladze",
+      "clubId": "ac-milan",
+      "seasonLabel": "2004-05",
+      "seasonEndYear": 2005,
+      "positions": [
+        "CB",
+        "FB"
+      ],
+      "rating": 81,
+      "cost": 55.2
+    },
+    {
+      "id": "massimo-ambrosini-2007",
+      "playerName": "Massimo Ambrosini",
+      "clubId": "ac-milan",
+      "seasonLabel": "2006-07",
+      "seasonEndYear": 2007,
+      "positions": [
+        "DM",
+        "CM"
+      ],
+      "rating": 81,
+      "cost": 54.2
+    },
+    {
+      "id": "serginho-2005",
+      "playerName": "Serginho",
+      "clubId": "ac-milan",
+      "seasonLabel": "2004-05",
+      "seasonEndYear": 2005,
+      "positions": [
+        "FB",
+        "W"
+      ],
+      "rating": 80,
+      "cost": 50.6
+    },
+    {
+      "id": "ray-wilkins-1985",
+      "playerName": "Ray Wilkins",
+      "clubId": "ac-milan",
+      "seasonLabel": "1984-85",
+      "seasonEndYear": 1985,
+      "positions": [
+        "CM"
+      ],
+      "rating": 79,
+      "cost": 48.6
+    },
+    {
+      "id": "christian-panucci-1995",
+      "playerName": "Christian Panucci",
+      "clubId": "ac-milan",
+      "seasonLabel": "1994-95",
+      "seasonEndYear": 1995,
+      "positions": [
+        "FB"
+      ],
+      "rating": 78,
+      "cost": 46.6
+    },
+    {
+      "id": "marco-simone-1994",
+      "playerName": "Marco Simone",
+      "clubId": "ac-milan",
+      "seasonLabel": "1993-94",
+      "seasonEndYear": 1994,
+      "positions": [
+        "ST"
+      ],
+      "rating": 78,
+      "cost": 46.6
+    },
+    {
+      "id": "alberigo-evani-1989",
+      "playerName": "Alberigo Evani",
+      "clubId": "ac-milan",
+      "seasonLabel": "1988-89",
+      "seasonEndYear": 1989,
+      "positions": [
+        "W",
+        "CM"
+      ],
+      "rating": 76,
+      "cost": 42.9
+    },
+    {
+      "id": "christian-abbiati-2003",
+      "playerName": "Christian Abbiati",
+      "clubId": "ac-milan",
+      "seasonLabel": "2002-03",
+      "seasonEndYear": 2003,
+      "positions": [
+        "GK"
+      ],
+      "rating": 76,
+      "cost": 45.1
+    },
+    {
+      "id": "filippo-galli-1994",
+      "playerName": "Filippo Galli",
+      "clubId": "ac-milan",
+      "seasonLabel": "1993-94",
+      "seasonEndYear": 1994,
+      "positions": [
+        "CB"
+      ],
+      "rating": 74,
+      "cost": 41.4
+    },
+    {
+      "id": "mark-hateley-1985",
+      "playerName": "Mark Hateley",
+      "clubId": "ac-milan",
+      "seasonLabel": "1984-85",
+      "seasonEndYear": 1985,
+      "positions": [
+        "ST"
+      ],
+      "rating": 74,
+      "cost": 39.4,
+      "note": "That header over Collovati in the derby"
+    }
+  ]
+}
