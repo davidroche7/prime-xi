@@ -1,0 +1,12228 @@
+[
+ {
+  "name": "Abe Hartley",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1897,
+    1898
+   ]
+  ],
+  "apps": 12,
+  "goals": 1,
+  "lfchId": 658,
+  "id": "abe-hartley"
+ },
+ {
+  "name": "Abel Xavier",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2002,
+    2002
+   ]
+  ],
+  "apps": 21,
+  "goals": 2,
+  "lfchId": 449,
+  "id": "abel-xavier"
+ },
+ {
+  "name": "Abraham Foxall",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1899,
+    1899
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 623,
+  "id": "abraham-foxall"
+ },
+ {
+  "name": "Ádám Bogdán",
+  "nationality": "Unknown",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2015,
+    2016
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 1284,
+  "id": "adam-bogdan"
+ },
+ {
+  "name": "Adam Lallana",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2014,
+    2020
+   ]
+  ],
+  "apps": 178,
+  "goals": 22,
+  "lfchId": 1273,
+  "id": "adam-lallana"
+ },
+ {
+  "name": "Adam Lewis",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2020,
+    2020
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1345,
+  "id": "adam-lewis"
+ },
+ {
+  "name": "Adam Morgan",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2012,
+    2012
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 1244,
+  "id": "adam-morgan"
+ },
+ {
+  "name": "Adrián",
+  "nationality": "Spain",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2019,
+    2022
+   ]
+  ],
+  "apps": 26,
+  "goals": 0,
+  "lfchId": 1338,
+  "id": "adrian"
+ },
+ {
+  "name": "Alan A'Court",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1952,
+    1964
+   ]
+  ],
+  "apps": 381,
+  "goals": 63,
+  "lfchId": 251,
+  "id": "alan-a-court"
+ },
+ {
+  "name": "Alan Arnell",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1953,
+    1961
+   ]
+  ],
+  "apps": 75,
+  "goals": 35,
+  "lfchId": 254,
+  "id": "alan-arnell"
+ },
+ {
+  "name": "Alan Banks",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1958,
+    1961
+   ]
+  ],
+  "apps": 8,
+  "goals": 6,
+  "lfchId": 255,
+  "id": "alan-banks"
+ },
+ {
+  "name": "Alan Hansen",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1977,
+    1991
+   ]
+  ],
+  "apps": 620,
+  "goals": 14,
+  "lfchId": 311,
+  "id": "alan-hansen"
+ },
+ {
+  "name": "Alan Hignett",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1965,
+    1965
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 320,
+  "id": "alan-hignett"
+ },
+ {
+  "name": "Alan Irvine",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1986,
+    1987
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 331,
+  "id": "alan-irvine"
+ },
+ {
+  "name": "Alan Kennedy",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1978,
+    1985
+   ]
+  ],
+  "apps": 359,
+  "goals": 20,
+  "lfchId": 342,
+  "id": "alan-kennedy"
+ },
+ {
+  "name": "Alan Waddle",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1973,
+    1977
+   ]
+  ],
+  "apps": 22,
+  "goals": 1,
+  "lfchId": 434,
+  "id": "alan-waddle"
+ },
+ {
+  "name": "Alastair Henderson",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1931,
+    1932
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 659,
+  "id": "alastair-henderson"
+ },
+ {
+  "name": "Albert Childs",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1953,
+    1953
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 575,
+  "id": "albert-childs"
+ },
+ {
+  "name": "Albert Pearson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1919,
+    1921
+   ]
+  ],
+  "apps": 51,
+  "goals": 4,
+  "lfchId": 795,
+  "id": "albert-pearson"
+ },
+ {
+  "name": "Albert Riera",
+  "nationality": "Spain",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2008,
+    2010
+   ]
+  ],
+  "apps": 56,
+  "goals": 5,
+  "lfchId": 1201,
+  "id": "albert-riera"
+ },
+ {
+  "name": "Albert Shears",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1926,
+    1928
+   ]
+  ],
+  "apps": 16,
+  "goals": 0,
+  "lfchId": 838,
+  "id": "albert-shears"
+ },
+ {
+  "name": "Albert Stubbins",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1946,
+    1953
+   ]
+  ],
+  "apps": 178,
+  "goals": 83,
+  "lfchId": 863,
+  "id": "albert-stubbins"
+ },
+ {
+  "name": "Albert Whitehurst",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1928,
+    1929
+   ]
+  ],
+  "apps": 8,
+  "goals": 2,
+  "lfchId": 883,
+  "id": "albert-whitehurst"
+ },
+ {
+  "name": "Alberto Aquilani",
+  "nationality": "Italy",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2009,
+    2010
+   ]
+  ],
+  "apps": 28,
+  "goals": 2,
+  "lfchId": 1174,
+  "id": "alberto-aquilani"
+ },
+ {
+  "name": "Alberto Moreno",
+  "nationality": "Spain",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2014,
+    2019
+   ]
+  ],
+  "apps": 141,
+  "goals": 3,
+  "lfchId": 1278,
+  "id": "alberto-moreno"
+ },
+ {
+  "name": "Alec Lindsay",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1969,
+    1977
+   ]
+  ],
+  "apps": 248,
+  "goals": 18,
+  "lfchId": 360,
+  "id": "alec-lindsay"
+ },
+ {
+  "name": "Alex Muir",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1948,
+    1948
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 774,
+  "id": "alex-muir"
+ },
+ {
+  "name": "Alex Oxlade-Chamberlain",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2017,
+    2023
+   ]
+  ],
+  "apps": 146,
+  "goals": 18,
+  "lfchId": 1320,
+  "id": "alex-oxlade-chamberlain"
+ },
+ {
+  "name": "Alex Raisbeck",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1898,
+    1909
+   ]
+  ],
+  "apps": 341,
+  "goals": 19,
+  "lfchId": 808,
+  "id": "alex-raisbeck"
+ },
+ {
+  "name": "Alex Smith",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1937,
+    1937
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 846,
+  "id": "alex-smith"
+ },
+ {
+  "name": "Alex South",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1955,
+    1955
+   ]
+  ],
+  "apps": 7,
+  "goals": 1,
+  "lfchId": 852,
+  "id": "alex-south"
+ },
+ {
+  "name": "Alex Watson",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1988,
+    1989
+   ]
+  ],
+  "apps": 9,
+  "goals": 0,
+  "lfchId": 439,
+  "id": "alex-watson"
+ },
+ {
+  "name": "Alexander Isak",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 22,
+  "goals": 4,
+  "lfchId": 2438,
+  "id": "alexander-isak"
+ },
+ {
+  "name": "Alexis Mac Allister",
+  "nationality": "Argentina",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2023,
+    2026
+   ]
+  ],
+  "apps": 150,
+  "goals": 19,
+  "lfchId": 1411,
+  "id": "alexis-mac-allister"
+ },
+ {
+  "name": "Alf Arrowsmith",
+  "nationality": "England",
+  "position": "U",
+  "careerSpans": [
+   [
+    1961,
+    1968
+   ]
+  ],
+  "apps": 56,
+  "goals": 24,
+  "lfchId": 257,
+  "id": "alf-arrowsmith"
+ },
+ {
+  "name": "Alf Hanson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1931,
+    1938
+   ]
+  ],
+  "apps": 177,
+  "goals": 52,
+  "lfchId": 651,
+  "id": "alf-hanson"
+ },
+ {
+  "name": "Alf Hobson",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1936,
+    1946
+   ]
+  ],
+  "apps": 28,
+  "goals": 0,
+  "lfchId": 668,
+  "id": "alf-hobson"
+ },
+ {
+  "name": "Alf West",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1903,
+    1909
+   ],
+   [
+    1910,
+    1911
+   ]
+  ],
+  "apps": 141,
+  "goals": 6,
+  "lfchId": 880,
+  "id": "alf-west"
+ },
+ {
+  "name": "Alisson",
+  "nationality": "Brazil",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2018,
+    2026
+   ]
+  ],
+  "apps": 333,
+  "goals": 1,
+  "lfchId": 1330,
+  "id": "alisson"
+ },
+ {
+  "name": "Allan Jones",
+  "nationality": "Unknown",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1959,
+    1963
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 336,
+  "id": "allan-jones"
+ },
+ {
+  "name": "Allan Scott",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1929,
+    1931
+   ]
+  ],
+  "apps": 4,
+  "goals": 2,
+  "lfchId": 832,
+  "id": "allan-scott"
+ },
+ {
+  "name": "Alun Evans",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1968,
+    1972
+   ]
+  ],
+  "apps": 111,
+  "goals": 33,
+  "lfchId": 295,
+  "id": "alun-evans"
+ },
+ {
+  "name": "Álvaro Arbeloa",
+  "nationality": "Spain",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2007,
+    2009
+   ]
+  ],
+  "apps": 98,
+  "goals": 2,
+  "id": "alvaro-arbeloa"
+ },
+ {
+  "name": "Aly Cissokho",
+  "nationality": "France",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2013,
+    2014
+   ]
+  ],
+  "apps": 13,
+  "goals": 0,
+  "lfchId": 1262,
+  "id": "aly-cissokho"
+ },
+ {
+  "name": "Amara Nallo",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 2422,
+  "id": "amara-nallo"
+ },
+ {
+  "name": "Andre Wisdom",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2012,
+    2013
+   ]
+  ],
+  "apps": 22,
+  "goals": 1,
+  "lfchId": 1229,
+  "id": "andre-wisdom"
+ },
+ {
+  "name": "Andrea Dossena",
+  "nationality": "Italy",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2008,
+    2009
+   ]
+  ],
+  "apps": 31,
+  "goals": 2,
+  "lfchId": 1197,
+  "id": "andrea-dossena"
+ },
+ {
+  "name": "Andrew Aitken",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1930,
+    1930
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 520,
+  "id": "andrew-aitken"
+ },
+ {
+  "name": "Andrew Hannah",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1892,
+    1895
+   ]
+  ],
+  "apps": 69,
+  "goals": 1,
+  "lfchId": 649,
+  "id": "andrew-hannah"
+ },
+ {
+  "name": "Andrew Kelvin",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1892,
+    1892
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 702,
+  "id": "andrew-kelvin"
+ },
+ {
+  "name": "Andrew McCowie",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1897,
+    1899
+   ]
+  ],
+  "apps": 35,
+  "goals": 11,
+  "lfchId": 736,
+  "id": "andrew-mccowie"
+ },
+ {
+  "name": "Andriy Voronin",
+  "nationality": "Ukraine",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2007,
+    2009
+   ]
+  ],
+  "apps": 40,
+  "goals": 6,
+  "lfchId": 1179,
+  "id": "andriy-voronin"
+ },
+ {
+  "name": "Andy Carroll",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2011,
+    2012
+   ]
+  ],
+  "apps": 58,
+  "goals": 11,
+  "lfchId": 1231,
+  "id": "andy-carroll"
+ },
+ {
+  "name": "Andy McGuigan",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1900,
+    1902
+   ]
+  ],
+  "apps": 37,
+  "goals": 14,
+  "lfchId": 742,
+  "id": "andy-mcguigan"
+ },
+ {
+  "name": "Andy Robertson",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2017,
+    2026
+   ]
+  ],
+  "apps": 378,
+  "goals": 14,
+  "lfchId": 1318,
+  "id": "andy-robertson"
+ },
+ {
+  "name": "Anthony Le Tallec",
+  "nationality": "France",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2003,
+    2005
+   ]
+  ],
+  "apps": 32,
+  "goals": 1,
+  "lfchId": 498,
+  "id": "anthony-le-tallec"
+ },
+ {
+  "name": "Antonio Barragán",
+  "nationality": "Spain",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2005,
+    2005
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1132,
+  "id": "antonio-barragan"
+ },
+ {
+  "name": "Antonio Núñez",
+  "nationality": "Spain",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2004,
+    2005
+   ]
+  ],
+  "apps": 27,
+  "goals": 1,
+  "lfchId": 618,
+  "id": "antonio-nunez"
+ },
+ {
+  "name": "Archibald Rawlings",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1924,
+    1926
+   ]
+  ],
+  "apps": 67,
+  "goals": 10,
+  "lfchId": 810,
+  "id": "archibald-rawlings"
+ },
+ {
+  "name": "Archie Goldie",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1895,
+    1900
+   ]
+  ],
+  "apps": 149,
+  "goals": 1,
+  "lfchId": 635,
+  "id": "archie-goldie"
+ },
+ {
+  "name": "Archie McPherson",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1929,
+    1934
+   ]
+  ],
+  "apps": 133,
+  "goals": 19,
+  "lfchId": 756,
+  "id": "archie-mcpherson"
+ },
+ {
+  "name": "Arthur",
+  "nationality": "Brazil",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2022,
+    2022
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1404,
+  "id": "arthur"
+ },
+ {
+  "name": "Arthur Berry",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1908,
+    1912
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 539,
+  "id": "arthur-berry"
+ },
+ {
+  "name": "Arthur Goddard",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1902,
+    1914
+   ]
+  ],
+  "apps": 414,
+  "goals": 77,
+  "lfchId": 634,
+  "id": "arthur-goddard"
+ },
+ {
+  "name": "Arthur Metcalf",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1912,
+    1915
+   ]
+  ],
+  "apps": 63,
+  "goals": 28,
+  "lfchId": 763,
+  "id": "arthur-metcalf"
+ },
+ {
+  "name": "Arthur Riley",
+  "nationality": "South Africa",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1925,
+    1940
+   ]
+  ],
+  "apps": 338,
+  "goals": 0,
+  "lfchId": 814,
+  "id": "arthur-riley"
+ },
+ {
+  "name": "Arthur Rowley",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1952,
+    1953
+   ]
+  ],
+  "apps": 11,
+  "goals": 0,
+  "lfchId": 824,
+  "id": "arthur-rowley"
+ },
+ {
+  "name": "Arthur Worgan",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1894,
+    1894
+   ]
+  ],
+  "apps": 2,
+  "goals": 2,
+  "lfchId": 890,
+  "id": "arthur-worgan"
+ },
+ {
+  "name": "Augustus Beeby",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1909,
+    1910
+   ]
+  ],
+  "apps": 16,
+  "goals": 0,
+  "lfchId": 537,
+  "id": "augustus-beeby"
+ },
+ {
+  "name": "Avi Cohen",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1979,
+    1981
+   ]
+  ],
+  "apps": 24,
+  "goals": 1,
+  "lfchId": 284,
+  "id": "avi-cohen"
+ },
+ {
+  "name": "Barney Battles",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1896,
+    1898
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 534,
+  "id": "barney-battles"
+ },
+ {
+  "name": "Barney Ramsden",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1937,
+    1947
+   ]
+  ],
+  "apps": 63,
+  "goals": 0,
+  "lfchId": 809,
+  "id": "barney-ramsden"
+ },
+ {
+  "name": "Barry Jones",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1991,
+    1991
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 337,
+  "id": "barry-jones"
+ },
+ {
+  "name": "Barry Venison",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1986,
+    1992
+   ]
+  ],
+  "apps": 158,
+  "goals": 3,
+  "lfchId": 432,
+  "id": "barry-venison"
+ },
+ {
+  "name": "Barry Wilkinson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1953,
+    1959
+   ]
+  ],
+  "apps": 79,
+  "goals": 0,
+  "lfchId": 445,
+  "id": "barry-wilkinson"
+ },
+ {
+  "name": "Ben Bull",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1896,
+    1896
+   ]
+  ],
+  "apps": 1,
+  "goals": 1,
+  "lfchId": 555,
+  "id": "ben-bull"
+ },
+ {
+  "name": "Ben Gannon-Doak",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2022,
+    2023
+   ]
+  ],
+  "apps": 10,
+  "goals": 0,
+  "lfchId": 1408,
+  "id": "ben-gannon-doak"
+ },
+ {
+  "name": "Ben Woodburn",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2016,
+    2018
+   ]
+  ],
+  "apps": 11,
+  "goals": 1,
+  "lfchId": 1306,
+  "id": "ben-woodburn"
+ },
+ {
+  "name": "Benjamin Dabbs",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1933,
+    1937
+   ]
+  ],
+  "apps": 56,
+  "goals": 0,
+  "lfchId": 594,
+  "id": "benjamin-dabbs"
+ },
+ {
+  "name": "Bernard Diomède",
+  "nationality": "France",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2000,
+    2001
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 290,
+  "id": "bernard-diomede"
+ },
+ {
+  "name": "Berry Nieuwenhuys",
+  "nationality": "South Africa",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1933,
+    1947
+   ]
+  ],
+  "apps": 257,
+  "goals": 79,
+  "lfchId": 781,
+  "id": "berry-nieuwenhuys"
+ },
+ {
+  "name": "Bert Slater",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1959,
+    1962
+   ]
+  ],
+  "apps": 111,
+  "goals": 0,
+  "lfchId": 411,
+  "id": "bert-slater"
+ },
+ {
+  "name": "Bertram Goode",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1908,
+    1909
+   ]
+  ],
+  "apps": 7,
+  "goals": 1,
+  "lfchId": 637,
+  "id": "bertram-goode"
+ },
+ {
+  "name": "Bill Jones",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1938,
+    1954
+   ]
+  ],
+  "apps": 277,
+  "goals": 17,
+  "lfchId": 690,
+  "id": "bill-jones"
+ },
+ {
+  "name": "Bill Kinghorn",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1938,
+    1939
+   ]
+  ],
+  "apps": 19,
+  "goals": 4,
+  "lfchId": 705,
+  "id": "bill-kinghorn"
+ },
+ {
+  "name": "Bill Lacey",
+  "nationality": "Ireland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1912,
+    1915
+   ],
+   [
+    1919,
+    1924
+   ]
+  ],
+  "apps": 260,
+  "goals": 29,
+  "lfchId": 708,
+  "id": "bill-lacey"
+ },
+ {
+  "name": "Bill McPherson",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1906,
+    1908
+   ]
+  ],
+  "apps": 55,
+  "goals": 17,
+  "lfchId": 757,
+  "id": "bill-mcpherson"
+ },
+ {
+  "name": "Bill Michael",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1896,
+    1897
+   ]
+  ],
+  "apps": 23,
+  "goals": 5,
+  "lfchId": 764,
+  "id": "bill-michael"
+ },
+ {
+  "name": "Bill Murray",
+  "nationality": "Scotland",
+  "position": "U",
+  "careerSpans": [
+   [
+    1928,
+    1929
+   ]
+  ],
+  "apps": 4,
+  "goals": 1,
+  "lfchId": 776,
+  "id": "bill-murray"
+ },
+ {
+  "name": "Bill Perkins",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1899,
+    1903
+   ]
+  ],
+  "apps": 117,
+  "goals": 0,
+  "lfchId": 798,
+  "id": "bill-perkins"
+ },
+ {
+  "name": "Bill Salisbury",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1928,
+    1929
+   ]
+  ],
+  "apps": 17,
+  "goals": 3,
+  "lfchId": 826,
+  "id": "bill-salisbury"
+ },
+ {
+  "name": "Bill Shepherd",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1948,
+    1951
+   ]
+  ],
+  "apps": 58,
+  "goals": 0,
+  "lfchId": 840,
+  "id": "bill-shepherd"
+ },
+ {
+  "name": "Bill White",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1901,
+    1902
+   ]
+  ],
+  "apps": 6,
+  "goals": 1,
+  "lfchId": 881,
+  "id": "bill-white"
+ },
+ {
+  "name": "Billy Dunlop",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1895,
+    1909
+   ]
+  ],
+  "apps": 363,
+  "goals": 3,
+  "lfchId": 608,
+  "id": "billy-dunlop"
+ },
+ {
+  "name": "Billy Hartill",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1936,
+    1936
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 657,
+  "id": "billy-hartill"
+ },
+ {
+  "name": "Billy Koumetio",
+  "nationality": "France",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2020,
+    2021
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1351,
+  "id": "billy-koumetio"
+ },
+ {
+  "name": "Billy Liddell",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1939,
+    1961
+   ]
+  ],
+  "apps": 534,
+  "goals": 228,
+  "lfchId": 359,
+  "id": "billy-liddell"
+ },
+ {
+  "name": "Billy Matthews",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1920,
+    1921
+   ]
+  ],
+  "apps": 9,
+  "goals": 4,
+  "lfchId": 728,
+  "id": "billy-matthews"
+ },
+ {
+  "name": "Billy McDevitt",
+  "nationality": "Ireland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1923,
+    1924
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 737,
+  "id": "billy-mcdevitt"
+ },
+ {
+  "name": "Billy McOwen",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1893,
+    1894
+   ]
+  ],
+  "apps": 27,
+  "goals": 0,
+  "lfchId": 755,
+  "id": "billy-mcowen"
+ },
+ {
+  "name": "Billy Millar",
+  "nationality": "Ireland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1928,
+    1928
+   ]
+  ],
+  "apps": 3,
+  "goals": 2,
+  "lfchId": 765,
+  "id": "billy-millar"
+ },
+ {
+  "name": "Billy Molyneux",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1965,
+    1965
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 380,
+  "id": "billy-molyneux"
+ },
+ {
+  "name": "Bjørn Tore Kvarme",
+  "nationality": "Norway",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1997,
+    1999
+   ]
+  ],
+  "apps": 54,
+  "goals": 0,
+  "lfchId": 350,
+  "id": "bj-rn-tore-kvarme"
+ },
+ {
+  "name": "Bob Glassey",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1935,
+    1936
+   ]
+  ],
+  "apps": 9,
+  "goals": 4,
+  "lfchId": 632,
+  "id": "bob-glassey"
+ },
+ {
+  "name": "Bob McDougall",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1914,
+    1914
+   ]
+  ],
+  "apps": 8,
+  "goals": 1,
+  "lfchId": 740,
+  "id": "bob-mcdougall"
+ },
+ {
+  "name": "Bob Paisley",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1939,
+    1954
+   ]
+  ],
+  "apps": 277,
+  "goals": 13,
+  "lfchId": 785,
+  "id": "bob-paisley"
+ },
+ {
+  "name": "Bob Pursell",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1911,
+    1920
+   ]
+  ],
+  "apps": 113,
+  "goals": 0,
+  "lfchId": 806,
+  "id": "bob-pursell"
+ },
+ {
+  "name": "Bobby Campbell",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1958,
+    1960
+   ]
+  ],
+  "apps": 25,
+  "goals": 2,
+  "lfchId": 276,
+  "id": "bobby-campbell"
+ },
+ {
+  "name": "Bobby Clark",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2022,
+    2024
+   ]
+  ],
+  "apps": 14,
+  "goals": 1,
+  "lfchId": 1403,
+  "id": "bobby-clark"
+ },
+ {
+  "name": "Bobby Graham",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1961,
+    1972
+   ]
+  ],
+  "apps": 137,
+  "goals": 42,
+  "lfchId": 307,
+  "id": "bobby-graham"
+ },
+ {
+  "name": "Bobby Marshall",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1897,
+    1898
+   ]
+  ],
+  "apps": 21,
+  "goals": 2,
+  "lfchId": 726,
+  "id": "bobby-marshall"
+ },
+ {
+  "name": "Bobby Murdoch",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1957,
+    1959
+   ]
+  ],
+  "apps": 19,
+  "goals": 7,
+  "lfchId": 775,
+  "id": "bobby-murdoch"
+ },
+ {
+  "name": "Boudewijn Zenden",
+  "nationality": "Netherlands",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2005,
+    2007
+   ]
+  ],
+  "apps": 47,
+  "goals": 2,
+  "lfchId": 1129,
+  "id": "boudewijn-zenden"
+ },
+ {
+  "name": "Brad Friedel",
+  "nationality": "United States",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1998,
+    1999
+   ]
+  ],
+  "apps": 31,
+  "goals": 0,
+  "lfchId": 302,
+  "id": "brad-friedel"
+ },
+ {
+  "name": "Brad Jones",
+  "nationality": "Australia",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2010,
+    2014
+   ]
+  ],
+  "apps": 27,
+  "goals": 0,
+  "lfchId": 1223,
+  "id": "brad-jones"
+ },
+ {
+  "name": "Brad Smith",
+  "nationality": "Australia",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2013,
+    2016
+   ]
+  ],
+  "apps": 11,
+  "goals": 1,
+  "lfchId": 1266,
+  "id": "brad-smith"
+ },
+ {
+  "name": "Brian Hall",
+  "nationality": "Scotland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1968,
+    1976
+   ]
+  ],
+  "apps": 224,
+  "goals": 21,
+  "lfchId": 309,
+  "id": "brian-hall"
+ },
+ {
+  "name": "Brian Jackson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1951,
+    1958
+   ]
+  ],
+  "apps": 133,
+  "goals": 11,
+  "lfchId": 684,
+  "id": "brian-jackson"
+ },
+ {
+  "name": "Brian Kettle",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1975,
+    1977
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 345,
+  "id": "brian-kettle"
+ },
+ {
+  "name": "Brian Mooney",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1986,
+    1986
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 382,
+  "id": "brian-mooney"
+ },
+ {
+  "name": "Bruce Grobbelaar",
+  "nationality": "Zimbabwe",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1981,
+    1994
+   ]
+  ],
+  "apps": 628,
+  "goals": 0,
+  "lfchId": 308,
+  "id": "bruce-grobbelaar"
+ },
+ {
+  "name": "Bruno Cheyrou",
+  "nationality": "France",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2002,
+    2004
+   ]
+  ],
+  "apps": 48,
+  "goals": 5,
+  "lfchId": 280,
+  "id": "bruno-cheyrou"
+ },
+ {
+  "name": "Bryan Williams",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1949,
+    1953
+   ]
+  ],
+  "apps": 34,
+  "goals": 5,
+  "lfchId": 886,
+  "id": "bryan-williams"
+ },
+ {
+  "name": "Calum Scanlon",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2023,
+    2026
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 2418,
+  "id": "calum-scanlon"
+ },
+ {
+  "name": "Calvin Ramsay",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2022,
+    2026
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 1400,
+  "id": "calvin-ramsay"
+ },
+ {
+  "name": "Cameron Brannagan",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2015,
+    2016
+   ]
+  ],
+  "apps": 9,
+  "goals": 0,
+  "lfchId": 1268,
+  "id": "cameron-brannagan"
+ },
+ {
+  "name": "Caoimhín Kelleher",
+  "nationality": "Republic of Ireland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2019,
+    2025
+   ]
+  ],
+  "apps": 67,
+  "goals": 0,
+  "lfchId": 1334,
+  "id": "caoimhin-kelleher"
+ },
+ {
+  "name": "Charles Cotton",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1904,
+    1904
+   ]
+  ],
+  "apps": 12,
+  "goals": 0,
+  "lfchId": 585,
+  "id": "charles-cotton"
+ },
+ {
+  "name": "Charles Itandje",
+  "nationality": "France",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2007,
+    2008
+   ]
+  ],
+  "apps": 7,
+  "goals": 0,
+  "lfchId": 1168,
+  "id": "charles-itandje"
+ },
+ {
+  "name": "Charlie Adam",
+  "nationality": "Scotland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2011,
+    2012
+   ]
+  ],
+  "apps": 37,
+  "goals": 2,
+  "lfchId": 1235,
+  "id": "charlie-adam"
+ },
+ {
+  "name": "Charlie Ashcroft",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1946,
+    1955
+   ]
+  ],
+  "apps": 89,
+  "goals": 0,
+  "lfchId": 525,
+  "id": "charlie-ashcroft"
+ },
+ {
+  "name": "Charlie Hafekost",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1914,
+    1914
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 647,
+  "id": "charlie-hafekost"
+ },
+ {
+  "name": "Charlie Hewitt",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1907,
+    1908
+   ]
+  ],
+  "apps": 16,
+  "goals": 6,
+  "lfchId": 663,
+  "id": "charlie-hewitt"
+ },
+ {
+  "name": "Charlie Jowitt",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1897,
+    1897
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 695,
+  "id": "charlie-jowitt"
+ },
+ {
+  "name": "Charlie Satterthwaite",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1899,
+    1901
+   ]
+  ],
+  "apps": 45,
+  "goals": 13,
+  "lfchId": 828,
+  "id": "charlie-satterthwaite"
+ },
+ {
+  "name": "Charlie Thompson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1930,
+    1931
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 867,
+  "id": "charlie-thompson"
+ },
+ {
+  "name": "Charlie Wilson",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1898,
+    1905
+   ]
+  ],
+  "apps": 91,
+  "goals": 3,
+  "lfchId": 887,
+  "id": "charlie-wilson"
+ },
+ {
+  "name": "Chris Fagan",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1970,
+    1971
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 297,
+  "id": "chris-fagan"
+ },
+ {
+  "name": "Chris Harrington",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1921,
+    1921
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 654,
+  "id": "chris-harrington"
+ },
+ {
+  "name": "Chris Kirkland",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2000,
+    2004
+   ]
+  ],
+  "apps": 45,
+  "goals": 0,
+  "lfchId": 347,
+  "id": "chris-kirkland"
+ },
+ {
+  "name": "Chris Lawler",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1960,
+    1975
+   ]
+  ],
+  "apps": 549,
+  "goals": 61,
+  "lfchId": 352,
+  "id": "chris-lawler"
+ },
+ {
+  "name": "Christian Benteke",
+  "nationality": "Belgium",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2015,
+    2016
+   ]
+  ],
+  "apps": 42,
+  "goals": 10,
+  "lfchId": 1289,
+  "id": "christian-benteke"
+ },
+ {
+  "name": "Christian Poulsen",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2010,
+    2011
+   ]
+  ],
+  "apps": 21,
+  "goals": 0,
+  "lfchId": 1222,
+  "id": "christian-poulsen"
+ },
+ {
+  "name": "Christian Ziege",
+  "nationality": "Germany",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2000,
+    2001
+   ]
+  ],
+  "apps": 32,
+  "goals": 2,
+  "lfchId": 451,
+  "id": "christian-ziege"
+ },
+ {
+  "name": "Cody Gakpo",
+  "nationality": "Netherlands",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2023,
+    2026
+   ]
+  ],
+  "apps": 180,
+  "goals": 50,
+  "lfchId": 1409,
+  "id": "cody-gakpo"
+ },
+ {
+  "name": "Colin Irwin",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1979,
+    1981
+   ]
+  ],
+  "apps": 44,
+  "goals": 3,
+  "lfchId": 332,
+  "id": "colin-irwin"
+ },
+ {
+  "name": "Colin Russell",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1981,
+    1981
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 405,
+  "id": "colin-russell"
+ },
+ {
+  "name": "Connor Randall",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2015,
+    2017
+   ]
+  ],
+  "apps": 8,
+  "goals": 0,
+  "lfchId": 1292,
+  "id": "connor-randall"
+ },
+ {
+  "name": "Conor Bradley",
+  "nationality": "Northern Ireland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2021,
+    2026
+   ]
+  ],
+  "apps": 78,
+  "goals": 1,
+  "lfchId": 1387,
+  "id": "conor-bradley"
+ },
+ {
+  "name": "Conor Coady",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2012,
+    2013
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1232,
+  "id": "conor-coady"
+ },
+ {
+  "name": "Craig Bellamy",
+  "nationality": "Wales",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2006,
+    2007
+   ],
+   [
+    2011,
+    2012
+   ]
+  ],
+  "apps": 78,
+  "goals": 18,
+  "lfchId": 1156,
+  "id": "craig-bellamy"
+ },
+ {
+  "name": "Craig Johnston",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1981,
+    1988
+   ]
+  ],
+  "apps": 271,
+  "goals": 40,
+  "lfchId": 335,
+  "id": "craig-johnston"
+ },
+ {
+  "name": "Curtis Jones",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2019,
+    2026
+   ]
+  ],
+  "apps": 228,
+  "goals": 22,
+  "lfchId": 1322,
+  "id": "curtis-jones"
+ },
+ {
+  "name": "Cyril Done",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1938,
+    1952
+   ]
+  ],
+  "apps": 110,
+  "goals": 36,
+  "lfchId": 604,
+  "id": "cyril-done"
+ },
+ {
+  "name": "Cyril Gilhespy",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1922,
+    1925
+   ]
+  ],
+  "apps": 19,
+  "goals": 3,
+  "lfchId": 629,
+  "id": "cyril-gilhespy"
+ },
+ {
+  "name": "Cyril Oxley",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1925,
+    1926
+   ]
+  ],
+  "apps": 34,
+  "goals": 6,
+  "lfchId": 783,
+  "id": "cyril-oxley"
+ },
+ {
+  "name": "Cyril Sidlow",
+  "nationality": "Wales",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1946,
+    1952
+   ]
+  ],
+  "apps": 165,
+  "goals": 0,
+  "lfchId": 844,
+  "id": "cyril-sidlow"
+ },
+ {
+  "name": "Damien Plessis",
+  "nationality": "France",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2008,
+    2009
+   ]
+  ],
+  "apps": 8,
+  "goals": 1,
+  "lfchId": 1196,
+  "id": "damien-plessis"
+ },
+ {
+  "name": "Dan Cunliffe",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1897,
+    1898
+   ]
+  ],
+  "apps": 18,
+  "goals": 6,
+  "lfchId": 591,
+  "id": "dan-cunliffe"
+ },
+ {
+  "name": "Daniel Agger",
+  "nationality": "Denmark",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2006,
+    2014
+   ]
+  ],
+  "apps": 232,
+  "goals": 14,
+  "lfchId": 1146,
+  "id": "daniel-agger"
+ },
+ {
+  "name": "Daniel Ayala",
+  "nationality": "Spain",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2009,
+    2010
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 1187,
+  "id": "daniel-ayala"
+ },
+ {
+  "name": "Daniel Pacheco",
+  "nationality": "Spain",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2009,
+    2012
+   ]
+  ],
+  "apps": 16,
+  "goals": 0,
+  "lfchId": 724,
+  "id": "daniel-pacheco"
+ },
+ {
+  "name": "Daniel Sturridge",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2013,
+    2019
+   ]
+  ],
+  "apps": 160,
+  "goals": 67,
+  "lfchId": 1207,
+  "id": "daniel-sturridge"
+ },
+ {
+  "name": "Daniele Padelli",
+  "nationality": "Italy",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2007,
+    2007
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1170,
+  "id": "daniele-padelli"
+ },
+ {
+  "name": "Danny Guthrie",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2006,
+    2007
+   ]
+  ],
+  "apps": 7,
+  "goals": 0,
+  "lfchId": 1166,
+  "id": "danny-guthrie"
+ },
+ {
+  "name": "Danny Ings",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2015,
+    2018
+   ]
+  ],
+  "apps": 25,
+  "goals": 4,
+  "lfchId": 1286,
+  "id": "danny-ings"
+ },
+ {
+  "name": "Danny McRorie",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1930,
+    1932
+   ]
+  ],
+  "apps": 35,
+  "goals": 6,
+  "lfchId": 761,
+  "id": "danny-mcrorie"
+ },
+ {
+  "name": "Danny Murphy",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1997,
+    2004
+   ]
+  ],
+  "apps": 249,
+  "goals": 44,
+  "lfchId": 386,
+  "id": "danny-murphy"
+ },
+ {
+  "name": "Danny Shone",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1921,
+    1925
+   ]
+  ],
+  "apps": 81,
+  "goals": 26,
+  "lfchId": 843,
+  "id": "danny-shone"
+ },
+ {
+  "name": "Danny Ward",
+  "nationality": "Unknown",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2016,
+    2017
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 1251,
+  "id": "danny-ward"
+ },
+ {
+  "name": "Danny Wilson",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2010,
+    2011
+   ]
+  ],
+  "apps": 9,
+  "goals": 0,
+  "lfchId": 1216,
+  "id": "danny-wilson"
+ },
+ {
+  "name": "Darren Potter",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2004,
+    2005
+   ]
+  ],
+  "apps": 17,
+  "goals": 0,
+  "lfchId": 504,
+  "id": "darren-potter"
+ },
+ {
+  "name": "Darwin Núñez",
+  "nationality": "Uruguay",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2022,
+    2025
+   ]
+  ],
+  "apps": 143,
+  "goals": 40,
+  "lfchId": 1398,
+  "id": "darwin-nunez"
+ },
+ {
+  "name": "Dave Davidson",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1928,
+    1930
+   ]
+  ],
+  "apps": 62,
+  "goals": 2,
+  "lfchId": 595,
+  "id": "dave-davidson"
+ },
+ {
+  "name": "Dave Rylands",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1974,
+    1974
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 484,
+  "id": "dave-rylands"
+ },
+ {
+  "name": "Dave Underwood",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1953,
+    1956
+   ]
+  ],
+  "apps": 50,
+  "goals": 0,
+  "lfchId": 870,
+  "id": "dave-underwood"
+ },
+ {
+  "name": "Dave Wilson",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1967,
+    1967
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 446,
+  "id": "dave-wilson"
+ },
+ {
+  "name": "Dave Wright",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1930,
+    1934
+   ]
+  ],
+  "apps": 100,
+  "goals": 35,
+  "lfchId": 891,
+  "id": "dave-wright"
+ },
+ {
+  "name": "David A. Wilson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1899,
+    1899
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 888,
+  "id": "david-a-wilson"
+ },
+ {
+  "name": "David Amoo",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2010,
+    2010
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1219,
+  "id": "david-amoo"
+ },
+ {
+  "name": "David Burrows",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1988,
+    1993
+   ]
+  ],
+  "apps": 193,
+  "goals": 3,
+  "lfchId": 272,
+  "id": "david-burrows"
+ },
+ {
+  "name": "David Fairclough",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1974,
+    1983
+   ]
+  ],
+  "apps": 154,
+  "goals": 55,
+  "lfchId": 298,
+  "id": "david-fairclough"
+ },
+ {
+  "name": "David Hannah",
+  "nationality": "Ireland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1894,
+    1897
+   ]
+  ],
+  "apps": 33,
+  "goals": 12,
+  "lfchId": 650,
+  "id": "david-hannah"
+ },
+ {
+  "name": "David Henderson",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1893,
+    1894
+   ]
+  ],
+  "apps": 23,
+  "goals": 12,
+  "lfchId": 660,
+  "id": "david-henderson"
+ },
+ {
+  "name": "David Hodgson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1982,
+    1984
+   ]
+  ],
+  "apps": 49,
+  "goals": 10,
+  "lfchId": 321,
+  "id": "david-hodgson"
+ },
+ {
+  "name": "David James",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1992,
+    1999
+   ]
+  ],
+  "apps": 277,
+  "goals": 0,
+  "lfchId": 333,
+  "id": "david-james"
+ },
+ {
+  "name": "David Johnson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1976,
+    1982
+   ]
+  ],
+  "apps": 213,
+  "goals": 78,
+  "lfchId": 334,
+  "id": "david-johnson"
+ },
+ {
+  "name": "David McMullan",
+  "nationality": "Ireland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1925,
+    1928
+   ]
+  ],
+  "apps": 35,
+  "goals": 0,
+  "lfchId": 750,
+  "id": "david-mcmullan"
+ },
+ {
+  "name": "David Murray",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1904,
+    1905
+   ]
+  ],
+  "apps": 15,
+  "goals": 0,
+  "lfchId": 777,
+  "id": "david-murray"
+ },
+ {
+  "name": "David Ngog",
+  "nationality": "France",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2008,
+    2011
+   ]
+  ],
+  "apps": 94,
+  "goals": 19,
+  "lfchId": 1145,
+  "id": "david-ngog"
+ },
+ {
+  "name": "David Pratt",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1923,
+    1927
+   ]
+  ],
+  "apps": 84,
+  "goals": 1,
+  "lfchId": 803,
+  "id": "david-pratt"
+ },
+ {
+  "name": "David Raven",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2004,
+    2005
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 930,
+  "id": "david-raven"
+ },
+ {
+  "name": "David Speedie",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1991,
+    1991
+   ]
+  ],
+  "apps": 14,
+  "goals": 6,
+  "lfchId": 417,
+  "id": "david-speedie"
+ },
+ {
+  "name": "David Thompson",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1996,
+    2000
+   ]
+  ],
+  "apps": 56,
+  "goals": 5,
+  "lfchId": 426,
+  "id": "david-thompson"
+ },
+ {
+  "name": "Dean Saunders",
+  "nationality": "Wales",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1991,
+    1992
+   ]
+  ],
+  "apps": 61,
+  "goals": 25,
+  "lfchId": 406,
+  "id": "dean-saunders"
+ },
+ {
+  "name": "Dejan Lovren",
+  "nationality": "Croatia",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2014,
+    2020
+   ]
+  ],
+  "apps": 185,
+  "goals": 8,
+  "lfchId": 1275,
+  "id": "dejan-lovren"
+ },
+ {
+  "name": "Derek Brownbill",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1973,
+    1973
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 271,
+  "id": "derek-brownbill"
+ },
+ {
+  "name": "Dick Allman",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1909,
+    1909
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 522,
+  "id": "dick-allman"
+ },
+ {
+  "name": "Dick Edmed",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1926,
+    1932
+   ]
+  ],
+  "apps": 170,
+  "goals": 46,
+  "lfchId": 611,
+  "id": "dick-edmed"
+ },
+ {
+  "name": "Dick Forshaw",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1919,
+    1927
+   ]
+  ],
+  "apps": 288,
+  "goals": 123,
+  "lfchId": 622,
+  "id": "dick-forshaw"
+ },
+ {
+  "name": "Dick Johnson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1920,
+    1925
+   ]
+  ],
+  "apps": 82,
+  "goals": 30,
+  "lfchId": 688,
+  "id": "dick-johnson"
+ },
+ {
+  "name": "Dick White",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1955,
+    1962
+   ]
+  ],
+  "apps": 217,
+  "goals": 1,
+  "lfchId": 443,
+  "id": "dick-white"
+ },
+ {
+  "name": "Dickie Morris",
+  "nationality": "Wales",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1902,
+    1905
+   ]
+  ],
+  "apps": 39,
+  "goals": 5,
+  "lfchId": 772,
+  "id": "dickie-morris"
+ },
+ {
+  "name": "Diego Cavalieri",
+  "nationality": "Brazil",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2008,
+    2010
+   ]
+  ],
+  "apps": 10,
+  "goals": 0,
+  "lfchId": 1199,
+  "id": "diego-cavalieri"
+ },
+ {
+  "name": "Dietmar Hamann",
+  "nationality": "Germany",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1999,
+    2006
+   ]
+  ],
+  "apps": 283,
+  "goals": 11,
+  "lfchId": 310,
+  "id": "dietmar-hamann"
+ },
+ {
+  "name": "Diogo Jota",
+  "nationality": "Portugal",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2020,
+    2025
+   ]
+  ],
+  "apps": 182,
+  "goals": 65,
+  "lfchId": 1373,
+  "id": "diogo-jota"
+ },
+ {
+  "name": "Dirk Kemp",
+  "nationality": "South Africa",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1937,
+    1939
+   ]
+  ],
+  "apps": 30,
+  "goals": 0,
+  "lfchId": 703,
+  "id": "dirk-kemp"
+ },
+ {
+  "name": "Dirk Kuyt",
+  "nationality": "Netherlands",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2006,
+    2012
+   ]
+  ],
+  "apps": 285,
+  "goals": 71,
+  "lfchId": 1162,
+  "id": "dirk-kuyt"
+ },
+ {
+  "name": "Divock Origi",
+  "nationality": "Belgium",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2015,
+    2022
+   ]
+  ],
+  "apps": 175,
+  "goals": 41,
+  "lfchId": 1276,
+  "id": "divock-origi"
+ },
+ {
+  "name": "Djibril Cissé",
+  "nationality": "France",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2004,
+    2006
+   ]
+  ],
+  "apps": 79,
+  "goals": 24,
+  "lfchId": 898,
+  "id": "djibril-cisse"
+ },
+ {
+  "name": "Djimi Traoré",
+  "nationality": "Mali",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1999,
+    2006
+   ]
+  ],
+  "apps": 141,
+  "goals": 1,
+  "lfchId": 430,
+  "id": "djimi-traore"
+ },
+ {
+  "name": "Dominic Matteo",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1992,
+    2000
+   ]
+  ],
+  "apps": 155,
+  "goals": 2,
+  "lfchId": 366,
+  "id": "dominic-matteo"
+ },
+ {
+  "name": "Dominic Solanke",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2017,
+    2018
+   ]
+  ],
+  "apps": 27,
+  "goals": 1,
+  "lfchId": 1319,
+  "id": "dominic-solanke"
+ },
+ {
+  "name": "Dominik Szoboszlai",
+  "nationality": "Hungary",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2023,
+    2026
+   ]
+  ],
+  "apps": 147,
+  "goals": 28,
+  "lfchId": 1410,
+  "id": "dominik-szoboszlai"
+ },
+ {
+  "name": "Don Campbell",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1953,
+    1958
+   ]
+  ],
+  "apps": 48,
+  "goals": 2,
+  "lfchId": 564,
+  "id": "don-campbell"
+ },
+ {
+  "name": "Don Hutchison",
+  "nationality": "Scotland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1992,
+    1994
+   ]
+  ],
+  "apps": 60,
+  "goals": 10,
+  "lfchId": 327,
+  "id": "don-hutchison"
+ },
+ {
+  "name": "Don Sloan",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1908,
+    1909
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 845,
+  "id": "don-sloan"
+ },
+ {
+  "name": "Don Woan",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1951,
+    1951
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 889,
+  "id": "don-woan"
+ },
+ {
+  "name": "Donald Mackinlay",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1910,
+    1929
+   ]
+  ],
+  "apps": 434,
+  "goals": 34,
+  "lfchId": 899,
+  "id": "donald-mackinlay"
+ },
+ {
+  "name": "Donald McCallum",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1902,
+    1903
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 732,
+  "id": "donald-mccallum"
+ },
+ {
+  "name": "Doni",
+  "nationality": "Brazil",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2012,
+    2013
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 1236,
+  "id": "doni"
+ },
+ {
+  "name": "Doug Livermore",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1968,
+    1970
+   ]
+  ],
+  "apps": 18,
+  "goals": 0,
+  "lfchId": 362,
+  "id": "doug-livermore"
+ },
+ {
+  "name": "Doug McAvoy",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1948,
+    1948
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 729,
+  "id": "doug-mcavoy"
+ },
+ {
+  "name": "Doug Rudham",
+  "nationality": "South Africa",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1954,
+    1959
+   ]
+  ],
+  "apps": 66,
+  "goals": 0,
+  "lfchId": 402,
+  "id": "doug-rudham"
+ },
+ {
+  "name": "Douglas Dick",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1893,
+    1894
+   ]
+  ],
+  "apps": 11,
+  "goals": 2,
+  "lfchId": 600,
+  "id": "douglas-dick"
+ },
+ {
+  "name": "Duncan McLean",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1892,
+    1895
+   ]
+  ],
+  "apps": 82,
+  "goals": 5,
+  "lfchId": 746,
+  "id": "duncan-mclean"
+ },
+ {
+  "name": "Eddie Spicer",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1939,
+    1954
+   ]
+  ],
+  "apps": 168,
+  "goals": 2,
+  "lfchId": 855,
+  "id": "eddie-spicer"
+ },
+ {
+  "name": "Edgar Chadwick",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1902,
+    1904
+   ]
+  ],
+  "apps": 45,
+  "goals": 7,
+  "lfchId": 570,
+  "id": "edgar-chadwick"
+ },
+ {
+  "name": "Edmund Crawford",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1932,
+    1933
+   ]
+  ],
+  "apps": 8,
+  "goals": 4,
+  "lfchId": 588,
+  "id": "edmund-crawford"
+ },
+ {
+  "name": "Edward Parry",
+  "nationality": "Unknown",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1921,
+    1925
+   ]
+  ],
+  "apps": 13,
+  "goals": 0,
+  "lfchId": 790,
+  "id": "edward-parry"
+ },
+ {
+  "name": "El Hadji Diouf",
+  "nationality": "Senegal",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2002,
+    2004
+   ]
+  ],
+  "apps": 80,
+  "goals": 6,
+  "lfchId": 291,
+  "id": "el-hadji-diouf"
+ },
+ {
+  "name": "Elijah Dixon-Bonner",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2020,
+    2022
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 1357,
+  "id": "elijah-dixon-bonner"
+ },
+ {
+  "name": "Elisha Scott",
+  "nationality": "Ireland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1912,
+    1934
+   ]
+  ],
+  "apps": 468,
+  "goals": 0,
+  "lfchId": 833,
+  "id": "elisha-scott"
+ },
+ {
+  "name": "Emile Heskey",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2000,
+    2004
+   ]
+  ],
+  "apps": 223,
+  "goals": 60,
+  "lfchId": 318,
+  "id": "emile-heskey"
+ },
+ {
+  "name": "Emiliano Insúa",
+  "nationality": "Argentina",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2007,
+    2010
+   ]
+  ],
+  "apps": 62,
+  "goals": 1,
+  "lfchId": 1167,
+  "id": "emiliano-insua"
+ },
+ {
+  "name": "Emlyn Hughes",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1967,
+    1979
+   ]
+  ],
+  "apps": 665,
+  "goals": 49,
+  "lfchId": 324,
+  "id": "emlyn-hughes"
+ },
+ {
+  "name": "Emre Can",
+  "nationality": "Germany",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2014,
+    2018
+   ]
+  ],
+  "apps": 167,
+  "goals": 14,
+  "lfchId": 1272,
+  "id": "emre-can"
+ },
+ {
+  "name": "Ephraim Longworth",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1910,
+    1928
+   ]
+  ],
+  "apps": 370,
+  "goals": 0,
+  "lfchId": 719,
+  "id": "ephraim-longworth"
+ },
+ {
+  "name": "Eric Anderson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1953,
+    1956
+   ]
+  ],
+  "apps": 76,
+  "goals": 22,
+  "lfchId": 523,
+  "id": "eric-anderson"
+ },
+ {
+  "name": "Erik Meijer",
+  "nationality": "Netherlands",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1999,
+    2000
+   ]
+  ],
+  "apps": 27,
+  "goals": 2,
+  "lfchId": 375,
+  "id": "erik-meijer"
+ },
+ {
+  "name": "Ernest Peake",
+  "nationality": "Wales",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1909,
+    1914
+   ]
+  ],
+  "apps": 55,
+  "goals": 6,
+  "lfchId": 794,
+  "id": "ernest-peake"
+ },
+ {
+  "name": "Ernie Blenkinsop",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1934,
+    1937
+   ]
+  ],
+  "apps": 71,
+  "goals": 0,
+  "lfchId": 541,
+  "id": "ernie-blenkinsop"
+ },
+ {
+  "name": "Fabinho",
+  "nationality": "Brazil",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2018,
+    2023
+   ]
+  ],
+  "apps": 219,
+  "goals": 11,
+  "lfchId": 1325,
+  "id": "fabinho"
+ },
+ {
+  "name": "Fábio Aurélio",
+  "nationality": "Brazil",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2006,
+    2012
+   ]
+  ],
+  "apps": 134,
+  "goals": 4,
+  "lfchId": 1157,
+  "id": "fabio-aurelio"
+ },
+ {
+  "name": "Fabio Borini",
+  "nationality": "Italy",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2012,
+    2015
+   ]
+  ],
+  "apps": 38,
+  "goals": 3,
+  "lfchId": 1239,
+  "id": "fabio-borini"
+ },
+ {
+  "name": "Fábio Carvalho",
+  "nationality": "Portugal",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2022,
+    2023
+   ]
+  ],
+  "apps": 21,
+  "goals": 3,
+  "lfchId": 1399,
+  "id": "fabio-carvalho"
+ },
+ {
+  "name": "Federico Chiesa",
+  "nationality": "Italy",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2024,
+    2026
+   ]
+  ],
+  "apps": 50,
+  "goals": 5,
+  "lfchId": 2425,
+  "id": "federico-chiesa"
+ },
+ {
+  "name": "Fernando Morientes",
+  "nationality": "Spain",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2005,
+    2006
+   ]
+  ],
+  "apps": 61,
+  "goals": 12,
+  "lfchId": 934,
+  "id": "fernando-morientes"
+ },
+ {
+  "name": "Fernando Torres",
+  "nationality": "Spain",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2007,
+    2011
+   ]
+  ],
+  "apps": 142,
+  "goals": 81,
+  "lfchId": 1186,
+  "id": "fernando-torres"
+ },
+ {
+  "name": "Florent Sinama Pongolle",
+  "nationality": "France",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2003,
+    2006
+   ]
+  ],
+  "apps": 66,
+  "goals": 9,
+  "lfchId": 503,
+  "id": "florent-sinama-pongolle"
+ },
+ {
+  "name": "Florian Wirtz",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 49,
+  "goals": 7,
+  "lfchId": 2432,
+  "id": "florian-wirtz"
+ },
+ {
+  "name": "Francis Checkland",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1921,
+    1921
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 574,
+  "id": "francis-checkland"
+ },
+ {
+  "name": "Frank Becton",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1895,
+    1898
+   ]
+  ],
+  "apps": 86,
+  "goals": 42,
+  "lfchId": 536,
+  "id": "frank-becton"
+ },
+ {
+  "name": "Frank Christie",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1950,
+    1950
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 577,
+  "id": "frank-christie"
+ },
+ {
+  "name": "Frank Grayer",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1914,
+    1914
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 642,
+  "id": "frank-grayer"
+ },
+ {
+  "name": "Frank Lock",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1953,
+    1955
+   ]
+  ],
+  "apps": 42,
+  "goals": 0,
+  "lfchId": 718,
+  "id": "frank-lock"
+ },
+ {
+  "name": "Frank Mitchell",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1921,
+    1921
+   ]
+  ],
+  "apps": 18,
+  "goals": 0,
+  "lfchId": 770,
+  "id": "frank-mitchell"
+ },
+ {
+  "name": "Frankie Lane",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1972,
+    1972
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 351,
+  "id": "frankie-lane"
+ },
+ {
+  "name": "Fred Baron",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1925,
+    1927
+   ]
+  ],
+  "apps": 20,
+  "goals": 7,
+  "lfchId": 530,
+  "id": "fred-baron"
+ },
+ {
+  "name": "Fred Buck",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1903,
+    1904
+   ]
+  ],
+  "apps": 13,
+  "goals": 1,
+  "lfchId": 554,
+  "id": "fred-buck"
+ },
+ {
+  "name": "Fred Finney",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1946,
+    1946
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 904,
+  "id": "fred-finney"
+ },
+ {
+  "name": "Fred Hopkin",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1921,
+    1931
+   ]
+  ],
+  "apps": 360,
+  "goals": 12,
+  "lfchId": 673,
+  "id": "fred-hopkin"
+ },
+ {
+  "name": "Fred Howe",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1935,
+    1938
+   ]
+  ],
+  "apps": 94,
+  "goals": 36,
+  "lfchId": 674,
+  "id": "fred-howe"
+ },
+ {
+  "name": "Fred Morris",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1958,
+    1959
+   ]
+  ],
+  "apps": 48,
+  "goals": 14,
+  "lfchId": 384,
+  "id": "fred-morris"
+ },
+ {
+  "name": "Fred Nickson",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1946,
+    1946
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 780,
+  "id": "fred-nickson"
+ },
+ {
+  "name": "Fred Pagnam",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1914,
+    1919
+   ]
+  ],
+  "apps": 39,
+  "goals": 30,
+  "lfchId": 784,
+  "id": "fred-pagnam"
+ },
+ {
+  "name": "Fred Perry",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1955,
+    1955
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 799,
+  "id": "fred-perry"
+ },
+ {
+  "name": "Fred Rogers",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1934,
+    1939
+   ]
+  ],
+  "apps": 75,
+  "goals": 0,
+  "lfchId": 820,
+  "id": "fred-rogers"
+ },
+ {
+  "name": "Fred Staniforth",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1913,
+    1913
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 856,
+  "id": "fred-staniforth"
+ },
+ {
+  "name": "Fred Tomley",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1955,
+    1955
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 868,
+  "id": "fred-tomley"
+ },
+ {
+  "name": "Freddie Woodman",
+  "nationality": "Unknown",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 2435,
+  "id": "freddie-woodman"
+ },
+ {
+  "name": "Frode Kippe",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1999,
+    2001
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 348,
+  "id": "frode-kippe"
+ },
+ {
+  "name": "Gabriel Paletta",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2006,
+    2007
+   ]
+  ],
+  "apps": 8,
+  "goals": 1,
+  "lfchId": 1158,
+  "id": "gabriel-paletta"
+ },
+ {
+  "name": "Gary Ablett",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1983,
+    1992
+   ]
+  ],
+  "apps": 147,
+  "goals": 1,
+  "lfchId": 250,
+  "id": "gary-ablett"
+ },
+ {
+  "name": "Gary Gillespie",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1983,
+    1991
+   ]
+  ],
+  "apps": 214,
+  "goals": 16,
+  "lfchId": 306,
+  "id": "gary-gillespie"
+ },
+ {
+  "name": "Gary McAllister",
+  "nationality": "Scotland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2000,
+    2002
+   ]
+  ],
+  "apps": 87,
+  "goals": 9,
+  "lfchId": 367,
+  "id": "gary-mcallister"
+ },
+ {
+  "name": "General Stevenson",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1898,
+    1899
+   ]
+  ],
+  "apps": 22,
+  "goals": 0,
+  "lfchId": 858,
+  "id": "general-stevenson"
+ },
+ {
+  "name": "Geoff Strong",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1964,
+    1970
+   ]
+  ],
+  "apps": 201,
+  "goals": 33,
+  "lfchId": 423,
+  "id": "geoff-strong"
+ },
+ {
+  "name": "Geoff Twentyman",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1953,
+    1960
+   ]
+  ],
+  "apps": 184,
+  "goals": 19,
+  "lfchId": 431,
+  "id": "geoff-twentyman"
+ },
+ {
+  "name": "George Allan",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1895,
+    1897
+   ],
+   [
+    1898,
+    1899
+   ]
+  ],
+  "apps": 96,
+  "goals": 58,
+  "lfchId": 521,
+  "id": "george-allan"
+ },
+ {
+  "name": "George Bowen",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1901,
+    1901
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 543,
+  "id": "george-bowen"
+ },
+ {
+  "name": "George Fleming",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1901,
+    1905
+   ]
+  ],
+  "apps": 82,
+  "goals": 6,
+  "lfchId": 621,
+  "id": "george-fleming"
+ },
+ {
+  "name": "George Latham",
+  "nationality": "Unknown",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1905,
+    1908
+   ]
+  ],
+  "apps": 19,
+  "goals": 0,
+  "lfchId": 710,
+  "id": "george-latham"
+ },
+ {
+  "name": "George Livingstone",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1902,
+    1903
+   ]
+  ],
+  "apps": 32,
+  "goals": 4,
+  "lfchId": 717,
+  "id": "george-livingstone"
+ },
+ {
+  "name": "George Paterson",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1938,
+    1939
+   ]
+  ],
+  "apps": 3,
+  "goals": 1,
+  "lfchId": 792,
+  "id": "george-paterson"
+ },
+ {
+  "name": "George Pither",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1927,
+    1928
+   ]
+  ],
+  "apps": 12,
+  "goals": 1,
+  "lfchId": 801,
+  "id": "george-pither"
+ },
+ {
+  "name": "George Whitworth",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1952,
+    1952
+   ]
+  ],
+  "apps": 9,
+  "goals": 0,
+  "lfchId": 884,
+  "id": "george-whitworth"
+ },
+ {
+  "name": "Georginio Wijnaldum",
+  "nationality": "Netherlands",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2016,
+    2021
+   ]
+  ],
+  "apps": 237,
+  "goals": 22,
+  "lfchId": 1310,
+  "id": "georginio-wijnaldum"
+ },
+ {
+  "name": "Gerard Dewhurst",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1894,
+    1894
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 599,
+  "id": "gerard-dewhurst"
+ },
+ {
+  "name": "Gerry Byrne",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1955,
+    1969
+   ]
+  ],
+  "apps": 333,
+  "goals": 4,
+  "lfchId": 273,
+  "id": "gerry-byrne"
+ },
+ {
+  "name": "Giorgi Mamardashvili",
+  "nationality": "Unknown",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 20,
+  "goals": 0,
+  "lfchId": 2424,
+  "id": "giorgi-mamardashvili"
+ },
+ {
+  "name": "Giovanni Leoni",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 2437,
+  "id": "giovanni-leoni"
+ },
+ {
+  "name": "Glen Johnson",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2009,
+    2015
+   ]
+  ],
+  "apps": 200,
+  "goals": 9,
+  "lfchId": 1136,
+  "id": "glen-johnson"
+ },
+ {
+  "name": "Glenn Hysén",
+  "nationality": "Sweden",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1989,
+    1992
+   ]
+  ],
+  "apps": 93,
+  "goals": 3,
+  "lfchId": 328,
+  "id": "glenn-hysen"
+ },
+ {
+  "name": "Gordon Gunson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1930,
+    1933
+   ]
+  ],
+  "apps": 87,
+  "goals": 26,
+  "lfchId": 646,
+  "id": "gordon-gunson"
+ },
+ {
+  "name": "Gordon Hodgson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1925,
+    1936
+   ]
+  ],
+  "apps": 377,
+  "goals": 241,
+  "lfchId": 669,
+  "id": "gordon-hodgson"
+ },
+ {
+  "name": "Gordon Milne",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1960,
+    1967
+   ]
+  ],
+  "apps": 282,
+  "goals": 18,
+  "lfchId": 377,
+  "id": "gordon-milne"
+ },
+ {
+  "name": "Gordon Wallace",
+  "nationality": "Scotland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1962,
+    1965
+   ]
+  ],
+  "apps": 22,
+  "goals": 6,
+  "lfchId": 435,
+  "id": "gordon-wallace"
+ },
+ {
+  "name": "Graeme Souness",
+  "nationality": "Scotland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1978,
+    1984
+   ]
+  ],
+  "apps": 359,
+  "goals": 55,
+  "lfchId": 415,
+  "id": "graeme-souness"
+ },
+ {
+  "name": "Gregory Vignal",
+  "nationality": "France",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2001,
+    2003
+   ]
+  ],
+  "apps": 20,
+  "goals": 0,
+  "lfchId": 433,
+  "id": "gregory-vignal"
+ },
+ {
+  "name": "Harman van den Berg",
+  "nationality": "Unknown",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1938,
+    1939
+   ]
+  ],
+  "apps": 19,
+  "goals": 3,
+  "lfchId": 872,
+  "id": "harman-van-den-berg"
+ },
+ {
+  "name": "Harold Barton",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1928,
+    1934
+   ]
+  ],
+  "apps": 109,
+  "goals": 29,
+  "lfchId": 532,
+  "id": "harold-barton"
+ },
+ {
+  "name": "Harold Fitzpatrick",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1907,
+    1907
+   ]
+  ],
+  "apps": 4,
+  "goals": 2,
+  "lfchId": 619,
+  "id": "harold-fitzpatrick"
+ },
+ {
+  "name": "Harold Jones",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1953,
+    1953
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 691,
+  "id": "harold-jones"
+ },
+ {
+  "name": "Harold Taylor",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1932,
+    1937
+   ]
+  ],
+  "apps": 72,
+  "goals": 6,
+  "lfchId": 864,
+  "id": "harold-taylor"
+ },
+ {
+  "name": "Harold Uren",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1907,
+    1912
+   ]
+  ],
+  "apps": 45,
+  "goals": 2,
+  "lfchId": 871,
+  "id": "harold-uren"
+ },
+ {
+  "name": "Harold Wadsworth",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1919,
+    1924
+   ]
+  ],
+  "apps": 55,
+  "goals": 3,
+  "lfchId": 873,
+  "id": "harold-wadsworth"
+ },
+ {
+  "name": "Harry Barkas",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1931,
+    1931
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 529,
+  "id": "harry-barkas"
+ },
+ {
+  "name": "Harry Beadles",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1921,
+    1923
+   ]
+  ],
+  "apps": 18,
+  "goals": 6,
+  "lfchId": 535,
+  "id": "harry-beadles"
+ },
+ {
+  "name": "Harry Bradshaw",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1893,
+    1898
+   ]
+  ],
+  "apps": 138,
+  "goals": 51,
+  "lfchId": 546,
+  "id": "harry-bradshaw"
+ },
+ {
+  "name": "Harry Chambers",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1915,
+    1928
+   ]
+  ],
+  "apps": 339,
+  "goals": 151,
+  "lfchId": 572,
+  "id": "harry-chambers"
+ },
+ {
+  "name": "Harry Griffiths",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1905,
+    1908
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 645,
+  "id": "harry-griffiths"
+ },
+ {
+  "name": "Harry Kaye",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1946,
+    1947
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 697,
+  "id": "harry-kaye"
+ },
+ {
+  "name": "Harry Kewell",
+  "nationality": "Australia",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2003,
+    2008
+   ]
+  ],
+  "apps": 139,
+  "goals": 16,
+  "lfchId": 492,
+  "id": "harry-kewell"
+ },
+ {
+  "name": "Harry Lewis",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1919,
+    1922
+   ]
+  ],
+  "apps": 70,
+  "goals": 12,
+  "lfchId": 714,
+  "id": "harry-lewis"
+ },
+ {
+  "name": "Harry Lowe",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1911,
+    1920
+   ]
+  ],
+  "apps": 136,
+  "goals": 20,
+  "lfchId": 721,
+  "id": "harry-lowe"
+ },
+ {
+  "name": "Harry McNaughton",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1920,
+    1920
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 753,
+  "id": "harry-mcnaughton"
+ },
+ {
+  "name": "Harry Storer",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1895,
+    1901
+   ],
+   [
+    1898,
+    1899
+   ]
+  ],
+  "apps": 121,
+  "goals": 0,
+  "lfchId": 860,
+  "id": "harry-storer"
+ },
+ {
+  "name": "Harry Welfare",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1913,
+    1913
+   ]
+  ],
+  "apps": 4,
+  "goals": 1,
+  "lfchId": 879,
+  "id": "harry-welfare"
+ },
+ {
+  "name": "Harry Wilson",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2017,
+    2020
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1314,
+  "id": "harry-wilson"
+ },
+ {
+  "name": "Harvey Blair",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2021,
+    2021
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1389,
+  "id": "harvey-blair"
+ },
+ {
+  "name": "Harvey Elliott",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2019,
+    2026
+   ]
+  ],
+  "apps": 149,
+  "goals": 15,
+  "lfchId": 1337,
+  "id": "harvey-elliott"
+ },
+ {
+  "name": "Hector Lawson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1924,
+    1924
+   ]
+  ],
+  "apps": 16,
+  "goals": 0,
+  "lfchId": 711,
+  "id": "hector-lawson"
+ },
+ {
+  "name": "Henry Race",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1928,
+    1930
+   ]
+  ],
+  "apps": 43,
+  "goals": 18,
+  "lfchId": 807,
+  "id": "henry-race"
+ },
+ {
+  "name": "Herbert Craik",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1903,
+    1903
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 587,
+  "id": "herbert-craik"
+ },
+ {
+  "name": "Herbert Leavey",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1910,
+    1911
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 712,
+  "id": "herbert-leavey"
+ },
+ {
+  "name": "Herbie Kane",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2019,
+    2019
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1344,
+  "id": "herbie-kane"
+ },
+ {
+  "name": "Howard Gayle",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1980,
+    1981
+   ]
+  ],
+  "apps": 5,
+  "goals": 1,
+  "lfchId": 304,
+  "id": "howard-gayle"
+ },
+ {
+  "name": "Hugh Gerhardi",
+  "nationality": "Unknown",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1953,
+    1953
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 628,
+  "id": "hugh-gerhardi"
+ },
+ {
+  "name": "Hugh Henderson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1894,
+    1894
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 661,
+  "id": "hugh-henderson"
+ },
+ {
+  "name": "Hugh Lester",
+  "nationality": "United States",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1912,
+    1912
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 713,
+  "id": "hugh-lester"
+ },
+ {
+  "name": "Hugh McQueen",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1892,
+    1895
+   ]
+  ],
+  "apps": 61,
+  "goals": 18,
+  "lfchId": 759,
+  "id": "hugh-mcqueen"
+ },
+ {
+  "name": "Hugh Morgan",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1898,
+    1900
+   ]
+  ],
+  "apps": 68,
+  "goals": 17,
+  "lfchId": 771,
+  "id": "hugh-morgan"
+ },
+ {
+  "name": "Hugo Ekitike",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 45,
+  "goals": 17,
+  "lfchId": 2434,
+  "id": "hugo-ekitike"
+ },
+ {
+  "name": "Ian Callaghan",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1960,
+    1978
+   ]
+  ],
+  "apps": 857,
+  "goals": 68,
+  "lfchId": 274,
+  "id": "ian-callaghan"
+ },
+ {
+  "name": "Ian Ross",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1967,
+    1972
+   ]
+  ],
+  "apps": 69,
+  "goals": 4,
+  "lfchId": 401,
+  "id": "ian-ross"
+ },
+ {
+  "name": "Ian Rush",
+  "nationality": "Wales",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1980,
+    1987
+   ],
+   [
+    1988,
+    1996
+   ]
+  ],
+  "apps": 660,
+  "goals": 346,
+  "lfchId": 404,
+  "id": "ian-rush"
+ },
+ {
+  "name": "Ian St. John",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1961,
+    1971
+   ]
+  ],
+  "apps": 425,
+  "goals": 118,
+  "lfchId": 419,
+  "id": "ian-st-john"
+ },
+ {
+  "name": "Ibrahima Konate",
+  "nationality": "France",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2021,
+    2026
+   ]
+  ],
+  "apps": 183,
+  "goals": 7,
+  "lfchId": 1383,
+  "id": "ibrahima-konate"
+ },
+ {
+  "name": "Igor Bišćan",
+  "nationality": "Croatia",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2000,
+    2005
+   ]
+  ],
+  "apps": 118,
+  "goals": 3,
+  "lfchId": 267,
+  "id": "igor-biscan"
+ },
+ {
+  "name": "Isaac Christie-Davies",
+  "nationality": "Wales",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2019,
+    2019
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1333,
+  "id": "isaac-christie-davies"
+ },
+ {
+  "name": "Isaac Mabaya",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1394,
+  "id": "isaac-mabaya"
+ },
+ {
+  "name": "István Kozma",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1992,
+    1992
+   ]
+  ],
+  "apps": 10,
+  "goals": 0,
+  "lfchId": 349,
+  "id": "istvan-kozma"
+ },
+ {
+  "name": "Jack Balmer",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1935,
+    1952
+   ]
+  ],
+  "apps": 309,
+  "goals": 110,
+  "lfchId": 526,
+  "id": "jack-balmer"
+ },
+ {
+  "name": "Jack Bamber",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1919,
+    1923
+   ]
+  ],
+  "apps": 80,
+  "goals": 2,
+  "lfchId": 527,
+  "id": "jack-bamber"
+ },
+ {
+  "name": "Jack Bearne",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2019,
+    2019
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1358,
+  "id": "jack-bearne"
+ },
+ {
+  "name": "Jack Chadburn",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1903,
+    1903
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 569,
+  "id": "jack-chadburn"
+ },
+ {
+  "name": "Jack Cox",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1898,
+    1909
+   ]
+  ],
+  "apps": 361,
+  "goals": 80,
+  "lfchId": 586,
+  "id": "jack-cox"
+ },
+ {
+  "name": "Jack Haigh",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1950,
+    1952
+   ]
+  ],
+  "apps": 11,
+  "goals": 3,
+  "lfchId": 896,
+  "id": "jack-haigh"
+ },
+ {
+  "name": "Jack Hobbs",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2007,
+    2007
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 1134,
+  "id": "jack-hobbs"
+ },
+ {
+  "name": "Jack Lipsham",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1906,
+    1907
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 716,
+  "id": "jack-lipsham"
+ },
+ {
+  "name": "Jack Parkinson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1902,
+    1914
+   ]
+  ],
+  "apps": 219,
+  "goals": 128,
+  "lfchId": 788,
+  "id": "jack-parkinson-1902"
+ },
+ {
+  "name": "Jack Parkinson",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1899,
+    1899
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 787,
+  "id": "jack-parkinson-1899"
+ },
+ {
+  "name": "Jack Roberts",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1933,
+    1933
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 815,
+  "id": "jack-roberts"
+ },
+ {
+  "name": "Jack Robinson",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2010,
+    2013
+   ]
+  ],
+  "apps": 11,
+  "goals": 0,
+  "lfchId": 1215,
+  "id": "jack-robinson"
+ },
+ {
+  "name": "Jack Sambrook",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1922,
+    1923
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 827,
+  "id": "jack-sambrook"
+ },
+ {
+  "name": "Jack Tennant",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1933,
+    1935
+   ]
+  ],
+  "apps": 42,
+  "goals": 0,
+  "lfchId": 866,
+  "id": "jack-tennant"
+ },
+ {
+  "name": "Jack Whitham",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1970,
+    1972
+   ]
+  ],
+  "apps": 18,
+  "goals": 7,
+  "lfchId": 444,
+  "id": "jack-whitham"
+ },
+ {
+  "name": "Jackie Sheldon",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1913,
+    1922
+   ]
+  ],
+  "apps": 147,
+  "goals": 20,
+  "lfchId": 839,
+  "id": "jackie-sheldon"
+ },
+ {
+  "name": "Jake Cain",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2020,
+    2020
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1367,
+  "id": "jake-cain"
+ },
+ {
+  "name": "James Bradley",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1905,
+    1911
+   ]
+  ],
+  "apps": 186,
+  "goals": 8,
+  "lfchId": 545,
+  "id": "james-bradley"
+ },
+ {
+  "name": "James Cameron",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1894,
+    1894
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 562,
+  "id": "james-cameron"
+ },
+ {
+  "name": "James Cleland",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1895,
+    1895
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 580,
+  "id": "james-cleland"
+ },
+ {
+  "name": "James Dawson",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1913,
+    1914
+   ]
+  ],
+  "apps": 14,
+  "goals": 3,
+  "lfchId": 597,
+  "id": "james-dawson"
+ },
+ {
+  "name": "James Garner",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1924,
+    1925
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 625,
+  "id": "james-garner"
+ },
+ {
+  "name": "James Garside",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1905,
+    1906
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 626,
+  "id": "james-garside"
+ },
+ {
+  "name": "James Gorman",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1906,
+    1908
+   ]
+  ],
+  "apps": 23,
+  "goals": 1,
+  "lfchId": 639,
+  "id": "james-gorman"
+ },
+ {
+  "name": "James Harrop",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1908,
+    1912
+   ]
+  ],
+  "apps": 139,
+  "goals": 4,
+  "lfchId": 655,
+  "id": "james-harrop"
+ },
+ {
+  "name": "James Henderson",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1893,
+    1893
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 662,
+  "id": "james-henderson"
+ },
+ {
+  "name": "James Hughes",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1904,
+    1909
+   ]
+  ],
+  "apps": 15,
+  "goals": 0,
+  "lfchId": 676,
+  "id": "james-hughes"
+ },
+ {
+  "name": "James Jackson",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1925,
+    1933
+   ]
+  ],
+  "apps": 224,
+  "goals": 2,
+  "lfchId": 685,
+  "id": "james-jackson"
+ },
+ {
+  "name": "James Kelso",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1892,
+    1892
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 701,
+  "id": "james-kelso"
+ },
+ {
+  "name": "James McBride",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1892,
+    1894
+   ]
+  ],
+  "apps": 56,
+  "goals": 7,
+  "lfchId": 731,
+  "id": "james-mcbride"
+ },
+ {
+  "name": "James McConnell",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2023,
+    2026
+   ]
+  ],
+  "apps": 12,
+  "goals": 0,
+  "lfchId": 1412,
+  "id": "james-mcconnell"
+ },
+ {
+  "name": "James Milner",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2015,
+    2023
+   ]
+  ],
+  "apps": 332,
+  "goals": 26,
+  "lfchId": 1285,
+  "id": "james-milner"
+ },
+ {
+  "name": "James Nicholl",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1914,
+    1915
+   ]
+  ],
+  "apps": 59,
+  "goals": 14,
+  "lfchId": 779,
+  "id": "james-nicholl"
+ },
+ {
+  "name": "James Norris",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2019,
+    2022
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1359,
+  "id": "james-norris"
+ },
+ {
+  "name": "James Penman",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1920,
+    1920
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 797,
+  "id": "james-penman"
+ },
+ {
+  "name": "James Scott",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1912,
+    1912
+   ]
+  ],
+  "apps": 10,
+  "goals": 0,
+  "lfchId": 834,
+  "id": "james-scott"
+ },
+ {
+  "name": "James Smith",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2006,
+    2006
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1165,
+  "id": "james-smith"
+ },
+ {
+  "name": "James Speakman",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1909,
+    1913
+   ]
+  ],
+  "apps": 8,
+  "goals": 1,
+  "lfchId": 853,
+  "id": "james-speakman"
+ },
+ {
+  "name": "James Stewart",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1909,
+    1913
+   ]
+  ],
+  "apps": 63,
+  "goals": 26,
+  "lfchId": 859,
+  "id": "james-stewart"
+ },
+ {
+  "name": "James Stott",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1893,
+    1894
+   ]
+  ],
+  "apps": 17,
+  "goals": 14,
+  "lfchId": 861,
+  "id": "james-stott"
+ },
+ {
+  "name": "Jamie Carragher",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1996,
+    2013
+   ]
+  ],
+  "apps": 737,
+  "goals": 5,
+  "lfchId": 277,
+  "id": "jamie-carragher"
+ },
+ {
+  "name": "Jamie Redknapp",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1991,
+    2002
+   ]
+  ],
+  "apps": 308,
+  "goals": 41,
+  "lfchId": 396,
+  "id": "jamie-redknapp"
+ },
+ {
+  "name": "Jan Kromkamp",
+  "nationality": "Netherlands",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2006,
+    2006
+   ]
+  ],
+  "apps": 18,
+  "goals": 0,
+  "lfchId": 1143,
+  "id": "jan-kromkamp"
+ },
+ {
+  "name": "Jan Mølby",
+  "nationality": "Denmark",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1984,
+    1996
+   ]
+  ],
+  "apps": 292,
+  "goals": 61,
+  "lfchId": 378,
+  "id": "jan-m-lby"
+ },
+ {
+  "name": "Jarell Quansah",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2023,
+    2025
+   ]
+  ],
+  "apps": 58,
+  "goals": 3,
+  "lfchId": 1393,
+  "id": "jarell-quansah"
+ },
+ {
+  "name": "Jari Litmanen",
+  "nationality": "Finland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2001,
+    2002
+   ]
+  ],
+  "apps": 43,
+  "goals": 9,
+  "lfchId": 361,
+  "id": "jari-litmanen"
+ },
+ {
+  "name": "Jason McAteer",
+  "nationality": "Republic of Ireland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1995,
+    1999
+   ]
+  ],
+  "apps": 139,
+  "goals": 6,
+  "lfchId": 368,
+  "id": "jason-mcateer"
+ },
+ {
+  "name": "Javier Manquillo",
+  "nationality": "Spain",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2014,
+    2015
+   ]
+  ],
+  "apps": 19,
+  "goals": 0,
+  "lfchId": 1277,
+  "id": "javier-manquillo"
+ },
+ {
+  "name": "Javier Mascherano",
+  "nationality": "Argentina",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2007,
+    2010
+   ]
+  ],
+  "apps": 139,
+  "goals": 2,
+  "lfchId": 1176,
+  "id": "javier-mascherano"
+ },
+ {
+  "name": "Jay Spearing",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2008,
+    2012
+   ]
+  ],
+  "apps": 55,
+  "goals": 0,
+  "lfchId": 1200,
+  "id": "jay-spearing"
+ },
+ {
+  "name": "Jayden Danns",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2024,
+    2026
+   ]
+  ],
+  "apps": 10,
+  "goals": 3,
+  "lfchId": 2421,
+  "id": "jayden-danns"
+ },
+ {
+  "name": "Jean-Michel Ferri",
+  "nationality": "France",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1999,
+    1999
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 300,
+  "id": "jean-michel-ferri"
+ },
+ {
+  "name": "Jeremie Frimpong",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 35,
+  "goals": 2,
+  "lfchId": 2430,
+  "id": "jeremie-frimpong"
+ },
+ {
+  "name": "Jermaine Pennant",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2006,
+    2008
+   ]
+  ],
+  "apps": 81,
+  "goals": 3,
+  "lfchId": 1159,
+  "id": "jermaine-pennant"
+ },
+ {
+  "name": "Jerome Sinclair",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2012,
+    2016
+   ]
+  ],
+  "apps": 5,
+  "goals": 1,
+  "lfchId": 1248,
+  "id": "jerome-sinclair"
+ },
+ {
+  "name": "Jerzy Dudek",
+  "nationality": "Poland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2001,
+    2007
+   ]
+  ],
+  "apps": 186,
+  "goals": 0,
+  "lfchId": 292,
+  "id": "jerzy-dudek"
+ },
+ {
+  "name": "Jim Beglin",
+  "nationality": "Republic of Ireland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1984,
+    1987
+   ]
+  ],
+  "apps": 98,
+  "goals": 3,
+  "lfchId": 265,
+  "id": "jim-beglin"
+ },
+ {
+  "name": "Jim Furnell",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1962,
+    1963
+   ]
+  ],
+  "apps": 28,
+  "goals": 0,
+  "lfchId": 303,
+  "id": "jim-furnell"
+ },
+ {
+  "name": "Jim Harley",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1934,
+    1948
+   ]
+  ],
+  "apps": 131,
+  "goals": 0,
+  "lfchId": 653,
+  "id": "jim-harley"
+ },
+ {
+  "name": "Jimmy Carter",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1991,
+    1991
+   ]
+  ],
+  "apps": 8,
+  "goals": 0,
+  "lfchId": 457,
+  "id": "jimmy-carter"
+ },
+ {
+  "name": "Jimmy Case",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1973,
+    1981
+   ]
+  ],
+  "apps": 269,
+  "goals": 46,
+  "lfchId": 278,
+  "id": "jimmy-case"
+ },
+ {
+  "name": "Jimmy Collins",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1936,
+    1937
+   ]
+  ],
+  "apps": 7,
+  "goals": 0,
+  "lfchId": 582,
+  "id": "jimmy-collins"
+ },
+ {
+  "name": "Jimmy Gray",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1928,
+    1928
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 641,
+  "id": "jimmy-gray"
+ },
+ {
+  "name": "Jimmy Harrower",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1958,
+    1961
+   ]
+  ],
+  "apps": 105,
+  "goals": 22,
+  "lfchId": 313,
+  "id": "jimmy-harrower"
+ },
+ {
+  "name": "Jimmy McDougall",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1928,
+    1938
+   ]
+  ],
+  "apps": 356,
+  "goals": 12,
+  "lfchId": 739,
+  "id": "jimmy-mcdougall"
+ },
+ {
+  "name": "Jimmy McInnes",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1938,
+    1939
+   ]
+  ],
+  "apps": 48,
+  "goals": 1,
+  "lfchId": 743,
+  "id": "jimmy-mcinnes"
+ },
+ {
+  "name": "Jimmy Melia",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1954,
+    1964
+   ]
+  ],
+  "apps": 286,
+  "goals": 79,
+  "lfchId": 376,
+  "id": "jimmy-melia"
+ },
+ {
+  "name": "Jimmy Payne",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1944,
+    1956
+   ]
+  ],
+  "apps": 243,
+  "goals": 43,
+  "lfchId": 793,
+  "id": "jimmy-payne"
+ },
+ {
+  "name": "Jimmy Ross",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1894,
+    1897
+   ]
+  ],
+  "apps": 85,
+  "goals": 39,
+  "lfchId": 822,
+  "id": "jimmy-ross"
+ },
+ {
+  "name": "Jimmy Smith",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1929,
+    1931
+   ]
+  ],
+  "apps": 62,
+  "goals": 38,
+  "lfchId": 849,
+  "id": "jimmy-smith"
+ },
+ {
+  "name": "Jimmy Walsh",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1923,
+    1928
+   ]
+  ],
+  "apps": 77,
+  "goals": 27,
+  "lfchId": 877,
+  "id": "jimmy-walsh"
+ },
+ {
+  "name": "João Carlos Teixeira",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2014,
+    2016
+   ]
+  ],
+  "apps": 8,
+  "goals": 1,
+  "lfchId": 1269,
+  "id": "joao-carlos-teixeira"
+ },
+ {
+  "name": "Jock McNab",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1920,
+    1928
+   ]
+  ],
+  "apps": 222,
+  "goals": 6,
+  "lfchId": 751,
+  "id": "jock-mcnab"
+ },
+ {
+  "name": "Jock Smith",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1892,
+    1893
+   ]
+  ],
+  "apps": 11,
+  "goals": 5,
+  "lfchId": 847,
+  "id": "jock-smith"
+ },
+ {
+  "name": "Joe Allen",
+  "nationality": "Wales",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2012,
+    2016
+   ]
+  ],
+  "apps": 132,
+  "goals": 7,
+  "lfchId": 1242,
+  "id": "joe-allen"
+ },
+ {
+  "name": "Joe Brough",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1910,
+    1911
+   ]
+  ],
+  "apps": 11,
+  "goals": 3,
+  "lfchId": 551,
+  "id": "joe-brough"
+ },
+ {
+  "name": "Joe Cadden",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1950,
+    1952
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 560,
+  "id": "joe-cadden"
+ },
+ {
+  "name": "Joe Cole",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2010,
+    2012
+   ]
+  ],
+  "apps": 42,
+  "goals": 5,
+  "lfchId": 1220,
+  "id": "joe-cole"
+ },
+ {
+  "name": "Joe Dickson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1956,
+    1956
+   ]
+  ],
+  "apps": 6,
+  "goals": 4,
+  "lfchId": 601,
+  "id": "joe-dickson"
+ },
+ {
+  "name": "Joe Gomez",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2015,
+    2026
+   ]
+  ],
+  "apps": 274,
+  "goals": 0,
+  "lfchId": 1283,
+  "id": "joe-gomez"
+ },
+ {
+  "name": "Joe Hardy",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2020,
+    2020
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1366,
+  "id": "joe-hardy"
+ },
+ {
+  "name": "Joe Hewitt",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1904,
+    1910
+   ]
+  ],
+  "apps": 164,
+  "goals": 73,
+  "lfchId": 664,
+  "id": "joe-hewitt"
+ },
+ {
+  "name": "Joe Hoare",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1903,
+    1904
+   ]
+  ],
+  "apps": 7,
+  "goals": 0,
+  "lfchId": 667,
+  "id": "joe-hoare"
+ },
+ {
+  "name": "Joe Keetley",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1923,
+    1924
+   ]
+  ],
+  "apps": 9,
+  "goals": 2,
+  "lfchId": 699,
+  "id": "joe-keetley"
+ },
+ {
+  "name": "Joe Lumsden",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1897,
+    1898
+   ]
+  ],
+  "apps": 8,
+  "goals": 2,
+  "lfchId": 723,
+  "id": "joe-lumsden"
+ },
+ {
+  "name": "Joe Maguire",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2016,
+    2016
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1299,
+  "id": "joe-maguire"
+ },
+ {
+  "name": "Joe Maloney",
+  "nationality": "England",
+  "position": "U",
+  "careerSpans": [
+   [
+    1953,
+    1953
+   ]
+  ],
+  "apps": 12,
+  "goals": 0,
+  "lfchId": 725,
+  "id": "joe-maloney"
+ },
+ {
+  "name": "Joe McQue",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1892,
+    1898
+   ]
+  ],
+  "apps": 142,
+  "goals": 14,
+  "lfchId": 758,
+  "id": "joe-mcque"
+ },
+ {
+  "name": "Joël Matip",
+  "nationality": "Cameroon",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2016,
+    2023
+   ]
+  ],
+  "apps": 201,
+  "goals": 11,
+  "lfchId": 1304,
+  "id": "joel-matip"
+ },
+ {
+  "name": "Joey Jones",
+  "nationality": "Wales",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1975,
+    1978
+   ]
+  ],
+  "apps": 100,
+  "goals": 3,
+  "lfchId": 338,
+  "id": "joey-jones"
+ },
+ {
+  "name": "John Aldridge",
+  "nationality": "Republic of Ireland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1987,
+    1989
+   ]
+  ],
+  "apps": 104,
+  "goals": 63,
+  "lfchId": 252,
+  "id": "john-aldridge"
+ },
+ {
+  "name": "John Arne Riise",
+  "nationality": "Norway",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2001,
+    2008
+   ]
+  ],
+  "apps": 348,
+  "goals": 31,
+  "lfchId": 398,
+  "id": "john-arne-riise"
+ },
+ {
+  "name": "John Barnes",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1987,
+    1997
+   ]
+  ],
+  "apps": 407,
+  "goals": 108,
+  "lfchId": 261,
+  "id": "john-barnes"
+ },
+ {
+  "name": "John Bovill",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1911,
+    1913
+   ]
+  ],
+  "apps": 29,
+  "goals": 7,
+  "lfchId": 542,
+  "id": "john-bovill"
+ },
+ {
+  "name": "John Browning",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1935,
+    1939
+   ]
+  ],
+  "apps": 19,
+  "goals": 0,
+  "lfchId": 552,
+  "id": "john-browning"
+ },
+ {
+  "name": "John Cameron",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1892,
+    1893
+   ]
+  ],
+  "apps": 9,
+  "goals": 5,
+  "lfchId": 561,
+  "id": "john-cameron"
+ },
+ {
+  "name": "John Carlin",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1903,
+    1907
+   ]
+  ],
+  "apps": 35,
+  "goals": 8,
+  "lfchId": 566,
+  "id": "john-carlin"
+ },
+ {
+  "name": "John Charlton",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1931,
+    1931
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 573,
+  "id": "john-charlton"
+ },
+ {
+  "name": "John Curran",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1894,
+    1895
+   ]
+  ],
+  "apps": 24,
+  "goals": 0,
+  "lfchId": 593,
+  "id": "john-curran"
+ },
+ {
+  "name": "John Davies",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1901,
+    1902
+   ]
+  ],
+  "apps": 10,
+  "goals": 0,
+  "lfchId": 596,
+  "id": "john-davies"
+ },
+ {
+  "name": "John Drummond",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1894,
+    1895
+   ]
+  ],
+  "apps": 18,
+  "goals": 1,
+  "lfchId": 607,
+  "id": "john-drummond"
+ },
+ {
+  "name": "John Durnin",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1986,
+    1988
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 294,
+  "id": "john-durnin"
+ },
+ {
+  "name": "John Easdale",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1946,
+    1947
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 609,
+  "id": "john-easdale"
+ },
+ {
+  "name": "John Evans",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1953,
+    1957
+   ]
+  ],
+  "apps": 107,
+  "goals": 53,
+  "lfchId": 613,
+  "id": "john-evans"
+ },
+ {
+  "name": "John Givens",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1894,
+    1894
+   ]
+  ],
+  "apps": 10,
+  "goals": 3,
+  "lfchId": 631,
+  "id": "john-givens"
+ },
+ {
+  "name": "John Glover",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1900,
+    1903
+   ]
+  ],
+  "apps": 59,
+  "goals": 0,
+  "lfchId": 633,
+  "id": "john-glover"
+ },
+ {
+  "name": "John Heydon",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1950,
+    1953
+   ]
+  ],
+  "apps": 67,
+  "goals": 0,
+  "lfchId": 665,
+  "id": "john-heydon"
+ },
+ {
+  "name": "John Holmes",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1895,
+    1898
+   ]
+  ],
+  "apps": 44,
+  "goals": 0,
+  "lfchId": 671,
+  "id": "john-holmes"
+ },
+ {
+  "name": "John Hughes",
+  "nationality": "Wales",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1903,
+    1904
+   ]
+  ],
+  "apps": 32,
+  "goals": 2,
+  "lfchId": 677,
+  "id": "john-hughes"
+ },
+ {
+  "name": "John Hunter",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1899,
+    1902
+   ]
+  ],
+  "apps": 45,
+  "goals": 12,
+  "lfchId": 680,
+  "id": "john-hunter"
+ },
+ {
+  "name": "John Jones",
+  "nationality": "Unknown",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1924,
+    1925
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 692,
+  "id": "john-jones"
+ },
+ {
+  "name": "John Lindsay",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1928,
+    1929
+   ]
+  ],
+  "apps": 16,
+  "goals": 3,
+  "lfchId": 715,
+  "id": "john-lindsay"
+ },
+ {
+  "name": "John McCartney",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1892,
+    1898
+   ]
+  ],
+  "apps": 166,
+  "goals": 7,
+  "lfchId": 734,
+  "id": "john-mccartney"
+ },
+ {
+  "name": "John McConnell",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1909,
+    1912
+   ]
+  ],
+  "apps": 53,
+  "goals": 1,
+  "lfchId": 735,
+  "id": "john-mcconnell"
+ },
+ {
+  "name": "John McDonald",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1909,
+    1912
+   ]
+  ],
+  "apps": 81,
+  "goals": 4,
+  "lfchId": 738,
+  "id": "john-mcdonald"
+ },
+ {
+  "name": "John McFarlane",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1929,
+    1929
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 741,
+  "id": "john-mcfarlane"
+ },
+ {
+  "name": "John McKenna",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1907,
+    1907
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 744,
+  "id": "john-mckenna"
+ },
+ {
+  "name": "John McLaughlin",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1970,
+    1974
+   ]
+  ],
+  "apps": 55,
+  "goals": 3,
+  "lfchId": 370,
+  "id": "john-mclaughlin"
+ },
+ {
+  "name": "John McLean",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1894,
+    1895
+   ]
+  ],
+  "apps": 29,
+  "goals": 0,
+  "lfchId": 747,
+  "id": "john-mclean-1894"
+ },
+ {
+  "name": "John McLean",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1903,
+    1903
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 748,
+  "id": "john-mclean-1903"
+ },
+ {
+  "name": "John Miller",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1892,
+    1893
+   ]
+  ],
+  "apps": 24,
+  "goals": 25,
+  "lfchId": 766,
+  "id": "john-miller-1892"
+ },
+ {
+  "name": "John Miller",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1919,
+    1920
+   ]
+  ],
+  "apps": 8,
+  "goals": 0,
+  "lfchId": 767,
+  "id": "john-miller-1919"
+ },
+ {
+  "name": "John Molyneux",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1955,
+    1962
+   ]
+  ],
+  "apps": 249,
+  "goals": 3,
+  "lfchId": 379,
+  "id": "john-molyneux"
+ },
+ {
+  "name": "John Nicholson",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1959,
+    1959
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 462,
+  "id": "john-nicholson"
+ },
+ {
+  "name": "John Ogston",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1967,
+    1967
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 490,
+  "id": "john-ogston"
+ },
+ {
+  "name": "John Price",
+  "nationality": "Unknown",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1955,
+    1955
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 804,
+  "id": "john-price"
+ },
+ {
+  "name": "John Scales",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1994,
+    1996
+   ]
+  ],
+  "apps": 94,
+  "goals": 4,
+  "lfchId": 407,
+  "id": "john-scales"
+ },
+ {
+  "name": "John Sealey",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1965,
+    1965
+   ]
+  ],
+  "apps": 1,
+  "goals": 1,
+  "lfchId": 409,
+  "id": "john-sealey"
+ },
+ {
+  "name": "John Shafto",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1937,
+    1939
+   ]
+  ],
+  "apps": 20,
+  "goals": 7,
+  "lfchId": 836,
+  "id": "john-shafto"
+ },
+ {
+  "name": "John Shield",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1936,
+    1936
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 841,
+  "id": "john-shield"
+ },
+ {
+  "name": "John Smith",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1951,
+    1953
+   ]
+  ],
+  "apps": 59,
+  "goals": 14,
+  "lfchId": 848,
+  "id": "john-smith"
+ },
+ {
+  "name": "John Toshack",
+  "nationality": "Wales",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1970,
+    1978
+   ]
+  ],
+  "apps": 247,
+  "goals": 96,
+  "lfchId": 429,
+  "id": "john-toshack"
+ },
+ {
+  "name": "John Tosswill",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1912,
+    1913
+   ]
+  ],
+  "apps": 11,
+  "goals": 1,
+  "lfchId": 869,
+  "id": "john-tosswill"
+ },
+ {
+  "name": "John Walker",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1898,
+    1902
+   ]
+  ],
+  "apps": 120,
+  "goals": 31,
+  "lfchId": 875,
+  "id": "john-walker"
+ },
+ {
+  "name": "John Wark",
+  "nationality": "Scotland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1984,
+    1988
+   ]
+  ],
+  "apps": 108,
+  "goals": 42,
+  "lfchId": 438,
+  "id": "john-wark"
+ },
+ {
+  "name": "John Welsh",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2002,
+    2005
+   ]
+  ],
+  "apps": 10,
+  "goals": 0,
+  "lfchId": 454,
+  "id": "john-welsh"
+ },
+ {
+  "name": "John Whitehead",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1895,
+    1895
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 882,
+  "id": "john-whitehead"
+ },
+ {
+  "name": "Johnny Morrissey",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1957,
+    1961
+   ]
+  ],
+  "apps": 37,
+  "goals": 6,
+  "lfchId": 385,
+  "id": "johnny-morrissey"
+ },
+ {
+  "name": "Johnny Wheeler",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1955,
+    1963
+   ]
+  ],
+  "apps": 177,
+  "goals": 23,
+  "lfchId": 441,
+  "id": "johnny-wheeler"
+ },
+ {
+  "name": "Jon Flanagan",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2011,
+    2017
+   ]
+  ],
+  "apps": 49,
+  "goals": 1,
+  "lfchId": 1230,
+  "id": "jon-flanagan"
+ },
+ {
+  "name": "Jon Newby",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1999,
+    2000
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 388,
+  "id": "jon-newby"
+ },
+ {
+  "name": "Jon Otsemobor",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2002,
+    2003
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 452,
+  "id": "jon-otsemobor"
+ },
+ {
+  "name": "Jonjo Shelvey",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2010,
+    2013
+   ]
+  ],
+  "apps": 69,
+  "goals": 7,
+  "lfchId": 1214,
+  "id": "jonjo-shelvey"
+ },
+ {
+  "name": "Jordan Henderson",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2011,
+    2023
+   ]
+  ],
+  "apps": 492,
+  "goals": 33,
+  "lfchId": 1233,
+  "id": "jordan-henderson"
+ },
+ {
+  "name": "Jordan Rossiter",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2014,
+    2015
+   ]
+  ],
+  "apps": 5,
+  "goals": 1,
+  "lfchId": 1267,
+  "id": "jordan-rossiter"
+ },
+ {
+  "name": "Jordan Williams",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2014,
+    2014
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1281,
+  "id": "jordan-williams"
+ },
+ {
+  "name": "Jordon Ibe",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2013,
+    2016
+   ]
+  ],
+  "apps": 58,
+  "goals": 4,
+  "lfchId": 1254,
+  "id": "jordon-ibe"
+ },
+ {
+  "name": "José Enrique",
+  "nationality": "Spain",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2011,
+    2016
+   ]
+  ],
+  "apps": 99,
+  "goals": 2,
+  "lfchId": 1138,
+  "id": "jose-enrique"
+ },
+ {
+  "name": "Josemi",
+  "nationality": "Spain",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2004,
+    2005
+   ]
+  ],
+  "apps": 35,
+  "goals": 0,
+  "lfchId": 901,
+  "id": "josemi"
+ },
+ {
+  "name": "Joseph Dines",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1912,
+    1912
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 602,
+  "id": "joseph-dines"
+ },
+ {
+  "name": "Joseph Pearson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1892,
+    1892
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 796,
+  "id": "joseph-pearson"
+ },
+ {
+  "name": "Kaide Gordon",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2021,
+    2026
+   ]
+  ],
+  "apps": 7,
+  "goals": 1,
+  "lfchId": 1385,
+  "id": "kaide-gordon"
+ },
+ {
+  "name": "Karl-Heinz Riedle",
+  "nationality": "Germany",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1997,
+    1999
+   ]
+  ],
+  "apps": 76,
+  "goals": 15,
+  "lfchId": 397,
+  "id": "karl-heinz-riedle"
+ },
+ {
+  "name": "Keith Burkinshaw",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1955,
+    1955
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 556,
+  "id": "keith-burkinshaw"
+ },
+ {
+  "name": "Keith Peters",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1939,
+    1939
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 800,
+  "id": "keith-peters"
+ },
+ {
+  "name": "Ken Brierley",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1948,
+    1953
+   ]
+  ],
+  "apps": 61,
+  "goals": 8,
+  "lfchId": 549,
+  "id": "ken-brierley"
+ },
+ {
+  "name": "Ken Campbell",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1912,
+    1920
+   ]
+  ],
+  "apps": 142,
+  "goals": 0,
+  "lfchId": 565,
+  "id": "ken-campbell"
+ },
+ {
+  "name": "Kenny Dalglish",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1977,
+    1990
+   ]
+  ],
+  "apps": 515,
+  "goals": 172,
+  "lfchId": 287,
+  "id": "kenny-dalglish"
+ },
+ {
+  "name": "Kevin Baron",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1946,
+    1954
+   ]
+  ],
+  "apps": 153,
+  "goals": 32,
+  "lfchId": 531,
+  "id": "kevin-baron"
+ },
+ {
+  "name": "Kevin Keegan",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1971,
+    1977
+   ]
+  ],
+  "apps": 323,
+  "goals": 100,
+  "lfchId": 341,
+  "id": "kevin-keegan"
+ },
+ {
+  "name": "Kevin Kewley",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1978,
+    1978
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 346,
+  "id": "kevin-kewley"
+ },
+ {
+  "name": "Kevin Lewis",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1960,
+    1963
+   ]
+  ],
+  "apps": 82,
+  "goals": 44,
+  "lfchId": 358,
+  "id": "kevin-lewis"
+ },
+ {
+  "name": "Kevin MacDonald",
+  "nationality": "Scotland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1984,
+    1988
+   ]
+  ],
+  "apps": 64,
+  "goals": 5,
+  "lfchId": 365,
+  "id": "kevin-macdonald"
+ },
+ {
+  "name": "Kevin Sheedy",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1981,
+    1982
+   ]
+  ],
+  "apps": 5,
+  "goals": 2,
+  "lfchId": 410,
+  "id": "kevin-sheedy"
+ },
+ {
+  "name": "Kevin Stewart",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2016,
+    2017
+   ]
+  ],
+  "apps": 20,
+  "goals": 0,
+  "lfchId": 1298,
+  "id": "kevin-stewart"
+ },
+ {
+  "name": "Ki-Jana Hoever",
+  "nationality": "Netherlands",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2019,
+    2020
+   ]
+  ],
+  "apps": 4,
+  "goals": 1,
+  "lfchId": 1332,
+  "id": "ki-jana-hoever"
+ },
+ {
+  "name": "Kieran Morrison",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 2429,
+  "id": "kieran-morrison"
+ },
+ {
+  "name": "Kolo Touré",
+  "nationality": "Ivory Coast",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2013,
+    2016
+   ]
+  ],
+  "apps": 71,
+  "goals": 1,
+  "lfchId": 1259,
+  "id": "kolo-toure"
+ },
+ {
+  "name": "Kostas Tsimikas",
+  "nationality": "Greece",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2020,
+    2026
+   ]
+  ],
+  "apps": 115,
+  "goals": 0,
+  "lfchId": 1372,
+  "id": "kostas-tsimikas"
+ },
+ {
+  "name": "Lance Carr",
+  "nationality": "South Africa",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1933,
+    1936
+   ]
+  ],
+  "apps": 33,
+  "goals": 8,
+  "lfchId": 568,
+  "id": "lance-carr"
+ },
+ {
+  "name": "Larry Lloyd",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1969,
+    1974
+   ]
+  ],
+  "apps": 218,
+  "goals": 5,
+  "lfchId": 363,
+  "id": "larry-lloyd"
+ },
+ {
+  "name": "Lauri Dalla Valle",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2010,
+    2010
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1221,
+  "id": "lauri-dalla-valle"
+ },
+ {
+  "name": "Laurie Hughes",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1943,
+    1960
+   ]
+  ],
+  "apps": 326,
+  "goals": 1,
+  "lfchId": 678,
+  "id": "laurie-hughes"
+ },
+ {
+  "name": "Layton Stewart",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2022,
+    2022
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1354,
+  "id": "layton-stewart"
+ },
+ {
+  "name": "Lazar Marković",
+  "nationality": "Serbia",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2014,
+    2015
+   ]
+  ],
+  "apps": 34,
+  "goals": 3,
+  "lfchId": 1274,
+  "id": "lazar-markovic"
+ },
+ {
+  "name": "Lee Jones",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1994,
+    1996
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 339,
+  "id": "lee-jones"
+ },
+ {
+  "name": "Lee Peltier",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2006,
+    2007
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 1160,
+  "id": "lee-peltier"
+ },
+ {
+  "name": "Leighton Clarkson",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2019,
+    2020
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 1346,
+  "id": "leighton-clarkson"
+ },
+ {
+  "name": "Len Carney",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1946,
+    1947
+   ]
+  ],
+  "apps": 6,
+  "goals": 1,
+  "lfchId": 567,
+  "id": "len-carney"
+ },
+ {
+  "name": "Les Bruton",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1932,
+    1933
+   ]
+  ],
+  "apps": 8,
+  "goals": 1,
+  "lfchId": 553,
+  "id": "les-bruton"
+ },
+ {
+  "name": "Les Shannon",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1948,
+    1948
+   ]
+  ],
+  "apps": 11,
+  "goals": 1,
+  "lfchId": 837,
+  "id": "les-shannon"
+ },
+ {
+  "name": "Lewis Koumas",
+  "nationality": "Wales",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2024,
+    2026
+   ]
+  ],
+  "apps": 1,
+  "goals": 1,
+  "lfchId": 2420,
+  "id": "lewis-koumas"
+ },
+ {
+  "name": "Leyton Maxwell",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1999,
+    1999
+   ]
+  ],
+  "apps": 1,
+  "goals": 1,
+  "lfchId": 374,
+  "id": "leyton-maxwell"
+ },
+ {
+  "name": "Liam Millar",
+  "nationality": "Canada",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2020,
+    2020
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1365,
+  "id": "liam-millar"
+ },
+ {
+  "name": "Loris Karius",
+  "nationality": "Germany",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2016,
+    2018
+   ]
+  ],
+  "apps": 49,
+  "goals": 0,
+  "lfchId": 1305,
+  "id": "loris-karius"
+ },
+ {
+  "name": "Louis Bimpson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1953,
+    1959
+   ]
+  ],
+  "apps": 102,
+  "goals": 39,
+  "lfchId": 453,
+  "id": "louis-bimpson"
+ },
+ {
+  "name": "Lucas Leiva",
+  "nationality": "Brazil",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2007,
+    2017
+   ]
+  ],
+  "apps": 345,
+  "goals": 7,
+  "lfchId": 1180,
+  "id": "lucas-leiva"
+ },
+ {
+  "name": "Luis Díaz",
+  "nationality": "Colombia",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2022,
+    2025
+   ]
+  ],
+  "apps": 148,
+  "goals": 41,
+  "lfchId": 1396,
+  "id": "luis-diaz"
+ },
+ {
+  "name": "Luis García",
+  "nationality": "Spain",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2004,
+    2007
+   ]
+  ],
+  "apps": 121,
+  "goals": 30,
+  "lfchId": 559,
+  "id": "luis-garcia"
+ },
+ {
+  "name": "Luis Longstaff",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2019,
+    2019
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1343,
+  "id": "luis-longstaff"
+ },
+ {
+  "name": "Luis Suárez",
+  "nationality": "Uruguay",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2011,
+    2014
+   ]
+  ],
+  "apps": 133,
+  "goals": 82,
+  "lfchId": 1224,
+  "id": "luis-suarez"
+ },
+ {
+  "name": "Luke Chambers",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2023,
+    2026
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 1401,
+  "id": "luke-chambers"
+ },
+ {
+  "name": "Malcolm McVean",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1892,
+    1897
+   ]
+  ],
+  "apps": 126,
+  "goals": 43,
+  "lfchId": 762,
+  "id": "malcolm-mcvean"
+ },
+ {
+  "name": "Mamadou Sakho",
+  "nationality": "France",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2013,
+    2017
+   ]
+  ],
+  "apps": 80,
+  "goals": 3,
+  "lfchId": 1264,
+  "id": "mamadou-sakho"
+ },
+ {
+  "name": "Mario Balotelli",
+  "nationality": "Italy",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2014,
+    2015
+   ]
+  ],
+  "apps": 28,
+  "goals": 4,
+  "lfchId": 1280,
+  "id": "mario-balotelli"
+ },
+ {
+  "name": "Mark González",
+  "nationality": "Chile",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2006,
+    2007
+   ]
+  ],
+  "apps": 36,
+  "goals": 3,
+  "lfchId": 1128,
+  "id": "mark-gonzalez"
+ },
+ {
+  "name": "Mark Kennedy",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1995,
+    1998
+   ]
+  ],
+  "apps": 21,
+  "goals": 0,
+  "lfchId": 343,
+  "id": "mark-kennedy"
+ },
+ {
+  "name": "Mark Lawrenson",
+  "nationality": "Republic of Ireland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1981,
+    1988
+   ]
+  ],
+  "apps": 356,
+  "goals": 18,
+  "lfchId": 354,
+  "id": "mark-lawrenson"
+ },
+ {
+  "name": "Mark Seagraves",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1986,
+    1986
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 408,
+  "id": "mark-seagraves"
+ },
+ {
+  "name": "Mark Smyth",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2004,
+    2004
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 931,
+  "id": "mark-smyth"
+ },
+ {
+  "name": "Mark Walters",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1991,
+    1996
+   ]
+  ],
+  "apps": 124,
+  "goals": 19,
+  "lfchId": 437,
+  "id": "mark-walters"
+ },
+ {
+  "name": "Mark Wright",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1991,
+    1998
+   ]
+  ],
+  "apps": 210,
+  "goals": 9,
+  "lfchId": 447,
+  "id": "mark-wright"
+ },
+ {
+  "name": "Marko Grujić",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2016,
+    2020
+   ]
+  ],
+  "apps": 16,
+  "goals": 1,
+  "lfchId": 1296,
+  "id": "marko-grujic"
+ },
+ {
+  "name": "Markus Babbel",
+  "nationality": "Germany",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2000,
+    2002
+   ]
+  ],
+  "apps": 73,
+  "goals": 6,
+  "lfchId": 259,
+  "id": "markus-babbel"
+ },
+ {
+  "name": "Martin Kelly",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2008,
+    2014
+   ]
+  ],
+  "apps": 62,
+  "goals": 1,
+  "lfchId": 1203,
+  "id": "martin-kelly"
+ },
+ {
+  "name": "Martin Škrtel",
+  "nationality": "Slovakia",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2008,
+    2016
+   ]
+  ],
+  "apps": 320,
+  "goals": 18,
+  "lfchId": 1195,
+  "id": "martin-skrtel"
+ },
+ {
+  "name": "Mateusz Musiałowski",
+  "nationality": "Poland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2024,
+    2024
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 2423,
+  "id": "mateusz-musia-owski"
+ },
+ {
+  "name": "Matt Busby",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1936,
+    1939
+   ]
+  ],
+  "apps": 122,
+  "goals": 3,
+  "lfchId": 557,
+  "id": "matt-busby"
+ },
+ {
+  "name": "Matt McQueen",
+  "nationality": "Scotland",
+  "position": "U",
+  "careerSpans": [
+   [
+    1892,
+    1897
+   ]
+  ],
+  "apps": 103,
+  "goals": 7,
+  "lfchId": 760,
+  "id": "matt-mcqueen"
+ },
+ {
+  "name": "Matthew Fitzsimmons",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1938,
+    1938
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 620,
+  "id": "matthew-fitzsimmons"
+ },
+ {
+  "name": "Maurice Parry",
+  "nationality": "Wales",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1900,
+    1909
+   ]
+  ],
+  "apps": 221,
+  "goals": 4,
+  "lfchId": 791,
+  "id": "maurice-parry"
+ },
+ {
+  "name": "Mauricio Pellegrino",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2005,
+    2005
+   ]
+  ],
+  "apps": 13,
+  "goals": 0,
+  "lfchId": 897,
+  "id": "mauricio-pellegrino"
+ },
+ {
+  "name": "Max Thompson",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1974,
+    1975
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 491,
+  "id": "max-thompson"
+ },
+ {
+  "name": "Max Woltman",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2021,
+    2022
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1392,
+  "id": "max-woltman"
+ },
+ {
+  "name": "Maxi Rodríguez",
+  "nationality": "Argentina",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2010,
+    2012
+   ]
+  ],
+  "apps": 73,
+  "goals": 17,
+  "lfchId": 1213,
+  "id": "maxi-rodriguez"
+ },
+ {
+  "name": "Melkamu Frauendorf",
+  "nationality": "Germany",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2022,
+    2022
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1395,
+  "id": "melkamu-frauendorf"
+ },
+ {
+  "name": "Merfyn Jones",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1952,
+    1953
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 693,
+  "id": "merfyn-jones"
+ },
+ {
+  "name": "Michael Griffin",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1908,
+    1909
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 644,
+  "id": "michael-griffin"
+ },
+ {
+  "name": "Michael Owen",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1996,
+    2004
+   ]
+  ],
+  "apps": 297,
+  "goals": 158,
+  "lfchId": 391,
+  "id": "michael-owen"
+ },
+ {
+  "name": "Michael Robinson",
+  "nationality": "Republic of Ireland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1983,
+    1984
+   ]
+  ],
+  "apps": 52,
+  "goals": 13,
+  "lfchId": 399,
+  "id": "michael-robinson"
+ },
+ {
+  "name": "Michael Thomas",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1991,
+    1998
+   ]
+  ],
+  "apps": 163,
+  "goals": 12,
+  "lfchId": 425,
+  "id": "michael-thomas"
+ },
+ {
+  "name": "Mike Hooper",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1986,
+    1993
+   ]
+  ],
+  "apps": 73,
+  "goals": 0,
+  "lfchId": 322,
+  "id": "mike-hooper"
+ },
+ {
+  "name": "Mike Marsh",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1987,
+    1993
+   ]
+  ],
+  "apps": 101,
+  "goals": 6,
+  "lfchId": 373,
+  "id": "mike-marsh"
+ },
+ {
+  "name": "Miki Roqué",
+  "nationality": "Spain",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2006,
+    2006
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1137,
+  "id": "miki-roque"
+ },
+ {
+  "name": "Milan Baroš",
+  "nationality": "Czech Republic",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2001,
+    2005
+   ]
+  ],
+  "apps": 108,
+  "goals": 27,
+  "lfchId": 263,
+  "id": "milan-baros"
+ },
+ {
+  "name": "Milan Jovanović",
+  "nationality": "Unknown",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2010,
+    2011
+   ]
+  ],
+  "apps": 18,
+  "goals": 2,
+  "lfchId": 1217,
+  "id": "milan-jovanovic"
+ },
+ {
+  "name": "Milos Kerkez",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 48,
+  "goals": 2,
+  "lfchId": 2433,
+  "id": "milos-kerkez"
+ },
+ {
+  "name": "Mohamed Salah",
+  "nationality": "Egypt",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2017,
+    2026
+   ]
+  ],
+  "apps": 442,
+  "goals": 257,
+  "lfchId": 1317,
+  "id": "mohamed-salah"
+ },
+ {
+  "name": "Mohamed Sissoko",
+  "nationality": "Mali",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2005,
+    2007
+   ]
+  ],
+  "apps": 87,
+  "goals": 1,
+  "lfchId": 1130,
+  "id": "mohamed-sissoko"
+ },
+ {
+  "name": "Morgan Boyes",
+  "nationality": "Wales",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2019,
+    2020
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1352,
+  "id": "morgan-boyes"
+ },
+ {
+  "name": "Nabil El Zhar",
+  "nationality": "Morocco",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2006,
+    2010
+   ]
+  ],
+  "apps": 32,
+  "goals": 1,
+  "lfchId": 1163,
+  "id": "nabil-el-zhar"
+ },
+ {
+  "name": "Naby Keïta",
+  "nationality": "Guinea",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2018,
+    2023
+   ]
+  ],
+  "apps": 129,
+  "goals": 11,
+  "lfchId": 1324,
+  "id": "naby-keita"
+ },
+ {
+  "name": "Nat Phillips",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2020,
+    2023
+   ]
+  ],
+  "apps": 29,
+  "goals": 1,
+  "lfchId": 1362,
+  "id": "nat-phillips"
+ },
+ {
+  "name": "Nathan Eccleston",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2009,
+    2010
+   ]
+  ],
+  "apps": 9,
+  "goals": 0,
+  "lfchId": 1206,
+  "id": "nathan-eccleston"
+ },
+ {
+  "name": "Nathaniel Clyne",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2015,
+    2020
+   ]
+  ],
+  "apps": 103,
+  "goals": 2,
+  "lfchId": 1287,
+  "id": "nathaniel-clyne"
+ },
+ {
+  "name": "Neco Williams",
+  "nationality": "Wales",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2019,
+    2022
+   ]
+  ],
+  "apps": 33,
+  "goals": 0,
+  "lfchId": 1349,
+  "id": "neco-williams"
+ },
+ {
+  "name": "Ned Doig",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1904,
+    1908
+   ]
+  ],
+  "apps": 53,
+  "goals": 0,
+  "lfchId": 603,
+  "id": "ned-doig"
+ },
+ {
+  "name": "Neil Kerr",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1894,
+    1895
+   ]
+  ],
+  "apps": 12,
+  "goals": 3,
+  "lfchId": 704,
+  "id": "neil-kerr"
+ },
+ {
+  "name": "Neil McBain",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1928,
+    1928
+   ]
+  ],
+  "apps": 12,
+  "goals": 0,
+  "lfchId": 730,
+  "id": "neil-mcbain"
+ },
+ {
+  "name": "Neil Mellor",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2002,
+    2005
+   ]
+  ],
+  "apps": 22,
+  "goals": 6,
+  "lfchId": 459,
+  "id": "neil-mellor"
+ },
+ {
+  "name": "Neil Ruddock",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1993,
+    1998
+   ]
+  ],
+  "apps": 152,
+  "goals": 12,
+  "lfchId": 403,
+  "id": "neil-ruddock"
+ },
+ {
+  "name": "Nick Barmby",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2000,
+    2002
+   ]
+  ],
+  "apps": 58,
+  "goals": 8,
+  "lfchId": 262,
+  "id": "nick-barmby"
+ },
+ {
+  "name": "Nick Tanner",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1989,
+    1992
+   ]
+  ],
+  "apps": 59,
+  "goals": 1,
+  "lfchId": 424,
+  "id": "nick-tanner"
+ },
+ {
+  "name": "Nicolas Anelka",
+  "nationality": "France",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2001,
+    2002
+   ]
+  ],
+  "apps": 22,
+  "goals": 5,
+  "lfchId": 253,
+  "id": "nicolas-anelka"
+ },
+ {
+  "name": "Nigel Clough",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1993,
+    1995
+   ]
+  ],
+  "apps": 44,
+  "goals": 9,
+  "lfchId": 283,
+  "id": "nigel-clough"
+ },
+ {
+  "name": "Nigel Spackman",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1987,
+    1988
+   ]
+  ],
+  "apps": 63,
+  "goals": 0,
+  "lfchId": 416,
+  "id": "nigel-spackman"
+ },
+ {
+  "name": "Norman James",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1931,
+    1932
+   ]
+  ],
+  "apps": 8,
+  "goals": 0,
+  "lfchId": 686,
+  "id": "norman-james"
+ },
+ {
+  "name": "Norman Low",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1934,
+    1936
+   ]
+  ],
+  "apps": 13,
+  "goals": 0,
+  "lfchId": 720,
+  "id": "norman-low"
+ },
+ {
+  "name": "Nuri Şahin",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2012,
+    2012
+   ]
+  ],
+  "apps": 12,
+  "goals": 3,
+  "lfchId": 1246,
+  "id": "nuri-sahin"
+ },
+ {
+  "name": "Oussama Assaidi",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2012,
+    2013
+   ]
+  ],
+  "apps": 12,
+  "goals": 0,
+  "lfchId": 1243,
+  "id": "oussama-assaidi"
+ },
+ {
+  "name": "Ovie Ejaria",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2016,
+    2020
+   ]
+  ],
+  "apps": 8,
+  "goals": 0,
+  "lfchId": 1312,
+  "id": "ovie-ejaria"
+ },
+ {
+  "name": "Owen Beck",
+  "nationality": "Wales",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2021,
+    2026
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 1391,
+  "id": "owen-beck"
+ },
+ {
+  "name": "Øyvind Leonhardsen",
+  "nationality": "Norway",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1997,
+    1999
+   ]
+  ],
+  "apps": 49,
+  "goals": 7,
+  "lfchId": 357,
+  "id": "yvind-leonhardsen"
+ },
+ {
+  "name": "Ozan Kabak",
+  "nationality": "Turkey",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2021,
+    2021
+   ]
+  ],
+  "apps": 13,
+  "goals": 0,
+  "lfchId": 1379,
+  "id": "ozan-kabak"
+ },
+ {
+  "name": "Pat Finnerhan",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1897,
+    1898
+   ]
+  ],
+  "apps": 8,
+  "goals": 1,
+  "lfchId": 617,
+  "id": "pat-finnerhan"
+ },
+ {
+  "name": "Patrice Luzi",
+  "nationality": "France",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2004,
+    2004
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 502,
+  "id": "patrice-luzi"
+ },
+ {
+  "name": "Patrick Gordon",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1893,
+    1894
+   ]
+  ],
+  "apps": 30,
+  "goals": 8,
+  "lfchId": 638,
+  "id": "patrick-gordon"
+ },
+ {
+  "name": "Patrik Berger",
+  "nationality": "Czech Republic",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1996,
+    2003
+   ]
+  ],
+  "apps": 196,
+  "goals": 35,
+  "lfchId": 266,
+  "id": "patrik-berger"
+ },
+ {
+  "name": "Paul Ince",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1997,
+    1999
+   ]
+  ],
+  "apps": 81,
+  "goals": 17,
+  "lfchId": 330,
+  "id": "paul-ince"
+ },
+ {
+  "name": "Paul Jones",
+  "nationality": "Unknown",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2004,
+    2004
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 519,
+  "id": "paul-jones"
+ },
+ {
+  "name": "Paul Konchesky",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2010,
+    2011
+   ]
+  ],
+  "apps": 18,
+  "goals": 0,
+  "lfchId": 1226,
+  "id": "paul-konchesky"
+ },
+ {
+  "name": "Paul Stewart",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1992,
+    1993
+   ]
+  ],
+  "apps": 42,
+  "goals": 3,
+  "lfchId": 421,
+  "id": "paul-stewart"
+ },
+ {
+  "name": "Paul Walsh",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1984,
+    1988
+   ]
+  ],
+  "apps": 112,
+  "goals": 37,
+  "lfchId": 436,
+  "id": "paul-walsh"
+ },
+ {
+  "name": "Pedro Chirivella",
+  "nationality": "Spain",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2015,
+    2020
+   ]
+  ],
+  "apps": 11,
+  "goals": 0,
+  "lfchId": 1291,
+  "id": "pedro-chirivella"
+ },
+ {
+  "name": "Pegguy Arphexad",
+  "nationality": "France",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2000,
+    2002
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 256,
+  "id": "pegguy-arphexad"
+ },
+ {
+  "name": "Pepe Reina",
+  "nationality": "Spain",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2005,
+    2014
+   ]
+  ],
+  "apps": 394,
+  "goals": 0,
+  "lfchId": 1126,
+  "id": "pepe-reina"
+ },
+ {
+  "name": "Percy Saul",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1906,
+    1909
+   ]
+  ],
+  "apps": 83,
+  "goals": 2,
+  "lfchId": 829,
+  "id": "percy-saul"
+ },
+ {
+  "name": "Peter Beardsley",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1987,
+    1991
+   ]
+  ],
+  "apps": 175,
+  "goals": 59,
+  "lfchId": 264,
+  "id": "peter-beardsley"
+ },
+ {
+  "name": "Peter Cormack",
+  "nationality": "Scotland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1972,
+    1976
+   ]
+  ],
+  "apps": 178,
+  "goals": 26,
+  "lfchId": 286,
+  "id": "peter-cormack"
+ },
+ {
+  "name": "Peter Crouch",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2005,
+    2008
+   ]
+  ],
+  "apps": 134,
+  "goals": 42,
+  "lfchId": 1133,
+  "id": "peter-crouch"
+ },
+ {
+  "name": "Peter Kippax",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1949,
+    1949
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 706,
+  "id": "peter-kippax"
+ },
+ {
+  "name": "Peter Kyle",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1899,
+    1900
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 707,
+  "id": "peter-kyle"
+ },
+ {
+  "name": "Peter McKinney",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1920,
+    1921
+   ]
+  ],
+  "apps": 3,
+  "goals": 1,
+  "lfchId": 745,
+  "id": "peter-mckinney"
+ },
+ {
+  "name": "Peter Platt",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1902,
+    1904
+   ]
+  ],
+  "apps": 45,
+  "goals": 0,
+  "lfchId": 802,
+  "id": "peter-platt"
+ },
+ {
+  "name": "Peter Thompson",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1963,
+    1974
+   ]
+  ],
+  "apps": 416,
+  "goals": 54,
+  "lfchId": 427,
+  "id": "peter-thompson"
+ },
+ {
+  "name": "Peter Wall",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1968,
+    1970
+   ]
+  ],
+  "apps": 42,
+  "goals": 0,
+  "lfchId": 456,
+  "id": "peter-wall"
+ },
+ {
+  "name": "Phil Babb",
+  "nationality": "Republic of Ireland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1994,
+    2000
+   ]
+  ],
+  "apps": 170,
+  "goals": 1,
+  "lfchId": 258,
+  "id": "phil-babb"
+ },
+ {
+  "name": "Phil Boersma",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1969,
+    1975
+   ]
+  ],
+  "apps": 120,
+  "goals": 30,
+  "lfchId": 270,
+  "id": "phil-boersma"
+ },
+ {
+  "name": "Phil Charnock",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1992,
+    1992
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 279,
+  "id": "phil-charnock"
+ },
+ {
+  "name": "Phil Chisnall",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1964,
+    1966
+   ]
+  ],
+  "apps": 9,
+  "goals": 2,
+  "lfchId": 281,
+  "id": "phil-chisnall"
+ },
+ {
+  "name": "Phil Kelly",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1892,
+    1893
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 700,
+  "id": "phil-kelly"
+ },
+ {
+  "name": "Phil Neal",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1974,
+    1985
+   ]
+  ],
+  "apps": 650,
+  "goals": 59,
+  "lfchId": 387,
+  "id": "phil-neal"
+ },
+ {
+  "name": "Phil Taylor",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1936,
+    1954
+   ]
+  ],
+  "apps": 343,
+  "goals": 32,
+  "lfchId": 865,
+  "id": "phil-taylor"
+ },
+ {
+  "name": "Phil Thompson",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1972,
+    1985
+   ]
+  ],
+  "apps": 477,
+  "goals": 13,
+  "lfchId": 428,
+  "id": "phil-thompson"
+ },
+ {
+  "name": "Philip Bratley",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1914,
+    1915
+   ]
+  ],
+  "apps": 13,
+  "goals": 0,
+  "lfchId": 548,
+  "id": "philip-bratley"
+ },
+ {
+  "name": "Philip Ferns",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1962,
+    1965
+   ]
+  ],
+  "apps": 28,
+  "goals": 1,
+  "lfchId": 299,
+  "id": "philip-ferns"
+ },
+ {
+  "name": "Philipp Degen",
+  "nationality": "Switzerland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2008,
+    2010
+   ]
+  ],
+  "apps": 13,
+  "goals": 0,
+  "lfchId": 1198,
+  "id": "philipp-degen"
+ },
+ {
+  "name": "Raby Howell",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1898,
+    1901
+   ]
+  ],
+  "apps": 67,
+  "goals": 0,
+  "lfchId": 675,
+  "id": "raby-howell"
+ },
+ {
+  "name": "Rafael Camacho",
+  "nationality": "Portugal",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2019,
+    2019
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1323,
+  "id": "rafael-camacho"
+ },
+ {
+  "name": "Ragnar Klavan",
+  "nationality": "Estonia",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2016,
+    2018
+   ]
+  ],
+  "apps": 53,
+  "goals": 2,
+  "lfchId": 1307,
+  "id": "ragnar-klavan"
+ },
+ {
+  "name": "Raheem Sterling",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2012,
+    2015
+   ]
+  ],
+  "apps": 129,
+  "goals": 23,
+  "lfchId": 1237,
+  "id": "raheem-sterling"
+ },
+ {
+  "name": "Ralph Holden",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1913,
+    1913
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 670,
+  "id": "ralph-holden"
+ },
+ {
+  "name": "Raul Meireles",
+  "nationality": "Portugal",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2010,
+    2011
+   ]
+  ],
+  "apps": 44,
+  "goals": 5,
+  "lfchId": 1225,
+  "id": "raul-meireles"
+ },
+ {
+  "name": "Ray Clemence",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1967,
+    1981
+   ]
+  ],
+  "apps": 665,
+  "goals": 0,
+  "lfchId": 282,
+  "id": "ray-clemence"
+ },
+ {
+  "name": "Ray Houghton",
+  "nationality": "Republic of Ireland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1987,
+    1992
+   ]
+  ],
+  "apps": 202,
+  "goals": 38,
+  "lfchId": 323,
+  "id": "ray-houghton"
+ },
+ {
+  "name": "Ray Kennedy",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1974,
+    1982
+   ]
+  ],
+  "apps": 393,
+  "goals": 72,
+  "lfchId": 344,
+  "id": "ray-kennedy"
+ },
+ {
+  "name": "Ray Lambert",
+  "nationality": "Wales",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1939,
+    1956
+   ]
+  ],
+  "apps": 342,
+  "goals": 2,
+  "lfchId": 709,
+  "id": "ray-lambert"
+ },
+ {
+  "name": "Ray Minshull",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1946,
+    1950
+   ]
+  ],
+  "apps": 31,
+  "goals": 0,
+  "lfchId": 769,
+  "id": "ray-minshull"
+ },
+ {
+  "name": "Reginald Blore",
+  "nationality": "Unknown",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1959,
+    1959
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 269,
+  "id": "reginald-blore"
+ },
+ {
+  "name": "Rhian Brewster",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2019,
+    2020
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 1316,
+  "id": "rhian-brewster"
+ },
+ {
+  "name": "Rhys Williams",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2020,
+    2026
+   ]
+  ],
+  "apps": 19,
+  "goals": 0,
+  "lfchId": 1376,
+  "id": "rhys-williams"
+ },
+ {
+  "name": "Richard Money",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1980,
+    1981
+   ]
+  ],
+  "apps": 17,
+  "goals": 0,
+  "lfchId": 381,
+  "id": "richard-money"
+ },
+ {
+  "name": "Richie Partridge",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2000,
+    2004
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 393,
+  "id": "richie-partridge"
+ },
+ {
+  "name": "Rickie Lambert",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2014,
+    2015
+   ]
+  ],
+  "apps": 36,
+  "goals": 3,
+  "lfchId": 1271,
+  "id": "rickie-lambert"
+ },
+ {
+  "name": "Rigobert Song",
+  "nationality": "Cameroon",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1999,
+    2000
+   ]
+  ],
+  "apps": 38,
+  "goals": 0,
+  "lfchId": 414,
+  "id": "rigobert-song"
+ },
+ {
+  "name": "Rio Ngumoha",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 30,
+  "goals": 2,
+  "lfchId": 2427,
+  "id": "rio-ngumoha"
+ },
+ {
+  "name": "Rob Jones",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1991,
+    1999
+   ]
+  ],
+  "apps": 243,
+  "goals": 0,
+  "lfchId": 340,
+  "id": "rob-jones"
+ },
+ {
+  "name": "Robbie Fowler",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1993,
+    2001
+   ],
+   [
+    2006,
+    2007
+   ]
+  ],
+  "apps": 369,
+  "goals": 183,
+  "lfchId": 301,
+  "id": "robbie-fowler"
+ },
+ {
+  "name": "Robbie Keane",
+  "nationality": "Republic of Ireland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2008,
+    2009
+   ]
+  ],
+  "apps": 28,
+  "goals": 7,
+  "lfchId": 1149,
+  "id": "robbie-keane"
+ },
+ {
+  "name": "Robbie Robinson",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1904,
+    1912
+   ]
+  ],
+  "apps": 271,
+  "goals": 65,
+  "lfchId": 819,
+  "id": "robbie-robinson"
+ },
+ {
+  "name": "Robert Blanthorne",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1907,
+    1907
+   ]
+  ],
+  "apps": 2,
+  "goals": 1,
+  "lfchId": 540,
+  "id": "robert-blanthorne"
+ },
+ {
+  "name": "Robert Clark",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1928,
+    1931
+   ]
+  ],
+  "apps": 42,
+  "goals": 11,
+  "lfchId": 578,
+  "id": "robert-clark"
+ },
+ {
+  "name": "Robert Colvin",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1898,
+    1898
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 583,
+  "id": "robert-colvin"
+ },
+ {
+  "name": "Robert Crawford",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1909,
+    1915
+   ]
+  ],
+  "apps": 115,
+  "goals": 1,
+  "lfchId": 589,
+  "id": "robert-crawford"
+ },
+ {
+  "name": "Robert Done",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1926,
+    1935
+   ]
+  ],
+  "apps": 155,
+  "goals": 13,
+  "lfchId": 605,
+  "id": "robert-done"
+ },
+ {
+  "name": "Robert Ferguson",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1912,
+    1915
+   ]
+  ],
+  "apps": 103,
+  "goals": 2,
+  "lfchId": 616,
+  "id": "robert-ferguson"
+ },
+ {
+  "name": "Robert Ireland",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1930,
+    1930
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 683,
+  "id": "robert-ireland"
+ },
+ {
+  "name": "Robert Neil",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1895,
+    1897
+   ]
+  ],
+  "apps": 27,
+  "goals": 3,
+  "lfchId": 778,
+  "id": "robert-neil"
+ },
+ {
+  "name": "Robert Priday",
+  "nationality": "South Africa",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1946,
+    1949
+   ]
+  ],
+  "apps": 40,
+  "goals": 7,
+  "lfchId": 805,
+  "id": "robert-priday"
+ },
+ {
+  "name": "Robert Savage",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1931,
+    1938
+   ]
+  ],
+  "apps": 105,
+  "goals": 2,
+  "lfchId": 831,
+  "id": "robert-savage"
+ },
+ {
+  "name": "Robert Thomson",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1963,
+    1964
+   ]
+  ],
+  "apps": 8,
+  "goals": 0,
+  "lfchId": 455,
+  "id": "robert-thomson"
+ },
+ {
+  "name": "Roberto Firmino",
+  "nationality": "Brazil",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2015,
+    2023
+   ]
+  ],
+  "apps": 362,
+  "goals": 111,
+  "lfchId": 1288,
+  "id": "roberto-firmino"
+ },
+ {
+  "name": "Roger Hunt",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1958,
+    1969
+   ]
+  ],
+  "apps": 492,
+  "goals": 285,
+  "lfchId": 326,
+  "id": "roger-hunt"
+ },
+ {
+  "name": "Ron Jones",
+  "nationality": "Unknown",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1938,
+    1939
+   ]
+  ],
+  "apps": 5,
+  "goals": 1,
+  "lfchId": 694,
+  "id": "ron-jones"
+ },
+ {
+  "name": "Ron Yeats",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1961,
+    1971
+   ]
+  ],
+  "apps": 454,
+  "goals": 16,
+  "lfchId": 450,
+  "id": "ron-yeats"
+ },
+ {
+  "name": "Ronald Orr",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1908,
+    1912
+   ]
+  ],
+  "apps": 112,
+  "goals": 39,
+  "lfchId": 782,
+  "id": "ronald-orr"
+ },
+ {
+  "name": "Ronnie Moran",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1952,
+    1965
+   ]
+  ],
+  "apps": 379,
+  "goals": 17,
+  "lfchId": 383,
+  "id": "ronnie-moran"
+ },
+ {
+  "name": "Ronnie Whelan",
+  "nationality": "Republic of Ireland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1979,
+    1994
+   ]
+  ],
+  "apps": 493,
+  "goals": 73,
+  "lfchId": 442,
+  "id": "ronnie-whelan"
+ },
+ {
+  "name": "Ronny Rosenthal",
+  "nationality": "Israel",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1990,
+    1993
+   ]
+  ],
+  "apps": 97,
+  "goals": 22,
+  "lfchId": 400,
+  "id": "ronny-rosenthal"
+ },
+ {
+  "name": "Roy Evans",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1970,
+    1973
+   ]
+  ],
+  "apps": 11,
+  "goals": 0,
+  "lfchId": 296,
+  "id": "roy-evans"
+ },
+ {
+  "name": "Roy Saunders",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1953,
+    1959
+   ]
+  ],
+  "apps": 146,
+  "goals": 1,
+  "lfchId": 830,
+  "id": "roy-saunders"
+ },
+ {
+  "name": "Russell Crossley",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1950,
+    1954
+   ]
+  ],
+  "apps": 73,
+  "goals": 0,
+  "lfchId": 590,
+  "id": "russell-crossley"
+ },
+ {
+  "name": "Ryan Babel",
+  "nationality": "Netherlands",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2007,
+    2011
+   ]
+  ],
+  "apps": 146,
+  "goals": 22,
+  "lfchId": 1190,
+  "id": "ryan-babel"
+ },
+ {
+  "name": "Ryan Gravenberch",
+  "nationality": "Netherlands",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2023,
+    2026
+   ]
+  ],
+  "apps": 137,
+  "goals": 10,
+  "lfchId": 2413,
+  "id": "ryan-gravenberch"
+ },
+ {
+  "name": "Ryan Kent",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2016,
+    2016
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1297,
+  "id": "ryan-kent"
+ },
+ {
+  "name": "Sadio Mané",
+  "nationality": "Senegal",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2016,
+    2022
+   ]
+  ],
+  "apps": 269,
+  "goals": 120,
+  "lfchId": 1303,
+  "id": "sadio-mane"
+ },
+ {
+  "name": "Salif Diao",
+  "nationality": "Senegal",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2002,
+    2005
+   ]
+  ],
+  "apps": 61,
+  "goals": 3,
+  "lfchId": 288,
+  "id": "salif-diao"
+ },
+ {
+  "name": "Sam Bowyer",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1907,
+    1912
+   ]
+  ],
+  "apps": 48,
+  "goals": 16,
+  "lfchId": 544,
+  "id": "sam-bowyer"
+ },
+ {
+  "name": "Sam English",
+  "nationality": "Ireland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1933,
+    1935
+   ]
+  ],
+  "apps": 50,
+  "goals": 26,
+  "lfchId": 612,
+  "id": "sam-english"
+ },
+ {
+  "name": "Sam Hardy",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1905,
+    1912
+   ]
+  ],
+  "apps": 240,
+  "goals": 0,
+  "lfchId": 652,
+  "id": "sam-hardy"
+ },
+ {
+  "name": "Sam Hignett",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1907,
+    1907
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 666,
+  "id": "sam-hignett"
+ },
+ {
+  "name": "Sam Raybould",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1900,
+    1907
+   ]
+  ],
+  "apps": 226,
+  "goals": 130,
+  "lfchId": 811,
+  "id": "sam-raybould"
+ },
+ {
+  "name": "Sam Shields",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1949,
+    1949
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 842,
+  "id": "sam-shields"
+ },
+ {
+  "name": "Sam Speakman",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1913,
+    1919
+   ]
+  ],
+  "apps": 26,
+  "goals": 0,
+  "lfchId": 854,
+  "id": "sam-speakman"
+ },
+ {
+  "name": "Samed Yeşil",
+  "nationality": "Germany",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2012,
+    2012
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1245,
+  "id": "samed-yesil"
+ },
+ {
+  "name": "Sami Hyypiä",
+  "nationality": "Finland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1999,
+    2009
+   ]
+  ],
+  "apps": 464,
+  "goals": 35,
+  "lfchId": 329,
+  "id": "sami-hyypia"
+ },
+ {
+  "name": "Sammy Lee",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1976,
+    1986
+   ]
+  ],
+  "apps": 295,
+  "goals": 19,
+  "lfchId": 355,
+  "id": "sammy-lee"
+ },
+ {
+  "name": "Sammy Smyth",
+  "nationality": "Northern Ireland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1953,
+    1954
+   ]
+  ],
+  "apps": 44,
+  "goals": 20,
+  "lfchId": 851,
+  "id": "sammy-smyth"
+ },
+ {
+  "name": "Samual Gilligan",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1910,
+    1912
+   ]
+  ],
+  "apps": 40,
+  "goals": 16,
+  "lfchId": 630,
+  "id": "samual-gilligan"
+ },
+ {
+  "name": "Sander Westerveld",
+  "nationality": "Netherlands",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1999,
+    2001
+   ]
+  ],
+  "apps": 103,
+  "goals": 0,
+  "lfchId": 440,
+  "id": "sander-westerveld"
+ },
+ {
+  "name": "Scott Carson",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2005,
+    2006
+   ]
+  ],
+  "apps": 9,
+  "goals": 0,
+  "lfchId": 936,
+  "id": "scott-carson"
+ },
+ {
+  "name": "Sean Dundee",
+  "nationality": "South Africa",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1998,
+    1999
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 293,
+  "id": "sean-dundee"
+ },
+ {
+  "name": "Sebastián Coates",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2011,
+    2013
+   ]
+  ],
+  "apps": 24,
+  "goals": 2,
+  "lfchId": 951,
+  "id": "sebastian-coates"
+ },
+ {
+  "name": "Sebastián Leto",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2007,
+    2007
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 1171,
+  "id": "sebastian-leto"
+ },
+ {
+  "name": "Sepp van den Berg",
+  "nationality": "Netherlands",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2019,
+    2020
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 1335,
+  "id": "sepp-van-den-berg"
+ },
+ {
+  "name": "Sergi Canos",
+  "nationality": "Spain",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2016,
+    2016
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1302,
+  "id": "sergi-canos"
+ },
+ {
+  "name": "Sheyi Ojo",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2016,
+    2017
+   ]
+  ],
+  "apps": 13,
+  "goals": 1,
+  "lfchId": 1282,
+  "id": "sheyi-ojo"
+ },
+ {
+  "name": "Sotirios Kyrgiakos",
+  "nationality": "Greece",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2009,
+    2011
+   ]
+  ],
+  "apps": 49,
+  "goals": 3,
+  "lfchId": 1204,
+  "id": "sotirios-kyrgiakos"
+ },
+ {
+  "name": "Stan Collymore",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1995,
+    1997
+   ]
+  ],
+  "apps": 81,
+  "goals": 35,
+  "lfchId": 285,
+  "id": "stan-collymore"
+ },
+ {
+  "name": "Stan Palk",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1947,
+    1948
+   ]
+  ],
+  "apps": 13,
+  "goals": 0,
+  "lfchId": 903,
+  "id": "stan-palk"
+ },
+ {
+  "name": "Stanley Kane",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1935,
+    1936
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 696,
+  "id": "stanley-kane"
+ },
+ {
+  "name": "Stefan Bajcetic",
+  "nationality": "Spain",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2022,
+    2026
+   ]
+  ],
+  "apps": 22,
+  "goals": 1,
+  "lfchId": 1402,
+  "id": "stefan-bajcetic"
+ },
+ {
+  "name": "Stéphane Henchoz",
+  "nationality": "Switzerland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1999,
+    2005
+   ]
+  ],
+  "apps": 205,
+  "goals": 0,
+  "lfchId": 316,
+  "id": "stephane-henchoz"
+ },
+ {
+  "name": "Stephen Darby",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2008,
+    2010
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 1169,
+  "id": "stephen-darby"
+ },
+ {
+  "name": "Stephen Warnock",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2004,
+    2007
+   ]
+  ],
+  "apps": 67,
+  "goals": 1,
+  "lfchId": 902,
+  "id": "stephen-warnock"
+ },
+ {
+  "name": "Stephen Wright",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2000,
+    2002
+   ]
+  ],
+  "apps": 21,
+  "goals": 1,
+  "lfchId": 448,
+  "id": "stephen-wright"
+ },
+ {
+  "name": "Steve Arnold",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1971,
+    1971
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 255,
+  "id": "steve-arnold"
+ },
+ {
+  "name": "Steve Finnan",
+  "nationality": "Republic of Ireland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2003,
+    2008
+   ]
+  ],
+  "apps": 217,
+  "goals": 1,
+  "lfchId": 493,
+  "id": "steve-finnan"
+ },
+ {
+  "name": "Steve Harkness",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1989,
+    1999
+   ]
+  ],
+  "apps": 139,
+  "goals": 3,
+  "lfchId": 312,
+  "id": "steve-harkness"
+ },
+ {
+  "name": "Steve Heighway",
+  "nationality": "Republic of Ireland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1970,
+    1981
+   ]
+  ],
+  "apps": 475,
+  "goals": 76,
+  "lfchId": 317,
+  "id": "steve-heighway"
+ },
+ {
+  "name": "Steve McMahon",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1985,
+    1991
+   ]
+  ],
+  "apps": 277,
+  "goals": 50,
+  "lfchId": 372,
+  "id": "steve-mcmahon"
+ },
+ {
+  "name": "Steve McManaman",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1990,
+    1999
+   ]
+  ],
+  "apps": 364,
+  "goals": 66,
+  "lfchId": 371,
+  "id": "steve-mcmanaman"
+ },
+ {
+  "name": "Steve Nicol",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1981,
+    1995
+   ]
+  ],
+  "apps": 468,
+  "goals": 46,
+  "lfchId": 389,
+  "id": "steve-nicol"
+ },
+ {
+  "name": "Steve Ogrizovic",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1978,
+    1980
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 390,
+  "id": "steve-ogrizovic"
+ },
+ {
+  "name": "Steve Parr",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1951,
+    1953
+   ]
+  ],
+  "apps": 20,
+  "goals": 0,
+  "lfchId": 789,
+  "id": "steve-parr"
+ },
+ {
+  "name": "Steve Peplow",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1969,
+    1969
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 394,
+  "id": "steve-peplow"
+ },
+ {
+  "name": "Steve Staunton",
+  "nationality": "Republic of Ireland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1986,
+    1991
+   ],
+   [
+    1998,
+    2000
+   ]
+  ],
+  "apps": 148,
+  "goals": 7,
+  "lfchId": 418,
+  "id": "steve-staunton"
+ },
+ {
+  "name": "Steven Caulker",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2016,
+    2016
+   ]
+  ],
+  "apps": 4,
+  "goals": 0,
+  "lfchId": 1301,
+  "id": "steven-caulker"
+ },
+ {
+  "name": "Steven Gerrard",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1998,
+    2015
+   ]
+  ],
+  "apps": 710,
+  "goals": 186,
+  "lfchId": 305,
+  "id": "steven-gerrard"
+ },
+ {
+  "name": "Stewart Downing",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2011,
+    2013
+   ]
+  ],
+  "apps": 91,
+  "goals": 7,
+  "lfchId": 979,
+  "id": "stewart-downing"
+ },
+ {
+  "name": "Stig Inge Bjørnebye",
+  "nationality": "Norway",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1992,
+    2000
+   ]
+  ],
+  "apps": 184,
+  "goals": 4,
+  "lfchId": 268,
+  "id": "stig-inge-bj-rnebye"
+ },
+ {
+  "name": "Suso",
+  "nationality": "Spain",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2012,
+    2014
+   ]
+  ],
+  "apps": 21,
+  "goals": 1,
+  "lfchId": 1240,
+  "id": "suso"
+ },
+ {
+  "name": "Syd Roberts",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1932,
+    1936
+   ]
+  ],
+  "apps": 62,
+  "goals": 13,
+  "lfchId": 816,
+  "id": "syd-roberts"
+ },
+ {
+  "name": "Sydney Ross",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1892,
+    1893
+   ]
+  ],
+  "apps": 21,
+  "goals": 0,
+  "lfchId": 823,
+  "id": "sydney-ross"
+ },
+ {
+  "name": "Sydney Smith",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1903,
+    1903
+   ]
+  ],
+  "apps": 2,
+  "goals": 1,
+  "lfchId": 850,
+  "id": "sydney-smith"
+ },
+ {
+  "name": "Takumi Minamino",
+  "nationality": "Japan",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2020,
+    2022
+   ]
+  ],
+  "apps": 55,
+  "goals": 14,
+  "lfchId": 1363,
+  "id": "takumi-minamino"
+ },
+ {
+  "name": "Ted Hancock",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1932,
+    1933
+   ]
+  ],
+  "apps": 10,
+  "goals": 2,
+  "lfchId": 648,
+  "id": "ted-hancock"
+ },
+ {
+  "name": "Ted Harston",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1937,
+    1937
+   ]
+  ],
+  "apps": 5,
+  "goals": 3,
+  "lfchId": 656,
+  "id": "ted-harston"
+ },
+ {
+  "name": "Terry McDermott",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1973,
+    1982
+   ]
+  ],
+  "apps": 329,
+  "goals": 81,
+  "lfchId": 369,
+  "id": "terry-mcdermott"
+ },
+ {
+  "name": "Thiago",
+  "nationality": "Spain",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2020,
+    2024
+   ]
+  ],
+  "apps": 98,
+  "goals": 3,
+  "lfchId": 1374,
+  "id": "thiago"
+ },
+ {
+  "name": "Thomas Armstrong",
+  "nationality": "England",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1920,
+    1920
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 524,
+  "id": "thomas-armstrong"
+ },
+ {
+  "name": "Thomas Bennett",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1919,
+    1919
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 538,
+  "id": "thomas-bennett"
+ },
+ {
+  "name": "Thomas Cleghorn",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1896,
+    1899
+   ]
+  ],
+  "apps": 70,
+  "goals": 1,
+  "lfchId": 579,
+  "id": "thomas-cleghorn"
+ },
+ {
+  "name": "Thomas Fairfoul",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1913,
+    1915
+   ]
+  ],
+  "apps": 71,
+  "goals": 0,
+  "lfchId": 615,
+  "id": "thomas-fairfoul"
+ },
+ {
+  "name": "Thomas Hill",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2019,
+    2019
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1360,
+  "id": "thomas-hill"
+ },
+ {
+  "name": "Thomas John Hunter",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1899,
+    1902
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 681,
+  "id": "thomas-john-hunter"
+ },
+ {
+  "name": "Thomas McNulty",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1954,
+    1957
+   ]
+  ],
+  "apps": 36,
+  "goals": 0,
+  "lfchId": 754,
+  "id": "thomas-mcnulty"
+ },
+ {
+  "name": "Thomas Robertson",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1900,
+    1902
+   ]
+  ],
+  "apps": 47,
+  "goals": 0,
+  "lfchId": 817,
+  "id": "thomas-robertson"
+ },
+ {
+  "name": "Tiago Ilori",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2016,
+    2016
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 1263,
+  "id": "tiago-ilori"
+ },
+ {
+  "name": "Titi Camara",
+  "nationality": "Guinea",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1999,
+    2000
+   ]
+  ],
+  "apps": 37,
+  "goals": 10,
+  "lfchId": 275,
+  "id": "titi-camara"
+ },
+ {
+  "name": "Tom Bradshaw",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1930,
+    1938
+   ]
+  ],
+  "apps": 291,
+  "goals": 4,
+  "lfchId": 547,
+  "id": "tom-bradshaw"
+ },
+ {
+  "name": "Tom Bromilow",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1919,
+    1929
+   ]
+  ],
+  "apps": 375,
+  "goals": 11,
+  "lfchId": 550,
+  "id": "tom-bromilow"
+ },
+ {
+  "name": "Tom Bush",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1933,
+    1947
+   ]
+  ],
+  "apps": 69,
+  "goals": 1,
+  "lfchId": 558,
+  "id": "tom-bush"
+ },
+ {
+  "name": "Tom Chorlton",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1904,
+    1912
+   ]
+  ],
+  "apps": 121,
+  "goals": 8,
+  "lfchId": 576,
+  "id": "tom-chorlton"
+ },
+ {
+  "name": "Tom Cooper",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1934,
+    1939
+   ]
+  ],
+  "apps": 160,
+  "goals": 0,
+  "lfchId": 584,
+  "id": "tom-cooper"
+ },
+ {
+  "name": "Tom Gracie",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1912,
+    1914
+   ]
+  ],
+  "apps": 34,
+  "goals": 5,
+  "lfchId": 640,
+  "id": "tom-gracie"
+ },
+ {
+  "name": "Tom Ince",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    2010,
+    2010
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1218,
+  "id": "tom-ince"
+ },
+ {
+  "name": "Tom Miller",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1912,
+    1920
+   ]
+  ],
+  "apps": 146,
+  "goals": 56,
+  "lfchId": 768,
+  "id": "tom-miller"
+ },
+ {
+  "name": "Tom Morrison",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1927,
+    1935
+   ]
+  ],
+  "apps": 254,
+  "goals": 4,
+  "lfchId": 773,
+  "id": "tom-morrison"
+ },
+ {
+  "name": "Tom Robertson",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1898,
+    1902
+   ]
+  ],
+  "apps": 141,
+  "goals": 34,
+  "lfchId": 818,
+  "id": "tom-robertson"
+ },
+ {
+  "name": "Tom Rogers",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1907,
+    1911
+   ]
+  ],
+  "apps": 40,
+  "goals": 0,
+  "lfchId": 821,
+  "id": "tom-rogers"
+ },
+ {
+  "name": "Tom Scott",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1925,
+    1927
+   ]
+  ],
+  "apps": 18,
+  "goals": 4,
+  "lfchId": 835,
+  "id": "tom-scott"
+ },
+ {
+  "name": "Tom Wilkie",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1895,
+    1898
+   ]
+  ],
+  "apps": 64,
+  "goals": 1,
+  "lfchId": 885,
+  "id": "tom-wilkie"
+ },
+ {
+  "name": "Tom Wyllie",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1892,
+    1893
+   ]
+  ],
+  "apps": 25,
+  "goals": 15,
+  "lfchId": 893,
+  "id": "tom-wyllie"
+ },
+ {
+  "name": "Tommy Gardner",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1930,
+    1930
+   ]
+  ],
+  "apps": 5,
+  "goals": 0,
+  "lfchId": 624,
+  "id": "tommy-gardner"
+ },
+ {
+  "name": "Tommy Green",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1902,
+    1903
+   ]
+  ],
+  "apps": 7,
+  "goals": 1,
+  "lfchId": 643,
+  "id": "tommy-green"
+ },
+ {
+  "name": "Tommy Johnson",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1934,
+    1936
+   ]
+  ],
+  "apps": 38,
+  "goals": 8,
+  "lfchId": 689,
+  "id": "tommy-johnson"
+ },
+ {
+  "name": "Tommy Lawrence",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1958,
+    1971
+   ]
+  ],
+  "apps": 390,
+  "goals": 0,
+  "lfchId": 353,
+  "id": "tommy-lawrence"
+ },
+ {
+  "name": "Tommy Leishman",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1959,
+    1963
+   ]
+  ],
+  "apps": 118,
+  "goals": 7,
+  "lfchId": 356,
+  "id": "tommy-leishman"
+ },
+ {
+  "name": "Tommy Lowry",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1965,
+    1965
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 364,
+  "id": "tommy-lowry"
+ },
+ {
+  "name": "Tommy Lucas",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1916,
+    1933
+   ]
+  ],
+  "apps": 366,
+  "goals": 3,
+  "lfchId": 722,
+  "id": "tommy-lucas"
+ },
+ {
+  "name": "Tommy McLeod",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1947,
+    1948
+   ]
+  ],
+  "apps": 7,
+  "goals": 0,
+  "lfchId": 749,
+  "id": "tommy-mcleod"
+ },
+ {
+  "name": "Tommy Reid",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1926,
+    1929
+   ]
+  ],
+  "apps": 55,
+  "goals": 30,
+  "lfchId": 812,
+  "id": "tommy-reid"
+ },
+ {
+  "name": "Tommy Smith",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1962,
+    1978
+   ]
+  ],
+  "apps": 638,
+  "goals": 48,
+  "lfchId": 413,
+  "id": "tommy-smith"
+ },
+ {
+  "name": "Tommy Younger",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1956,
+    1959
+   ]
+  ],
+  "apps": 127,
+  "goals": 0,
+  "lfchId": 894,
+  "id": "tommy-younger"
+ },
+ {
+  "name": "Tony Gallacher",
+  "nationality": "Scotland",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2019,
+    2019
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 1353,
+  "id": "tony-gallacher"
+ },
+ {
+  "name": "Tony Hateley",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1967,
+    1968
+   ]
+  ],
+  "apps": 56,
+  "goals": 28,
+  "lfchId": 314,
+  "id": "tony-hateley"
+ },
+ {
+  "name": "Tony McNamara",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1957,
+    1958
+   ]
+  ],
+  "apps": 10,
+  "goals": 3,
+  "lfchId": 752,
+  "id": "tony-mcnamara"
+ },
+ {
+  "name": "Tony Rowley",
+  "nationality": "Wales",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1954,
+    1958
+   ]
+  ],
+  "apps": 63,
+  "goals": 39,
+  "lfchId": 825,
+  "id": "tony-rowley"
+ },
+ {
+  "name": "Torben Piechnik",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1992,
+    1993
+   ]
+  ],
+  "apps": 24,
+  "goals": 0,
+  "lfchId": 395,
+  "id": "torben-piechnik"
+ },
+ {
+  "name": "Trent Alexander-Arnold",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2016,
+    2025
+   ]
+  ],
+  "apps": 354,
+  "goals": 23,
+  "lfchId": 1311,
+  "id": "trent-alexander-arnold"
+ },
+ {
+  "name": "Trent Koné-Doherty",
+  "nationality": "Unknown",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 2428,
+  "id": "trent-kone-doherty"
+ },
+ {
+  "name": "Trevor Storton",
+  "nationality": "England",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1972,
+    1974
+   ]
+  ],
+  "apps": 12,
+  "goals": 0,
+  "lfchId": 422,
+  "id": "trevor-storton"
+ },
+ {
+  "name": "Trey Nyoni",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2024,
+    2026
+   ]
+  ],
+  "apps": 20,
+  "goals": 0,
+  "lfchId": 2419,
+  "id": "trey-nyoni"
+ },
+ {
+  "name": "Tyler Morton",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2021,
+    2025
+   ]
+  ],
+  "apps": 14,
+  "goals": 0,
+  "lfchId": 1386,
+  "id": "tyler-morton"
+ },
+ {
+  "name": "Vegard Heggem",
+  "nationality": "Norway",
+  "position": "DF",
+  "careerSpans": [
+   [
+    1998,
+    2000
+   ]
+  ],
+  "apps": 65,
+  "goals": 3,
+  "lfchId": 315,
+  "id": "vegard-heggem"
+ },
+ {
+  "name": "Vic Wright",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1934,
+    1937
+   ]
+  ],
+  "apps": 85,
+  "goals": 33,
+  "lfchId": 892,
+  "id": "vic-wright"
+ },
+ {
+  "name": "Virgil van Dijk",
+  "nationality": "Netherlands",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2018,
+    2026
+   ]
+  ],
+  "apps": 374,
+  "goals": 36,
+  "lfchId": 1321,
+  "id": "virgil-van-dijk"
+ },
+ {
+  "name": "Vítězslav Jaroš",
+  "nationality": "Czech Republic",
+  "position": "GK",
+  "careerSpans": [
+   [
+    2024,
+    2026
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1364,
+  "id": "vitezslav-jaros"
+ },
+ {
+  "name": "Vladimír Šmicer",
+  "nationality": "Czech Republic",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1999,
+    2005
+   ]
+  ],
+  "apps": 184,
+  "goals": 19,
+  "lfchId": 412,
+  "id": "vladimir-smicer"
+ },
+ {
+  "name": "Wally Richardson",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1893,
+    1893
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 813,
+  "id": "wally-richardson"
+ },
+ {
+  "name": "Walter Wadsworth",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1915,
+    1926
+   ]
+  ],
+  "apps": 242,
+  "goals": 8,
+  "lfchId": 874,
+  "id": "walter-wadsworth"
+ },
+ {
+  "name": "Wataru Endō",
+  "nationality": "Japan",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2023,
+    2026
+   ]
+  ],
+  "apps": 87,
+  "goals": 2,
+  "lfchId": 1413,
+  "id": "wataru-endo"
+ },
+ {
+  "name": "Wellity Lucky",
+  "nationality": "Unknown",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2025,
+    2026
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 2443,
+  "id": "wellity-lucky"
+ },
+ {
+  "name": "Wilfred Bartrop",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1914,
+    1915
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 533,
+  "id": "wilfred-bartrop"
+ },
+ {
+  "name": "William Banks",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1914,
+    1915
+   ]
+  ],
+  "apps": 26,
+  "goals": 6,
+  "lfchId": 528,
+  "id": "william-banks"
+ },
+ {
+  "name": "William Chalmers",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1924,
+    1925
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 571,
+  "id": "william-chalmers"
+ },
+ {
+  "name": "William Cockburn",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1924,
+    1926
+   ]
+  ],
+  "apps": 67,
+  "goals": 0,
+  "lfchId": 581,
+  "id": "william-cockburn"
+ },
+ {
+  "name": "William Cunningham",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1921,
+    1922
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 592,
+  "id": "william-cunningham"
+ },
+ {
+  "name": "William Devlin",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1927,
+    1927
+   ]
+  ],
+  "apps": 19,
+  "goals": 15,
+  "lfchId": 598,
+  "id": "william-devlin"
+ },
+ {
+  "name": "William Goldie",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1897,
+    1904
+   ]
+  ],
+  "apps": 174,
+  "goals": 6,
+  "lfchId": 636,
+  "id": "william-goldie"
+ },
+ {
+  "name": "William Hood",
+  "nationality": "Ireland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1937,
+    1937
+   ]
+  ],
+  "apps": 3,
+  "goals": 0,
+  "lfchId": 672,
+  "id": "william-hood"
+ },
+ {
+  "name": "William Hughes",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1894,
+    1894
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 679,
+  "id": "william-hughes"
+ },
+ {
+  "name": "William Hunter",
+  "nationality": "England",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1909,
+    1909
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 682,
+  "id": "william-hunter"
+ },
+ {
+  "name": "William Jenkinson",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1919,
+    1920
+   ]
+  ],
+  "apps": 13,
+  "goals": 0,
+  "lfchId": 687,
+  "id": "william-jenkinson"
+ },
+ {
+  "name": "William Keech",
+  "nationality": "England",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1895,
+    1895
+   ]
+  ],
+  "apps": 6,
+  "goals": 0,
+  "lfchId": 698,
+  "id": "william-keech"
+ },
+ {
+  "name": "William McCann",
+  "nationality": "Scotland",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1894,
+    1895
+   ]
+  ],
+  "apps": 17,
+  "goals": 0,
+  "lfchId": 733,
+  "id": "william-mccann"
+ },
+ {
+  "name": "William Stuart",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1912,
+    1912
+   ]
+  ],
+  "apps": 5,
+  "goals": 1,
+  "lfchId": 862,
+  "id": "william-stuart"
+ },
+ {
+  "name": "William Walker",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1897,
+    1898
+   ]
+  ],
+  "apps": 12,
+  "goals": 3,
+  "lfchId": 876,
+  "id": "william-walker"
+ },
+ {
+  "name": "William Watkinson",
+  "nationality": "England",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1947,
+    1950
+   ]
+  ],
+  "apps": 24,
+  "goals": 2,
+  "lfchId": 878,
+  "id": "william-watkinson"
+ },
+ {
+  "name": "Willie Carlin",
+  "nationality": "England",
+  "position": "MF",
+  "careerSpans": [
+   [
+    1959,
+    1959
+   ]
+  ],
+  "apps": 1,
+  "goals": 0,
+  "lfchId": 460,
+  "id": "willie-carlin"
+ },
+ {
+  "name": "Willie Donnelly",
+  "nationality": "Unknown",
+  "position": "GK",
+  "careerSpans": [
+   [
+    1896,
+    1897
+   ]
+  ],
+  "apps": 8,
+  "goals": 0,
+  "lfchId": 606,
+  "id": "willie-donnelly"
+ },
+ {
+  "name": "Willie Fagan",
+  "nationality": "Scotland",
+  "position": "FW",
+  "careerSpans": [
+   [
+    1935,
+    1952
+   ]
+  ],
+  "apps": 182,
+  "goals": 57,
+  "lfchId": 614,
+  "id": "willie-fagan"
+ },
+ {
+  "name": "Willie Steel",
+  "nationality": "Scotland",
+  "position": "FB",
+  "careerSpans": [
+   [
+    1931,
+    1935
+   ]
+  ],
+  "apps": 128,
+  "goals": 0,
+  "lfchId": 857,
+  "id": "willie-steel"
+ },
+ {
+  "name": "Willie Stevenson",
+  "nationality": "Scotland",
+  "position": "HB",
+  "careerSpans": [
+   [
+    1962,
+    1967
+   ]
+  ],
+  "apps": 241,
+  "goals": 18,
+  "lfchId": 420,
+  "id": "willie-stevenson"
+ },
+ {
+  "name": "Xabi Alonso",
+  "nationality": "Spain",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2004,
+    2009
+   ]
+  ],
+  "apps": 210,
+  "goals": 19,
+  "lfchId": 900,
+  "id": "xabi-alonso"
+ },
+ {
+  "name": "Xherdan Shaqiri",
+  "nationality": "Switzerland",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2018,
+    2021
+   ]
+  ],
+  "apps": 63,
+  "goals": 8,
+  "lfchId": 1329,
+  "id": "xherdan-shaqiri"
+ },
+ {
+  "name": "Yasser Larouci",
+  "nationality": "Algeria",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2020,
+    2020
+   ]
+  ],
+  "apps": 2,
+  "goals": 0,
+  "lfchId": 1350,
+  "id": "yasser-larouci"
+ },
+ {
+  "name": "Yossi Benayoun",
+  "nationality": "Israel",
+  "position": "MF",
+  "careerSpans": [
+   [
+    2007,
+    2010
+   ]
+  ],
+  "apps": 134,
+  "goals": 29,
+  "lfchId": 1189,
+  "id": "yossi-benayoun"
+ },
+ {
+  "name": "Zak Whitbread",
+  "nationality": "United States",
+  "position": "DF",
+  "careerSpans": [
+   [
+    2004,
+    2005
+   ]
+  ],
+  "apps": 7,
+  "goals": 0,
+  "lfchId": 905,
+  "id": "zak-whitbread"
+ }
+]
