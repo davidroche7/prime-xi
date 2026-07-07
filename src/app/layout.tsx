@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   },
   description:
     "The Perfect XI — build the greatest Liverpool team blind and score it /98 against a hidden canonical selection — plus Guess the Red, the daily player quiz.",
+  openGraph: {
+    siteName: SITE_NAME,
+    type: "website",
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description:
+      "Build the greatest Liverpool XI blind and score it /98 against a hidden canonical selection. Plus a daily player quiz.",
+    images: ["/og.png"],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
