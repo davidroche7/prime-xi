@@ -1,8 +1,10 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { difficultyFor, generateClues } from "./clues";
+import { buildEraKey, type CanonicalEra } from "./eras";
 import type { Enrichment } from "./lfchistory";
 import { enrichmentSubset } from "./lfchistory";
+import { MANAGERS } from "./managers";
 import type { SpinePlayer } from "./wikipedia";
 
 /** Pipeline C — assemble committed /data JSON from cached pipeline outputs. */
@@ -55,13 +57,22 @@ if (require.main === module) {
   const byDiff = [1, 2, 3, 4, 5].map((d) => answers.filter((a) => a.difficulty === d).length);
   console.log(`answers: ${answers.length} (difficulty 1..5: ${byDiff.join("/")})`);
 
-  // Task 7 artefacts — exported only once the canonical module exists locally.
-  const canonicalDir = join(__dirname, "canonical");
-  if (existsSync(join(canonicalDir, "index.ts"))) {
+  writeJson(
+    "managers.json",
+    MANAGERS.map(({ id, name, years }) => ({ id, name, years })),
+  );
+
+  // eras.json needs the plaintext keys, which live only in gitignored canonical/
+  if (existsSync(join(__dirname, "canonical", "index.ts"))) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { exportCanonical } = require("./canonical/index.ts");
-    exportCanonical(writeJson);
+    const { CANONICAL } = require("./canonical/index.ts") as { CANONICAL: CanonicalEra[] };
+    const ids = new Set(spine.map((p) => p.id));
+    for (const era of CANONICAL)
+      for (const slot of era.slots)
+        for (const p of slot)
+          if (!ids.has(p.playerId)) throw new Error(`canonical ${era.slug}: unknown player ${p.playerId}`);
+    writeJson("eras.json", CANONICAL.map(buildEraKey));
   } else {
-    console.log("canonical/ not present — skipping managers.json/eras.json (Task 7)");
+    console.log("canonical/ not present — skipping eras.json (see pipeline/canonical/README.md)");
   }
 }
