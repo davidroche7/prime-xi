@@ -1,117 +1,91 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { cost } from "../../src/lib/cost";
-import { fit } from "../../src/lib/scoring";
-import type { ClubData, Formation, PositionGroup } from "../../src/lib/types";
+import type { AnswerPlayer, EraKey, Formation, IndexedPlayer, Manager } from "../../src/lib/types";
 
 /** Validates the committed static JSON in /data — the app's only data source. */
 
-const DATA_DIR = join(__dirname, "..", "..", "data");
-const GROUPS: PositionGroup[] = ["GK", "CB", "FB", "DM", "CM", "AM", "W", "ST"];
+const DATA = join(__dirname, "..", "..", "data");
+const read = <T>(f: string) => JSON.parse(readFileSync(join(DATA, f), "utf8")) as T;
 
-const index = JSON.parse(readFileSync(join(DATA_DIR, "index.json"), "utf8")) as {
-  slug: string;
-  tier: string;
-  budget: number;
-}[];
-const formations = JSON.parse(readFileSync(join(DATA_DIR, "formations.json"), "utf8")) as Formation[];
-const clubFiles = readdirSync(join(DATA_DIR, "clubs")).filter((f) => f.endsWith(".json"));
-const clubs = clubFiles.map(
-  (f) => JSON.parse(readFileSync(join(DATA_DIR, "clubs", f), "utf8")) as ClubData,
-);
+const index = read<IndexedPlayer[]>("players-index.json");
+const answers = read<AnswerPlayer[]>("answers.json");
+const formations = read<Formation[]>("formations.json");
 
-describe("data/index.json", () => {
-  it("has 6-12 marquee clubs (§3)", () => {
-    const marquee = index.filter((c) => c.tier === "marquee");
-    expect(marquee.length).toBeGreaterThanOrEqual(6);
-    expect(marquee.length).toBeLessThanOrEqual(12);
+describe("players-index.json", () => {
+  it("covers the complete roster (≥ 800 players)", () => {
+    expect(index.length).toBeGreaterThanOrEqual(800);
   });
-  it("matches the club files on disk", () => {
-    expect(new Set(index.map((c) => `${c.slug}.json`))).toEqual(new Set(clubFiles));
+  it("ids are unique and url-safe", () => {
+    expect(new Set(index.map((p) => p.id)).size).toBe(index.length);
+    for (const p of index) expect(p.id).toMatch(/^[a-z0-9-]+$/);
+  });
+  it("every entry has search names and a valid year range", () => {
+    for (const p of index) {
+      expect(p.search.length).toBeGreaterThanOrEqual(1);
+      expect(p.years[0]).toBeGreaterThanOrEqual(1892);
+      expect(p.years[1]).toBeGreaterThanOrEqual(p.years[0]);
+    }
   });
 });
 
-describe("data/formations.json", () => {
-  it("every formation has 11 slots with unique ids and valid groups", () => {
-    expect(formations.length).toBeGreaterThanOrEqual(1);
+describe("answers.json", () => {
+  it("has a playable pool (≥ 250) with both normal and hard coverage", () => {
+    expect(answers.length).toBeGreaterThanOrEqual(250);
+    expect(answers.filter((a) => a.difficulty <= 3).length).toBeGreaterThanOrEqual(100);
+    expect(answers.filter((a) => a.difficulty >= 3).length).toBeGreaterThanOrEqual(50);
+  });
+  it("every answer has exactly 6 substantial clues that never name the player", () => {
+    for (const a of answers) {
+      expect(a.clues).toHaveLength(6);
+      const surname = a.name.toLowerCase().split(" ").slice(-1)[0];
+      for (const c of a.clues) {
+        expect(c.length).toBeGreaterThan(10);
+        if (surname.length > 3) expect(c.toLowerCase()).not.toContain(surname);
+      }
+    }
+  });
+  it("answers are a subset of the index with matching names", () => {
+    const byId = new Map(index.map((p) => [p.id, p.name]));
+    for (const a of answers) expect(byId.get(a.id)).toBe(a.name);
+  });
+  it("difficulty is 1..5", () => {
+    for (const a of answers) expect([1, 2, 3, 4, 5]).toContain(a.difficulty);
+  });
+});
+
+describe("formations.json", () => {
+  it("every formation has 11 unique-slot entries and one GK", () => {
     for (const f of formations) {
       expect(f.slots).toHaveLength(11);
       expect(new Set(f.slots.map((s) => s.slotId)).size).toBe(11);
-      for (const s of f.slots) {
-        expect(GROUPS).toContain(s.group);
-        expect(s.x).toBeGreaterThanOrEqual(0);
-        expect(s.x).toBeLessThanOrEqual(100);
-        expect(s.y).toBeGreaterThanOrEqual(0);
-        expect(s.y).toBeLessThanOrEqual(100);
-      }
       expect(f.slots.filter((s) => s.group === "GK")).toHaveLength(1);
     }
   });
 });
 
-describe.each(clubs.map((c) => [c.club.slug, c] as const))("data/clubs/%s.json", (_slug, data) => {
-  it("player ids are unique and well-formed", () => {
-    expect(new Set(data.players.map((p) => p.id)).size).toBe(data.players.length);
-    for (const p of data.players) {
-      expect(p.id).toMatch(/^[a-z0-9-]+$/);
-      expect(p.clubId).toBe(data.club.id);
-    }
-  });
+// Task 7 artefacts — validated once they exist.
+const hasEras = existsSync(join(DATA, "eras.json"));
+describe.runIf(hasEras)("eras.json + managers.json", () => {
+  // describe bodies run at collection even when skipped — read lazily
+  const eras = () => read<EraKey[]>("eras.json");
+  const managers = () => read<Manager[]>("managers.json");
 
-  it("ratings, seasons and positions are valid", () => {
-    for (const p of data.players) {
-      expect(p.rating).toBeGreaterThanOrEqual(1);
-      expect(p.rating).toBeLessThanOrEqual(99);
-      expect(p.seasonLabel).toMatch(/^\d{4}-\d{2}$/);
-      expect(p.seasonEndYear).toBe(Number(p.seasonLabel.slice(0, 4)) + 1);
-      expect(p.positions.length).toBeGreaterThanOrEqual(1);
-      for (const pos of p.positions) expect(GROUPS).toContain(pos);
-    }
-  });
-
-  it("shipped costs match the cost function exactly (never recomputed at runtime)", () => {
-    for (const p of data.players) {
-      expect(p.cost).toBe(cost(p.rating, p.positions));
-    }
-  });
-
-  it("every formation can be filled with natural players within budget", () => {
-    for (const f of formations) {
-      const used = new Set<string>();
-      let total = 0;
-      for (const slot of f.slots) {
-        const cheapest = data.players
-          .filter((p) => !used.has(p.id) && fit(p.positions, slot.group) === "natural")
-          .sort((a, b) => a.cost - b.cost)[0];
-        expect(cheapest, `no natural ${slot.group} at ${data.club.slug} for ${f.name}`).toBeDefined();
-        used.add(cheapest.id);
-        total += cheapest.cost;
+  it("three era keys with 11 hashed slots each and no plaintext", () => {
+    expect(eras().map((e) => e.slug).sort()).toEqual(["all-time", "post-war", "premier-league"]);
+    for (const e of eras()) {
+      expect(e.hashes.slots).toHaveLength(11);
+      for (const s of e.hashes.slots) {
+        expect(s.players.length).toBeGreaterThanOrEqual(1);
+        expect(s.seasons.length).toBeGreaterThanOrEqual(1);
+        for (const h of [...s.players, ...s.seasons]) expect(h).toMatch(/^[0-9a-z]+$/);
       }
-      expect(total, `cheapest natural ${f.name} XI at ${data.club.slug} must fit budget`).toBeLessThanOrEqual(
-        data.club.budget,
-      );
+      expect(JSON.stringify(e)).not.toMatch(/dalglish|gerrard|salah/i); // spot-check: no plaintext leak
     }
   });
 
-  it("has a cheap depth band so budget choices are real", () => {
-    expect(data.players.filter((p) => p.rating < 80).length).toBeGreaterThanOrEqual(5);
-    expect(data.players.length).toBeGreaterThanOrEqual(30);
-  });
-
-  it("budget is tuned: superstar 4-3-3 XI is 28-42% over budget (§5.2)", () => {
-    const f433 = formations.find((f) => f.id === "433")!;
-    const used = new Set<string>();
-    let superstar = 0;
-    for (const slot of f433.slots) {
-      const best = data.players
-        .filter((p) => !used.has(p.id) && fit(p.positions, slot.group) === "natural")
-        .sort((a, b) => b.cost - a.cost)[0];
-      used.add(best.id);
-      superstar += best.cost;
-    }
-    const ratio = superstar / data.club.budget;
-    expect(ratio).toBeGreaterThanOrEqual(1.28);
-    expect(ratio).toBeLessThanOrEqual(1.42);
+  it("managers list is substantial and unique", () => {
+    expect(managers().length).toBeGreaterThanOrEqual(15);
+    expect(new Set(managers().map((m) => m.id)).size).toBe(managers().length);
   });
 });

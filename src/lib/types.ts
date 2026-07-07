@@ -1,28 +1,4 @@
 export type PositionGroup = "GK" | "CB" | "FB" | "DM" | "CM" | "AM" | "W" | "ST";
-export type ClubTier = "marquee" | "longtail";
-
-export interface Club {
-  id: string;
-  slug: string;
-  name: string;
-  aliases: string[];
-  tier: ClubTier;
-  themeColour: string; // generic, NOT official
-  budget: number; // credits, tuned offline per club (§5.2)
-}
-
-export interface PlayerSeason {
-  id: string; // stable, unique
-  playerName: string;
-  clubId: string;
-  seasonLabel: string; // "2013-14"
-  seasonEndYear: number; // 2014
-  positions: PositionGroup[]; // [0] = primary
-  rating: number; // 1..99, derived offline
-  cost: number; // credits, derived offline
-  stats?: { apps?: number; goals?: number; assists?: number };
-  note?: string;
-}
 
 export interface FormationSlot {
   slotId: string;
@@ -37,21 +13,40 @@ export interface Formation {
   slots: FormationSlot[];
 }
 
-export interface ClubData {
-  club: Club;
-  players: PlayerSeason[];
+/** One entry in /data/players-index.json — every player in club history. */
+export interface IndexedPlayer {
+  id: string;
+  name: string;
+  /** lowercase strings matched by the autocomplete (name variants) */
+  search: string[];
+  /** first and last year of their Liverpool career, e.g. [1990, 1999] */
+  years: [number, number];
 }
 
-/** One filled slot in a starting XI. */
-export interface XiEntry {
-  slotId: string;
-  player: PlayerSeason;
+/** One entry in /data/answers.json — the Guess the Red answer pool. */
+export interface AnswerPlayer {
+  id: string;
+  name: string;
+  difficulty: 1 | 2 | 3 | 4 | 5;
+  clues: string[]; // exactly 6, hardest → easiest
 }
 
-export type TierLabel =
-  | "Cult Hero"
-  | "Fan Favourite"
-  | "Continental"
-  | "Elite"
-  | "Legendary"
-  | "GOAT";
+/** One entry in /data/managers.json. */
+export interface Manager {
+  id: string;
+  name: string;
+  years: string; // "1959–1974"
+}
+
+/** One entry in /data/eras.json — canonical key shipped as salted hashes only. */
+export interface EraKey {
+  slug: string;
+  title: string;
+  seasonRange: string; // human label, e.g. "1892 – today"
+  hashes: {
+    slots: { players: string[]; seasons: string[] }[]; // 11 entries
+    manager: string;
+    managerSeason: string;
+    formation: string;
+  };
+}

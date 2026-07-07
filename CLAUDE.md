@@ -1,201 +1,78 @@
-# CLAUDE.md — PRIME XI
+# CLAUDE.md — PRIME XI (v2: the LFC pivot)
 
-Operating spec for the build agent. Read this fully before writing any code. If any instruction here conflicts with a request made mid-build, **this file wins** unless I explicitly override it.
-
----
+Operating spec for the build agent. If any instruction here conflicts with a request made mid-build, **this file wins** unless Dave explicitly overrides it. The v1 budget-cap builder is dead (see PRD §1) — do not resurrect any part of its game design.
 
 ## 0. What you are building
 
-A **static, serverless, accountless** web app: pick a club → spend a fixed budget filling a formation with peak player-seasons → get a deterministic **team rating (/99) + tier** → share an image card. Plus a **daily seeded puzzle** and **programmatic SEO pages** per club.
+Two backendless Liverpool knowledge games on one static site, sharing one dataset:
 
-You are **not** building a match/season simulation. See §8.
+- **Game A — "Guess the Red"**: daily progressive-clue player guesser. Objective answer, autocomplete restricted to real LFC players, Wordle-style share card. Lives at `/`. Ships first.
+- **Game B — "The Perfect XI"**: blind team build (player + season per slot, formation, manager) scored /98 against a hidden canonical XI per era. Mastermind-count feedback only. Era pages at `/xi/<era>/`.
 
----
+You are **not** building a match/season simulation, and **not** building Phase 3 (voting/backend) — see §8.
 
 ## 1. Hard rules (violating any of these is a defect)
 
-- **NO backend, NO database, NO auth, NO server-side state** in v1. The only "server" permitted is an optional Cloudflare Pages Function for share-card OG images (§6). Everything else is static + client-side.
-- **NO match engine. NO season simulation. NO fixtures, no results, no "play the season."** v1 scores a static team. If you catch yourself modelling matches → **STOP** and re-read §8.
-- **NO leaderboards, accounts, multiplayer, or real-time/live data.** All player data is historical and static.
-- **NO club badges, kits, crests, official logos, or competition marks.** Club **names** and **historical stats** only (facts). Generic colour themes only.
-- **Ratings and costs are pre-computed offline** by the pipeline (§3) and shipped as static JSON. Production **never** computes them and **never** scrapes at runtime.
-- All scoring, cost, and daily-puzzle logic must be **pure, deterministic** functions in `src/lib` with **unit tests**. Same inputs → same outputs, on every device, forever.
-- **localStorage is allowed** (this is a real Next.js app, not a sandboxed artifact) — use it for optional streak/last-build only. Never required for core play.
+- **NO backend, NO database, NO auth, NO accounts** in Phases 1–2. Static + client-side only. Phase 3 (Cloudflare D1/KV + Turnstile + curator identity) is deliberately last and out of current scope.
+- **NO LFC badge, crest, kit, or competition marks.** Club name as fact + generic red theme. "Independent, not affiliated" disclaimer stays live.
+- All game logic = **pure, deterministic functions in `src/lib` with unit tests**. Same inputs → same outputs, every device, forever.
+- Data is produced **offline** in `/pipeline` and shipped as static JSON in `/data`. Production never scrapes, never computes ratings.
+- **Canonical-key plaintext is never committed** — `pipeline/canonical/` is gitignored; only salted-hash exports ship. The repo is public.
+- Clues are **generated from raw facts**. Never lift lfchistory.net's editorial text or their question-of-the-day.
+- localStorage is optional-only (streaks, per-day state, best scores). Never required for core play.
 
-## 2. Tech (locked — do not substitute)
+## 2. Tech (locked)
 
-- **Next.js (App Router) with `output: 'export'`** — fully static. (Astro acceptable only if you flag it first; default is Next.)
-- **TypeScript**, **Tailwind**, **pnpm**.
-- **Cloudflare Pages** hosting. *Not Vercel* — static + Cloudflare avoids bill-shock if this goes viral.
-- **Plausible** analytics (privacy-friendly, no cookie banner needed).
-- Share card: **client-side `<canvas>`** → downloadable/shareable image. No backend needed for this.
+Next.js App Router `output: 'export'` · TypeScript · Tailwind v4 · pnpm · Vitest · Plausible (env-gated) · client-canvas share cards. Demo host: GitHub Pages (basePath-aware). Production host: Cloudflare Pages. Ads behind `NEXT_PUBLIC_ADS_ENABLED` (off).
 
-## 3. Data pipeline (OFFLINE — never deployed)
+## 3. Data (hybrid, offline)
 
-Lives in `/pipeline`, run by hand, output committed as static JSON under `/data`. Historical stats never change, so this runs **once** per data update.
+- **Wikipedia** (MediaWiki API): the three "List of Liverpool F.C. players" pages = the complete all-time roster spine (name, nationality, position, career years, apps, goals). CC BY-SA — credit in footer.
+- **lfchistory.net**: robots.txt permits; scrape once with disk cache + 1.5s backoff + descriptive UA; enrich the notable subset (birthplace, signed-from, honours, season stats) for clue generation. Quiet "data via lfchistory.net" credit.
+- Pipeline: `fetch spine → fetch enrichment → generate clues + difficulty → export /data JSON`. `/data` is committed; `pipeline/cache/` is not.
 
-- Sources: `worldfootballR`, `soccerdata`, `ScraperFC`, StatsBomb open data, football-data.co.uk. Scrape respectfully (cache, backoff). **Note:** FBref lost Opta access Jan 2026 — do **not** design anything that depends on xG. Basic stats (apps, goals, assists) + a derived rating are sufficient.
-- Pipeline stages: `scrape → normalise/dedupe → assign positions → derive rating → derive cost → export JSON`.
-- The pipeline is the real work. Keep v1 to **6–12 marquee clubs** with clean data; everything else is a shallow SEO stub.
+## 4. Game A spec
 
-## 4. Data schema (static JSON under `/data`)
+- Daily answer: fixed-seed permutation over the answer pool (normal: difficulty ≤3; hard: ≥3), indexed by days-since-epoch — same player worldwide, resets 00:00 UTC, no repeats within a cycle.
+- Six clues, hardest → easiest. Wrong guess auto-reveals the next clue. Solved on clue *k* → score `7−k` (6 best). Six clues exhausted + wrong = fail.
+- Share text/card: date, score /6, clue boxes, no spoilers. Optional streak in localStorage.
 
-```ts
-type PositionGroup = "GK" | "CB" | "FB" | "DM" | "CM" | "AM" | "W" | "ST";
-type ClubTier = "marquee" | "longtail";
+## 5. Game B spec
 
-interface Club {
-  id: string; slug: string; name: string; aliases: string[];
-  tier: ClubTier; themeColour: string;      // generic, NOT official
-}
+- Score: per canonical slot, player 6 + season 2 (only if player right) ×11 = 88; manager 4 + manager peak season 2; formation 4. **Max 98.**
+- Equivalence classes: a slot may accept several (player, season) answers — any scores full.
+- Manager peak season = argmax of weighted honours that season: **EC/CL 10 · League 8 · other European 5 · FA Cup 3 · League Cup 2** (ties → earlier season). Longevity modifier is v2 — out.
+- Feedback: total + counts (`players 9/11 · seasons 6/11 · formation ✓ · manager ✗`) — never which picks.
+- Reveal: canonical hidden until 100%. Phase 2 = local reveal only (your own build is the key). Global first-ascent is Phase 3.
+- Eras: all-time · post-war (1945+) · Premier League (1992+). Each is its own SEO page with prose + FAQ JSON-LD.
 
-interface PlayerSeason {
-  id: string;                                // stable, unique
-  playerName: string; clubId: string;
-  seasonLabel: string; seasonEndYear: number; // "2013-14", 2014
-  positions: PositionGroup[];                 // [0] = primary
-  rating: number;                             // 1..99, derived offline
-  cost: number;                               // credits, derived offline
-  stats?: { apps?: number; goals?: number; assists?: number };
-  note?: string;                              // short flavour, optional
-}
+## 6. Share cards
 
-interface FormationSlot { slotId: string; group: PositionGroup; x: number; y: number; }
-interface Formation { id: string; name: string; slots: FormationSlot[]; } // e.g. "4-3-3"
-```
+Client-canvas → PNG, both games. First-class feature: this is the distribution channel. No logos, plain URL back to the site.
 
-`/data/clubs/<slug>.json` (Club + its PlayerSeason[]), `/data/formations.json`, `/data/index.json` (club list for routing/sitemap).
+## 7. SEO
 
-## 5. Scoring & cost (pure functions in `src/lib`)
+Home (Game A) + era pages carry evergreen prose (300–500 words), FAQ JSON-LD, sitemap, semantic HTML, no layout shift. Target queries: "Liverpool player quiz", "greatest Liverpool XI of all time", "best Liverpool Premier League XI", "greatest post-war Liverpool team".
 
-### 5.1 Team score → `src/lib/scoring.ts`
+## 8. Scope guardrails — STOP list
 
-```
-POSITION_WEIGHTS = { GK:1.10, CB:1.15, FB:0.95, DM:1.15, CM:1.10, AM:1.00, W:1.00, ST:1.05 }
-POSITION_FIT     = { natural:1.00, adjacent:0.90, alien:0.75 }   // player vs slot group
+Leave a `// V2:` or `// PHASE3:` comment instead of building:
 
-effectiveRating(ps, slot) = ps.rating * POSITION_FIT[fit(ps.positions, slot.group)]
+- Match/season simulation → **out, permanently**
+- Voting, proposals, curator identity, first-ascent registry, leaderboards → **Phase 3**
+- Accounts, login, profiles → Phase 3 curator-only identity, not now
+- Server routes of any kind → Phase 3
+- Real market-value pricing, live/current-season data → out
+- Longevity modifier on manager scoring → v2
 
-teamScore(xi, formation):
-   weighted = Σ  effectiveRating(ps,slot) * POSITION_WEIGHTS[slot.group]
-   total    = Σ  POSITION_WEIGHTS[slot.group]
-   raw      = weighted / total                       // ~1..99
-   penalty  = balancePenalty(xi)                      // 0..~6, subtractive
-   overall  = clamp(round(raw - penalty), 1, 99)
+## 9. Definition of done (this build)
 
-balancePenalty(xi):   // discourage lopsided sides
-   +3 if weakest CB rating < 75
-   +2 if no CM/DM rated ≥ 80
-   +2 if more than 3 players are out of natural position
-   (cap total at 6)
-```
+Phase 1: daily guesser live on the demo host, static, shareable, difficulty-rated players, Hard mode, streak. Phase 2: three era pages playable + shareable against hand-seeded hashed keys; canonical plaintext absent from repo and build output. Both: `pnpm test` green, typecheck clean, static build, credits + disclaimer in footer, ads off.
 
-Tier labels by `overall`: `<70 Cult Hero · 70–79 Fan Favourite · 80–86 Continental · 87–91 Elite · 92–95 Legendary · 96+ GOAT`. (Confetti at GOAT.)
+## 10. Decision log
 
-### 5.2 Cost → `src/lib/cost.ts`
-
-Cost must be **convex** in rating so eleven superstars are unaffordable — this is the whole game.
-
-```
-COST_EXP = 3.2                 // convexity; tune during data prep
-COST_MAX = 100
-SCARCITY = { GK:1.05, CB:1.05, DM:1.03, default:1.00 }
-
-cost(ps) = round( (ps.rating/99)^COST_EXP * COST_MAX * SCARCITY[ps.positions[0] ?? default], 1)
-```
-
-**BUDGET** (per club, in `Club` or a config): start ~**260 credits**.
-
-> **Tuning target (do this during data prep, not in the UI):** set `COST_EXP` and `BUDGET` so that (a) a strong, well-balanced XI spends **90–100%** of budget, and (b) an all-superstar XI comes in **~30–40% over** budget. If those two aren't true, the puzzle is broken.
-
-Budget is a **ceiling only** — no bonus for unspent credits (that would incentivise cheap teams).
-
-## 6. Share card (the distribution channel — polish this)
-
-- Rendered **client-side** to `<canvas>` → PNG the user saves/shares. This is how the app spreads while the owner stays anonymous — treat it as a first-class feature, not an afterthought.
-- Card shows: XI by position, `overall/99`, tier badge, club name, date (daily mode), and a plain URL back to the site. No logos.
-- *(v1.5 optional)* dynamic link-unfurl OG image via a **Cloudflare Pages Function** — the only server code permitted. Do not add it in v1 unless everything else is done.
-
-## 7. Daily puzzle → `src/lib/dailyPuzzle.ts` (no server)
-
-```
-seed        = hash(currentDateUTC "YYYY-MM-DD")
-rng         = mulberry32(seed)              // deterministic PRNG in src/lib/prng.ts
-puzzle(rng) = { club: pick(marqueeClubs|"open"), budget, constraints: pick 0..2 from POOL }
-```
-
-`POOL` examples: "no player after 2010", "max one player per decade", "no two players from the same original club", reduced budget. Same puzzle worldwide; resets 00:00 UTC. Output = same score/tier + a **date-stamped** card. Optional localStorage streak; **never** a server leaderboard.
-
-## 8. Scope guardrails — the 2 a.m. STOP list
-
-If you find yourself doing **any** of the following, you have left scope. Stop, and leave a `// V2:` comment instead:
-
-- Simulating matches, seasons, fixtures, or opponent results → **V2**
-- "Play a season" / "beat a historical side" → **V2**
-- "Guess the peak season" quiz mechanic → **V2** *(deliberately held back — it's the strongest future differentiator; do not spend it early)*
-- Accounts, login, user profiles → **V2**
-- Server-side leaderboards, multiplayer, PvP, Elo → **V2**
-- A database, an ORM, server routes (beyond the one optional OG function) → **V2**
-- Real market-value pricing / cross-era value modelling → **V2**
-- Live scores, current-season data, anything real-time → **out, permanently**
-
-When unsure whether something is v1: if it needs a server, an account, or a match result, it is **not** v1.
-
-## 9. SEO (build into the static export)
-
-- One page per club: `/club/[slug]`. Marquee clubs get the full builder; long-tail clubs get the page + builder on shallower data.
-- Each page: `<h1>` "Build [Club]'s Greatest XI — Every Player at Their Peak", **300–500 words** of evergreen prose (generate per club), the builder, internal links to rival/related clubs, and **FAQ JSON-LD**.
-- Generate `sitemap.xml` and per-page title/meta from templates. Semantic HTML; fast; no layout shift.
-
-## 10. File structure
-
-```
-/
-  CLAUDE.md  PRD.md  package.json  next.config.mjs   # output:'export'
-  /data          # STATIC, from pipeline — clubs/<slug>.json, formations.json, index.json
-  /pipeline      # OFFLINE ONLY, never deployed — scrape/normalise/rating/cost/export (+README)
-  /public        # fonts, static card assets (no logos)
-  /src
-    /app
-      layout.tsx  page.tsx                 # home + club picker
-      /club/[slug]/page.tsx                # builder + SEO prose (static params from index.json)
-      /daily/page.tsx
-    /components   Pitch  PlayerSlot  PlayerPicker  BudgetBar  ScorePanel  TierBadge  ShareCard
-    /lib          types  scoring  cost  dailyPuzzle  prng   # all pure + unit-tested
-    /content/clubs/<slug>.mdx              # evergreen SEO copy (or inline in page)
-```
-
-## 11. Commands
-
-```
-pnpm install
-pnpm dev                 # local
-pnpm test                # scoring/cost/dailyPuzzle must have unit tests — keep green
-pnpm build && pnpm export
-# deploy: Cloudflare Pages (static output dir)
-```
-
-## 12. Definition of done (v1)
-
-Static site deploys to Cloudflare Pages with **zero** server dependencies (bar the optional OG function); **6–12 marquee clubs** fully playable; budget tuned to §5.2 target; daily mode seeded & deterministic; client-side share card; per-club SEO pages + sitemap; ad slots present behind an **off** flag; disclaimer live; `pnpm test` green. No simulation, no accounts, no database anywhere in the tree.
-
-## 13. Decision log (why, so you don't "helpfully" undo these)
-
-- **Score, don't simulate** — the match engine is the scope-killer and a credibility trap; a budget-capped static score already *is* the game.
-- **Convex cost** — linear cost collapses the puzzle to "buy the best XI"; convexity forces knowledge-driven allocation.
-- **Cloudflare + static** — cheap, and immune to viral bill-shock.
-- **Narrow & deep** — the puzzle is only rich for big clubs; the long tail earns its keep via SEO, not depth.
-- **Hold back the quiz twist** — it's the best v2 differentiator; shipping it in v1 wastes the moat.
-
----
-
-## Appendix: v1 build notes (2026-07-04)
-
-- **Budget deviation from §5.2's "start ~260":** with `COST_EXP 3.2` and rosters rated
-  65–98, 260 credits caps the XI at ~62 average rating. The §5.2 *tuning target* takes
-  precedence (as this file instructs): budgets are derived per club in the pipeline as
-  `superstarXICost / 1.35`, landing at 620–660. Both targets verified by
-  `pnpm pipeline:tune` and the `/data` test suite.
-- "No two players from the same original club" constraint from the §7 POOL examples is
-  not implementable with v1 data (no origin-club field) — replaced with a
-  "3+ pre-1993 seasons" constraint. // V2: add originClubId to PlayerSeason.
+- **Kill the budget builder** — demo proved LFC's pool too top-heavy for knapsack tension; knowledge games replace it.
+- **Two games, one dataset, three phases** — certain win (daily quiz) ships before the ambitious one (crowd-owned XI); backend deliberately last.
+- **Weaponise subjectivity** — canonical XI is community-owned in Phase 3; mastery (≥95%) gates editing.
+- **Hybrid data** — Wikipedia guarantees completeness (validated); lfchistory enriches clues (robots-permitted, validated).
+- **Hashed keys, public repo** — salted hashes are a deterrent, not secrecy; real secrecy arrives with Phase 3's server. Accepted.

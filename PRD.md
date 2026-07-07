@@ -1,88 +1,80 @@
-# PRD — PRIME XI (working title)
+# PRD — PRIME XI, v2 scope (LFC pivot)
 
-> Build your club's greatest-ever team from each player's **peak season** — not their trophy years.
-> A budget-capped, knowledge-driven squad puzzle with a daily mode and a shareable result card.
+**Status:** v2 spec, approved 2026-07-07 · **Owner:** Dave · **Build tool:** Fable (Claude)
+**Supersedes** the v1 budget-builder PRD (killed after demo — see §1).
 
-**Status:** v1 spec, pre-build · **Owner:** Dave · **Build tool:** Fable (Claude)
-**Working name only** — final name/domain TBC and must clear trademark (see Legal).
+## 1. What changed and why
 
----
+The budget-cap builder was killed after a demo proved the problem we feared: Liverpool's pool is too top-heavy for a knapsack to feel tense. Two knowledge games replace it. They share one dataset and ship in three phases, so the certain win (the daily quiz) is live long before the ambitious part (crowd-owned perfect XI) is finished.
 
-## 1. Why this exists
+The perfect XI carries an unavoidable subjectivity — there is no answer key fans will all agree on. Rather than fight that, the design weaponises it: the canonical XI is community-owned, and you earn the right to change it by proving you understand it. Subjectivity becomes the meta-game, not the complaint.
 
-The viral `38-0-0` genre (spin → draft → simulate a perfect season) peaked around June 2026 and is now saturated with near-identical clones competing on multiplayer and cosmetics. Two gaps remain open:
+## 2. The two games
 
-1. **Knowledge, not luck.** The incumbents are random-spin games. There is no lane yet for a *skill* game that rewards knowing football history.
-2. **SEO, not social.** The incumbents grew via X virality. Nobody is mining the enormous **evergreen** search demand for *"greatest [club] XI of all time."*
+### Game A — "Guess the Red" (daily, ships first)
 
-PRIME XI targets both: a knowledge puzzle distributed by programmatic SEO + user-shared result cards, operable anonymously with no social presence.
+Progressive-clue player guesser with an objective answer (the player's identity), so nobody can call it wrong. Start on the hardest clue; reveal easier clues one at a time; fewer clues + fewer wrong guesses = higher score. Guessing via autocomplete restricted to players who actually played for Liverpool. One player per day, same for everyone. Wordle-style share card. Fully backendless.
 
-## 2. The core insight
+### Game B — "The Perfect XI" (evergreen, per era)
 
-A player's **best individual season** rarely aligns with their team's **trophy season** (e.g. Suárez 2013‑14 at Liverpool — sublime individually, won nothing). The game is: assemble your club's greatest XI by picking each player at their *peak*, under a **budget cap** that stops you simply fielding eleven superstars.
+Blind, knowledge-driven team build. For each slot you pick a player and a season, choose a formation, and pick a manager — any era, no stats shown until submit. Your build is scored against a hidden canonical XI (each player at their defining season). You see your score plus Mastermind-style counts, never which picks were right. The canonical XI is revealed publicly only when someone first scores 100%. Offered as era variants (see §4).
 
-## 3. What v1 is (and deliberately is not)
+## 3. Build phases
 
-**v1 IS:** a static, accountless web app where you pick a club, spend a fixed budget filling a formation with peak player-seasons, and receive a deterministic **team rating (/99) + tier label** and a **share card**. Plus a **daily puzzle** (same constraint for everyone, seeded by date). Plus programmatic **SEO pages** per club.
+| Phase | Scope | Backend? | Ships |
+|---|---|---|---|
+| 1 | Game A daily guesser, LFC | None (static) | First — the SEO wedge |
+| 2 | Game B perfect XI with a hand-seeded canonical key; score + counts feedback | None (reads static seeded key) | Playable & shareable, no voting |
+| 3 | Community voting/governance — canonical XI becomes crowd-owned; unlock at 95% | First backend (Cloudflare D1/KV + Turnstile + anonymous curator identity) | The ambitious phase, deliberately last |
 
-**v1 IS NOT** (these are v2 — see §9): any match/season **simulation**, "beat a historical side," the "guess the peak season" quiz twist, leaderboards, accounts, multiplayer, or real market-value pricing.
+The backend arrives only in Phase 3. Everything before it is static, anonymous, and spike-proof. Voting is the first thing that nudges "set and forget" toward "lightly tended" — hence last.
 
-> **The single most important decision:** v1 **scores**, it does not **simulate**. The match engine is the part that turns a weekend into a month and invites "your sim is rigged" complaints. With a budget cap, a deterministic score *is* the game — a knapsack puzzle: maximise team rating within budget.
+## 4. Eras (Game B content + SEO multiplier)
 
-## 4. Core loop
+Each era is its own evergreen puzzle with its own canonical XI, its own voting, and its own SEO page:
 
-1. Choose a club (curated set).
-2. Choose a formation.
-3. Fill 11 slots by selecting peak player-seasons, each with a **cost**; the **budget** is a hard ceiling.
-4. Team rating (/99) + tier update live as you build.
-5. Lock it in → generate a **share card** (image, user-shared → anonymous distribution).
-6. **Daily mode:** identical seeded constraint worldwide; date-stamped card; resets 00:00 UTC.
+- Complete history — all-time Liverpool XI
+- Post-war — 1945 onward
+- Premier League era — 1992 onward
+- (room for more: Shankly/Paisley boot-room era, the modern Klopp era, etc.)
 
-## 5. Why the budget cap carries the whole thing
+This is the anonymous growth engine: "greatest Liverpool XI of all time", "best Liverpool Premier League XI", "greatest post-war Liverpool team" are all high-intent evergreen searches.
 
-The cap is the engine. It only rewards knowledge if **cost is not linear in rating** — otherwise everyone maxes out and builds the same XI (the "freedom kills the game" failure). v1 makes cost a **convex** function of rating (elite seasons cost disproportionately more) plus a small positional-scarcity multiplier. This forces allocation trade-offs — a world-class spine funded by knowing the *affordable-but-excellent* player-seasons out wide. That breadth-of-knowledge requirement is the v1 skill.
+## 5. Scoring — Game B (max 98, matching the "out of 98" mental model; tunable)
 
-**Design consequence — narrow and deep:** the puzzle is only rich for clubs with a deep pool of elite seasons (~20–40 marquee clubs). Launch with **6–12 curated marquee clubs** done properly. Every other club exists as an **SEO landing page** (page + builder, shallower data) — it ranks for "greatest [club] XI" but doesn't pretend to be a deep puzzle.
+Per canonical slot: player identity 6 pts, correct season +2 pts (only if the player is right). Eleven slots = 88. Manager 4 + manager's peak season 2 = 6. Formation 4. Total 98.
 
-## 6. Success criteria
+- **Equivalence classes:** a slot may have several equally-canonical answers (e.g. Clemence ≈ Alisson in goal). Any accepted (player, season) scores full.
+- **Manager scoring:** the manager is a 12th blind pick, judged on their peak season, rated by weighted honours won that season: European Cup 10 · League 8 · other European (UEFA/Europa/Cup Winners'/Super Cup) 5 · FA Cup 3 · League Cup 2. The canonical manager-season is the one maximising that sum. (Longevity is a deliberate v2 modifier — the one-season-wonder problem has no clean answer and would swallow the build.)
+- **Feedback model (Mastermind, not a bare number):** on submit the player sees total score and counts — players correct: 9/11 · seasons correct: 6/11 · formation ✓ · manager ✗ — but never which. Legible enough to reason with; leaks nothing.
+- **Reveal:** the canonical XI stays hidden until the first 100% "first ascent", after which it's shown as solved.
 
-- **Ship criterion:** live, static, accountless, 6–12 marquee clubs playable + daily mode + share card, in a weekend of build (plus data-prep evenings).
-- **Traction signals (month 3–6):** organic impressions on "greatest [club] XI" queries; share-card referrals; daily-mode return visits (via privacy-friendly analytics).
-- **Explicitly not a KPI in v1:** MAU/retention dashboards, revenue. Monetisation is switched on *after* traffic (§8).
+## 6. Voting & governance — Game B, Phase 3
 
-## 7. Distribution
+- **Curator gate:** scoring ≥95% (≥93/98) in a single submission on an era earns curator status for that era — you now see its current canonical XI and may propose/vote changes. This is a mastery gate: you can't edit the boss until you've all but beaten it, which also makes brigading hard (you must demonstrate the knowledge, not just show up).
+- **Proposals:** a curator proposes a slot change (alternative player and/or season, or a formation/manager change). Other curators vote. A change flips the canonical only past a vote count + margin threshold.
+- **Versioning:** every canonical XI keeps history — first-ascent credit, amendment log, current version.
+- **Anti-abuse:** Cloudflare Turnstile on submissions; rate limits; one vote per curator per proposal.
+- **Anonymity note (the honest cost):** one-vote-per-curator needs a stable identity, so curators get an anonymous recovery-code identity (no email, no social). This is the one place the pure-anonymity model bends — accepted, and scoped to curators only.
 
-- **Programmatic SEO** — one page per club, evergreen prose + FAQ schema. This is the anonymous growth engine that needs no social account.
-- **User-shared result cards** — the app is inherently shareable; *users* propagate it, owner stays anonymous.
-- **No owner social presence required.**
+## 7. Distribution (unchanged principle: anonymous)
+
+Programmatic SEO per era/page; user-shared result cards for both games (users propagate, owner stays faceless); no owner social account anywhere.
 
 ## 8. Monetisation (defined, not front-loaded)
 
-- Ad slots exist behind a feature flag, **off** until traffic justifies them.
-- **Pro unlock** (v2): remove ads, extra clubs, expert mode. One-off purchase.
-- **Merchant of record** (LemonSqueezy or Paddle) when payments arrive — handles UK VAT and preserves anonymity. Not needed in v1.
+Ad slots behind an off flag until traffic. Pro unlock (v2): remove ads, hard mode, extra eras. Merchant of record (LemonSqueezy/Paddle) only when payments exist — handles UK VAT and anonymity.
 
-## 9. Scope fence
+## 9. Data & legal
 
-| In v1 | Out (v2+) |
-|---|---|
-| Budget-capped builder | Match / season **simulation** |
-| Deterministic score + tier | "Beat a historical side" mode |
-| Daily seeded puzzle | "Guess the peak season" quiz twist *(hold back — best long-term differentiator)* |
-| Share card (client-side image) | Leaderboards, accounts, multiplayer |
-| 6–12 marquee clubs + SEO long tail | Full club breadth as deep puzzles |
-| Ads-ready (flagged off) | Real market-value pricing; Pro unlock; MoR payments |
+- Source facts from lfchistory.net — appearances, goals, positions, dates, shirt numbers, honours, transfers, manager tenures. Scrape once, cache static.
+- Facts are usable; do not lift lfchistory's editorial or their question-of-the-day. Generate our own clues from raw data.
+- Quiet "data via lfchistory.net" credit — courteous and costs nothing.
+- No LFC badge, crest, kit, or competition marks. Club name as fact + generic Red theme only. Standard "independent, not affiliated" disclaimer.
+- **Amendment (approved 2026-07-07):** hybrid sourcing — Wikipedia's three "List of Liverpool F.C. players" pages (MediaWiki API, CC BY-SA, attributed) provide the complete all-time roster spine so no player is missed; lfchistory.net (robots.txt permits; scraped once with cache + backoff) enriches the notable subset for clue generation.
 
-## 10. Legal / branding (non-negotiable)
+## 10. Success & risks
 
-- Player names and historical stats are **facts** — usable.
-- **No** club badges, kits, crests, official logos, or competition marks (e.g. Premier League marks). Club **names** as descriptive facts + **generic** colour themes only.
-- Ship the standard disclaimer: *independent, not affiliated with or endorsed by any league, club or competition; ratings are an independent interpretation of publicly available data, used descriptively.*
-- Final product **name/domain** must clear a trademark check before launch.
-
-## 11. Key risks
-
-- **Scope creep into a match engine** — the primary risk; mitigated by §9 and the CLAUDE.md guardrails.
-- **Budget tuning** — if cost tracks rating too closely the puzzle collapses; must be tuned during data prep (target in CLAUDE.md).
-- **Data grind** — the dataset, not the app, is the real work; keeping v1 to 6–12 clubs keeps the timeline honest.
-- **Spike-shaped payoff** — likeliest outcome is modest; treat as a low-cost bet, not an annuity.
+- **Phase 1 done:** daily LFC guesser live, static, shareable, with difficulty-rated players and a Hard mode.
+- **Traction signals:** organic impressions on Liverpool guesser/XI queries; share-card referrals; daily return visits (Plausible).
+- **Risks:** Phase-3 voting is brigadable if the curator gate is weak (mitigated by the 95% gate + Turnstile); scope creep into match simulation (fenced, permanently out); the perfect-XI's subjectivity (converted into the voting meta-game rather than removed).

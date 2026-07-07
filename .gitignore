@@ -4,3 +4,9 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+pipeline/cache/*
+!pipeline/cache/spine.json
+# canonical XI plaintext must never be committed (repo is public)
+pipeline/canonical/*
+!pipeline/canonical/README.md
+.claude/
