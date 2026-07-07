@@ -8,6 +8,7 @@
     "export": "next build",
     "test": "vitest run",
     "test:watch": "vitest",
+    "pipeline:export": "tsx pipeline/export.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

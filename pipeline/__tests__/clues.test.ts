@@ -112,8 +112,8 @@ describe("difficultyFor", () => {
   });
   it("always returns 1..5", () => {
     for (const apps of [50, 100, 200, 400, 800]) {
-      for (const span of [[1900, 1910], [1960, 1970], [2015, 2025]] as [number, number][][]) {
-        const d = difficultyFor({ ...obscureSpine, apps, careerSpans: span as never });
+      for (const span of [[1900, 1910], [1960, 1970], [2015, 2025]] as [number, number][]) {
+        const d = difficultyFor({ ...obscureSpine, apps, careerSpans: [span] });
         expect(d).toBeGreaterThanOrEqual(1);
         expect(d).toBeLessThanOrEqual(5);
       }
