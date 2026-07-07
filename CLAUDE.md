@@ -6,8 +6,8 @@ Operating spec for the build agent. If any instruction here conflicts with a req
 
 Two backendless Liverpool knowledge games on one static site, sharing one dataset:
 
-- **Game A — "Guess the Red"**: daily progressive-clue player guesser. Objective answer, autocomplete restricted to real LFC players, Wordle-style share card. Lives at `/`. Ships first.
-- **Game B — "The Perfect XI"**: blind team build (player + season per slot, formation, manager) scored /98 against a hidden canonical XI per era. Mastermind-count feedback only. Era pages at `/xi/<era>/`.
+- **Game B — "The Perfect XI"** is the **main game** (Dave's call, 2026-07-07, overriding the original layout): blind team build (player + season per slot, formation, manager) scored /98 against a hidden canonical XI per era. Mastermind-count feedback only. The homepage `/` leads with it; era pages at `/xi/<era>/`.
+- **Game A — "Guess the Red"** is the secondary daily game: progressive-clue player guesser. Objective answer, autocomplete restricted to real LFC players, Wordle-style share card. Lives at `/daily/`. Shipped first.
 
 You are **not** building a match/season simulation, and **not** building Phase 3 (voting/backend) — see §8.
 
@@ -52,7 +52,7 @@ Client-canvas → PNG, both games. First-class feature: this is the distribution
 
 ## 7. SEO
 
-Home (Game A) + era pages carry evergreen prose (300–500 words), FAQ JSON-LD, sitemap, semantic HTML, no layout shift. Target queries: "Liverpool player quiz", "greatest Liverpool XI of all time", "best Liverpool Premier League XI", "greatest post-war Liverpool team".
+Home (Perfect XI hub), `/daily/` (Game A) + era pages carry evergreen prose (300–500 words), FAQ JSON-LD, sitemap, semantic HTML, no layout shift. Target queries: "Liverpool player quiz", "greatest Liverpool XI of all time", "best Liverpool Premier League XI", "greatest post-war Liverpool team".
 
 ## 8. Scope guardrails — STOP list
 

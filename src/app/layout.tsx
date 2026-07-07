@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: `%s · ${SITE_NAME}`,
   },
   description:
-    "Guess the Red — a daily Liverpool player quiz with six progressive clues — and The Perfect XI, a blind team-builder scored against hidden all-time selections.",
+    "The Perfect XI — build the greatest Liverpool team blind and score it /98 against a hidden canonical selection — plus Guess the Red, the daily player quiz.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -29,10 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <div className="flex gap-4 text-sm text-zinc-300">
               <Link href="/" className="hover:text-white">
-                Daily
-              </Link>
-              <Link href="/xi/all-time/" className="hover:text-white">
                 The Perfect XI
+              </Link>
+              <Link href="/daily/" className="hover:text-white">
+                Daily quiz
               </Link>
             </div>
           </nav>
