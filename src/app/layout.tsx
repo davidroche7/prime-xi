@@ -31,6 +31,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/" className="hover:text-white">
                 Daily
               </Link>
+              <Link href="/xi/all-time/" className="hover:text-white">
+                The Perfect XI
+              </Link>
             </div>
           </nav>
         </header>

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { GuessShareCard } from "@/components/GuessShareCard";
+import { PlayerSearch } from "@/components/PlayerSearch";
 import { dailyAnswerId, type Mode } from "@/lib/dailyAnswer";
 import {
   guess,
@@ -14,6 +15,7 @@ import {
 } from "@/lib/guessGame";
 import { utcDateString } from "@/lib/prng";
 import { SITE_URL } from "@/lib/site";
+import { readStored, writeStored } from "@/lib/storage";
 import type { AnswerPlayer, IndexedPlayer } from "@/lib/types";
 
 interface GuessTheRedProps {
@@ -26,28 +28,6 @@ interface Streak {
   count: number;
 }
 
-// localStorage is optional-only (spec §1) — every access swallows failures
-function readJson<T>(key: string): T | null {
-  try {
-    const raw = localStorage.getItem(key);
-    return raw ? (JSON.parse(raw) as T) : null;
-  } catch {
-    return null;
-  }
-}
-
-function writeJson(key: string, value: unknown) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value));
-  } catch {
-    // storage unavailable — state just won't persist
-  }
-}
-
-function normalize(s: string): string {
-  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
-}
-
 export function GuessTheRed({ players, answers }: GuessTheRedProps) {
   // Computed after mount: the puzzle depends on the visitor's current UTC date,
   // which must not run during static prerender.
@@ -55,20 +35,17 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
   const [mode, setMode] = useState<Mode>("normal");
   const [state, setState] = useState<GuessState>(initialState());
   const [streak, setStreak] = useState<Streak | null>(null);
-  const [query, setQuery] = useState("");
-  const [highlight, setHighlight] = useState(0);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     setDate(utcDateString());
-    setStreak(readJson<Streak>("gtr:streak"));
+    setStreak(readStored<Streak>("gtr:streak"));
   }, []);
 
   // restore (or reset) per-day, per-mode game state
   useEffect(() => {
     if (!date) return;
-    setState(readJson<GuessState>(`gtr:${date}:${mode}`) ?? initialState());
-    setQuery("");
+    setState(readStored<GuessState>(`gtr:${date}:${mode}`) ?? initialState());
     setCopied(false);
   }, [date, mode]);
 
@@ -85,41 +62,25 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
   const apply = (next: GuessState) => {
     if (!date) return;
     setState(next);
-    writeJson(`gtr:${date}:${mode}`, next);
+    writeStored(`gtr:${date}:${mode}`, next);
     // streak tracks the standard daily puzzle only; a fail resets it
     const justEnded = (next.solved || next.failed) && !over;
     if (justEnded && mode === "normal") {
-      const prev = readJson<Streak>("gtr:streak");
+      const prev = readStored<Streak>("gtr:streak");
       if (prev?.lastPlayed !== date) {
         const yesterday = new Date(Date.parse(date) - 86400000).toISOString().slice(0, 10);
         const updated: Streak = next.solved
           ? { lastPlayed: date, count: prev?.lastPlayed === yesterday ? prev.count + 1 : 1 }
           : { lastPlayed: date, count: 0 };
-        writeJson("gtr:streak", updated);
+        writeStored("gtr:streak", updated);
         setStreak(updated);
       }
     }
   };
 
-  const matches = useMemo(() => {
-    const q = normalize(query.trim());
-    if (q.length < 2) return [];
-    const hits = players.filter(
-      (p) => !state.wrongGuesses.includes(p.id) && p.search.some((s) => s.includes(q)),
-    );
-    hits.sort((a, b) => {
-      const aPre = a.search.some((s) => s.startsWith(q)) ? 0 : 1;
-      const bPre = b.search.some((s) => s.startsWith(q)) ? 0 : 1;
-      return aPre - bPre || a.name.localeCompare(b.name);
-    });
-    return hits.slice(0, 8);
-  }, [players, query, state.wrongGuesses]);
-
   const submitGuess = (p: IndexedPlayer) => {
     if (!answer || over) return;
     apply(guess(state, p.id, answer.id));
-    setQuery("");
-    setHighlight(0);
   };
 
   const copyShare = async () => {
@@ -175,54 +136,13 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
       </ol>
 
       {!over ? (
-        <div className="relative mt-4">
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => {
-              setQuery(e.target.value);
-              setHighlight(0);
-            }}
-            onKeyDown={(e) => {
-              if (e.key === "ArrowDown") {
-                e.preventDefault();
-                setHighlight((h) => Math.min(h + 1, matches.length - 1));
-              } else if (e.key === "ArrowUp") {
-                e.preventDefault();
-                setHighlight((h) => Math.max(h - 1, 0));
-              } else if (e.key === "Enter" && matches[highlight]) {
-                e.preventDefault();
-                submitGuess(matches[highlight]);
-              } else if (e.key === "Escape") {
-                setQuery("");
-              }
-            }}
+        <div className="mt-4">
+          <PlayerSearch
+            players={players}
+            onPick={submitGuess}
+            exclude={state.wrongGuesses}
             placeholder="Guess a Liverpool player…"
-            aria-label="Guess a Liverpool player"
-            autoComplete="off"
-            className="w-full rounded-lg border border-ink-700 bg-ink-900 px-4 py-3 outline-none placeholder:text-zinc-500 focus:border-red-700"
           />
-          {matches.length > 0 ? (
-            <ul className="absolute z-10 mt-1 w-full overflow-hidden rounded-lg border border-ink-700 bg-ink-900 shadow-xl">
-              {matches.map((p, i) => (
-                <li key={p.id}>
-                  <button
-                    type="button"
-                    onClick={() => submitGuess(p)}
-                    onMouseEnter={() => setHighlight(i)}
-                    className={`flex w-full items-baseline justify-between px-4 py-2 text-left ${
-                      i === highlight ? "bg-red-900/40" : ""
-                    }`}
-                  >
-                    <span>{p.name}</span>
-                    <span className="text-xs text-zinc-500">
-                      {p.years[0]}–{p.years[1]}
-                    </span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          ) : null}
           <div className="mt-3 flex items-center justify-between text-sm">
             <span className="text-zinc-500">
               Clue {state.cluesRevealed}/{MAX_CLUES} · solve now for {MAX_CLUES + 1 - state.cluesRevealed} pts

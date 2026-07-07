@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { GuessTheRed } from "@/components/GuessTheRed";
 import { getAnswers, getPlayersIndex } from "@/lib/data";
 import { SITE_URL } from "@/lib/site";
@@ -45,6 +46,24 @@ export default function HomePage() {
       </section>
 
       <GuessTheRed players={players} answers={answers} />
+
+      <section className="mx-auto mt-14 max-w-xl rounded-xl border border-ink-800 bg-ink-900/60 p-5 text-center">
+        <h2 className="font-bold text-zinc-200">The Perfect XI</h2>
+        <p className="mt-1 text-sm text-zinc-400">
+          The other game: build a Liverpool XI blind and score it /98 against a hidden canonical team.
+        </p>
+        <div className="mt-3 flex flex-wrap justify-center gap-2 text-sm font-semibold">
+          {[
+            ["all-time", "All-time"],
+            ["post-war", "Post-war"],
+            ["premier-league", "Premier League"],
+          ].map(([slug, label]) => (
+            <Link key={slug} href={`/xi/${slug}/`} className="rounded-lg border border-ink-700 px-3 py-1.5 hover:border-red-700">
+              {label}
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <section className="mx-auto mt-16 max-w-xl space-y-4 border-t border-ink-800 pt-8 text-sm leading-relaxed text-zinc-400">
         <h2 className="text-lg font-bold text-zinc-200">The daily Liverpool player quiz</h2>
