@@ -33,6 +33,12 @@ export function revealClue(state: GuessState): GuessState {
   return { ...state, cluesRevealed: state.cluesRevealed + 1 };
 }
 
+/** Concede: ends the game as a fail so the answer can be revealed. */
+export function giveUp(state: GuessState): GuessState {
+  if (state.solved || state.failed) return state;
+  return { ...state, failed: true };
+}
+
 /** 6 (first-clue solve) … 1 (last-clue solve); 0 unsolved. */
 export function score(state: GuessState): number {
   return state.solved ? MAX_CLUES + 1 - state.cluesRevealed : 0;

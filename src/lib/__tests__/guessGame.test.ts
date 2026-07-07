@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { guess, initialState, revealClue, score, shareText } from "../guessGame";
+import { giveUp, guess, initialState, revealClue, score, shareText } from "../guessGame";
 
 const ANSWER = "kenny-dalglish";
 
@@ -51,6 +51,16 @@ describe("guessGame reducer", () => {
     const solved = guess(s, ANSWER, ANSWER);
     expect(guess(solved, "ian-rush", ANSWER)).toEqual(solved);
     expect(revealClue(solved)).toEqual(solved);
+  });
+
+  it("giving up fails the game from any live state, scores 0, and is a no-op afterwards", () => {
+    const s = giveUp(revealClue(initialState()));
+    expect(s.failed).toBe(true);
+    expect(s.cluesRevealed).toBe(2); // grid reflects clues actually seen
+    expect(score(s)).toBe(0);
+    expect(giveUp(s)).toEqual(s);
+    const solved = guess(initialState(), ANSWER, ANSWER);
+    expect(giveUp(solved)).toEqual(solved);
   });
 
   it("duplicate wrong guesses are not double-counted", () => {

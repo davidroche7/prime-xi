@@ -43,6 +43,7 @@ export interface EraKey {
   slug: string;
   title: string;
   seasonRange: string; // human label, e.g. "1892 – today"
+  fromYear: number; // era window start — pickers only offer players/managers/seasons from here on
   hashes: {
     slots: { players: string[]; seasons: string[] }[]; // 11 entries
     manager: string;
