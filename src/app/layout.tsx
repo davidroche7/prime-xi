@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DISCLAIMER, PLAUSIBLE_DOMAIN, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
+import { CREDITS, DISCLAIMER, PLAUSIBLE_DOMAIN, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: `%s · ${SITE_NAME}`,
   },
   description:
-    "Pick a club, spend a fixed budget on peak player-seasons, and see how your greatest XI rates. Deterministic scoring, a daily puzzle, and shareable team cards.",
+    "Guess the Red — a daily Liverpool player quiz with six progressive clues — and The Perfect XI, a blind team-builder scored against hidden all-time selections.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="border-b border-ink-800">
           <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
             <Link href="/" className="text-lg font-black tracking-tight">
-              PRIME<span className="text-emerald-400"> XI</span>
+              PRIME<span className="text-red-500"> XI</span>
             </Link>
             <div className="flex gap-4 text-sm text-zinc-300">
               <Link href="/" className="hover:text-white">
@@ -36,8 +36,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>
         <footer className="border-t border-ink-800 py-6">
-          <div className="mx-auto max-w-5xl px-4 text-xs leading-relaxed text-zinc-500">
+          <div className="mx-auto max-w-5xl space-y-2 px-4 text-xs leading-relaxed text-zinc-500">
             <p>{DISCLAIMER}</p>
+            <p>{CREDITS}</p>
           </div>
         </footer>
       </body>
