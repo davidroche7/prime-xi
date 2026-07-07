@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description:
     "A free daily Liverpool player guessing game. Six clues, hardest to easiest, one Red from 130+ years of club history. New puzzle every day at midnight UTC.",
   alternates: { canonical: `${SITE_URL}/daily/` },
+  openGraph: {
+    title: "Guess the Red — the daily Liverpool FC player quiz",
+    url: `${SITE_URL}/daily/`,
+    images: ["/og.png"],
+  },
 };
 
 const FAQS = [

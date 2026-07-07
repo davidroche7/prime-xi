@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "Build the greatest Liverpool XI blind — players, defining seasons, formation, manager — and score it out of 98 against a hidden canonical team. Three eras, counts-only feedback.",
   alternates: { canonical: `${SITE_URL}/` },
+  openGraph: {
+    title: "The Perfect XI — build the greatest Liverpool team and prove it",
+    url: `${SITE_URL}/`,
+    images: ["/og.png"],
+  },
 };
 
 const FAQS = [

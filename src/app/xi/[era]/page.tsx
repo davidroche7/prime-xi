@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ era: stri
     title: content.metaTitle,
     description: content.metaDescription,
     alternates: { canonical: `${SITE_URL}/xi/${era}/` },
+    openGraph: { title: content.metaTitle, url: `${SITE_URL}/xi/${era}/`, images: ["/og.png"] },
   };
 }
 
