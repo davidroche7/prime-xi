@@ -86,7 +86,7 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
   const copyShare = async () => {
     if (!date) return;
     try {
-      await navigator.clipboard.writeText(shareText(state, date, mode, SITE_URL));
+      await navigator.clipboard.writeText(shareText(state, date, mode, `${SITE_URL}/daily/`));
       setCopied(true);
     } catch {
       // clipboard unavailable — the share card download still works
