@@ -1,6 +1,6 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import type { ClubData, Formation } from "./types";
+import type { AnswerPlayer, EraKey, Formation, IndexedPlayer, Manager } from "./types";
 
 /**
  * Build-time-only readers for the static JSON in /data. With `output: 'export'` these
@@ -9,31 +9,12 @@ import type { ClubData, Formation } from "./types";
 
 const DATA_DIR = join(process.cwd(), "data");
 
-export interface ClubIndexEntry {
-  id: string;
-  slug: string;
-  name: string;
-  tier: "marquee" | "longtail";
-  themeColour: string;
-  budget: number;
-  playerCount: number;
+function readJson<T>(name: string): T {
+  return JSON.parse(readFileSync(join(DATA_DIR, name), "utf8"));
 }
 
-export function getClubIndex(): ClubIndexEntry[] {
-  return JSON.parse(readFileSync(join(DATA_DIR, "index.json"), "utf8"));
-}
-
-export function getClubSlugs(): string[] {
-  return readdirSync(join(DATA_DIR, "clubs"))
-    .filter((f) => f.endsWith(".json"))
-    .map((f) => f.replace(/\.json$/, ""));
-}
-
-export function getClubData(slug: string): ClubData {
-  if (!/^[a-z0-9-]+$/.test(slug)) throw new Error(`Bad club slug: ${slug}`);
-  return JSON.parse(readFileSync(join(DATA_DIR, "clubs", `${slug}.json`), "utf8"));
-}
-
-export function getFormations(): Formation[] {
-  return JSON.parse(readFileSync(join(DATA_DIR, "formations.json"), "utf8"));
-}
+export const getFormations = () => readJson<Formation[]>("formations.json");
+export const getPlayersIndex = () => readJson<IndexedPlayer[]>("players-index.json");
+export const getAnswers = () => readJson<AnswerPlayer[]>("answers.json");
+export const getManagers = () => readJson<Manager[]>("managers.json");
+export const getEras = () => readJson<EraKey[]>("eras.json");

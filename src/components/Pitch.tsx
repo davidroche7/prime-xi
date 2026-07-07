@@ -1,17 +1,16 @@
 "use client";
 
-import type { Formation, PlayerSeason } from "@/lib/types";
-import { fit } from "@/lib/scoring";
+import type { Formation } from "@/lib/types";
 
 interface PitchProps {
   formation: Formation;
-  assignments: Record<string, PlayerSeason | undefined>;
+  /** slotId -> short label (e.g. surname) for filled slots */
+  labels: Record<string, string | undefined>;
   selectedSlotId: string | null;
   onSelectSlot: (slotId: string) => void;
-  themeColour: string;
 }
 
-export function Pitch({ formation, assignments, selectedSlotId, onSelectSlot, themeColour }: PitchProps) {
+export function Pitch({ formation, labels, selectedSlotId, onSelectSlot }: PitchProps) {
   return (
     <div
       className="relative w-full overflow-hidden rounded-xl border border-ink-700 bg-gradient-to-b from-pitch-800 to-pitch-900"
@@ -23,9 +22,8 @@ export function Pitch({ formation, assignments, selectedSlotId, onSelectSlot, th
       <div className="pointer-events-none absolute left-3 right-3 top-1/2 border-t border-white/20" />
 
       {formation.slots.map((slot) => {
-        const player = assignments[slot.slotId];
+        const label = labels[slot.slotId];
         const selected = selectedSlotId === slot.slotId;
-        const playerFit = player ? fit(player.positions, slot.group) : null;
         return (
           <button
             key={slot.slotId}
@@ -33,23 +31,21 @@ export function Pitch({ formation, assignments, selectedSlotId, onSelectSlot, th
             onClick={() => onSelectSlot(slot.slotId)}
             className="absolute -translate-x-1/2 -translate-y-1/2 text-center"
             style={{ left: `${slot.x}%`, top: `${slot.y}%` }}
-            aria-label={`${slot.group} slot${player ? `: ${player.playerName}` : ", empty"}`}
+            aria-label={`${slot.group} slot${label ? `: ${label}` : ", empty"}`}
           >
             <span
-              className={`mx-auto flex h-11 w-11 items-center justify-center rounded-full border-2 text-xs font-bold shadow-lg transition sm:h-13 sm:w-13 ${
+              className={`mx-auto flex h-11 w-11 items-center justify-center rounded-full border-2 text-[10px] font-bold shadow-lg transition ${
                 selected
                   ? "border-amber-300 bg-amber-400 text-black"
-                  : player
-                    ? "border-white/70 text-white"
+                  : label
+                    ? "border-white/70 bg-red-800 text-white"
                     : "border-dashed border-white/50 bg-black/30 text-white/70 hover:bg-black/50"
               }`}
-              style={player && !selected ? { backgroundColor: themeColour } : undefined}
             >
-              {player ? player.rating : slot.group}
+              {slot.group}
             </span>
             <span className="mt-1 block max-w-20 truncate text-[10px] font-semibold text-white drop-shadow sm:max-w-24 sm:text-xs">
-              {player ? player.playerName.split(" ").slice(-1)[0] : " "}
-              {playerFit === "adjacent" ? " ◦" : playerFit === "alien" ? " ✕" : ""}
+              {label ?? " "}
             </span>
           </button>
         );

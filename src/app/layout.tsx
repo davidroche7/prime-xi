@@ -28,11 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               PRIME<span className="text-emerald-400"> XI</span>
             </Link>
             <div className="flex gap-4 text-sm text-zinc-300">
-              <Link href="/daily/" className="hover:text-white">
-                Daily puzzle
-              </Link>
               <Link href="/" className="hover:text-white">
-                Clubs
+                Daily
               </Link>
             </div>
           </nav>
