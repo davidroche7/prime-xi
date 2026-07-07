@@ -46,6 +46,7 @@ describe("buildEraKey", () => {
     slug: "all-time",
     title: "Test",
     seasonRange: "x",
+    fromYear: 1892,
     formationId: "433",
     managerId: "bob-paisley",
     slots: [

@@ -13,6 +13,7 @@ export const example: CanonicalEra = {
   slug: "all-time",
   title: "The Greatest All-Time Liverpool XI",
   seasonRange: "1892 – today",
+  fromYear: 1892,
   formationId: "433",
   managerId: "bob-paisley",
   slots: [

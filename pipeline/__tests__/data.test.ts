@@ -74,6 +74,7 @@ describe.runIf(hasEras)("eras.json + managers.json", () => {
   it("three era keys with 11 hashed slots each and no plaintext", () => {
     expect(eras().map((e) => e.slug).sort()).toEqual(["all-time", "post-war", "premier-league"]);
     for (const e of eras()) {
+      expect(e.fromYear).toBeGreaterThanOrEqual(1892); // era window start ships with the key
       expect(e.hashes.slots).toHaveLength(11);
       for (const s of e.hashes.slots) {
         expect(s.players.length).toBeGreaterThanOrEqual(1);

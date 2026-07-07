@@ -5,6 +5,7 @@ import { GuessShareCard } from "@/components/GuessShareCard";
 import { PlayerSearch } from "@/components/PlayerSearch";
 import { dailyAnswerId, type Mode } from "@/lib/dailyAnswer";
 import {
+  giveUp,
   guess,
   initialState,
   MAX_CLUES,
@@ -143,19 +144,28 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
             exclude={state.wrongGuesses}
             placeholder="Guess a Liverpool player…"
           />
-          <div className="mt-3 flex items-center justify-between text-sm">
+          <div className="mt-3 flex items-center justify-between gap-2 text-sm">
             <span className="text-zinc-500">
               Clue {state.cluesRevealed}/{MAX_CLUES} · solve now for {MAX_CLUES + 1 - state.cluesRevealed} pts
             </span>
-            {state.cluesRevealed < MAX_CLUES ? (
+            <span className="flex gap-2">
+              {state.cluesRevealed < MAX_CLUES ? (
+                <button
+                  type="button"
+                  onClick={() => apply(revealClue(state))}
+                  className="rounded-lg border border-ink-700 px-3 py-1.5 text-zinc-300 hover:border-red-700 hover:text-white"
+                >
+                  Reveal next clue
+                </button>
+              ) : null}
               <button
                 type="button"
-                onClick={() => apply(revealClue(state))}
-                className="rounded-lg border border-ink-700 px-3 py-1.5 text-zinc-300 hover:border-red-700 hover:text-white"
+                onClick={() => apply(giveUp(state))}
+                className="rounded-lg px-3 py-1.5 text-zinc-500 hover:text-red-400"
               >
-                Reveal next clue
+                Give up
               </button>
-            ) : null}
+            </span>
           </div>
         </div>
       ) : (
@@ -167,7 +177,7 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
             </p>
           ) : (
             <p className="text-lg">
-              <span className="font-black text-red-400">Out of clues.</span> It was{" "}
+              <span className="font-black text-red-400">Not this time.</span> It was{" "}
               <span className="font-bold">{answer.name}</span>
             </p>
           )}

@@ -41,6 +41,21 @@ export function PerfectXiBuilder({ era, formations, players, managers }: Perfect
   const byId = useMemo(() => new Map(players.map((p) => [p.id, p])), [players]);
   const solved = saved.solvedBuild !== null;
 
+  // era gating: only players, seasons and managers from the era window are pickable
+  const eligiblePlayers = useMemo(
+    () => players.filter((p) => p.years[1] >= era.fromYear),
+    [players, era.fromYear],
+  );
+  const playerSeasons = (p: IndexedPlayer) => seasonsBetween(Math.max(p.years[0], era.fromYear), p.years[1]);
+  const managerSeasonsById = useMemo(
+    () =>
+      new Map(
+        managers.map((m) => [m.id, seasonsFromYearRanges(m.years).filter((s) => parseInt(s) >= era.fromYear)]),
+      ),
+    [managers, era.fromYear],
+  );
+  const eligibleManagers = managers.filter((m) => (managerSeasonsById.get(m.id) ?? []).length > 0);
+
   // restore attempts/best and, if already solved, the winning build (local reveal)
   useEffect(() => {
     const s = readStored<Saved>(storageKey);
@@ -180,7 +195,7 @@ export function PerfectXiBuilder({ era, formations, players, managers }: Perfect
                   disabled={solved}
                   className={selectClass}
                 >
-                  {seasonsBetween(selectedPlayer.years[0], selectedPlayer.years[1]).map((s) => (
+                  {playerSeasons(selectedPlayer).map((s) => (
                     <option key={s} value={s}>
                       {s}
                     </option>
@@ -190,11 +205,11 @@ export function PerfectXiBuilder({ era, formations, players, managers }: Perfect
             </div>
           ) : (
             <PlayerSearch
-              players={players}
+              players={eligiblePlayers}
               onPick={(p) =>
                 setPicks({
                   ...picks,
-                  [selectedSlot]: { playerId: p.id, season: seasonsBetween(p.years[0], p.years[1])[0] },
+                  [selectedSlot]: { playerId: p.id, season: playerSeasons(p)[0] },
                 })
               }
               exclude={pickedIds}
@@ -216,7 +231,7 @@ export function PerfectXiBuilder({ era, formations, players, managers }: Perfect
               className={selectClass}
             >
               <option value="">—</option>
-              {managers.map((m) => (
+              {eligibleManagers.map((m) => (
                 <option key={m.id} value={m.id}>
                   {m.name} ({m.years})
                 </option>
@@ -233,7 +248,7 @@ export function PerfectXiBuilder({ era, formations, players, managers }: Perfect
             >
               <option value="">—</option>
               {manager
-                ? seasonsFromYearRanges(manager.years).map((s) => (
+                ? (managerSeasonsById.get(manager.id) ?? []).map((s) => (
                     <option key={s} value={s}>
                       {s}
                     </option>

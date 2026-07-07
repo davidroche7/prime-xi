@@ -7,6 +7,7 @@ const canonical: CanonicalEra = {
   slug: "all-time",
   title: "Test XI",
   seasonRange: "x",
+    fromYear: 1892,
   formationId: "433",
   managerId: "bob-paisley", // peak season computes to 1976-77
   slots: [
