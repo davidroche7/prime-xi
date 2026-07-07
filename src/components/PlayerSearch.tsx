@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { normalizeCanonical as normalize } from "@/lib/canonicalHash";
 import type { IndexedPlayer } from "@/lib/types";
 
 interface PlayerSearchProps {
@@ -9,10 +10,6 @@ interface PlayerSearchProps {
   placeholder: string;
   /** player ids to hide from results (already guessed / already picked) */
   exclude?: string[];
-}
-
-function normalize(s: string): string {
-  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 }
 
 /** Autocomplete restricted to the real all-time roster — blind: name + years only. */

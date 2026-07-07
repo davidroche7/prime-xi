@@ -60,9 +60,8 @@ export function PerfectXiBuilder({ era, formations, players, managers }: Perfect
     setPicks(Object.fromEntries(formation.slots.map((s, i) => [s.slotId, saved.solvedBuild!.picks[i]])));
   }, [saved.solvedBuild, formation]);
 
-  const pickedIds = Object.values(picks)
-    .filter((p): p is Pick => !!p)
-    .map((p) => p.playerId);
+  // only the active formation's picks — a formation switch must not leave ghost exclusions
+  const pickedIds = formation.slots.flatMap((s) => (picks[s.slotId] ? [picks[s.slotId]!.playerId] : []));
 
   const labels = Object.fromEntries(
     formation.slots.map((s) => {

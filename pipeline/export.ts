@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { normalizeCanonical } from "../src/lib/canonicalHash";
 import { difficultyFor, generateClues } from "./clues";
 import { buildEraKey, type CanonicalEra } from "./eras";
 import type { Enrichment } from "./lfchistory";
@@ -17,14 +18,10 @@ function writeJson(name: string, value: unknown) {
   console.log(`wrote data/${name}`);
 }
 
-function stripDiacritics(s: string): string {
-  return s.normalize("NFD").replace(/[̀-ͯ]/g, "");
-}
-
 export function buildPlayersIndex(spine: SpinePlayer[]) {
   return spine.map((p) => {
     const lower = p.name.toLowerCase();
-    const plain = stripDiacritics(lower);
+    const plain = normalizeCanonical(p.name);
     const surname = plain.split(" ").slice(-1)[0];
     return {
       id: p.id,
