@@ -1,20 +1,32 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { H2HShareCard } from "@/components/H2HShareCard";
 import { Pitch } from "@/components/Pitch";
 import { PlayerSearch } from "@/components/PlayerSearch";
 import { XiShareCard } from "@/components/XiShareCard";
+import { matchResult, RATING_FLOOR, teamRating } from "@/lib/h2h";
 import { scoreBuild, type XiBuild, type XiScore } from "@/lib/perfectXi";
 import { seasonsBetween, seasonsFromYearRanges } from "@/lib/seasons";
 import { readStored, writeStored } from "@/lib/storage";
-import type { EraKey, Formation, IndexedPlayer, Manager } from "@/lib/types";
+import type { EraKey, Formation, IndexedPlayer, Manager, Ratings } from "@/lib/types";
+
+interface Opponent {
+  club: string;
+  name: string; // display name, e.g. "Manchester United"
+  canonicalRating: number; // hidden — only the resulting scoreline is shown
+}
 
 interface PerfectXiBuilderProps {
   era: EraKey;
   formations: Formation[];
   players: IndexedPlayer[];
   managers: Manager[];
+  ratings: Ratings;
+  opponents: Opponent[];
 }
+
+const clubName = (slug: string) => slug.replace(/(^|-)(\w)/g, (_, s, c) => (s ? " " : "") + c.toUpperCase());
 
 interface Pick {
   playerId: string;
@@ -27,15 +39,21 @@ interface Saved {
   solvedBuild: XiBuild | null;
 }
 
-export function PerfectXiBuilder({ era, formations, players, managers }: PerfectXiBuilderProps) {
-  const storageKey = `xi:${era.slug}`;
+export function PerfectXiBuilder({ era, formations, players, managers, ratings, opponents }: PerfectXiBuilderProps) {
+  const storageKey = `xi:${era.club}:${era.slug}`;
   const [formationId, setFormationId] = useState(formations[0].id);
   const [picks, setPicks] = useState<Record<string, Pick | undefined>>({});
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
   const [managerId, setManagerId] = useState("");
   const [managerSeason, setManagerSeason] = useState("");
   const [feedback, setFeedback] = useState<XiScore | null>(null);
+  const [yourRating, setYourRating] = useState<number | null>(null); // H2H team strength (hidden)
+  const [rival, setRival] = useState<Opponent | null>(null);
   const [saved, setSaved] = useState<Saved>({ attempts: 0, best: 0, solvedBuild: null });
+
+  // hidden H2H team strength of a build — a pick with no shipped rating counts as the floor
+  const ratingOfBuild = (build: XiBuild) =>
+    teamRating(build.picks.map((p) => ratings[p.playerId]?.[p.season] ?? RATING_FLOOR));
 
   const formation = formations.find((f) => f.id === formationId) ?? formations[0];
   const byId = useMemo(() => new Map(players.map((p) => [p.id, p])), [players]);
@@ -66,6 +84,7 @@ export function PerfectXiBuilder({ era, formations, players, managers }: Perfect
       setManagerId(s.solvedBuild.managerId);
       setManagerSeason(s.solvedBuild.managerSeason);
       setFeedback(scoreBuild(s.solvedBuild, era)); // so the share card survives a reload
+      setYourRating(ratingOfBuild(s.solvedBuild)); // so H2H survives a reload too
     }
   }, [storageKey, era]);
 
@@ -103,6 +122,7 @@ export function PerfectXiBuilder({ era, formations, players, managers }: Perfect
       solvedBuild: s.perfect ? build : null,
     };
     setFeedback(s);
+    setYourRating(ratingOfBuild(build)); // unlocks head-to-head
     setSaved(next);
     writeStored(storageKey, next);
   };
@@ -291,6 +311,56 @@ export function PerfectXiBuilder({ era, formations, players, managers }: Perfect
           <p className="text-center text-xs text-zinc-500">
             {saved.attempts} attempt{saved.attempts === 1 ? "" : "s"} so far · best {saved.best}/98
           </p>
+        ) : null}
+
+        {feedback && yourRating !== null && opponents.length > 0 ? (
+          <div className="rounded-xl border border-ink-700 bg-ink-900 p-4">
+            <p className="text-center text-sm font-bold text-zinc-200">Head to head</p>
+            <p className="mt-1 text-center text-xs text-zinc-500">
+              Play your XI against another club’s greatest side — result only, their team stays hidden.
+            </p>
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
+              {opponents.map((o) => (
+                <button
+                  key={o.club}
+                  type="button"
+                  onClick={() => setRival(o)}
+                  className={`rounded-lg border px-3 py-2 text-sm font-semibold ${
+                    rival?.club === o.club
+                      ? "border-red-700 bg-red-700/20 text-white"
+                      : "border-ink-700 text-zinc-300 hover:border-red-700"
+                  }`}
+                >
+                  {o.name}
+                </button>
+              ))}
+            </div>
+            {rival
+              ? (() => {
+                  const result = matchResult(yourRating, rival.canonicalRating);
+                  const tone =
+                    result.outcome === "W" ? "text-emerald-400" : result.outcome === "L" ? "text-red-400" : "text-amber-400";
+                  const word = result.outcome === "W" ? "Win" : result.outcome === "L" ? "Loss" : "Draw";
+                  return (
+                    <div className="mt-4 text-center">
+                      <p className="text-sm text-zinc-400">
+                        {clubName(era.club)} <span className="text-zinc-600">v</span> {rival.name}
+                      </p>
+                      <p className={`text-5xl font-black ${tone}`}>{result.scoreline}</p>
+                      <p className={`text-sm font-bold ${tone}`}>{word}</p>
+                      <div className="mt-3 flex justify-center">
+                        <H2HShareCard
+                          result={result}
+                          yourClub={clubName(era.club)}
+                          rivalClub={rival.name}
+                          eraTitle={era.title}
+                        />
+                      </div>
+                    </div>
+                  );
+                })()
+              : null}
+          </div>
         ) : null}
       </div>
     </div>

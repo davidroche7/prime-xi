@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PerfectXiBuilder } from "@/components/PerfectXiBuilder";
 import { ERA_CONTENT } from "@/content/eras";
-import { getEras, getFormations, getManagers, getPlayersIndex } from "@/lib/data";
+import { getEras, getFormations, getManagers, getOpponents, getPlayersIndex, getRatings } from "@/lib/data";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -42,6 +42,8 @@ export default async function EraPage({ params }: { params: Promise<{ era: strin
         formations={getFormations()}
         players={getPlayersIndex("liverpool")}
         managers={getManagers("liverpool")}
+        ratings={getRatings("liverpool")}
+        opponents={getOpponents("liverpool", era.slug)}
       />
 
       <section className="mx-auto mt-16 max-w-2xl space-y-4 border-t border-ink-800 pt-8 text-sm leading-relaxed text-zinc-400">
