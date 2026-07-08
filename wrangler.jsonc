@@ -1,0 +1,14 @@
+{
+  // Serve the static Next.js export (`output: 'export'` → ./out) as Cloudflare
+  // Workers static assets. No `main` worker script = assets-only, no server
+  // runtime — keeps the "static + client-side only" hard rule intact.
+  // Presence of this file stops `wrangler deploy` from auto-detecting Next.js
+  // and running the OpenNext server adapter (which fails on a static export).
+  "name": "prime-xi",
+  "compatibility_date": "2026-07-08",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
