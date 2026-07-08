@@ -8,6 +8,9 @@
  * exposes the other's XI: the opponent is a single number behind a scoreline.
  */
 
+/** Rating floor — a pick with no shipped rating (deep cut / omitted) counts as this. */
+export const RATING_FLOOR = 30;
+
 /** Aggregate 11 player-season ratings into one team strength (0–99). */
 export function teamRating(seasonRatings: number[]): number {
   if (seasonRatings.length === 0) return 0;

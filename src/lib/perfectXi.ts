@@ -30,22 +30,22 @@ export function scoreBuild(build: XiBuild, era: EraKey): XiScore {
   let playersCorrect = 0;
   let seasonsCorrect = 0;
   for (const pick of build.picks) {
-    const pHash = canonicalHash(era.slug, "player", pick.playerId);
+    const pHash = canonicalHash(era.club, era.slug, "player", pick.playerId);
     const i = era.hashes.slots.findIndex((s, idx) => !used.has(idx) && s.players.includes(pHash));
     if (i === -1) continue;
     used.add(i);
     playersCorrect++;
-    const sHash = canonicalHash(era.slug, "season", `${pick.playerId}|${pick.season}`);
+    const sHash = canonicalHash(era.club, era.slug, "season", `${pick.playerId}|${pick.season}`);
     if (era.hashes.slots[i].seasons.includes(sHash)) seasonsCorrect++;
   }
 
-  const managerCorrect = canonicalHash(era.slug, "manager", build.managerId) === era.hashes.manager;
+  const managerCorrect = canonicalHash(era.club, era.slug, "manager", build.managerId) === era.hashes.manager;
   const managerSeasonCorrect =
     managerCorrect &&
-    canonicalHash(era.slug, "manager-season", `${build.managerId}|${build.managerSeason}`) ===
+    canonicalHash(era.club, era.slug, "manager-season", `${build.managerId}|${build.managerSeason}`) ===
       era.hashes.managerSeason;
   const formationCorrect =
-    canonicalHash(era.slug, "formation", build.formationId) === era.hashes.formation;
+    canonicalHash(era.club, era.slug, "formation", build.formationId) === era.hashes.formation;
 
   const total =
     playersCorrect * 6 +

@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getEras().map((e) => ({ era: e.slug }));
+  return getEras("liverpool").map((e) => ({ era: e.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ era: string }> }): Promise<Metadata> {
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ era: stri
 
 export default async function EraPage({ params }: { params: Promise<{ era: string }> }) {
   const { era: slug } = await params;
-  const era = getEras().find((e) => e.slug === slug);
+  const era = getEras("liverpool").find((e) => e.slug === slug);
   const content = ERA_CONTENT[slug];
   if (!era || !content) notFound();
 
@@ -40,8 +40,8 @@ export default async function EraPage({ params }: { params: Promise<{ era: strin
       <PerfectXiBuilder
         era={era}
         formations={getFormations()}
-        players={getPlayersIndex()}
-        managers={getManagers()}
+        players={getPlayersIndex("liverpool")}
+        managers={getManagers("liverpool")}
       />
 
       <section className="mx-auto mt-16 max-w-2xl space-y-4 border-t border-ink-800 pt-8 text-sm leading-relaxed text-zinc-400">

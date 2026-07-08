@@ -13,7 +13,7 @@ export interface Formation {
   slots: FormationSlot[];
 }
 
-/** One entry in /data/players-index.json — every player in club history. */
+/** One entry in /data/clubs/<club>/players-index.json — every player in club history. */
 export interface IndexedPlayer {
   id: string;
   name: string;
@@ -23,7 +23,7 @@ export interface IndexedPlayer {
   years: [number, number];
 }
 
-/** One entry in /data/answers.json — the Guess the Red answer pool. */
+/** One entry in /data/clubs/<club>/answers.json — the Guess the Red answer pool. */
 export interface AnswerPlayer {
   id: string;
   name: string;
@@ -31,19 +31,21 @@ export interface AnswerPlayer {
   clues: string[]; // exactly 6, hardest → easiest
 }
 
-/** One entry in /data/managers.json. */
+/** One entry in /data/clubs/<club>/managers.json. */
 export interface Manager {
   id: string;
   name: string;
   years: string; // "1959–1974"
 }
 
-/** One entry in /data/eras.json — canonical key shipped as salted hashes only. */
+/** One entry in /data/clubs/<club>/eras.json — canonical key shipped as salted hashes only. */
 export interface EraKey {
+  club: string; // owning club slug — part of the hash salt, so keys never collide across clubs
   slug: string;
   title: string;
   seasonRange: string; // human label, e.g. "1892 – today"
   fromYear: number; // era window start — pickers only offer players/managers/seasons from here on
+  canonicalRating: number; // precomputed H2H strength of this era's canonical XI (reveals no players)
   hashes: {
     slots: { players: string[]; seasons: string[] }[]; // 11 entries
     manager: string;
@@ -51,3 +53,7 @@ export interface EraKey {
     formation: string;
   };
 }
+
+/** /data/clubs/<club>/ratings.json — per-(player, season) H2H rating (30–99).
+ *  Floor-omitted: a missing player or season means the rating floor. Never displayed. */
+export type Ratings = Record<string, Record<string, number>>; // playerId → season label → rating

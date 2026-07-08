@@ -12,9 +12,12 @@ const DATA_DIR = join(process.cwd(), "data");
 function readJson<T>(name: string): T {
   return JSON.parse(readFileSync(join(DATA_DIR, name), "utf8"));
 }
+function readClubJson<T>(club: string, name: string): T {
+  return JSON.parse(readFileSync(join(DATA_DIR, "clubs", club, name), "utf8"));
+}
 
-export const getFormations = () => readJson<Formation[]>("formations.json");
-export const getPlayersIndex = () => readJson<IndexedPlayer[]>("players-index.json");
-export const getAnswers = () => readJson<AnswerPlayer[]>("answers.json");
-export const getManagers = () => readJson<Manager[]>("managers.json");
-export const getEras = () => readJson<EraKey[]>("eras.json");
+export const getFormations = () => readJson<Formation[]>("formations.json"); // shared across clubs
+export const getPlayersIndex = (club: string) => readClubJson<IndexedPlayer[]>(club, "players-index.json");
+export const getAnswers = (club: string) => readClubJson<AnswerPlayer[]>(club, "answers.json");
+export const getManagers = (club: string) => readClubJson<Manager[]>(club, "managers.json");
+export const getEras = (club: string) => readClubJson<EraKey[]>(club, "eras.json");

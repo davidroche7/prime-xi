@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${SITE_URL}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/daily/`, changeFrequency: "daily", priority: 0.9 },
-    ...getEras().map((e) => ({
+    ...getEras("liverpool").map((e) => ({
       url: `${SITE_URL}/xi/${e.slug}/`,
       changeFrequency: "monthly" as const,
       priority: 0.8,
