@@ -96,6 +96,26 @@ describe.runIf(hasEras)("eras.json + managers.json", () => {
   });
 });
 
+// H2H opponent clubs ship only an all-time eras.json (one canonicalRating, no roster).
+const MAN_UTD = join(DATA, "clubs", "manchester-united");
+const hasOpponent = existsSync(join(MAN_UTD, "eras.json"));
+describe.runIf(hasOpponent)("opponent club: manchester-united", () => {
+  const eras = () => JSON.parse(readFileSync(join(MAN_UTD, "eras.json"), "utf8")) as EraKey[];
+
+  it("ships a valid all-time key: rated, hashed, no plaintext", () => {
+    const all = eras();
+    expect(all.map((e) => e.slug)).toEqual(["all-time"]); // opponent-only: all-time era only for now
+    for (const e of all) {
+      expect(e.club).toBe("manchester-united"); // own club slug → hashes never collide with Liverpool's
+      expect(e.canonicalRating).toBeGreaterThanOrEqual(30);
+      expect(e.canonicalRating).toBeLessThanOrEqual(99);
+      expect(e.hashes.slots).toHaveLength(11);
+      for (const s of e.hashes.slots) for (const h of [...s.players, ...s.seasons]) expect(h).toMatch(/^[0-9a-z]+$/);
+      expect(JSON.stringify(e)).not.toMatch(/schmeichel|charlton|ronaldo|ferguson/i); // no plaintext leak
+    }
+  });
+});
+
 const hasRatings = existsSync(join(CLUB, "ratings.json"));
 describe.runIf(hasRatings)("ratings.json", () => {
   const ratings = () => readClub<Ratings>("ratings.json");

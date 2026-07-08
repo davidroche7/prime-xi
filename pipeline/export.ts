@@ -8,7 +8,7 @@ import { difficultyFor, generateClues } from "./clues";
 import { buildEraKey, type CanonicalEra } from "./eras";
 import type { Enrichment } from "./lfchistory";
 import { enrichmentSubset } from "./lfchistory";
-import { MANAGERS } from "./managers";
+import { MANAGERS, type ManagerRecord } from "./managers";
 import { playerSeasonRating } from "./ratings";
 import type { SpinePlayer } from "./wikipedia";
 
@@ -53,6 +53,26 @@ export function buildRatings(spine: SpinePlayer[], enrichment: Record<number, En
     if (Object.keys(seasons).length) out[p.id] = seasons;
   }
   return out;
+}
+
+/** Opponent clubs (H2H only): an authored mini-canonical (gitignored) → one
+ *  eras.json, no roster/daily. Rated by the same formula as the home club so
+ *  scorelines are fair. Skipped silently when the key is absent (public repo).
+ *  Richen to a full club later by adding the usual files beside eras.json. */
+function buildOpponent(club: string) {
+  const key = join(__dirname, "canonical", `${club}.ts`);
+  if (!existsSync(key)) return console.log(`canonical/${club}.ts not present — skipping ${club}`);
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { CANONICAL, MANAGERS: mgrs, ratingOf } = require(key) as {
+    CANONICAL: CanonicalEra[];
+    MANAGERS: ManagerRecord[];
+    ratingOf: (playerId: string, season: string) => number;
+  };
+  const dir = join(__dirname, "..", "data", "clubs", club);
+  mkdirSync(dir, { recursive: true });
+  const eras = CANONICAL.map((e) => buildEraKey(e, club, ratingOf, mgrs));
+  writeFileSync(join(dir, "eras.json"), JSON.stringify(eras) + "\n");
+  console.log(`wrote data/clubs/${club}/eras.json (canonicalRating ${eras.map((e) => e.canonicalRating).join("/")})`);
 }
 
 export function buildAnswers(spine: SpinePlayer[], enrichment: Record<number, Enrichment>) {
@@ -102,4 +122,7 @@ if (require.main === module) {
   } else {
     console.log("canonical/ not present — skipping eras.json (see pipeline/canonical/README.md)");
   }
+
+  // H2H opponents — each ships only an all-time canonicalRating for now.
+  buildOpponent("manchester-united");
 }

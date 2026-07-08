@@ -1,7 +1,7 @@
 import { canonicalHash } from "../src/lib/canonicalHash";
 import { teamRating } from "../src/lib/h2h";
 import type { EraKey } from "../src/lib/types";
-import { MANAGERS, managerPeakSeason } from "./managers";
+import { MANAGERS, type ManagerRecord, managerPeakSeason } from "./managers";
 
 /**
  * Turns a plaintext canonical era key (gitignored, pipeline/canonical/) into
@@ -25,13 +25,16 @@ export interface CanonicalEra {
  *   the export passes it explicitly per club.
  * @param ratingOf per-(player, season) rating lookup; used to precompute the
  *   canonical XI's team rating for head-to-head. Defaults to 0 (tests don't need it).
+ * @param managers the club's manager records (peak-season source). Defaults to
+ *   Liverpool's; other clubs pass their own so this stays club-agnostic.
  */
 export function buildEraKey(
   era: CanonicalEra,
   club = "liverpool",
   ratingOf: (playerId: string, season: string) => number = () => 0,
+  managers: ManagerRecord[] = MANAGERS,
 ): EraKey {
-  const manager = MANAGERS.find((m) => m.id === era.managerId);
+  const manager = managers.find((m) => m.id === era.managerId);
   if (!manager) throw new Error(`buildEraKey: unknown manager ${era.managerId}`);
   if (era.slots.length !== 11) throw new Error(`buildEraKey: ${era.slug} has ${era.slots.length} slots`);
   const seen = new Set<string>();
