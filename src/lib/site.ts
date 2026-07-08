@@ -1,5 +1,5 @@
 export const SITE_NAME = "PRIME XI";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://prime-xi.pages.dev";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://theperfectxi.com";
 export const SITE_TAGLINE = "Build the greatest Liverpool XI — and prove you know it.";
 export const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN; // unset = analytics off
 export const DISCLAIMER =
