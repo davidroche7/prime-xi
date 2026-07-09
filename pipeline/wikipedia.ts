@@ -20,6 +20,17 @@ const CLUB_PAGES: Record<string, string[]> = {
     "List of Manchester United F.C. players (25–99 appearances)",
     "List of Manchester United F.C. players (1–24 appearances)",
   ],
+  everton: ["List of Everton F.C. players"],
+  arsenal: [
+    "List of Arsenal F.C. players",
+    "List of Arsenal F.C. players (25–99 appearances)",
+    "List of Arsenal F.C. players (1–24 appearances)",
+  ],
+  "manchester-city": [
+    "List of Manchester City F.C. players",
+    "List of Manchester City F.C. players (25–99 appearances)",
+    "List of Manchester City F.C. players (1–24 appearances)",
+  ],
 };
 
 const CACHE_DIR = join(__dirname, "cache");
@@ -163,13 +174,15 @@ async function fetchPage(title: string): Promise<string> {
   return body.parse.wikitext;
 }
 
-export async function fetchSpine(club = "liverpool"): Promise<SpinePlayer[]> {
+export async function fetchSpine(club = "liverpool", minPlayers = 700): Promise<SpinePlayer[]> {
   const titles = CLUB_PAGES[club];
   if (!titles) throw new Error(`No Wikipedia list pages configured for club: ${club}`);
   const pages = await Promise.all(titles.map(fetchPage));
   const spine = mergeSpine(pages.map(parseListPage));
 
-  if (spine.length < 700) throw new Error(`Spine too small: ${spine.length} players (expected ≥ 700)`);
+  // The home club needs a complete roster; opponent research only needs the
+  // notable subset, so callers can lower the floor.
+  if (spine.length < minPlayers) throw new Error(`Spine too small: ${spine.length} players (expected ≥ ${minPlayers})`);
   const dupes = spine.filter((p, i) => spine.findIndex((q) => q.id === p.id) !== i);
   if (dupes.length > 0) throw new Error(`Duplicate ids: ${dupes.map((d) => d.id).join(", ")}`);
 
@@ -182,7 +195,8 @@ export async function fetchSpine(club = "liverpool"): Promise<SpinePlayer[]> {
 // Run directly: `pnpm tsx pipeline/wikipedia.ts [club]`
 if (require.main === module) {
   const club = process.argv[2] ?? "liverpool";
-  fetchSpine(club).then((s) => {
+  const min = club === "liverpool" ? 700 : 50; // opponents research the notable subset only
+  fetchSpine(club, min).then((s) => {
     console.log(`${club} spine: ${s.length} players, ${s.filter((p) => p.lfchId).length} with lfchistory ids`);
   });
 }

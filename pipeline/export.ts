@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { normalizeCanonical } from "../src/lib/canonicalHash";
 import { RATING_FLOOR } from "../src/lib/h2h";
@@ -123,6 +123,11 @@ if (require.main === module) {
     console.log("canonical/ not present — skipping eras.json (see pipeline/canonical/README.md)");
   }
 
-  // H2H opponents — each ships only an all-time canonicalRating for now.
-  buildOpponent("manchester-united");
+  // H2H opponents — any gitignored canonical/<club>.ts (not index.ts) ships its
+  // per-era canonicalRating(s). Drop in a file, re-run: no code change per club.
+  const canonicalDir = join(__dirname, "canonical");
+  if (existsSync(canonicalDir)) {
+    for (const f of readdirSync(canonicalDir))
+      if (f.endsWith(".ts") && f !== "index.ts") buildOpponent(f.replace(/\.ts$/, ""));
+  }
 }
