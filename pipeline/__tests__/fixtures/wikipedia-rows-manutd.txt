@@ -1,0 +1,32 @@
+{| class="wikitable unsortable"
+|+ Positions key
+|-
+!scope="row"|GK
+|colspan="3" align=center |[[Goalkeeper (association football)|Goalkeeper]]
+|-
+!scope="row"|FW
+|colspan="3" align=center|[[Forward (association football)|Forward]]
+|}
+
+{| class="wikitable plainrowheaders sortable" style="text-align:center"
+|+List of Manchester United F.C. players with at least 100 appearances
+|-
+!scope="col" rowspan="2"|Name
+!scope="col" rowspan="2"|Nationality
+!scope="col" rowspan="2"|Position
+!scope="col" rowspan="2"|Manchester United<br />career
+!scope="col" colspan="3" class="unsortable"|Appearances
+!scope="col" rowspan="2"|Goals
+!scope="col" rowspan="2" class="unsortable"|Ref
+|-
+!scope="col"|Starts
+!scope="col"|Subs
+!scope="col"|Total
+|-
+! scope="row" align="left"| {{sortname|Bobby|Charlton}}
+|{{fba|ENG}}|| {{sort|6|FW}}||1956–1973||756||2||758||249||<ref>x</ref>
+|-
+! scope="row" align="left"| {{sortname|Denis|Law}}
+|{{fba|SCO}}|| {{sort|6|FW}}||1962–1973||398||6||404||237||<ref>x</ref>
+|-
+|}

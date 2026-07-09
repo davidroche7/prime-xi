@@ -63,6 +63,23 @@ describe("parseListPage", () => {
   });
 });
 
+// Man Utd's list pages use a different-but-valid table dialect: `! scope="row"`
+// (space + quotes) and inline `||` cells rather than Liverpool's `!scope=row`
+// with newline-`|` cells. Same parser must handle both.
+describe("parseListPage — Man Utd dialect (inline || cells)", () => {
+  const rows = parseListPage(readFileSync(join(__dirname, "fixtures", "wikipedia-rows-manutd.txt"), "utf8"));
+
+  it("parses only the player rows, dropping the positions-key legend", () => {
+    expect(rows.map((r) => r.name)).toEqual(["Bobby Charlton", "Denis Law"]);
+  });
+
+  it("reads inline-|| cells into the right columns (Total apps, not Starts)", () => {
+    const charlton = rows.find((r) => r.name === "Bobby Charlton")!;
+    expect(charlton).toMatchObject({ nationality: "England", position: "FW", apps: 758, goals: 249 });
+    expect(charlton.careerSpans).toEqual([[1956, 1973]]);
+  });
+});
+
 describe("mergeSpine", () => {
   it("assigns unique ids and disambiguates collisions with first year", () => {
     const rows = parseListPage(fixture);
