@@ -19,6 +19,7 @@ export const ERA_CONTENT: Record<string, EraContent> = {
       "The build is blind. Pick a formation, fill all eleven slots, and for each player name the season that defined him — Dalglish had many great years, but which was the peak? Then choose the manager who should lead them and the season that was his summit. Submit, and you get Mastermind-style feedback: how many players you have right, how many defining seasons, whether formation and manager match — never which picks were correct. That is the puzzle: work out where your team agrees with history's verdict and where it doesn't.",
       "A perfect build scores 98 — six points per correct player, two per correct season, four for the formation, four for the manager and two more for his peak season. Some slots accept more than one legend: an all-time XI that starts Clemence is as defensible as one that starts Alisson, and the key knows it. Find all of it and the canonical XI is revealed — as your own team sheet, because at 100% they are the same thing.",
       "Your attempts and best score are saved on your device, nothing more. No account, no leaderboard, just you against the collective judgement of Liverpool history. Start with the certainties — every all-time XI has four or five picks nobody argues about — then use the counts to triangulate the rest.",
+      "And there is a second game folded into the build. Once you submit your all-time Liverpool XI, head-to-head lets you send it into battle against another club's greatest side — Manchester United, Real Madrid, Barcelona, Bayern Munich, AC Milan, Ajax, Arsenal, Manchester City or Everton. You see a scoreline and nothing else: the opponent's XI stays hidden, and every player's strength turns on the exact season you chose, so a legend in an off-year quietly weakens your team. The real question this board asks is not only whether your XI is the greatest in Liverpool's history, but whether it is the greatest in Europe.",
     ],
     faqs: [
       {
@@ -37,6 +38,10 @@ export const ERA_CONTENT: Record<string, EraContent> = {
         q: "Can a slot have more than one right answer?",
         a: "Yes. Some slots accept equivalent legends — either of two great goalkeepers, for example — and any accepted player with an accepted season scores in full.",
       },
+      {
+        q: "Can my Liverpool XI play other clubs?",
+        a: "Yes. After you submit an all-time XI, head-to-head pits it against the hidden greatest all-time XI of Manchester United, Real Madrid, Barcelona, Bayern Munich, AC Milan, Ajax, Arsenal, Manchester City or Everton. You get only a scoreline and a win, draw or loss; the opponent's team is never shown.",
+      },
     ],
   },
   "post-war": {
@@ -49,6 +54,7 @@ export const ERA_CONTENT: Record<string, EraContent> = {
       "The rules are the same as every Perfect XI page: build blind, then submit. Eleven players, each with the season that defined him, a formation, a manager and his peak season. The feedback is counts only — players right, seasons right, formation and manager yes or no. Nobody tells you that your left-back is the problem; the deduction is the game.",
       "The post-war era is the connoisseur's board. The certainties are fewer than the all-time page — the 1940s and 50s offer Liddell and not much else that survives an honest selection, while the 1960s alone could staff half a team. A perfect score of 98 reveals the canonical XI, which at that moment is identical to yours. Attempts and best score live in your browser; the answer never leaves the page you're on.",
       "If you grew up on Hansen bringing the ball out, or on Keegan and Toshack, or on van Dijk striding through the press, this is the argument you've been having all your life — now with a score attached.",
+      "Once you have submitted your post-war XI, you can take it head-to-head against another club's greatest post-war side — Manchester United, Arsenal or Manchester City. The result is a scoreline only: the opponent's team stays hidden, and each rating depends on the season you picked. Building the best post-war Liverpool team is one thing; proving it beats the best of United is another.",
     ],
     faqs: [
       {
@@ -67,6 +73,10 @@ export const ERA_CONTENT: Record<string, EraContent> = {
         q: "Do I need an account?",
         a: "No. Attempts and your best score are stored only in your browser's local storage, and the game works with storage disabled.",
       },
+      {
+        q: "Can I play my post-war XI against other clubs?",
+        a: "Yes — head-to-head offers Manchester United, Arsenal and Manchester City for the post-war era. You submit your XI, pick a rival and see only a scoreline; the opponent's team is never revealed.",
+      },
     ],
   },
   "premier-league": {
@@ -79,6 +89,7 @@ export const ERA_CONTENT: Record<string, EraContent> = {
       "Build yours blind: eleven players from 1992 onwards, each tagged with his defining season — Torres in 2007-08 or Fowler in 1995-96 both have a claim on the nine, but the hidden key has its own view. Add a formation, a manager and his peak season, then submit for counts-only feedback. Six points per correct player, two per season, four each for formation and manager, two for the manager's summit: 98 for perfection.",
       "The Premier League board rewards the supporter who watched it happen. The modern champions supply obvious candidates, but the key remembers Hyypiä's decade of order, Gerrard dragging ordinary teams to extraordinary places, and Suárez's single incandescent season. Equivalence classes mean genuinely defensible alternatives both score — but only genuinely defensible ones.",
       "Reach 100% and the canonical XI is revealed as your own build, with your attempt count as the bragging right. Everything is saved locally on your device; there is nothing to sign up for and nothing to install.",
+      "There is more to do once you have built it. Head-to-head lets you pit your Premier League Liverpool XI against another club's greatest Premier League side — Manchester United, Arsenal or Manchester City. You see a scoreline and a win, draw or loss and nothing else: the opponent's team is hidden, and a player rated on the wrong season drags yours down. Beating United's Premier League XI is its own bragging right.",
     ],
     faqs: [
       {
@@ -96,6 +107,10 @@ export const ERA_CONTENT: Record<string, EraContent> = {
       {
         q: "Can I retry after a wrong build?",
         a: "As often as you like. Each submission counts an attempt, your best score is kept on your device, and the canonical XI stays hidden until you hit 98.",
+      },
+      {
+        q: "Can I play my Premier League XI against rivals?",
+        a: "Yes. Head-to-head pits your Premier League Liverpool XI against the hidden greatest Premier League XI of Manchester United, Arsenal or Manchester City. Submit, pick a rival and you see only the scoreline.",
       },
     ],
   },
