@@ -283,7 +283,7 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
             type="button"
             onClick={submit}
             disabled={!complete}
-            className="w-full rounded-lg bg-red-700 px-4 py-3 font-bold text-white hover:bg-red-600 disabled:cursor-not-allowed disabled:bg-ink-700 disabled:text-zinc-500"
+            className="w-full rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-4 py-3 font-bold text-white shadow-lg shadow-red-950/50 transition hover:from-red-500 hover:to-red-600 disabled:cursor-not-allowed disabled:bg-ink-700 disabled:bg-none disabled:text-zinc-500 disabled:shadow-none"
           >
             {complete ? "Score my XI" : "Fill all 11 slots + manager to submit"}
           </button>

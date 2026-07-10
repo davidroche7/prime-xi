@@ -43,8 +43,14 @@ export default function DailyPage() {
   return (
     <>
       <section className="py-8 text-center">
-        <h1 className="text-4xl font-black tracking-tight">
-          Guess the <span className="text-red-500">Red</span>
+        <p className="text-xs font-bold uppercase tracking-[0.25em] text-red-400/90">
+          The daily warm-up
+        </p>
+        <h1 className="mt-2 text-4xl font-black tracking-tighter">
+          Guess the{" "}
+          <span className="bg-gradient-to-b from-red-400 to-red-600 bg-clip-text text-transparent">
+            Red
+          </span>
         </h1>
         <p className="mx-auto mt-2 max-w-xl text-zinc-400">
           One mystery Liverpool player a day. Six clues, hardest first — how few do you need?

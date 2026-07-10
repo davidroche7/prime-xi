@@ -61,11 +61,17 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="py-10 text-center">
-        <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
-          The Perfect <span className="text-red-500">XI</span>
+      <section className="py-12 text-center sm:py-16">
+        <p className="text-xs font-bold uppercase tracking-[0.25em] text-red-400/90">
+          A Liverpool knowledge game
+        </p>
+        <h1 className="mt-3 text-5xl font-black tracking-tighter sm:text-6xl">
+          The Perfect{" "}
+          <span className="bg-gradient-to-b from-red-400 to-red-600 bg-clip-text text-transparent">
+            XI
+          </span>
         </h1>
-        <p className="mx-auto mt-3 max-w-xl text-zinc-400">
+        <p className="mx-auto mt-4 max-w-xl text-balance text-zinc-400">
           The greatest Liverpool team is hidden on this site. Build yours blind — players, defining
           seasons, formation, manager — and score it out of 98. Counts-only feedback. Then take it
           head-to-head against the greatest XIs of United, Real Madrid and more.
@@ -79,12 +85,12 @@ export default function HomePage() {
             <Link
               key={card.slug}
               href={`/xi/${card.slug}/`}
-              className="rounded-xl border border-ink-700 bg-ink-900 p-5 text-center transition hover:border-red-700"
+              className="group rounded-2xl bg-gradient-to-b from-ink-900 to-ink-950 p-5 text-center ring-1 ring-white/10 transition duration-200 hover:-translate-y-0.5 hover:ring-red-500/50"
             >
-              <span className="block text-lg font-black">{card.label}</span>
+              <span className="block text-lg font-black tracking-tight">{card.label}</span>
               <span className="mt-1 block text-xs text-zinc-500">{era?.seasonRange}</span>
               <span className="mt-2 block text-sm text-zinc-400">{card.blurb}</span>
-              <span className="mt-3 inline-block rounded-lg bg-red-700 px-4 py-1.5 text-sm font-bold text-white">
+              <span className="mt-4 inline-block rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-4 py-1.5 text-sm font-bold text-white shadow-lg shadow-red-950/50 transition group-hover:from-red-500 group-hover:to-red-600">
                 Build it →
               </span>
             </Link>
@@ -92,7 +98,7 @@ export default function HomePage() {
         })}
       </section>
 
-      <section className="mx-auto mt-10 max-w-3xl rounded-xl border border-ink-800 bg-ink-900/60 p-5 text-center">
+      <section className="mx-auto mt-10 max-w-3xl rounded-2xl bg-ink-900/60 p-6 text-center ring-1 ring-white/10">
         <h2 className="font-bold text-zinc-200">
           Guess the <span className="text-red-500">Red</span> — the daily warm-up
         </h2>
@@ -102,13 +108,13 @@ export default function HomePage() {
         </p>
         <Link
           href="/daily/"
-          className="mt-3 inline-block rounded-lg border border-ink-700 px-4 py-2 text-sm font-bold hover:border-red-700"
+          className="mt-4 inline-block rounded-lg px-4 py-2 text-sm font-bold ring-1 ring-white/15 transition hover:bg-white/5 hover:ring-red-500/60"
         >
           Play today&apos;s puzzle
         </Link>
       </section>
 
-      <section className="mx-auto mt-10 max-w-3xl rounded-xl border border-red-900/50 bg-red-950/20 p-5 text-center">
+      <section className="mx-auto mt-10 max-w-3xl rounded-2xl bg-gradient-to-b from-red-950/40 to-ink-950 p-6 text-center ring-1 ring-red-500/25">
         <h2 className="font-bold text-zinc-100">
           Then take them <span className="text-red-500">head-to-head</span>
         </h2>
@@ -121,7 +127,7 @@ export default function HomePage() {
         </p>
         <Link
           href="/xi/all-time/"
-          className="mt-3 inline-block rounded-lg border border-red-800 px-4 py-2 text-sm font-bold text-zinc-100 hover:border-red-600"
+          className="mt-4 inline-block rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-red-950/50 transition hover:from-red-500 hover:to-red-600"
         >
           Build an XI, then play a rival →
         </Link>
