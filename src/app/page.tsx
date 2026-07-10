@@ -29,6 +29,10 @@ const FAQS = [
     a: "All-time (1892 to today), post-war (1945 to today) and the Premier League era (1992 to today). Each has its own hidden canonical XI and its own page, so solving one tells you nothing mechanical about the others.",
   },
   {
+    q: "Can I play my Liverpool XI against other clubs?",
+    a: "Yes — head-to-head. Once you submit a build, you can pit it against another club's hidden greatest side for the same era: Manchester United, Everton, Manchester City, Arsenal, Real Madrid, Barcelona, Bayern Munich, Ajax and AC Milan. You see only a scoreline and a win, draw or loss — the opponent's team is never revealed, and because every rating turns on the exact season you picked, a legend in a poor year makes your team weaker.",
+  },
+  {
     q: "Is there a daily game too?",
     a: "Yes — Guess the Red is the daily warm-up: one mystery Liverpool player a day, six clues from hardest to easiest, with a shareable score grid and a streak.",
   },
@@ -63,8 +67,8 @@ export default function HomePage() {
         </h1>
         <p className="mx-auto mt-3 max-w-xl text-zinc-400">
           The greatest Liverpool team is hidden on this site. Build yours blind — players, defining
-          seasons, formation, manager — and score it out of 98. Counts-only feedback. No hints, no
-          spoilers, no mercy.
+          seasons, formation, manager — and score it out of 98. Counts-only feedback. Then take it
+          head-to-head against the greatest XIs of United, Real Madrid and more.
         </p>
       </section>
 
@@ -101,6 +105,25 @@ export default function HomePage() {
           className="mt-3 inline-block rounded-lg border border-ink-700 px-4 py-2 text-sm font-bold hover:border-red-700"
         >
           Play today&apos;s puzzle
+        </Link>
+      </section>
+
+      <section className="mx-auto mt-10 max-w-3xl rounded-xl border border-red-900/50 bg-red-950/20 p-5 text-center">
+        <h2 className="font-bold text-zinc-100">
+          Then take them <span className="text-red-500">head-to-head</span>
+        </h2>
+        <p className="mx-auto mt-1 max-w-xl text-sm text-zinc-400">
+          Built your XI? Pit it against another club&apos;s greatest side — Manchester United, Real
+          Madrid, Barcelona, Bayern Munich, AC Milan and more. You get a scoreline and nothing else:
+          the opponent&apos;s team stays hidden, and every rating turns on the exact season you picked,
+          so a legend in an off-year weakens your team. Is your greatest Liverpool XI really the
+          greatest in Europe?
+        </p>
+        <Link
+          href="/xi/all-time/"
+          className="mt-3 inline-block rounded-lg border border-red-800 px-4 py-2 text-sm font-bold text-zinc-100 hover:border-red-600"
+        >
+          Build an XI, then play a rival →
         </Link>
       </section>
 

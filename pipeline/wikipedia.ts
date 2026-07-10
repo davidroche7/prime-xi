@@ -7,11 +7,31 @@ import { join } from "node:path";
  * in the site footer). Together they cover every player in club history.
  */
 
-const PAGES = [
-  "List of Liverpool F.C. players",
-  "List of Liverpool F.C. players (25–99 appearances)",
-  "List of Liverpool F.C. players (1–24 appearances)",
-];
+/** Each club's "List of <club> F.C. players" pages — same MediaWiki template
+ *  family, so parseListPage handles them all; only the titles differ. */
+const CLUB_PAGES: Record<string, string[]> = {
+  liverpool: [
+    "List of Liverpool F.C. players",
+    "List of Liverpool F.C. players (25–99 appearances)",
+    "List of Liverpool F.C. players (1–24 appearances)",
+  ],
+  "manchester-united": [
+    "List of Manchester United F.C. players (100+ appearances)",
+    "List of Manchester United F.C. players (25–99 appearances)",
+    "List of Manchester United F.C. players (1–24 appearances)",
+  ],
+  everton: ["List of Everton F.C. players"],
+  arsenal: [
+    "List of Arsenal F.C. players",
+    "List of Arsenal F.C. players (25–99 appearances)",
+    "List of Arsenal F.C. players (1–24 appearances)",
+  ],
+  "manchester-city": [
+    "List of Manchester City F.C. players",
+    "List of Manchester City F.C. players (25–99 appearances)",
+    "List of Manchester City F.C. players (1–24 appearances)",
+  ],
+};
 
 const CACHE_DIR = join(__dirname, "cache");
 
@@ -55,9 +75,19 @@ const OPEN_SPAN_END = 2026; // ponytail: bump on the next data refresh
 /** Parse one list page's wikitext into rows. Pure — unit-tested on fixtures. */
 export function parseListPage(wikitext: string): RawRow[] {
   const rows: RawRow[] = [];
-  for (const chunk of wikitext.split(/(?:^|\n)!scope=row/).slice(1)) {
+  // Row header + cell separators vary by page editor: Liverpool uses `!scope=row`
+  // with newline-`|` cells; Man Utd uses `! scope="row"` with inline `||` cells.
+  // Accept both — non-player rows (e.g. the positions-key legend) are dropped by
+  // the year/numeric guards below regardless.
+  for (const chunk of wikitext.split(/(?:^|\n)!\s*scope="?row"?/).slice(1)) {
     const cellBlock = chunk.split(/\n\|-/)[0];
-    const cells = cellBlock.split(/\n\|/).map((c) => c.trim());
+    // Protect `||` inside templates (e.g. {{sortname|Alisson||Becker}} — an empty
+    // surname) so it isn't mistaken for an inline cell separator, then restore.
+    const S = "\u0000"; // sentinel — never present in wikitext
+    const cells = cellBlock
+      .replace(/\{\{[^{}]*\}\}/g, (m) => m.replaceAll("||", S))
+      .split(/\n\||\|\|/)
+      .map((c) => c.trim().replaceAll(S, "||"));
 
     // name lives in the scope=row line: {{sortname|First|Last|dab?|sort?}} or [[Link|Name]]
     const sort = cells[0].match(/\{\{sortname\|([^|}]*)\|([^|}]*)/);
@@ -144,21 +174,29 @@ async function fetchPage(title: string): Promise<string> {
   return body.parse.wikitext;
 }
 
-export async function fetchSpine(): Promise<SpinePlayer[]> {
-  const pages = await Promise.all(PAGES.map(fetchPage));
+export async function fetchSpine(club = "liverpool", minPlayers = 700): Promise<SpinePlayer[]> {
+  const titles = CLUB_PAGES[club];
+  if (!titles) throw new Error(`No Wikipedia list pages configured for club: ${club}`);
+  const pages = await Promise.all(titles.map(fetchPage));
   const spine = mergeSpine(pages.map(parseListPage));
 
-  if (spine.length < 700) throw new Error(`Spine too small: ${spine.length} players (expected ≥ 700)`);
+  // The home club needs a complete roster; opponent research only needs the
+  // notable subset, so callers can lower the floor.
+  if (spine.length < minPlayers) throw new Error(`Spine too small: ${spine.length} players (expected ≥ ${minPlayers})`);
   const dupes = spine.filter((p, i) => spine.findIndex((q) => q.id === p.id) !== i);
   if (dupes.length > 0) throw new Error(`Duplicate ids: ${dupes.map((d) => d.id).join(", ")}`);
 
-  writeFileSync(join(CACHE_DIR, "spine.json"), JSON.stringify(spine, null, 1));
+  // Liverpool keeps the original filename; other clubs get spine-<club>.json.
+  const file = club === "liverpool" ? "spine.json" : `spine-${club}.json`;
+  writeFileSync(join(CACHE_DIR, file), JSON.stringify(spine, null, 1));
   return spine;
 }
 
-// Run directly: `pnpm tsx pipeline/wikipedia.ts`
+// Run directly: `pnpm tsx pipeline/wikipedia.ts [club]`
 if (require.main === module) {
-  fetchSpine().then((s) => {
-    console.log(`spine: ${s.length} players, ${s.filter((p) => p.lfchId).length} with lfchistory ids`);
+  const club = process.argv[2] ?? "liverpool";
+  const min = club === "liverpool" ? 700 : 50; // opponents research the notable subset only
+  fetchSpine(club, min).then((s) => {
+    console.log(`${club} spine: ${s.length} players, ${s.filter((p) => p.lfchId).length} with lfchistory ids`);
   });
 }

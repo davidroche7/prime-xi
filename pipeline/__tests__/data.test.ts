@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import type { AnswerPlayer, EraKey, Formation, IndexedPlayer, Manager, Ratings } from "../../src/lib/types";
@@ -96,22 +96,28 @@ describe.runIf(hasEras)("eras.json + managers.json", () => {
   });
 });
 
-// H2H opponent clubs ship only an all-time eras.json (one canonicalRating, no roster).
-const MAN_UTD = join(DATA, "clubs", "manchester-united");
-const hasOpponent = existsSync(join(MAN_UTD, "eras.json"));
-describe.runIf(hasOpponent)("opponent club: manchester-united", () => {
-  const eras = () => JSON.parse(readFileSync(join(MAN_UTD, "eras.json"), "utf8")) as EraKey[];
-
-  it("ships a valid all-time key: rated, hashed, no plaintext", () => {
-    const all = eras();
-    expect(all.map((e) => e.slug)).toEqual(["all-time"]); // opponent-only: all-time era only for now
-    for (const e of all) {
-      expect(e.club).toBe("manchester-united"); // own club slug → hashes never collide with Liverpool's
-      expect(e.canonicalRating).toBeGreaterThanOrEqual(30);
-      expect(e.canonicalRating).toBeLessThanOrEqual(99);
-      expect(e.hashes.slots).toHaveLength(11);
-      for (const s of e.hashes.slots) for (const h of [...s.players, ...s.seasons]) expect(h).toMatch(/^[0-9a-z]+$/);
-      expect(JSON.stringify(e)).not.toMatch(/schmeichel|charlton|ronaldo|ferguson/i); // no plaintext leak
+// H2H opponent clubs ship an eras.json per era they cover (canonicalRating +
+// hashes, no roster). Every club dir other than liverpool is an opponent.
+const clubsDir = join(DATA, "clubs");
+const opponentClubs = existsSync(clubsDir)
+  ? readdirSync(clubsDir).filter((c) => c !== "liverpool" && existsSync(join(clubsDir, c, "eras.json")))
+  : [];
+describe.runIf(opponentClubs.length > 0)("H2H opponent clubs", () => {
+  it("ships ≥ 1 rated, hashed era per opponent, own club slug, no plaintext leak", () => {
+    for (const club of opponentClubs) {
+      const eras = JSON.parse(readFileSync(join(clubsDir, club, "eras.json"), "utf8")) as EraKey[];
+      expect(eras.length).toBeGreaterThanOrEqual(1);
+      const slugs = eras.map((e) => e.slug);
+      expect(new Set(slugs).size).toBe(slugs.length); // no duplicate eras
+      for (const e of eras) {
+        expect(e.club).toBe(club); // own slug → hashes never collide across clubs
+        expect(e.canonicalRating).toBeGreaterThanOrEqual(30);
+        expect(e.canonicalRating).toBeLessThanOrEqual(99);
+        expect(e.hashes.slots).toHaveLength(11);
+        for (const s of e.hashes.slots) for (const h of [...s.players, ...s.seasons]) expect(h).toMatch(/^[0-9a-z]+$/);
+        // shipped key must carry no plaintext player/manager surnames
+        expect(JSON.stringify(e)).not.toMatch(/schmeichel|charlton|ronaldo|ferguson|southall|dean|kendall/i);
+      }
     }
   });
 });
