@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#09090b"/>
+  <g transform="translate(256 256) scale(1) translate(-256 -256)" stroke-linecap="square">
+    <!-- X -->
+    <line x1="128" y1="152" x2="256" y2="360" stroke="#ef4444" stroke-width="46"/>
+    <line x1="256" y1="152" x2="128" y2="360" stroke="#fafafa" stroke-width="46"/>
+    <!-- I -->
+    <line x1="352" y1="152" x2="352" y2="360" stroke="#ef4444" stroke-width="46"/>
+    <!-- baseline pitch stripe -->
+    <line x1="104" y1="412" x2="408" y2="412" stroke="#15803d" stroke-width="18"/>
+  </g>
+</svg>

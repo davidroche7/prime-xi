@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { AdSlot } from "@/components/AdSlot";
 import { PerfectXiBuilder } from "@/components/PerfectXiBuilder";
 import { ERA_CONTENT } from "@/content/eras";
 import { getEras, getFormations, getManagers, getOpponents, getPlayersIndex, getRatings } from "@/lib/data";
@@ -45,6 +46,10 @@ export default async function EraPage({ params }: { params: Promise<{ era: strin
         ratings={getRatings("liverpool")}
         opponents={getOpponents("liverpool", era.slug)}
       />
+
+      <div className="mx-auto max-w-2xl">
+        <AdSlot slot="era-below-builder" />
+      </div>
 
       <section className="mx-auto mt-16 max-w-2xl space-y-4 border-t border-ink-800 pt-8 text-sm leading-relaxed text-zinc-400">
         {content.prose.map((p, i) => (
