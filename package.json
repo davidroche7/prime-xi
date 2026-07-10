@@ -9,6 +9,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "pipeline:export": "tsx pipeline/export.ts",
+    "pipeline:review": "tsx pipeline/review.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
