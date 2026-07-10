@@ -1,12 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" fill="#09090b"/>
+  <rect width="512" height="512" fill="#c8102e"/>
+  
+  <g fill="#f6efdf" opacity=".5">
+    <path d="M60 40l36 12-24 24-12-16z"/><path d="M320 90l40-8-12 28-24 4z"/>
+    <path d="M150 240l32 16-32 16z"/><path d="M420 260l28 20-36 8z"/>
+    <path d="M80 350l36-12-8 28z"/><path d="M300 420l40 8-20 24z"/>
+  </g>
+  <g fill="#1a0a0e" opacity=".42">
+    <path d="M220 30l32 8-20 24z"/><path d="M420 130l-32 20 8-32z"/>
+    <path d="M40 170l28 12-12 24-20-12z"/><path d="M260 330l36 8-16 24z"/>
+    <path d="M440 40l24 24-36 4z"/><path d="M120 440l36-12-8 28z"/>
+  </g>
+  <rect x="14" y="14" width="484" height="484" fill="none" stroke="#1a0a0e" stroke-width="18"/>
   <g transform="translate(256 256) scale(1) translate(-256 -256)" stroke-linecap="square">
-    <!-- X -->
-    <line x1="128" y1="152" x2="256" y2="360" stroke="#ef4444" stroke-width="46"/>
-    <line x1="256" y1="152" x2="128" y2="360" stroke="#fafafa" stroke-width="46"/>
-    <!-- I -->
-    <line x1="352" y1="152" x2="352" y2="360" stroke="#ef4444" stroke-width="46"/>
-    <!-- baseline pitch stripe -->
-    <line x1="104" y1="412" x2="408" y2="412" stroke="#15803d" stroke-width="18"/>
+    <line x1="128" y1="152" x2="256" y2="360" stroke="#1a0a0e" stroke-width="50"/>
+    <line x1="256" y1="152" x2="128" y2="360" stroke="#f6efdf" stroke-width="50"/>
+    <line x1="352" y1="152" x2="352" y2="360" stroke="#f6efdf" stroke-width="50"/>
+    <line x1="104" y1="418" x2="408" y2="418" stroke="#1a0a0e" stroke-width="20"/>
   </g>
 </svg>

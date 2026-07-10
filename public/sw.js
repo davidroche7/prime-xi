@@ -3,7 +3,7 @@
  * assets are content-hashed, so stale entries are impossible).
  * ponytail: no precache manifest — offline covers previously visited pages;
  * add a build-time precache list if store review demands cold-start offline. */
-const CACHE = "prime-xi-v1";
+const CACHE = "perfect-xi-v2";
 
 self.addEventListener("install", () => self.skipWaiting());
 

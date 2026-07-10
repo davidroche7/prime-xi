@@ -1,36 +1,50 @@
 @import "tailwindcss";
 
+/* Candy Terrace — kit-red poster on matchday paper (spec: docs/superpowers/specs/2026-07-10). */
 @theme {
-  --color-pitch-900: #14532d;
-  --color-pitch-800: #166534;
-  --color-pitch-700: #15803d;
-  --color-ink-950: #09090b;
-  --color-ink-900: #18181b;
-  --color-ink-800: #27272a;
-  --color-ink-700: #3f3f46;
+  --color-blood-600: #c8102e; /* kit red */
+  --color-blood-700: #a41623; /* deep red */
+  --color-paper-100: #f9f3e4; /* page ground */
+  --color-paper-50: #fffaef; /* card ground */
+  --color-cream-100: #f6efdf; /* text on red */
+  --color-ink-950: #1a0a0e; /* warm ink */
+  --color-sand-300: #ece1c6; /* hairline rules on paper */
+  --color-dune-600: #6d5c48; /* muted text on paper */
+  --color-pitch-800: #1d5c33;
   --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-display: var(--font-archivo-black), "Arial Black", sans-serif;
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-ink-950 font-sans text-zinc-100 antialiased;
-  /* one fixed atmospheric wash: red glow up top, pitch green low — no images */
-  background-image:
-    radial-gradient(60rem 24rem at 50% -6rem, rgb(127 29 29 / 0.28), transparent 70%),
-    radial-gradient(50rem 30rem at 50% 115%, rgb(20 83 45 / 0.18), transparent 70%);
-  background-attachment: fixed;
+  @apply bg-paper-100 font-sans text-ink-950 antialiased;
 }
 
 ::selection {
-  background: rgb(239 68 68 / 0.35);
+  background: rgb(200 16 46 / 0.25);
 }
 
 :focus-visible {
-  outline: 2px solid rgb(239 68 68 / 0.8);
+  outline: 3px solid var(--color-blood-600);
   outline-offset: 2px;
+}
+
+/* the '89 fleck: irregular cream + ink shards tiled over kit red */
+@utility fleck {
+  background-color: var(--color-blood-600);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='96'%3E%3Cg fill='%23f6efdf' opacity='.5'%3E%3Cpath d='M14 10l9 3-6 6-3-4z'/%3E%3Cpath d='M74 22l10-2-3 7-6 1z'/%3E%3Cpath d='M38 58l8 4-8 4z'/%3E%3Cpath d='M104 64l7 5-9 2z'/%3E%3Cpath d='M20 84l9-3-2 7z'/%3E%3C/g%3E%3Cg fill='%231a0a0e' opacity='.42'%3E%3Cpath d='M52 8l8 2-5 6z'/%3E%3Cpath d='M96 34l-8 5 2-8z'/%3E%3Cpath d='M12 42l7 3-3 6-5-3z'/%3E%3Cpath d='M64 78l9 2-4 6z'/%3E%3Cpath d='M110 6l6 6-9 1z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 120px 96px;
+}
+
+/* hard poster shadows — the only shadows in the system */
+@utility shadow-poster {
+  box-shadow: 5px 5px 0 var(--color-ink-950);
+}
+@utility shadow-poster-sm {
+  box-shadow: 3px 3px 0 var(--color-ink-950);
 }
 
 @keyframes confetti-fall {
@@ -51,4 +65,11 @@ body {
   pointer-events: none;
   animation: confetti-fall 3.2s linear forwards;
   z-index: 50;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confetti-piece {
+    animation: none;
+    display: none;
+  }
 }

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo } from "next/font/google";
+import { Archivo, Archivo_Black } from "next/font/google";
 import Link from "next/link";
 import { ADS_ENABLED, ADSENSE_CLIENT } from "@/lib/flags";
 import { CREDITS, DISCLAIMER, PLAUSIBLE_DOMAIN, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
@@ -8,6 +8,12 @@ import "./globals.css";
 const bp = process.env.BASE_PATH || "";
 
 const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo", display: "swap" });
+const archivoBlack = Archivo_Black({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-archivo-black",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -35,11 +41,11 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = { themeColor: "#09090b" };
+export const viewport: Viewport = { themeColor: "#c8102e" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={archivo.variable}>
+    <html lang="en" className={`${archivo.variable} ${archivoBlack.variable}`}>
       <head>
         {PLAUSIBLE_DOMAIN ? (
           <script defer data-domain={PLAUSIBLE_DOMAIN} src="https://plausible.io/js/script.js" />
@@ -59,35 +65,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         ) : null}
       </head>
-      <body className="min-h-screen flex flex-col">
-        <header className="sticky top-0 z-40 border-b border-white/5 bg-ink-950/80 backdrop-blur">
+      <body className="flex min-h-screen flex-col">
+        <header className="sticky top-0 z-40 border-b-[3px] border-ink-950 bg-paper-100">
           <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-            <Link href="/" className="flex items-center gap-2 text-lg font-black tracking-tight">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`${bp}/favicon.svg`} alt="" className="h-6 w-6 rounded-md" />
-              PRIME<span className="text-red-500"> XI</span>
+            <Link href="/" className="font-display text-base uppercase tracking-tight">
+              The Perfect <span className="text-blood-600">XI</span>
             </Link>
-            <div className="flex gap-4 text-sm text-zinc-300">
-              <Link href="/" className="hover:text-white">
-                The Perfect XI
+            <div className="flex gap-4 text-xs font-bold uppercase tracking-wide">
+              <Link href="/" className="hover:text-blood-600">
+                Build an XI
               </Link>
-              <Link href="/daily/" className="hover:text-white">
+              <Link href="/daily/" className="hover:text-blood-600">
                 Daily quiz
               </Link>
             </div>
           </nav>
         </header>
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>
-        <footer className="border-t border-ink-800 py-6">
-          <div className="mx-auto max-w-5xl space-y-2 px-4 text-xs leading-relaxed text-zinc-500">
+        <footer className="border-t-[3px] border-ink-950 py-6">
+          <div className="mx-auto max-w-5xl space-y-2 px-4 text-xs leading-relaxed text-dune-600">
             <p>{DISCLAIMER}</p>
             <p>{CREDITS}</p>
-            <p>
-              <Link href="/privacy/" className="hover:text-zinc-300">
+            <p className="font-bold uppercase tracking-wide">
+              <Link href="/privacy/" className="hover:text-blood-600">
                 Privacy
               </Link>
               {" · "}
-              <Link href="/terms/" className="hover:text-zinc-300">
+              <Link href="/terms/" className="hover:text-blood-600">
                 Terms
               </Link>
             </p>

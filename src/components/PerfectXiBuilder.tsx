@@ -39,6 +39,20 @@ interface Saved {
   solvedBuild: XiBuild | null;
 }
 
+/** Team-sheet stats line: age in the picked season + career totals + honour marks. */
+const statsLine = (p: IndexedPlayer, season: string) => {
+  const bits: string[] = [];
+  if (p.birthYear) bits.push(`age ${parseInt(season) - p.birthYear}`);
+  bits.push(`${p.apps} apps`);
+  if (p.goals > 0) bits.push(`${p.goals} gls`);
+  if (p.marks) bits.push(...p.marks);
+  return bits.join(" · ");
+};
+
+const labelClass = "mb-1 block text-[10px] font-bold uppercase tracking-[0.18em] text-blood-700";
+const selectClass =
+  "shadow-poster-sm w-full border-[3px] border-ink-950 bg-paper-50 px-3 py-2.5 text-sm font-bold outline-none disabled:opacity-50";
+
 export function PerfectXiBuilder({ era, formations, players, managers, ratings, opponents }: PerfectXiBuilderProps) {
   const storageKey = `xi:${era.club}:${era.slug}`;
   const [formationId, setFormationId] = useState(formations[0].id);
@@ -104,6 +118,7 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
     }),
   );
 
+  const filledCount = formation.slots.filter((s) => picks[s.slotId]).length;
   const complete =
     formation.slots.every((s) => picks[s.slotId]) && managerId !== "" && managerSeason !== "";
 
@@ -131,11 +146,8 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
   const selectedPlayer = selected ? byId.get(selected.playerId) : undefined;
   const manager = managers.find((m) => m.id === managerId);
 
-  const selectClass =
-    "w-full rounded-lg border border-ink-700 bg-ink-900 px-3 py-2.5 outline-none focus:border-red-700";
-
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="grid gap-6 md:grid-cols-[2fr_3fr]">
       {solved
         ? Array.from({ length: 30 }, (_, i) => (
             <span
@@ -149,64 +161,107 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
           ))
         : null}
 
-      <div>
-        <Pitch
-          formation={formation}
-          labels={labels}
-          selectedSlotId={selectedSlot}
-          onSelectSlot={(id) => setSelectedSlot(id)}
-        />
+      {/* formation diagram + setup — names never appear on the pitch */}
+      <div className="flex gap-4 md:block md:space-y-4">
+        <div className="w-[44%] shrink-0 md:w-full">
+          <Pitch
+            formation={formation}
+            labels={labels}
+            selectedSlotId={selectedSlot}
+            onSelectSlot={(id) => setSelectedSlot(id)}
+          />
+        </div>
+        <div className="min-w-0 flex-1 space-y-3 md:space-y-4">
+          <label className="block">
+            <span className={labelClass}>Formation</span>
+            <select
+              value={formationId}
+              onChange={(e) => {
+                setFormationId(e.target.value);
+                setSelectedSlot(null);
+              }}
+              disabled={solved}
+              className={selectClass}
+            >
+              {formations.map((f) => (
+                <option key={f.id} value={f.id}>
+                  {f.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="block">
+            <span className={labelClass}>Manager</span>
+            <select
+              value={managerId}
+              onChange={(e) => {
+                setManagerId(e.target.value);
+                setManagerSeason("");
+              }}
+              disabled={solved}
+              className={selectClass}
+            >
+              <option value="">—</option>
+              {eligibleManagers.map((m) => (
+                <option key={m.id} value={m.id}>
+                  {m.name} ({m.years})
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="block">
+            <span className={labelClass}>His peak season</span>
+            <select
+              value={managerSeason}
+              onChange={(e) => setManagerSeason(e.target.value)}
+              disabled={solved || !manager}
+              className={selectClass}
+            >
+              <option value="">—</option>
+              {manager
+                ? (managerSeasonsById.get(manager.id) ?? []).map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))
+                : null}
+            </select>
+          </label>
+        </div>
       </div>
 
       <div className="space-y-4">
         {solved ? (
-          <div className="rounded-xl border border-emerald-700 bg-emerald-950/40 p-4 text-center">
-            <p className="text-lg font-black text-emerald-400">PERFECT — 98/98</p>
-            <p className="mt-1 text-sm text-zinc-300">
-              You found the canonical {era.title} in {saved.attempts} attempts. Your build below is
-              the hidden XI.
+          <div className="shadow-poster border-[3px] border-ink-950 bg-pitch-800 p-4 text-center text-cream-100">
+            <p className="font-display text-lg uppercase">Perfect — 98/98</p>
+            <p className="mt-1 text-sm">
+              You found the canonical {era.title} in {saved.attempts} attempts. Your team sheet below
+              is the hidden XI.
             </p>
           </div>
         ) : null}
 
-        <label className="block text-sm">
-          <span className="mb-1 block font-semibold text-zinc-300">Formation</span>
-          <select
-            value={formationId}
-            onChange={(e) => {
-              setFormationId(e.target.value);
-              setSelectedSlot(null);
-            }}
-            disabled={solved}
-            className={selectClass}
-          >
-            {formations.map((f) => (
-              <option key={f.id} value={f.id}>
-                {f.name}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <div className="rounded-xl border border-ink-800 bg-ink-900/60 p-4">
+        <div className="shadow-poster-sm border-[3px] border-ink-950 bg-paper-50 p-4">
           {!selectedSlot ? (
-            <p className="text-sm text-zinc-500">Tap a slot on the pitch to pick a player.</p>
+            <p className="text-sm font-bold text-dune-600">
+              Tap a team-sheet row (or a pitch dot) to pick a player.
+            </p>
           ) : selected && selectedPlayer ? (
             <div className="space-y-3 text-sm">
               <div className="flex items-center justify-between">
-                <span className="font-bold">{selectedPlayer.name}</span>
+                <span className="font-display uppercase">{selectedPlayer.name}</span>
                 {!solved ? (
                   <button
                     type="button"
                     onClick={() => setPicks({ ...picks, [selectedSlot]: undefined })}
-                    className="text-zinc-400 hover:text-red-400"
+                    className="text-xs font-bold uppercase tracking-wide text-dune-600 hover:text-blood-600"
                   >
                     Remove
                   </button>
                 ) : null}
               </div>
               <label className="block">
-                <span className="mb-1 block text-zinc-400">His defining season</span>
+                <span className={labelClass}>His defining season</span>
                 <select
                   value={selected.season}
                   onChange={(e) =>
@@ -238,44 +293,51 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
           )}
         </div>
 
-        <div className="grid grid-cols-2 gap-3 text-sm">
-          <label className="block">
-            <span className="mb-1 block font-semibold text-zinc-300">Manager</span>
-            <select
-              value={managerId}
-              onChange={(e) => {
-                setManagerId(e.target.value);
-                setManagerSeason("");
-              }}
-              disabled={solved}
-              className={selectClass}
-            >
-              <option value="">—</option>
-              {eligibleManagers.map((m) => (
-                <option key={m.id} value={m.id}>
-                  {m.name} ({m.years})
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="block">
-            <span className="mb-1 block font-semibold text-zinc-300">His peak season</span>
-            <select
-              value={managerSeason}
-              onChange={(e) => setManagerSeason(e.target.value)}
-              disabled={solved || !manager}
-              className={selectClass}
-            >
-              <option value="">—</option>
-              {manager
-                ? (managerSeasonsById.get(manager.id) ?? []).map((s) => (
-                    <option key={s} value={s}>
-                      {s}
-                    </option>
-                  ))
-                : null}
-            </select>
-          </label>
+        {/* the team sheet — where the XI actually lives */}
+        <div className="shadow-poster border-[3px] border-ink-950 bg-paper-50">
+          <div className="flex items-center justify-between bg-ink-950 px-3 py-2 text-cream-100">
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em]">Team sheet</span>
+            <span className="font-display text-sm">{filledCount}/11</span>
+          </div>
+          {formation.slots.map((slot, i) => {
+            const pick = picks[slot.slotId];
+            const player = pick ? byId.get(pick.playerId) : undefined;
+            const sel = selectedSlot === slot.slotId;
+            return (
+              <button
+                type="button"
+                key={slot.slotId}
+                onClick={() => setSelectedSlot(slot.slotId)}
+                className={`flex w-full items-center gap-2.5 border-b-2 border-sand-300 px-3 py-2 text-left last:border-b-0 ${
+                  sel ? "bg-sand-300/60" : "hover:bg-sand-300/30"
+                }`}
+              >
+                <span
+                  className={`flex h-5 w-5 shrink-0 items-center justify-center border-2 border-ink-950 text-[10px] font-bold ${
+                    player ? "bg-blood-600 text-white" : "bg-paper-50 text-dune-600"
+                  }`}
+                >
+                  {i + 1}
+                </span>
+                {player && pick ? (
+                  <>
+                    <span className="min-w-0 flex-1">
+                      <span className="font-display block truncate text-xs uppercase">{player.name}</span>
+                      <span className="block truncate text-[11px] font-bold text-dune-600">
+                        {statsLine(player, pick.season)}
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-xs font-bold text-blood-600">{pick.season}</span>
+                  </>
+                ) : (
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-xs font-bold uppercase text-dune-600">— {slot.group}</span>
+                    <span className="block text-[11px] text-dune-600">tap to pick player + season</span>
+                  </span>
+                )}
+              </button>
+            );
+          })}
         </div>
 
         {!solved ? (
@@ -283,24 +345,24 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
             type="button"
             onClick={submit}
             disabled={!complete}
-            className="w-full rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-4 py-3 font-bold text-white shadow-lg shadow-red-950/50 transition hover:from-red-500 hover:to-red-600 disabled:cursor-not-allowed disabled:bg-ink-700 disabled:bg-none disabled:text-zinc-500 disabled:shadow-none"
+            className="font-display shadow-poster w-full border-[3px] border-ink-950 bg-blood-600 px-4 py-3 text-sm uppercase tracking-wide text-white transition-transform hover:-translate-y-0.5 disabled:translate-y-0 disabled:cursor-not-allowed disabled:bg-paper-50 disabled:text-dune-600 disabled:shadow-none"
           >
             {complete ? "Score my XI" : "Fill all 11 slots + manager to submit"}
           </button>
         ) : null}
 
         {feedback ? (
-          <div className="rounded-xl border border-ink-700 bg-ink-900 p-4 text-center">
-            <p className="text-3xl font-black">
+          <div className="shadow-poster border-[3px] border-ink-950 bg-ink-950 p-4 text-center text-cream-100">
+            <p className="font-display text-3xl">
               {feedback.total}
-              <span className="text-lg font-bold text-zinc-500">/98</span>
+              <span className="text-lg text-cream-100/60">/98</span>
             </p>
-            <p className="mt-2 text-sm text-zinc-300">
+            <p className="mt-2 text-sm font-bold">
               Players {feedback.playersCorrect}/11 · Seasons {feedback.seasonsCorrect}/11 · Formation{" "}
               {feedback.formationCorrect ? "✓" : "✗"} · Manager {feedback.managerCorrect ? "✓" : "✗"} ·
               Peak {feedback.managerSeasonCorrect ? "✓" : "✗"}
             </p>
-            <p className="mt-1 text-xs text-zinc-500">
+            <p className="mt-1 text-xs text-cream-100/60">
               {saved.attempts} attempt{saved.attempts === 1 ? "" : "s"} · best {saved.best}/98
             </p>
             <div className="mt-3 flex justify-center">
@@ -308,16 +370,16 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
             </div>
           </div>
         ) : saved.attempts > 0 && !solved ? (
-          <p className="text-center text-xs text-zinc-500">
+          <p className="text-center text-xs font-bold text-dune-600">
             {saved.attempts} attempt{saved.attempts === 1 ? "" : "s"} so far · best {saved.best}/98
           </p>
         ) : null}
 
         {feedback && yourRating !== null && opponents.length > 0 ? (
-          <div className="rounded-xl border border-ink-700 bg-ink-900 p-4">
-            <p className="text-center text-sm font-bold text-zinc-200">Head to head</p>
-            <p className="mt-1 text-center text-xs text-zinc-500">
-              Play your XI against another club’s greatest side — result only, their team stays hidden.
+          <div className="shadow-poster-sm border-[3px] border-ink-950 bg-paper-50 p-4">
+            <p className="font-display text-center text-sm uppercase">Head to head</p>
+            <p className="mt-1 text-center text-xs font-bold text-dune-600">
+              Play your XI against another club&apos;s greatest side — result only, their team stays hidden.
             </p>
             <div className="mt-3 flex flex-wrap justify-center gap-2">
               {opponents.map((o) => (
@@ -325,10 +387,10 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
                   key={o.club}
                   type="button"
                   onClick={() => setRival(o)}
-                  className={`rounded-lg border px-3 py-2 text-sm font-semibold ${
+                  className={`border-2 border-ink-950 px-3 py-2 text-xs font-bold uppercase tracking-wide ${
                     rival?.club === o.club
-                      ? "border-red-700 bg-red-700/20 text-white"
-                      : "border-ink-700 text-zinc-300 hover:border-red-700"
+                      ? "shadow-poster-sm bg-blood-600 text-white"
+                      : "bg-paper-50 hover:bg-sand-300/60"
                   }`}
                 >
                   {o.name}
@@ -339,15 +401,19 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
               ? (() => {
                   const result = matchResult(yourRating, rival.canonicalRating);
                   const tone =
-                    result.outcome === "W" ? "text-emerald-400" : result.outcome === "L" ? "text-red-400" : "text-amber-400";
+                    result.outcome === "W"
+                      ? "text-pitch-800"
+                      : result.outcome === "L"
+                        ? "text-blood-700"
+                        : "text-dune-600";
                   const word = result.outcome === "W" ? "Win" : result.outcome === "L" ? "Loss" : "Draw";
                   return (
                     <div className="mt-4 text-center">
-                      <p className="text-sm text-zinc-400">
-                        {clubName(era.club)} <span className="text-zinc-600">v</span> {rival.name}
+                      <p className="text-sm font-bold text-dune-600">
+                        {clubName(era.club)} <span className="opacity-60">v</span> {rival.name}
                       </p>
-                      <p className={`text-5xl font-black ${tone}`}>{result.scoreline}</p>
-                      <p className={`text-sm font-bold ${tone}`}>{word}</p>
+                      <p className={`font-display text-5xl ${tone}`}>{result.scoreline}</p>
+                      <p className={`font-display text-sm uppercase ${tone}`}>{word}</p>
                       <div className="mt-3 flex justify-center">
                         <H2HShareCard
                           result={result}

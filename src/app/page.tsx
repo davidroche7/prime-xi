@@ -61,80 +61,64 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="py-12 text-center sm:py-16">
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-red-400/90">
-          A Liverpool knowledge game
-        </p>
-        <h1 className="mt-3 text-5xl font-black tracking-tighter sm:text-6xl">
-          The Perfect{" "}
-          <span className="bg-gradient-to-b from-red-400 to-red-600 bg-clip-text text-transparent">
-            XI
-          </span>
-        </h1>
-        <p className="mx-auto mt-4 max-w-xl text-balance text-zinc-400">
-          The greatest Liverpool team is hidden on this site. Build yours blind — players, defining
-          seasons, formation, manager — and score it out of 98. Counts-only feedback. Then take it
-          head-to-head against the greatest XIs of United, Real Madrid and more.
-        </p>
+      <section className="fleck -mx-4 -mt-6 mb-10 border-b-[3px] border-ink-950 px-4 py-10 text-cream-100 sm:px-8 sm:py-14">
+        <div className="mx-auto max-w-3xl">
+          <div className="flex items-center justify-between">
+            <p className="text-[11px] font-bold uppercase tracking-[0.22em]">A Liverpool knowledge game</p>
+            <span className="bg-ink-950 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em]">
+              Free
+            </span>
+          </div>
+          <h1 className="font-display mt-6 text-5xl uppercase leading-[0.95] tracking-tight sm:text-6xl">
+            Build the greatest XI.
+            <span className="block text-ink-950">Prove it.</span>
+          </h1>
+          <p className="mt-4 max-w-xl text-sm font-bold leading-relaxed sm:text-base">
+            The team is hidden on this site. Build yours blind — players, defining seasons,
+            formation, manager — and score it out of 98. Then it fights Europe.
+          </p>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {ERA_CARDS.map((card) => {
+              const era = eras.find((e) => e.slug === card.slug);
+              return (
+                <Link
+                  key={card.slug}
+                  href={`/xi/${card.slug}/`}
+                  className="shadow-poster group border-[3px] border-ink-950 bg-paper-50 p-4 text-ink-950 transition-transform duration-150 hover:-translate-y-0.5"
+                >
+                  <span className="font-display block text-base uppercase">{card.label}</span>
+                  <span className="mt-1 block text-xs font-bold text-dune-600">{era?.seasonRange}</span>
+                  <span className="mt-1 block text-sm text-dune-600">{card.blurb}</span>
+                  <span className="mt-3 inline-block bg-blood-600 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-white group-hover:bg-blood-700">
+                    Build it →
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 border-[3px] border-dashed border-cream-100/70 p-4">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em]">Head-to-head</p>
+            <p className="font-display mt-1 text-sm uppercase leading-snug">
+              Your XI vs United, Real Madrid, Bayern… scoreline only. Their team stays hidden.
+            </p>
+          </div>
+
+          <Link
+            href="/daily/"
+            className="font-display mt-8 block border-[3px] border-ink-950 bg-ink-950 p-4 text-center text-sm uppercase tracking-wide text-cream-100 shadow-[5px_5px_0_rgb(26_10_14_/_0.45)] transition-transform duration-150 hover:-translate-y-0.5"
+          >
+            Guess the Red — today&apos;s puzzle →
+          </Link>
+          <p className="mt-4 text-center text-[10px] font-bold uppercase tracking-[0.18em]">
+            No account · works offline · free
+          </p>
+        </div>
       </section>
 
-      <section className="mx-auto grid max-w-3xl gap-4 sm:grid-cols-3">
-        {ERA_CARDS.map((card) => {
-          const era = eras.find((e) => e.slug === card.slug);
-          return (
-            <Link
-              key={card.slug}
-              href={`/xi/${card.slug}/`}
-              className="group rounded-2xl bg-gradient-to-b from-ink-900 to-ink-950 p-5 text-center ring-1 ring-white/10 transition duration-200 hover:-translate-y-0.5 hover:ring-red-500/50"
-            >
-              <span className="block text-lg font-black tracking-tight">{card.label}</span>
-              <span className="mt-1 block text-xs text-zinc-500">{era?.seasonRange}</span>
-              <span className="mt-2 block text-sm text-zinc-400">{card.blurb}</span>
-              <span className="mt-4 inline-block rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-4 py-1.5 text-sm font-bold text-white shadow-lg shadow-red-950/50 transition group-hover:from-red-500 group-hover:to-red-600">
-                Build it →
-              </span>
-            </Link>
-          );
-        })}
-      </section>
-
-      <section className="mx-auto mt-10 max-w-3xl rounded-2xl bg-ink-900/60 p-6 text-center ring-1 ring-white/10">
-        <h2 className="font-bold text-zinc-200">
-          Guess the <span className="text-red-500">Red</span> — the daily warm-up
-        </h2>
-        <p className="mx-auto mt-1 max-w-xl text-sm text-zinc-400">
-          One mystery Liverpool player a day, six clues, hardest first. Keep the streak alive while
-          you plot your XI.
-        </p>
-        <Link
-          href="/daily/"
-          className="mt-4 inline-block rounded-lg px-4 py-2 text-sm font-bold ring-1 ring-white/15 transition hover:bg-white/5 hover:ring-red-500/60"
-        >
-          Play today&apos;s puzzle
-        </Link>
-      </section>
-
-      <section className="mx-auto mt-10 max-w-3xl rounded-2xl bg-gradient-to-b from-red-950/40 to-ink-950 p-6 text-center ring-1 ring-red-500/25">
-        <h2 className="font-bold text-zinc-100">
-          Then take them <span className="text-red-500">head-to-head</span>
-        </h2>
-        <p className="mx-auto mt-1 max-w-xl text-sm text-zinc-400">
-          Built your XI? Pit it against another club&apos;s greatest side — Manchester United, Real
-          Madrid, Barcelona, Bayern Munich, AC Milan and more. You get a scoreline and nothing else:
-          the opponent&apos;s team stays hidden, and every rating turns on the exact season you picked,
-          so a legend in an off-year weakens your team. Is your greatest Liverpool XI really the
-          greatest in Europe?
-        </p>
-        <Link
-          href="/xi/all-time/"
-          className="mt-4 inline-block rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-red-950/50 transition hover:from-red-500 hover:to-red-600"
-        >
-          Build an XI, then play a rival →
-        </Link>
-      </section>
-
-      <section className="mx-auto mt-16 max-w-2xl space-y-4 border-t border-ink-800 pt-8 text-sm leading-relaxed text-zinc-400">
-        <h2 className="text-lg font-bold text-zinc-200">One hidden XI per era. Find it.</h2>
+      <section className="mx-auto mt-16 max-w-2xl space-y-4 border-t-[3px] border-ink-950 pt-8 text-sm leading-relaxed text-dune-600">
+        <h2 className="font-display text-lg uppercase text-ink-950">One hidden XI per era. Find it.</h2>
         <p>
           Every supporter has built the greatest Liverpool XI in their head. This site makes it a
           game with a score. For each era a canonical team is hidden behind salted hashes — eleven
@@ -161,12 +145,12 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto mt-10 max-w-2xl text-sm">
-        <h2 className="text-lg font-bold text-zinc-200">FAQ</h2>
+        <h2 className="font-display text-lg uppercase text-ink-950">FAQ</h2>
         <dl className="mt-3 space-y-4">
           {FAQS.map((f) => (
-            <div key={f.q}>
-              <dt className="font-semibold text-zinc-300">{f.q}</dt>
-              <dd className="mt-1 leading-relaxed text-zinc-400">{f.a}</dd>
+            <div key={f.q} className="border-b-2 border-sand-300 pb-4">
+              <dt className="font-bold text-ink-950">{f.q}</dt>
+              <dd className="mt-1 leading-relaxed text-dune-600">{f.a}</dd>
             </div>
           ))}
         </dl>

@@ -62,10 +62,10 @@ export function PlayerSearch({ players, onPick, placeholder, exclude }: PlayerSe
         placeholder={placeholder}
         aria-label={placeholder}
         autoComplete="off"
-        className="w-full rounded-lg border border-ink-700 bg-ink-900 px-4 py-3 outline-none placeholder:text-zinc-500 focus:border-red-700"
+        className="shadow-poster-sm w-full border-[3px] border-ink-950 bg-white px-4 py-3 font-bold outline-none placeholder:font-normal placeholder:italic placeholder:text-dune-600"
       />
       {matches.length > 0 ? (
-        <ul className="absolute z-10 mt-1 w-full overflow-hidden rounded-lg border border-ink-700 bg-ink-900 shadow-xl">
+        <ul className="shadow-poster absolute z-10 mt-1 w-full overflow-hidden border-[3px] border-ink-950 bg-paper-50">
           {matches.map((p, i) => (
             <li key={p.id}>
               <button
@@ -73,11 +73,11 @@ export function PlayerSearch({ players, onPick, placeholder, exclude }: PlayerSe
                 onClick={() => pick(p)}
                 onMouseEnter={() => setHighlight(i)}
                 className={`flex w-full items-baseline justify-between px-4 py-2 text-left ${
-                  i === highlight ? "bg-red-900/40" : ""
+                  i === highlight ? "bg-blood-600 text-white" : ""
                 }`}
               >
-                <span>{p.name}</span>
-                <span className="text-xs text-zinc-500">
+                <span className="font-bold">{p.name}</span>
+                <span className={`text-xs ${i === highlight ? "text-white/80" : "text-dune-600"}`}>
                   {p.years[0]}–{p.years[1]}
                 </span>
               </button>

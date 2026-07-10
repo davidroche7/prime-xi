@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <article className="prose-invert mx-auto max-w-2xl space-y-6 text-sm leading-relaxed text-zinc-300">
-      <h1 className="text-2xl font-black tracking-tight text-white">Privacy policy</h1>
-      <p className="text-xs text-zinc-500">Last updated: 10 July 2026</p>
+    <article className="mx-auto max-w-2xl space-y-6 text-sm leading-relaxed text-dune-600">
+      <h1 className="font-display text-2xl uppercase tracking-tight text-ink-950">Privacy policy</h1>
+      <p className="text-xs text-dune-600">Last updated: 10 July 2026</p>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold text-zinc-100">The short version</h2>
+        <h2 className="font-display text-lg uppercase text-ink-950">The short version</h2>
         <p>
           {SITE_NAME} has no accounts, no sign-up, and collects no personal data. Your game progress
           lives only on your own device.
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold text-zinc-100">Data stored on your device</h2>
+        <h2 className="font-display text-lg uppercase text-ink-950">Data stored on your device</h2>
         <p>
           The games optionally use your browser&apos;s localStorage to remember streaks, best scores,
           and today&apos;s puzzle state. This data never leaves your device, is not required to play,
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold text-zinc-100">Analytics</h2>
+        <h2 className="font-display text-lg uppercase text-ink-950">Analytics</h2>
         <p>
           We use privacy-respecting, cookieless analytics (Cloudflare Web Analytics and/or Plausible)
           to count visits in aggregate. These tools set no cookies, store no personal information, and
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold text-zinc-100">Advertising</h2>
+        <h2 className="font-display text-lg uppercase text-ink-950">Advertising</h2>
         <p>
           If advertising is enabled, ads are served by Google AdSense, which may use cookies or device
           identifiers subject to your consent where the law requires it (you will be asked before any
@@ -49,13 +49,13 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold text-zinc-100">Contact</h2>
+        <h2 className="font-display text-lg uppercase text-ink-950">Contact</h2>
         <p>
-          Questions about this policy: <a className="text-red-400 hover:underline" href="mailto:davidroche1979@gmail.com">davidroche1979@gmail.com</a>.
+          Questions about this policy: <a className="font-bold text-blood-600 hover:underline" href="mailto:davidroche1979@gmail.com">davidroche1979@gmail.com</a>.
         </p>
       </section>
 
-      <p className="text-xs text-zinc-500">{DISCLAIMER}</p>
+      <p className="text-xs text-dune-600">{DISCLAIMER}</p>
     </article>
   );
 }

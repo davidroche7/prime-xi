@@ -2,6 +2,18 @@
 
 import { ShareCardModal } from "@/components/ShareCardModal";
 import type { MatchResult } from "@/lib/h2h";
+import {
+  CARD_H as H,
+  CARD_W as W,
+  CREAM,
+  DEEP_RED,
+  DISPLAY,
+  DUNE,
+  INK,
+  PITCH,
+  plate,
+  posterGround,
+} from "@/lib/shareCanvas";
 import { SITE_URL } from "@/lib/site";
 
 interface H2HShareCardProps {
@@ -11,12 +23,10 @@ interface H2HShareCardProps {
   eraTitle: string;
 }
 
-const W = 1080;
-const H = 1080;
 const OUTCOME: Record<MatchResult["outcome"], { label: string; colour: string }> = {
-  W: { label: "WIN", colour: "#34d399" },
-  D: { label: "DRAW", colour: "#fbbf24" },
-  L: { label: "LOSS", colour: "#f87171" },
+  W: { label: "WIN", colour: PITCH },
+  D: { label: "DRAW", colour: DUNE },
+  L: { label: "LOSS", colour: DEEP_RED },
 };
 
 // scoreline only — never reveals either XI (spec §5/§6)
@@ -26,37 +36,37 @@ function draw(canvas: HTMLCanvasElement, { result, yourClub, rivalClub, eraTitle
   canvas.width = W;
   canvas.height = H;
 
-  const bg = ctx.createLinearGradient(0, 0, 0, H);
-  bg.addColorStop(0, "#09090b");
-  bg.addColorStop(1, "#18181b");
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = "#b91c1c";
-  ctx.fillRect(0, 0, W, 14);
+  posterGround(ctx);
 
   ctx.textAlign = "center";
-  ctx.fillStyle = "#fafafa";
-  ctx.font = "900 68px system-ui, sans-serif";
-  ctx.fillText("HEAD TO HEAD", W / 2, 160);
-  ctx.font = "600 38px system-ui, sans-serif";
-  ctx.fillStyle = "#a1a1aa";
-  ctx.fillText(eraTitle, W / 2, 225);
+  ctx.fillStyle = CREAM;
+  ctx.font = `64px ${DISPLAY}`;
+  ctx.fillText("HEAD TO HEAD", W / 2, 170);
+  ctx.font = "bold 36px Archivo, system-ui, sans-serif";
+  ctx.fillText(eraTitle.toUpperCase(), W / 2, 235);
 
-  ctx.fillStyle = "#d4d4d8";
-  ctx.font = "700 52px system-ui, sans-serif";
-  ctx.fillText(`${yourClub}  v  ${rivalClub}`, W / 2, 400);
+  plate(ctx, 110, 310, W - 220, 470);
+
+  ctx.fillStyle = INK;
+  ctx.font = `44px ${DISPLAY}`;
+  ctx.fillText(`${yourClub.toUpperCase()}  V  ${rivalClub.toUpperCase()}`, W / 2, 410);
 
   ctx.fillStyle = OUTCOME[result.outcome].colour;
-  ctx.font = "900 260px system-ui, sans-serif";
-  ctx.fillText(result.scoreline, W / 2, 640);
-  ctx.font = "800 60px system-ui, sans-serif";
+  ctx.font = `240px ${DISPLAY}`;
+  ctx.fillText(result.scoreline, W / 2, 650);
+  ctx.font = `56px ${DISPLAY}`;
   ctx.fillText(OUTCOME[result.outcome].label, W / 2, 740);
 
-  ctx.fillStyle = "#71717a";
-  ctx.font = "600 34px system-ui, sans-serif";
-  ctx.fillText(`Build yours at ${SITE_URL.replace(/^https?:\/\//, "")}`, W / 2, H - 80);
+  ctx.fillStyle = CREAM;
+  ctx.font = "bold 34px Archivo, system-ui, sans-serif";
+  ctx.fillText(`Build yours at ${SITE_URL.replace(/^https?:\/\//, "")}`, W / 2, H - 70);
 }
 
 export function H2HShareCard(props: H2HShareCardProps) {
-  return <ShareCardModal draw={(canvas) => draw(canvas, props)} filename={`head-to-head-${props.rivalClub.toLowerCase().replace(/\s+/g, "-")}.png`} />;
+  return (
+    <ShareCardModal
+      draw={(canvas) => draw(canvas, props)}
+      filename={`head-to-head-${props.rivalClub.toLowerCase().replace(/\s+/g, "-")}.png`}
+    />
+  );
 }
