@@ -36,8 +36,8 @@ const FAQS = [
 ];
 
 export default function DailyPage() {
-  const players = getPlayersIndex();
-  const answers = getAnswers();
+  const players = getPlayersIndex("liverpool");
+  const answers = getAnswers("liverpool");
 
   return (
     <>

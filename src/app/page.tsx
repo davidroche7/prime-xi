@@ -53,7 +53,7 @@ const ERA_CARDS = [
 ];
 
 export default function HomePage() {
-  const eras = getEras();
+  const eras = getEras("liverpool");
 
   return (
     <>

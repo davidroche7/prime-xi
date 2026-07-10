@@ -1,6 +1,7 @@
 import { canonicalHash } from "../src/lib/canonicalHash";
+import { teamRating } from "../src/lib/h2h";
 import type { EraKey } from "../src/lib/types";
-import { MANAGERS, managerPeakSeason } from "./managers";
+import { MANAGERS, type ManagerRecord, managerPeakSeason } from "./managers";
 
 /**
  * Turns a plaintext canonical era key (gitignored, pipeline/canonical/) into
@@ -19,8 +20,21 @@ export interface CanonicalEra {
   slots: { playerId: string; seasons: string[] }[][];
 }
 
-export function buildEraKey(era: CanonicalEra): EraKey {
-  const manager = MANAGERS.find((m) => m.id === era.managerId);
+/**
+ * @param club owning club slug (part of the hash salt). Defaults to liverpool;
+ *   the export passes it explicitly per club.
+ * @param ratingOf per-(player, season) rating lookup; used to precompute the
+ *   canonical XI's team rating for head-to-head. Defaults to 0 (tests don't need it).
+ * @param managers the club's manager records (peak-season source). Defaults to
+ *   Liverpool's; other clubs pass their own so this stays club-agnostic.
+ */
+export function buildEraKey(
+  era: CanonicalEra,
+  club = "liverpool",
+  ratingOf: (playerId: string, season: string) => number = () => 0,
+  managers: ManagerRecord[] = MANAGERS,
+): EraKey {
+  const manager = managers.find((m) => m.id === era.managerId);
   if (!manager) throw new Error(`buildEraKey: unknown manager ${era.managerId}`);
   if (era.slots.length !== 11) throw new Error(`buildEraKey: ${era.slug} has ${era.slots.length} slots`);
   const seen = new Set<string>();
@@ -36,21 +50,26 @@ export function buildEraKey(era: CanonicalEra): EraKey {
   if (parseInt(peak) < era.fromYear)
     throw new Error(`buildEraKey: ${era.slug}: manager peak ${peak} predates era start ${era.fromYear}`);
 
+  // canonical team rating = the primary (first) player-season of each of the 11 slots
+  const canonicalRating = teamRating(era.slots.map((slot) => ratingOf(slot[0].playerId, slot[0].seasons[0])));
+
   return {
+    club,
     slug: era.slug,
     title: era.title,
     seasonRange: era.seasonRange,
     fromYear: era.fromYear,
+    canonicalRating,
     hashes: {
       slots: era.slots.map((slot) => ({
-        players: slot.map((p) => canonicalHash(era.slug, "player", p.playerId)),
+        players: slot.map((p) => canonicalHash(club, era.slug, "player", p.playerId)),
         seasons: slot.flatMap((p) =>
-          p.seasons.map((s) => canonicalHash(era.slug, "season", `${p.playerId}|${s}`)),
+          p.seasons.map((s) => canonicalHash(club, era.slug, "season", `${p.playerId}|${s}`)),
         ),
       })),
-      manager: canonicalHash(era.slug, "manager", era.managerId),
-      managerSeason: canonicalHash(era.slug, "manager-season", `${era.managerId}|${peak}`),
-      formation: canonicalHash(era.slug, "formation", era.formationId),
+      manager: canonicalHash(club, era.slug, "manager", era.managerId),
+      managerSeason: canonicalHash(club, era.slug, "manager-season", `${era.managerId}|${peak}`),
+      formation: canonicalHash(club, era.slug, "formation", era.formationId),
     },
   };
 }

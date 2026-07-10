@@ -1,16 +1,18 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import type { AnswerPlayer, EraKey, Formation, IndexedPlayer, Manager } from "../../src/lib/types";
+import type { AnswerPlayer, EraKey, Formation, IndexedPlayer, Manager, Ratings } from "../../src/lib/types";
 
 /** Validates the committed static JSON in /data — the app's only data source. */
 
 const DATA = join(__dirname, "..", "..", "data");
+const CLUB = join(DATA, "clubs", "liverpool");
 const read = <T>(f: string) => JSON.parse(readFileSync(join(DATA, f), "utf8")) as T;
+const readClub = <T>(f: string) => JSON.parse(readFileSync(join(CLUB, f), "utf8")) as T;
 
-const index = read<IndexedPlayer[]>("players-index.json");
-const answers = read<AnswerPlayer[]>("answers.json");
-const formations = read<Formation[]>("formations.json");
+const index = readClub<IndexedPlayer[]>("players-index.json");
+const answers = readClub<AnswerPlayer[]>("answers.json");
+const formations = read<Formation[]>("formations.json"); // shared across clubs, stays at data/
 
 describe("players-index.json", () => {
   it("covers the complete roster (≥ 800 players)", () => {
@@ -64,16 +66,19 @@ describe("formations.json", () => {
   });
 });
 
-// Task 7 artefacts — validated once they exist.
-const hasEras = existsSync(join(DATA, "eras.json"));
+// canonical artefacts — validated once they exist.
+const hasEras = existsSync(join(CLUB, "eras.json"));
 describe.runIf(hasEras)("eras.json + managers.json", () => {
   // describe bodies run at collection even when skipped — read lazily
-  const eras = () => read<EraKey[]>("eras.json");
-  const managers = () => read<Manager[]>("managers.json");
+  const eras = () => readClub<EraKey[]>("eras.json");
+  const managers = () => readClub<Manager[]>("managers.json");
 
   it("three era keys with 11 hashed slots each and no plaintext", () => {
     expect(eras().map((e) => e.slug).sort()).toEqual(["all-time", "post-war", "premier-league"]);
     for (const e of eras()) {
+      expect(e.club).toBe("liverpool");
+      expect(e.canonicalRating).toBeGreaterThanOrEqual(30); // H2H strength ships, reveals no players
+      expect(e.canonicalRating).toBeLessThanOrEqual(99);
       expect(e.fromYear).toBeGreaterThanOrEqual(1892); // era window start ships with the key
       expect(e.hashes.slots).toHaveLength(11);
       for (const s of e.hashes.slots) {
@@ -88,5 +93,47 @@ describe.runIf(hasEras)("eras.json + managers.json", () => {
   it("managers list is substantial and unique", () => {
     expect(managers().length).toBeGreaterThanOrEqual(15);
     expect(new Set(managers().map((m) => m.id)).size).toBe(managers().length);
+  });
+});
+
+// H2H opponent clubs ship only an all-time eras.json (one canonicalRating, no roster).
+const MAN_UTD = join(DATA, "clubs", "manchester-united");
+const hasOpponent = existsSync(join(MAN_UTD, "eras.json"));
+describe.runIf(hasOpponent)("opponent club: manchester-united", () => {
+  const eras = () => JSON.parse(readFileSync(join(MAN_UTD, "eras.json"), "utf8")) as EraKey[];
+
+  it("ships a valid all-time key: rated, hashed, no plaintext", () => {
+    const all = eras();
+    expect(all.map((e) => e.slug)).toEqual(["all-time"]); // opponent-only: all-time era only for now
+    for (const e of all) {
+      expect(e.club).toBe("manchester-united"); // own club slug → hashes never collide with Liverpool's
+      expect(e.canonicalRating).toBeGreaterThanOrEqual(30);
+      expect(e.canonicalRating).toBeLessThanOrEqual(99);
+      expect(e.hashes.slots).toHaveLength(11);
+      for (const s of e.hashes.slots) for (const h of [...s.players, ...s.seasons]) expect(h).toMatch(/^[0-9a-z]+$/);
+      expect(JSON.stringify(e)).not.toMatch(/schmeichel|charlton|ronaldo|ferguson/i); // no plaintext leak
+    }
+  });
+});
+
+const hasRatings = existsSync(join(CLUB, "ratings.json"));
+describe.runIf(hasRatings)("ratings.json", () => {
+  const ratings = () => readClub<Ratings>("ratings.json");
+
+  it("maps known players to season→rating, floor-omitted (31–99)", () => {
+    const r = ratings();
+    const ids = new Set(index.map((p) => p.id));
+    let entries = 0;
+    for (const [pid, seasons] of Object.entries(r)) {
+      expect(ids.has(pid)).toBe(true);
+      for (const [season, rating] of Object.entries(seasons)) {
+        expect(season).toMatch(/^\d{4}-\d{2}$/);
+        expect(rating).toBeGreaterThan(30); // floor-omitted: the floor itself is never stored
+        expect(rating).toBeLessThanOrEqual(99);
+        entries++;
+      }
+    }
+    expect(Object.keys(r).length).toBeGreaterThanOrEqual(50);
+    expect(entries).toBeGreaterThan(0);
   });
 });

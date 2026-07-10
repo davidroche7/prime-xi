@@ -8,6 +8,8 @@ Two backendless Liverpool knowledge games on one static site, sharing one datase
 
 - **Game B — "The Perfect XI"** is the **main game** (Dave's call, 2026-07-07, overriding the original layout): blind team build (player + season per slot, formation, manager) scored /98 against a hidden canonical XI per era. Mastermind-count feedback only. The homepage `/` leads with it; era pages at `/xi/<era>/`.
 - **Game A — "Guess the Red"** is the secondary daily game: progressive-clue player guesser. Objective answer, autocomplete restricted to real LFC players, Wordle-style share card. Lives at `/daily/`. Shipped first.
+- **Head-to-head (Phase B, live)** rides on Game B: after you submit a Perfect XI, you may pit its **hidden team rating** against a rival club's **hidden canonical rating** for the same era → **scoreline + W/D/L only**, neither XI nor either rating ever shown. This is NOT a match simulation (see §8) — it's a single deterministic rating comparison. Spec in §5a.
+- **Multi-club (Phase B, in progress)** — club is a **data dimension**, never a fork: `data/clubs/<slug>/`. Liverpool is the fully-playable home club; other clubs join first as **H2H opponents only** (one `eras.json` / `canonicalRating`), then get Liverpool-level richness (full roster, playable Perfect XI) as data allows. See §3, §5a, §10.
 
 You are **not** building a match/season simulation, and **not** building Phase 3 (voting/backend) — see §8.
 
@@ -17,7 +19,8 @@ You are **not** building a match/season simulation, and **not** building Phase 3
 - **NO LFC badge, crest, kit, or competition marks.** Club name as fact + generic red theme. "Independent, not affiliated" disclaimer stays live.
 - All game logic = **pure, deterministic functions in `src/lib` with unit tests**. Same inputs → same outputs, every device, forever.
 - Data is produced **offline** in `/pipeline` and shipped as static JSON in `/data`. Production never scrapes, never computes ratings.
-- **Canonical-key plaintext is never committed** — `pipeline/canonical/` is gitignored; only salted-hash exports ship. The repo is public.
+- **Canonical-key plaintext is never committed** — `pipeline/canonical/` is gitignored (per-club: `index.ts` = Liverpool, `<club>.ts` = each opponent); only salted-hash exports ship. The repo is public. Hash salt is `gtr-xi-v1|<club>|<era>|<kind>|<value>` so keys never collide across clubs.
+- **H2H ratings are hidden, not secret** — per-(player, season) ratings ship in-client (needed to rate your own picks) but are **never displayed**; only a scoreline is. Deterrent-level, exactly like the canonical hashes. True secrecy waits for Phase 3's server.
 - Clues are **generated from raw facts**. Never lift lfchistory.net's editorial text or their question-of-the-day.
 - localStorage is optional-only (streaks, per-day state, best scores). Never required for core play.
 
@@ -30,6 +33,7 @@ Next.js App Router `output: 'export'` · TypeScript · Tailwind v4 · pnpm · Vi
 - **Wikipedia** (MediaWiki API): the three "List of Liverpool F.C. players" pages = the complete all-time roster spine (name, nationality, position, career years, apps, goals). CC BY-SA — credit in footer.
 - **lfchistory.net**: robots.txt permits; scrape once with disk cache + 1.5s backoff + descriptive UA; enrich the notable subset (birthplace, signed-from, honours, season stats) for clue generation. Quiet "data via lfchistory.net" credit.
 - Pipeline: `fetch spine → fetch enrichment → generate clues + difficulty → export /data JSON`. `/data` is committed; `pipeline/cache/` is not.
+- **Club-scoped layout**: `data/clubs/<slug>/` holds `players-index.json`, `answers.json`, `managers.json`, `eras.json`, `ratings.json`; `data/formations.json` is shared. Loaders in `src/lib/data.ts` take a club slug. An **opponent-only** club ships just `eras.json` (all-time) — richen it later by adding the other files beside it (never a separate opponent type). `ratings.json` = per-(player, season) H2H rating 30–99, floor-omitted, from `pipeline/ratings.ts` (career-base × career-arc + trophy-season boost; no per-season stats exist yet — `// ponytail:` upgrade path is real per-season data). Every club rated by the **same** formula so H2H is fair.
 
 ## 4. Game A spec
 
@@ -46,6 +50,14 @@ Next.js App Router `output: 'export'` · TypeScript · Tailwind v4 · pnpm · Vi
 - Reveal: canonical hidden until 100%. Phase 2 = local reveal only (your own build is the key). Global first-ascent is Phase 3.
 - Eras: all-time · post-war (1945+) · Premier League (1992+). Each is its own SEO page with prose + FAQ JSON-LD.
 
+## 5a. Head-to-head spec (Phase B)
+
+- **Trigger**: unlocks only *after* you submit a Perfect XI for an era. Offered only where a rival club has a canonical XI covering that same era (e.g. Man Utd = all-time only). No submit → no H2H.
+- **Engine** (`src/lib/h2h.ts`, pure/tested): `teamRating(11 season-ratings)` = mean (unrated pick → `RATING_FLOOR` 30); `matchResult(yourRating, rivalRating)` maps the gap to a scoreline (1-pt edge = 1-0; wider gaps widen the margin). The mapping is invented — tune freely, it has no other callers.
+- **Feedback**: **scoreline + W/D/L only.** Rival's XI is never shown; rival's rating is a hidden number; your own rating is not shown either (Dave: ratings hidden, scoreline only). The only place any canonical XI is ever revealed remains scoring 100% on that club's own Perfect XI.
+- **Data**: your picks are rated against **your** club's shipped `ratings.json`; the rival contributes one precomputed `canonicalRating` from its `eras.json` (computed offline as `teamRating` of its canonical XI — reveals no players). Share via `H2HShareCard` (canvas, no XI).
+- **Full match/season simulation stays permanently out** (§8) — H2H is one number vs one number.
+
 ## 6. Share cards
 
 Client-canvas → PNG, both games. First-class feature: this is the distribution channel. No logos, plain URL back to the site.
@@ -58,7 +70,7 @@ Home (Perfect XI hub), `/daily/` (Game A) + era pages carry evergreen prose (300
 
 Leave a `// V2:` or `// PHASE3:` comment instead of building:
 
-- Match/season simulation → **out, permanently**
+- Match/season simulation (lineups playing out, xG, minute-by-minute) → **out, permanently**. The H2H rating-duel scoreline (§5a) is IN and is *not* this — it's one rating vs one rating.
 - Voting, proposals, curator identity, first-ascent registry, leaderboards → **Phase 3**
 - Accounts, login, profiles → Phase 3 curator-only identity, not now
 - Server routes of any kind → Phase 3
@@ -76,3 +88,6 @@ Phase 1: daily guesser live on the demo host, static, shareable, difficulty-rate
 - **Weaponise subjectivity** — canonical XI is community-owned in Phase 3; mastery (≥95%) gates editing.
 - **Hybrid data** — Wikipedia guarantees completeness (validated); lfchistory enriches clues (robots-permitted, validated).
 - **Hashed keys, public repo** — salted hashes are a deterrent, not secrecy; real secrecy arrives with Phase 3's server. Accepted.
+- **Club as a data dimension, not a fork** (2026-07-08) — one app, `data/clubs/<slug>/`; de-risks store review + trademark exposure. Reinforces the community-owned direction per club.
+- **Head-to-head = rating duel, scoreline only** (revised 2026-07-08) — a post-Perfect-XI feature; hidden per-(player,season) ratings → hidden team rating vs rival's hidden `canonicalRating` → scoreline. Every canonical XI stays hidden (only 100% on your own Perfect XI reveals one). Both clubs rated by the same offline formula so the duel is merit, not scale.
+- **Opponent-only → full richness** (Dave, 2026-07-08) — a new club joins first as an H2H opponent (one `canonicalRating`, no scrape) to validate the vertical cheaply, then earns Liverpool-level data (roster scrape, playable Perfect XI, routing/club-picker) where data supports it. B1 = LFC vs Man Utd (opponent-only) shipped; B2 = first club to full richness.

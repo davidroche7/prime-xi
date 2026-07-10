@@ -13,6 +13,6 @@ export function normalizeCanonical(s: string): string {
   return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").trim();
 }
 
-export function canonicalHash(eraSlug: string, kind: "player" | "season" | "manager" | "manager-season" | "formation", value: string): string {
-  return hashString(`gtr-xi-v1|${eraSlug}|${kind}|${normalizeCanonical(value)}`).toString(36);
+export function canonicalHash(club: string, eraSlug: string, kind: "player" | "season" | "manager" | "manager-season" | "formation", value: string): string {
+  return hashString(`gtr-xi-v1|${club}|${eraSlug}|${kind}|${normalizeCanonical(value)}`).toString(36);
 }
