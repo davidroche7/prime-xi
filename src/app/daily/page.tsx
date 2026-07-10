@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
 import { GuessTheRed } from "@/components/GuessTheRed";
 import { getAnswers, getPlayersIndex } from "@/lib/data";
 import { SITE_URL } from "@/lib/site";
@@ -61,6 +62,10 @@ export default function DailyPage() {
           — build the greatest Liverpool team blind and prove you know it.
         </p>
       </section>
+
+      <div className="mx-auto max-w-xl">
+        <AdSlot slot="daily-below-game" />
+      </div>
 
       <section className="mx-auto mt-16 max-w-xl space-y-4 border-t border-ink-800 pt-8 text-sm leading-relaxed text-zinc-400">
         <h2 className="text-lg font-bold text-zinc-200">The daily Liverpool player quiz</h2>

@@ -1,7 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Link from "next/link";
+import { ADS_ENABLED, ADSENSE_CLIENT } from "@/lib/flags";
 import { CREDITS, DISCLAIMER, PLAUSIBLE_DOMAIN, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
+
+const bp = process.env.BASE_PATH || "";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -20,7 +23,16 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   twitter: { card: "summary_large_image" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
+
+export const viewport: Viewport = { themeColor: "#09090b" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -28,6 +40,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {PLAUSIBLE_DOMAIN ? (
           <script defer data-domain={PLAUSIBLE_DOMAIN} src="https://plausible.io/js/script.js" />
+        ) : null}
+        {ADS_ENABLED && ADSENSE_CLIENT ? (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            crossOrigin="anonymous"
+          />
+        ) : null}
+        {process.env.NODE_ENV === "production" ? (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `addEventListener("load",()=>{"serviceWorker"in navigator&&navigator.serviceWorker.register("${bp}/sw.js")})`,
+            }}
+          />
         ) : null}
       </head>
       <body className="min-h-screen flex flex-col">
@@ -51,6 +77,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="mx-auto max-w-5xl space-y-2 px-4 text-xs leading-relaxed text-zinc-500">
             <p>{DISCLAIMER}</p>
             <p>{CREDITS}</p>
+            <p>
+              <Link href="/privacy/" className="hover:text-zinc-300">
+                Privacy
+              </Link>
+              {" · "}
+              <Link href="/terms/" className="hover:text-zinc-300">
+                Terms
+              </Link>
+            </p>
           </div>
         </footer>
       </body>
