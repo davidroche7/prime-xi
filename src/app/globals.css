@@ -8,6 +8,7 @@
   --color-ink-900: #18181b;
   --color-ink-800: #27272a;
   --color-ink-700: #3f3f46;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
 }
 
 :root {
@@ -15,7 +16,21 @@
 }
 
 body {
-  @apply bg-ink-950 text-zinc-100 antialiased;
+  @apply bg-ink-950 font-sans text-zinc-100 antialiased;
+  /* one fixed atmospheric wash: red glow up top, pitch green low — no images */
+  background-image:
+    radial-gradient(60rem 24rem at 50% -6rem, rgb(127 29 29 / 0.28), transparent 70%),
+    radial-gradient(50rem 30rem at 50% 115%, rgb(20 83 45 / 0.18), transparent 70%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgb(239 68 68 / 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid rgb(239 68 68 / 0.8);
+  outline-offset: 2px;
 }
 
 @keyframes confetti-fall {

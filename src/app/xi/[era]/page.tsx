@@ -31,8 +31,13 @@ export default async function EraPage({ params }: { params: Promise<{ era: strin
 
   return (
     <>
-      <section className="py-6 text-center">
-        <h1 className="mx-auto max-w-3xl text-3xl font-black tracking-tight">{content.h1}</h1>
+      <section className="py-8 text-center">
+        <p className="text-xs font-bold uppercase tracking-[0.25em] text-red-400/90">
+          The Perfect XI
+        </p>
+        <h1 className="mx-auto mt-2 max-w-3xl text-3xl font-black tracking-tighter sm:text-4xl">
+          {content.h1}
+        </h1>
         <p className="mx-auto mt-2 max-w-xl text-zinc-400">
           {era.seasonRange} · build blind, score /98, counts-only feedback
         </p>

@@ -185,7 +185,7 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
             <button
               type="button"
               onClick={copyShare}
-              className="rounded-lg bg-red-700 px-4 py-2 font-bold text-white hover:bg-red-600"
+              className="rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-4 py-2 font-bold text-white shadow-lg shadow-red-950/50 transition hover:from-red-500 hover:to-red-600"
             >
               {copied ? "Copied!" : "Copy result"}
             </button>

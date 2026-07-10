@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next";
+import { Archivo } from "next/font/google";
 import Link from "next/link";
 import { ADS_ENABLED, ADSENSE_CLIENT } from "@/lib/flags";
 import { CREDITS, DISCLAIMER, PLAUSIBLE_DOMAIN, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const bp = process.env.BASE_PATH || "";
+
+const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -36,7 +39,7 @@ export const viewport: Viewport = { themeColor: "#09090b" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={archivo.variable}>
       <head>
         {PLAUSIBLE_DOMAIN ? (
           <script defer data-domain={PLAUSIBLE_DOMAIN} src="https://plausible.io/js/script.js" />
@@ -57,9 +60,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ) : null}
       </head>
       <body className="min-h-screen flex flex-col">
-        <header className="border-b border-ink-800">
+        <header className="sticky top-0 z-40 border-b border-white/5 bg-ink-950/80 backdrop-blur">
           <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-            <Link href="/" className="text-lg font-black tracking-tight">
+            <Link href="/" className="flex items-center gap-2 text-lg font-black tracking-tight">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`${bp}/favicon.svg`} alt="" className="h-6 w-6 rounded-md" />
               PRIME<span className="text-red-500"> XI</span>
             </Link>
             <div className="flex gap-4 text-sm text-zinc-300">
