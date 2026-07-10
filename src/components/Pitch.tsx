@@ -4,49 +4,46 @@ import type { Formation } from "@/lib/types";
 
 interface PitchProps {
   formation: Formation;
-  /** slotId -> short label (e.g. surname) for filled slots */
+  /** slotId -> filled player surname — used for aria labels only; the diagram never shows text */
   labels: Record<string, string | undefined>;
   selectedSlotId: string | null;
   onSelectSlot: (slotId: string) => void;
 }
 
+/** Compact formation diagram: dashed dot = empty, solid cream square = filled,
+ *  red = selected. Names live on the team sheet, never on the pitch. */
 export function Pitch({ formation, labels, selectedSlotId, onSelectSlot }: PitchProps) {
   return (
     <div
-      className="relative w-full overflow-hidden rounded-xl border border-ink-700 bg-gradient-to-b from-pitch-800 to-pitch-900"
+      className="shadow-poster-sm relative w-full overflow-hidden border-[3px] border-ink-950 bg-pitch-800"
       style={{ aspectRatio: "3 / 4" }}
     >
-      {/* pitch markings */}
-      <div className="pointer-events-none absolute inset-3 rounded border border-white/20" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20" />
-      <div className="pointer-events-none absolute left-3 right-3 top-1/2 border-t border-white/20" />
+      <div className="pointer-events-none absolute inset-2 border border-cream-100/25" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cream-100/25" />
+      <div className="pointer-events-none absolute left-2 right-2 top-1/2 border-t border-cream-100/25" />
 
       {formation.slots.map((slot) => {
-        const label = labels[slot.slotId];
+        const filled = Boolean(labels[slot.slotId]);
         const selected = selectedSlotId === slot.slotId;
         return (
           <button
             key={slot.slotId}
             type="button"
             onClick={() => onSelectSlot(slot.slotId)}
-            className="absolute -translate-x-1/2 -translate-y-1/2 text-center"
+            className="absolute flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
             style={{ left: `${slot.x}%`, top: `${slot.y}%` }}
-            aria-label={`${slot.group} slot${label ? `: ${label}` : ", empty"}`}
+            aria-label={`${slot.group} slot${filled ? `: ${labels[slot.slotId]}` : ", empty"}`}
+            aria-pressed={selected}
           >
             <span
-              className={`mx-auto flex h-11 w-11 items-center justify-center rounded-full border-2 text-[10px] font-bold shadow-lg transition ${
+              className={
                 selected
-                  ? "border-amber-300 bg-amber-400 text-black"
-                  : label
-                    ? "border-white/70 bg-red-800 text-white"
-                    : "border-dashed border-white/50 bg-black/30 text-white/70 hover:bg-black/50"
-              }`}
-            >
-              {slot.group}
-            </span>
-            <span className="mt-1 block max-w-20 truncate text-[10px] font-semibold text-white drop-shadow sm:max-w-24 sm:text-xs">
-              {label ?? " "}
-            </span>
+                  ? "h-5 w-5 rounded-full border-2 border-cream-100 bg-blood-600 shadow-[0_0_0_2px_var(--color-ink-950)]"
+                  : filled
+                    ? "h-5 w-5 border-2 border-ink-950 bg-paper-50 shadow-[2px_2px_0_var(--color-ink-950)]"
+                    : "h-5 w-5 rounded-full border-2 border-dashed border-cream-100/60"
+              }
+            />
           </button>
         );
       })}

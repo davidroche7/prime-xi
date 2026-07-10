@@ -42,27 +42,22 @@ export default function DailyPage() {
 
   return (
     <>
-      <section className="py-8 text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-red-400/90">
-          The daily warm-up
-        </p>
-        <h1 className="mt-2 text-4xl font-black tracking-tighter">
-          Guess the{" "}
-          <span className="bg-gradient-to-b from-red-400 to-red-600 bg-clip-text text-transparent">
-            Red
-          </span>
+      <section className="fleck -mx-4 -mt-6 mb-8 border-b-[3px] border-ink-950 px-4 py-8 text-center text-cream-100">
+        <p className="text-[11px] font-bold uppercase tracking-[0.22em]">The daily warm-up</p>
+        <h1 className="font-display mt-2 text-3xl uppercase tracking-tight sm:text-4xl">
+          Guess the <span className="text-ink-950">Red</span>
         </h1>
-        <p className="mx-auto mt-2 max-w-xl text-zinc-400">
+        <p className="mx-auto mt-2 max-w-xl text-sm font-bold">
           One mystery Liverpool player a day. Six clues, hardest first — how few do you need?
         </p>
       </section>
 
       <GuessTheRed players={players} answers={answers} />
 
-      <section className="mx-auto mt-14 max-w-xl rounded-xl border border-ink-800 bg-ink-900/60 p-5 text-center">
-        <p className="text-sm text-zinc-400">
+      <section className="mx-auto mt-14 max-w-xl rounded-xl border border-sand-300 bg-paper-50 p-5 text-center">
+        <p className="text-sm text-dune-600">
           Done for today? The main event is{" "}
-          <Link href="/" className="font-semibold text-red-400 hover:text-red-300">
+          <Link href="/" className="font-semibold text-blood-600 hover:text-red-300">
             The Perfect XI
           </Link>{" "}
           — build the greatest Liverpool team blind and prove you know it.
@@ -73,8 +68,8 @@ export default function DailyPage() {
         <AdSlot slot="daily-below-game" />
       </div>
 
-      <section className="mx-auto mt-16 max-w-xl space-y-4 border-t border-ink-800 pt-8 text-sm leading-relaxed text-zinc-400">
-        <h2 className="text-lg font-bold text-zinc-200">The daily Liverpool player quiz</h2>
+      <section className="mx-auto mt-16 max-w-xl space-y-4 border-t border-sand-300 pt-8 text-sm leading-relaxed text-dune-600">
+        <h2 className="font-display text-lg uppercase text-ink-950">The daily Liverpool player quiz</h2>
         <p>
           Guess the Red is a daily knowledge game for Liverpool supporters. Each day the game picks one
           player from the club&apos;s complete playing history — more than 800 men have pulled on the shirt
@@ -105,12 +100,12 @@ export default function DailyPage() {
       </section>
 
       <section className="mx-auto mt-10 max-w-xl text-sm">
-        <h2 className="text-lg font-bold text-zinc-200">FAQ</h2>
+        <h2 className="font-display text-lg uppercase text-ink-950">FAQ</h2>
         <dl className="mt-3 space-y-4">
           {FAQS.map((f) => (
             <div key={f.q}>
-              <dt className="font-semibold text-zinc-300">{f.q}</dt>
-              <dd className="mt-1 leading-relaxed text-zinc-400">{f.a}</dd>
+              <dt className="font-semibold text-ink-950">{f.q}</dt>
+              <dd className="mt-1 leading-relaxed text-dune-600">{f.a}</dd>
             </div>
           ))}
         </dl>

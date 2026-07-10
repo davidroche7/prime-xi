@@ -96,7 +96,7 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
 
   if (!date || !answer) {
     return (
-      <div className="rounded-xl border border-ink-700 bg-ink-900 p-8 text-center text-zinc-400">
+      <div className="shadow-poster-sm border-[3px] border-ink-950 bg-paper-50 p-8 text-center font-bold text-dune-600">
         Loading today&apos;s puzzle…
       </div>
     );
@@ -105,18 +105,18 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
   return (
     <div className="mx-auto max-w-xl">
       <div className="mb-4 flex items-center justify-between text-sm">
-        <span className="text-zinc-400">
+        <span className="font-bold text-dune-600">
           {date}
           {streak && streak.count > 0 ? <span className="ml-2">🔥 {streak.count}-day streak</span> : null}
         </span>
-        <div className="flex rounded-lg border border-ink-700 p-0.5" role="group" aria-label="Difficulty mode">
+        <div className="flex border-[3px] border-ink-950 bg-paper-50 p-0.5" role="group" aria-label="Difficulty mode">
           {(["normal", "hard"] as const).map((m) => (
             <button
               key={m}
               type="button"
               onClick={() => setMode(m)}
-              className={`rounded-md px-3 py-1 font-semibold capitalize ${
-                mode === m ? "bg-red-700 text-white" : "text-zinc-400 hover:text-white"
+              className={`px-3 py-1 text-xs font-bold uppercase tracking-wide ${
+                mode === m ? "bg-blood-600 text-white" : "text-dune-600 hover:text-ink-950"
               }`}
             >
               {m}
@@ -127,8 +127,8 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
 
       <ol className="space-y-2">
         {answer.clues.slice(0, state.cluesRevealed).map((clue, i) => (
-          <li key={i} className="flex gap-3 rounded-lg border border-ink-800 bg-ink-900 p-3">
-            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded bg-red-900/60 text-xs font-bold text-red-200">
+          <li key={i} className="shadow-poster-sm flex gap-3 border-[3px] border-ink-950 bg-paper-50 p-3">
+            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center border-2 border-ink-950 bg-blood-600 text-xs font-bold text-white">
               {i + 1}
             </span>
             <span>{clue}</span>
@@ -145,7 +145,7 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
             placeholder="Guess a Liverpool player…"
           />
           <div className="mt-3 flex items-center justify-between gap-2 text-sm">
-            <span className="text-zinc-500">
+            <span className="text-xs font-bold uppercase tracking-wide text-dune-600">
               Clue {state.cluesRevealed}/{MAX_CLUES} · solve now for {MAX_CLUES + 1 - state.cluesRevealed} pts
             </span>
             <span className="flex gap-2">
@@ -153,7 +153,7 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
                 <button
                   type="button"
                   onClick={() => apply(revealClue(state))}
-                  className="rounded-lg border border-ink-700 px-3 py-1.5 text-zinc-300 hover:border-red-700 hover:text-white"
+                  className="border-2 border-ink-950 bg-paper-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wide hover:bg-sand-300/60"
                 >
                   Reveal next clue
                 </button>
@@ -161,7 +161,7 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
               <button
                 type="button"
                 onClick={() => apply(giveUp(state))}
-                className="rounded-lg px-3 py-1.5 text-zinc-500 hover:text-red-400"
+                className="px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-dune-600 hover:text-blood-600"
               >
                 Give up
               </button>
@@ -169,15 +169,15 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
           </div>
         </div>
       ) : (
-        <div className="mt-4 rounded-xl border border-ink-700 bg-ink-900 p-5 text-center">
+        <div className="shadow-poster mt-4 border-[3px] border-ink-950 bg-ink-950 p-5 text-center text-cream-100">
           {state.solved ? (
             <p className="text-lg">
-              <span className="font-black text-emerald-400">Solved!</span> It&apos;s{" "}
+              <span className="font-display uppercase text-cream-100">Solved!</span> It&apos;s{" "}
               <span className="font-bold">{answer.name}</span> — {score(state)}/6 points
             </p>
           ) : (
             <p className="text-lg">
-              <span className="font-black text-red-400">Not this time.</span> It was{" "}
+              <span className="font-display uppercase text-blood-600">Not this time.</span> It was{" "}
               <span className="font-bold">{answer.name}</span>
             </p>
           )}
@@ -185,7 +185,7 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
             <button
               type="button"
               onClick={copyShare}
-              className="rounded-lg bg-gradient-to-b from-red-600 to-red-700 px-4 py-2 font-bold text-white shadow-lg shadow-red-950/50 transition hover:from-red-500 hover:to-red-600"
+              className="border-2 border-cream-100 bg-blood-600 px-4 py-2 text-xs font-bold uppercase tracking-wide text-white hover:bg-blood-700"
             >
               {copied ? "Copied!" : "Copy result"}
             </button>
@@ -197,7 +197,7 @@ export function GuessTheRed({ players, answers }: GuessTheRedProps) {
       {state.wrongGuesses.length > 0 ? (
         <div className="mt-4 flex flex-wrap gap-2 text-sm">
           {state.wrongGuesses.map((id) => (
-            <span key={id} className="rounded-full border border-ink-700 px-3 py-1 text-zinc-400 line-through">
+            <span key={id} className="border-2 border-sand-300 px-3 py-1 text-sm font-bold text-dune-600 line-through">
               {nameById.get(id) ?? id}
             </span>
           ))}

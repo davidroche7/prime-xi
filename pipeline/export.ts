@@ -5,6 +5,7 @@ import { RATING_FLOOR } from "../src/lib/h2h";
 import { seasonsBetween } from "../src/lib/seasons";
 import type { Ratings } from "../src/lib/types";
 import { difficultyFor, generateClues } from "./clues";
+import { honourMarks } from "./honours";
 import { buildEraKey, type CanonicalEra } from "./eras";
 import type { Enrichment } from "./lfchistory";
 import { enrichmentSubset } from "./lfchistory";
@@ -23,16 +24,25 @@ function writeJson(name: string, value: unknown) {
   console.log(`wrote data/${name}`);
 }
 
-export function buildPlayersIndex(spine: SpinePlayer[]) {
+export function buildPlayersIndex(spine: SpinePlayer[], enrichment: Record<number, Enrichment> = {}) {
   return spine.map((p) => {
     const lower = p.name.toLowerCase();
     const plain = normalizeCanonical(p.name);
     const surname = plain.split(" ").slice(-1)[0];
+    const enr = p.lfchId != null ? enrichment[p.lfchId] : undefined;
+    const marks = honourMarks(enr?.honours);
     return {
       id: p.id,
       name: p.name,
       search: [...new Set([lower, plain, surname])],
       years: [p.careerSpans[0][0], p.careerSpans[p.careerSpans.length - 1][1]] as [number, number],
+      // team-sheet stats: career totals + position for everyone; birth year and
+      // honour marks only where lfchistory enrichment exists (covers likely XI picks)
+      pos: p.position,
+      apps: p.apps,
+      goals: p.goals,
+      ...(enr?.birthYear ? { birthYear: enr.birthYear } : {}),
+      ...(marks.length ? { marks } : {}),
     };
   });
 }
@@ -92,7 +102,7 @@ if (require.main === module) {
 
   mkdirSync(DATA, { recursive: true });
 
-  writeJson("players-index.json", buildPlayersIndex(spine));
+  writeJson("players-index.json", buildPlayersIndex(spine, enrichment));
   const answers = buildAnswers(spine, enrichment);
   writeJson("answers.json", answers);
 

@@ -33,34 +33,34 @@ export function ShareCardModal({ draw, filename }: ShareCardModalProps) {
       <button
         type="button"
         onClick={show}
-        className="rounded-lg border border-ink-700 px-4 py-2 font-bold text-zinc-200 hover:border-red-700"
+        className="border-2 border-current px-4 py-2 text-xs font-bold uppercase tracking-wide hover:opacity-75"
       >
         Share card
       </button>
       {open ? (
         <div
-          className="fixed inset-0 z-40 flex items-center justify-center bg-black/80 p-4"
+          className="fixed inset-0 z-40 flex items-center justify-center bg-ink-950/80 p-4"
           onClick={() => setOpen(false)}
           role="dialog"
           aria-label="Share card preview"
         >
           <div
-            className="max-h-full w-full max-w-md overflow-auto rounded-xl bg-ink-900 p-4"
+            className="shadow-poster max-h-full w-full max-w-md overflow-auto border-[3px] border-ink-950 bg-paper-50 p-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <canvas ref={canvasRef} className="w-full rounded-lg" />
+            <canvas ref={canvasRef} className="w-full border-2 border-ink-950" />
             <div className="mt-3 flex gap-2">
               <button
                 type="button"
                 onClick={download}
-                className="flex-1 rounded-lg bg-red-700 px-4 py-2 font-bold hover:bg-red-600"
+                className="flex-1 border-2 border-ink-950 bg-blood-600 px-4 py-2 text-sm font-bold uppercase tracking-wide text-white hover:bg-blood-700"
               >
                 Download PNG
               </button>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="rounded-lg bg-ink-700 px-4 py-2 hover:bg-ink-800"
+                className="border-2 border-ink-950 bg-paper-50 px-4 py-2 text-sm font-bold uppercase tracking-wide text-ink-950 hover:bg-sand-300/60"
               >
                 Close
               </button>

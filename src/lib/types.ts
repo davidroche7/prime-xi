@@ -21,6 +21,14 @@ export interface IndexedPlayer {
   search: string[];
   /** first and last year of their Liverpool career, e.g. [1990, 1999] */
   years: [number, number];
+  /** team-sheet stats: wiki position key (GK|FB|HB|DF|MF|FW|U) + career totals */
+  pos: string;
+  apps: number;
+  goals: number;
+  /** enriched players only — age on the sheet = pick-season start year − birthYear */
+  birthYear?: number;
+  /** enriched players only — ≤3 honour marks, majors first, e.g. ["CL ’05", "FA ’06"] */
+  marks?: string[];
 }
 
 /** One entry in /data/clubs/<club>/answers.json — the Guess the Red answer pool. */

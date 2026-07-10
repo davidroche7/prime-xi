@@ -2,6 +2,18 @@
 
 import { ShareCardModal } from "@/components/ShareCardModal";
 import { score, type GuessState } from "@/lib/guessGame";
+import {
+  CARD_H as H,
+  CARD_W as W,
+  CREAM,
+  DEEP_RED,
+  DISPLAY,
+  INK,
+  PITCH,
+  plate,
+  posterGround,
+  RED,
+} from "@/lib/shareCanvas";
 import { SITE_URL } from "@/lib/site";
 
 interface GuessShareCardProps {
@@ -10,58 +22,52 @@ interface GuessShareCardProps {
   mode: "normal" | "hard";
 }
 
-const W = 1080;
-const H = 1080;
-
 function draw(canvas: HTMLCanvasElement, { state, dateUTC, mode }: GuessShareCardProps) {
   const ctx = canvas.getContext("2d");
   if (!ctx) return;
   canvas.width = W;
   canvas.height = H;
 
-  const bg = ctx.createLinearGradient(0, 0, 0, H);
-  bg.addColorStop(0, "#09090b");
-  bg.addColorStop(1, "#18181b");
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, W, H);
+  posterGround(ctx);
 
-  ctx.fillStyle = "#b91c1c";
-  ctx.fillRect(0, 0, W, 14);
-
-  ctx.fillStyle = "#fafafa";
-  ctx.font = "900 76px system-ui, sans-serif";
   ctx.textAlign = "center";
-  ctx.fillText("GUESS THE RED", W / 2, 170);
-  ctx.font = "600 40px system-ui, sans-serif";
-  ctx.fillStyle = "#a1a1aa";
+  ctx.fillStyle = CREAM;
+  ctx.font = `70px ${DISPLAY}`;
+  ctx.fillText("GUESS THE RED", W / 2, 175);
+  ctx.font = "bold 38px Archivo, system-ui, sans-serif";
   ctx.fillText(dateUTC + (mode === "hard" ? "  ·  HARD" : ""), W / 2, 240);
 
+  plate(ctx, 140, 310, W - 280, 440);
+
   // result — mirrors shareText(): attempts out of six clues
-  ctx.fillStyle = "#fafafa";
-  ctx.font = "900 170px system-ui, sans-serif";
-  ctx.fillText(state.solved ? `${state.cluesRevealed}/6` : "X/6", W / 2, 480);
-  ctx.font = "700 44px system-ui, sans-serif";
-  ctx.fillStyle = state.solved ? "#34d399" : "#f87171";
-  ctx.fillText(state.solved ? `solved · ${score(state)} pts` : "not today", W / 2, 560);
+  ctx.fillStyle = INK;
+  ctx.font = `170px ${DISPLAY}`;
+  ctx.fillText(state.solved ? `${state.cluesRevealed}/6` : "X/6", W / 2, 520);
+  ctx.font = `44px ${DISPLAY}`;
+  ctx.fillStyle = state.solved ? PITCH : DEEP_RED;
+  ctx.fillText(state.solved ? `SOLVED · ${score(state)} PTS` : "NOT TODAY", W / 2, 600);
 
   // clue boxes — same grid as the emoji share text
   const cells: string[] = state.solved
-    ? [...Array(state.cluesRevealed - 1).fill("#b91c1c"), "#16a34a"]
-    : [...Array(state.cluesRevealed).fill("#b91c1c"), "#27272a"];
-  const size = 110;
+    ? [...Array(state.cluesRevealed - 1).fill(RED), PITCH]
+    : [...Array(state.cluesRevealed).fill(RED), INK];
+  const size = 100;
   const gap = 22;
   const x0 = (W - (cells.length * size + (cells.length - 1) * gap)) / 2;
   cells.forEach((fill, i) => {
+    const x = x0 + i * (size + gap);
+    ctx.fillStyle = INK;
+    ctx.fillRect(x + 8, 660 + 8, size, size);
     ctx.fillStyle = fill;
-    ctx.beginPath();
-    ctx.roundRect(x0 + i * (size + gap), 640, size, size, 18);
-    ctx.fill();
+    ctx.fillRect(x, 660, size, size);
+    ctx.strokeStyle = INK;
+    ctx.lineWidth = 6;
+    ctx.strokeRect(x + 3, 663, size - 6, size - 6);
   });
 
-  ctx.textAlign = "center";
-  ctx.fillStyle = "#71717a";
-  ctx.font = "600 34px system-ui, sans-serif";
-  ctx.fillText(`Play today's at ${SITE_URL.replace(/^https?:\/\//, "")}`, W / 2, H - 80);
+  ctx.fillStyle = CREAM;
+  ctx.font = "bold 34px Archivo, system-ui, sans-serif";
+  ctx.fillText(`Play today's at ${SITE_URL.replace(/^https?:\/\//, "")}`, W / 2, H - 70);
 }
 
 export function GuessShareCard(props: GuessShareCardProps) {
