@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
 import { getEras } from "@/lib/data";
 import { SITE_URL } from "@/lib/site";
 
@@ -143,6 +144,10 @@ export default function HomePage() {
           breather from the big build, the daily Guess the Red puzzle resets every midnight UTC.
         </p>
       </section>
+
+      <div className="mx-auto max-w-2xl">
+        <AdSlot slot="home-below-prose" />
+      </div>
 
       <section className="mx-auto mt-10 max-w-2xl text-sm">
         <h2 className="font-display text-lg uppercase text-ink-950">FAQ</h2>

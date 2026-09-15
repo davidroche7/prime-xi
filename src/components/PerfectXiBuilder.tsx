@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { AdSlot } from "@/components/AdSlot";
 import { H2HShareCard } from "@/components/H2HShareCard";
 import { Pitch } from "@/components/Pitch";
 import { PlayerSearch } from "@/components/PlayerSearch";
@@ -422,6 +423,8 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
                           eraTitle={era.title}
                         />
                       </div>
+                      {/* post-result: user has completed a full build+duel loop, natural pause point */}
+                      <AdSlot slot="era-h2h-result" />
                     </div>
                   );
                 })()
