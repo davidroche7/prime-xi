@@ -37,7 +37,12 @@ function honourYears(enr?: Enrichment): Set<number> {
 
 /** Career-quality base 30–99 from career totals + honours count. */
 export function playerBase(player: SpinePlayer, enr?: Enrichment): number {
-  const apps = Math.min(player.apps / 500, 1) * 25; // longevity / establishment
+  // ponytail: sqrt-compressed longevity curve (calibration pass, 2026-09-15) —
+  // linear apps/500 was punishing short-but-elite careers (Cafu, Nesta, early
+  // Haaland) relative to one-club servants; sqrt gives partial credit sooner
+  // while still rewarding full longevity at the cap. Upgrade path: real
+  // per-season minutes data if it ever exists.
+  const apps = Math.sqrt(Math.min(player.apps / 500, 1)) * 25; // longevity / establishment
   const goals = goalsComponent(player.position, player.goals);
   // distinct honour-years ≈ trophies won; "1987/88" contributes years {1987,1988}
   const honourCount = enr?.honours ? honourYears(enr).size / 2 : 0;
