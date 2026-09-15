@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">The Perfect XI</string>
+    <string name="title_activity_main">The Perfect XI</string>
+    <string name="package_name">com.theperfectxi.app</string>
+    <string name="custom_url_scheme">com.theperfectxi.app</string>
+</resources>
