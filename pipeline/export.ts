@@ -42,6 +42,7 @@ export function buildPlayersIndex(spine: SpinePlayer[], enrichment: Record<numbe
       apps: p.apps,
       goals: p.goals,
       ...(enr?.birthYear ? { birthYear: enr.birthYear } : {}),
+      ...(enr?.birthMonthDay ? { birthMonthDay: enr.birthMonthDay } : {}),
       ...(marks.length ? { marks } : {}),
     };
   });

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo, Archivo_Black } from "next/font/google";
 import Link from "next/link";
 import { ADS_ENABLED, ADSENSE_CLIENT } from "@/lib/flags";
-import { CREDITS, DISCLAIMER, PLAUSIBLE_DOMAIN, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
+import { CREDITS, DISCLAIMER, IS_DEMO_HOST, PLAUSIBLE_DOMAIN, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const bp = process.env.BASE_PATH || "";
@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   twitter: { card: "summary_large_image" },
+  // GitHub Pages demo mirror must never compete with prod in search results.
+  ...(IS_DEMO_HOST ? { robots: { index: false, follow: false } } : {}),
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -78,6 +80,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/daily/" className="hover:text-blood-600">
                 Daily quiz
               </Link>
+              <Link href="/higher-lower/" className="hidden hover:text-blood-600 sm:inline">
+                Higher/Lower
+              </Link>
             </div>
           </nav>
         </header>
@@ -86,6 +91,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="mx-auto max-w-5xl space-y-2 px-4 text-xs leading-relaxed text-dune-600">
             <p>{DISCLAIMER}</p>
             <p>{CREDITS}</p>
+            <p className="font-bold uppercase tracking-wide">
+              <Link href="/how-it-works/" className="hover:text-blood-600">
+                How it works
+              </Link>
+              {" · "}
+              <Link href="/head-to-head/" className="hover:text-blood-600">
+                Head-to-head
+              </Link>
+              {" · "}
+              <Link href="/on-this-day/" className="hover:text-blood-600">
+                On this day
+              </Link>
+              {" · "}
+              <Link href="/higher-lower/" className="hover:text-blood-600">
+                Higher/Lower
+              </Link>
+            </p>
             <p className="font-bold uppercase tracking-wide">
               <Link href="/privacy/" className="hover:text-blood-600">
                 Privacy

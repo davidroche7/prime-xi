@@ -3,13 +3,13 @@ import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { GuessTheRed } from "@/components/GuessTheRed";
 import { getAnswers, getPlayersIndex } from "@/lib/data";
-import { SITE_URL } from "@/lib/site";
+import { PROD_URL, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Guess the Red — the daily Liverpool FC player quiz",
   description:
     "A free daily Liverpool player guessing game. Six clues, hardest to easiest, one Red from 130+ years of club history. New puzzle every day at midnight UTC.",
-  alternates: { canonical: `${SITE_URL}/daily/` },
+  alternates: { canonical: `${PROD_URL}/daily/` },
   openGraph: {
     title: "Guess the Red — the daily Liverpool FC player quiz",
     url: `${SITE_URL}/daily/`,
@@ -60,7 +60,15 @@ export default function DailyPage() {
           <Link href="/" className="font-semibold text-blood-600 hover:text-red-300">
             The Perfect XI
           </Link>{" "}
-          — build the greatest Liverpool team blind and prove you know it.
+          — build the greatest Liverpool team blind and prove you know it. Or try{" "}
+          <Link href="/higher-lower/" className="font-semibold text-blood-600 hover:text-red-300">
+            Higher or Lower
+          </Link>{" "}
+          and{" "}
+          <Link href="/on-this-day/" className="font-semibold text-blood-600 hover:text-red-300">
+            On This Day
+          </Link>
+          .
         </p>
       </section>
 

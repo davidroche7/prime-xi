@@ -30,11 +30,19 @@ const clubName = (slug: string) => slug.replace(/(^|-)(\w)/g, (_, s, c) => (s ? 
  *  is a candidate, so a new opponent auto-appears once its data is exported. */
 export function getOpponents(club: string, eraSlug: string) {
   const clubsDir = join(DATA_DIR, "clubs");
-  return readdirSync(clubsDir)
+  const rivals = readdirSync(clubsDir)
     .filter((c) => c !== club && existsSync(join(clubsDir, c, "eras.json")))
     .flatMap((c) => {
       const era = getEras(c).find((e) => e.slug === eraSlug);
       return era ? [{ club: c, name: clubName(c), canonicalRating: era.canonicalRating }] : [];
     })
     .sort((a, b) => a.name.localeCompare(b.name));
+
+  // "The Legends" isn't a rival club — it's this era's own hidden canonical XI,
+  // the exact team the build is scored against. Same rating-duel engine, but
+  // beating it is beating the actual answer, not another club's number.
+  const own = getEras(club).find((e) => e.slug === eraSlug);
+  const legends = own ? [{ club: "legends", name: "The Legends", canonicalRating: own.canonicalRating }] : [];
+
+  return [...legends, ...rivals];
 }

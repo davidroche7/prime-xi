@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { getEras } from "@/lib/data";
-import { SITE_URL } from "@/lib/site";
+import { PROD_URL, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Perfect XI — build the greatest Liverpool team and prove it",
   description:
     "Build the greatest Liverpool XI blind — players, defining seasons, formation, manager — and score it out of 98 against a hidden canonical team. Three eras, counts-only feedback.",
-  alternates: { canonical: `${SITE_URL}/` },
+  alternates: { canonical: `${PROD_URL}/` },
   openGraph: {
     title: "The Perfect XI — build the greatest Liverpool team and prove it",
     url: `${SITE_URL}/`,
@@ -99,19 +99,40 @@ export default function HomePage() {
             })}
           </div>
 
-          <div className="mt-8 border-[3px] border-dashed border-cream-100/70 p-4">
+          <Link
+            href="/head-to-head/"
+            className="mt-8 block border-[3px] border-dashed border-cream-100/70 p-4 hover:border-solid"
+          >
             <p className="text-[10px] font-bold uppercase tracking-[0.22em]">Head-to-head</p>
             <p className="font-display mt-1 text-sm uppercase leading-snug">
-              Your XI vs United, Real Madrid, Bayern… scoreline only. Their team stays hidden.
+              Your XI vs United, Real Madrid, Bayern… or The Legends, the actual hidden XI. Scoreline
+              only — every team stays hidden. How it works →
             </p>
-          </div>
-
-          <Link
-            href="/daily/"
-            className="font-display mt-8 block border-[3px] border-ink-950 bg-ink-950 p-4 text-center text-sm uppercase tracking-wide text-cream-100 shadow-[5px_5px_0_rgb(26_10_14_/_0.45)] transition-transform duration-150 hover:-translate-y-0.5"
-          >
-            Guess the Red — today&apos;s puzzle →
           </Link>
+
+          <p className="mt-8 text-center text-[10px] font-bold uppercase tracking-[0.22em]">
+            More to play
+          </p>
+          <div className="mt-3 grid gap-3 sm:grid-cols-3">
+            <Link
+              href="/daily/"
+              className="font-display border-[3px] border-ink-950 bg-ink-950 p-3 text-center text-xs uppercase tracking-wide text-cream-100 transition-transform duration-150 hover:-translate-y-0.5"
+            >
+              Guess the Red
+            </Link>
+            <Link
+              href="/higher-lower/"
+              className="font-display border-[3px] border-ink-950 bg-ink-950 p-3 text-center text-xs uppercase tracking-wide text-cream-100 transition-transform duration-150 hover:-translate-y-0.5"
+            >
+              Higher or Lower
+            </Link>
+            <Link
+              href="/on-this-day/"
+              className="font-display border-[3px] border-ink-950 bg-ink-950 p-3 text-center text-xs uppercase tracking-wide text-cream-100 transition-transform duration-150 hover:-translate-y-0.5"
+            >
+              On This Day
+            </Link>
+          </div>
           <p className="mt-4 text-center text-[10px] font-bold uppercase tracking-[0.18em]">
             No account · works offline · free
           </p>
@@ -134,7 +155,11 @@ export default function HomePage() {
           for perfection. Genuinely defensible alternatives are accepted — an all-time XI that starts
           Clemence is as right as one that starts Alisson — but only genuinely defensible ones. Reach
           100% and the canonical XI is revealed as your own team sheet, because at that moment they
-          are the same thing.
+          are the same thing. Full breakdown of every point on the{" "}
+          <Link href="/how-it-works/" className="font-semibold text-blood-600 hover:text-red-300">
+            how it&apos;s scored
+          </Link>{" "}
+          page.
         </p>
         <p>
           Start with the era you know best. The Premier League board rewards the football you
