@@ -380,7 +380,9 @@ export function PerfectXiBuilder({ era, formations, players, managers, ratings, 
           <div className="shadow-poster-sm border-[3px] border-ink-950 bg-paper-50 p-4">
             <p className="font-display text-center text-sm uppercase">Head to head</p>
             <p className="mt-1 text-center text-xs font-bold text-dune-600">
-              Play your XI against another club&apos;s greatest side — result only, their team stays hidden.
+              Play your XI against another club&apos;s greatest side — or against{" "}
+              <strong className="text-ink-950">The Legends</strong>, the actual hidden XI you were just
+              scored against. Result only, every team stays hidden.
             </p>
             <div className="mt-3 flex flex-wrap justify-center gap-2">
               {opponents.map((o) => (

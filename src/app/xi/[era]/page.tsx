@@ -4,7 +4,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { PerfectXiBuilder } from "@/components/PerfectXiBuilder";
 import { ERA_CONTENT } from "@/content/eras";
 import { getEras, getFormations, getManagers, getOpponents, getPlayersIndex, getRatings } from "@/lib/data";
-import { SITE_URL } from "@/lib/site";
+import { PROD_URL, SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ era: stri
   return {
     title: content.metaTitle,
     description: content.metaDescription,
-    alternates: { canonical: `${SITE_URL}/xi/${era}/` },
+    alternates: { canonical: `${PROD_URL}/xi/${era}/` },
     openGraph: { title: content.metaTitle, url: `${SITE_URL}/xi/${era}/`, images: ["/og.png"] },
   };
 }

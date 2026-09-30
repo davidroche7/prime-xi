@@ -15,6 +15,9 @@ const MIN_APPS = 50; // enrichment subset threshold (~350 players)
 export interface Enrichment {
   lfchId: number;
   birthYear?: number;
+  /** "MM-DD" — only when the "Born" field carries a full day+month, for the
+   *  on-this-day feature. Never fabricated: absent means the source didn't say. */
+  birthMonthDay?: string;
   birthplace?: string;
   signedFrom?: string;
   fee?: string; // "£43.9m" — only when the Joined Liverpool field carries one
@@ -45,12 +48,25 @@ export function parseProfile(html: string): Enrichment {
     const m = v?.match(/\b(1[89]\d{2}|20\d{2})\b/);
     return m ? Number(m[1]) : undefined;
   };
+  const MONTHS = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+  ];
+  const monthDay = (v?: string) => {
+    const m = v?.match(/\b(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\b/);
+    if (!m) return undefined;
+    const day = String(Number(m[1])).padStart(2, "0");
+    const month = String(MONTHS.indexOf(m[2]) + 1).padStart(2, "0");
+    return `${month}-${day}`;
+  };
   const joined = fields.get("Joined Liverpool");
   const fee = joined?.match(/£[\d.,]+[mk]?/i)?.[0];
+  const born = fields.get("Born");
 
   return {
     lfchId: 0, // caller sets
-    birthYear: year(fields.get("Born")),
+    birthYear: year(born),
+    birthMonthDay: monthDay(born),
     birthplace: fields.get("Place of Birth") || undefined,
     signedFrom: fields.get("Signed from") || undefined,
     ...(fee ? { fee } : {}),

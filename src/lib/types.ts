@@ -27,6 +27,9 @@ export interface IndexedPlayer {
   goals: number;
   /** enriched players only — age on the sheet = pick-season start year − birthYear */
   birthYear?: number;
+  /** enriched players only, and only when the source gave a full date — "MM-DD",
+   *  drives the on-this-day feature. Absent, not guessed, when unknown. */
+  birthMonthDay?: string;
   /** enriched players only — ≤3 honour marks, majors first, e.g. ["CL ’05", "FA ’06"] */
   marks?: string[];
 }
