@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     { url: `${SITE_URL}/how-it-works/`, changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${SITE_URL}/head-to-head/`, changeFrequency: "monthly" as const, priority: 0.6 },
+    { url: `${SITE_URL}/about/`, changeFrequency: "yearly" as const, priority: 0.3 },
     { url: `${SITE_URL}/privacy/`, changeFrequency: "yearly" as const, priority: 0.1 },
     { url: `${SITE_URL}/terms/`, changeFrequency: "yearly" as const, priority: 0.1 },
   ];
