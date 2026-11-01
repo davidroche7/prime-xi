@@ -92,6 +92,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p>{DISCLAIMER}</p>
             <p>{CREDITS}</p>
             <p className="font-bold uppercase tracking-wide">
+              <Link href="/articles/" className="hover:text-blood-600">
+                Articles
+              </Link>
+              {" · "}
               <Link href="/how-it-works/" className="hover:text-blood-600">
                 How it works
               </Link>

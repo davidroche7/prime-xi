@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { ARTICLES } from "@/lib/articles";
 import { getEras } from "@/lib/data";
 import { SITE_URL } from "@/lib/site";
 
@@ -10,6 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/daily/`, changeFrequency: "daily", priority: 0.9 },
     { url: `${SITE_URL}/on-this-day/`, changeFrequency: "daily", priority: 0.7 },
     { url: `${SITE_URL}/higher-lower/`, changeFrequency: "daily", priority: 0.8 },
+    { url: `${SITE_URL}/articles/`, changeFrequency: "monthly" as const, priority: 0.7 },
+    ...ARTICLES.map((a) => ({
+      url: `${SITE_URL}/articles/${a.slug}/`,
+      changeFrequency: "yearly" as const,
+      priority: 0.7,
+    })),
     ...getEras("liverpool").map((e) => ({
       url: `${SITE_URL}/xi/${e.slug}/`,
       changeFrequency: "monthly" as const,
